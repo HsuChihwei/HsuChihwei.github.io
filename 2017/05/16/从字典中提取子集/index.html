@@ -76,6 +76,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="悟の迹" type="application/atom+xml" />
 
@@ -91,20 +93,20 @@
 
 <meta name="description" content="需求给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。
 解决方案使用字典推导式：
-12345678910111213prices = &amp;#123;    &apos;ACME&apos;: 45.23,    &apos;AAPL&apos;: 612.78,    &apos;IBM&apos;: 205.55,    &apos;HPQ&apos;: 37.20,    &apos;FB&apos;: 10.75&amp;#125;# Make a dictionary of al">
+123456789101112prices = &amp;#123;    &apos;ACME&apos;: 45.23,    &apos;AAPL&apos;: 612.78,    &apos;IBM&apos;: 205.55,    &apos;HPQ&apos;: 37.20,    &apos;FB&apos;: 10.75&amp;#125;# Make a dictionary of all">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从字典中提取子集">
 <meta property="og:url" content="http://yoursite.com/2017/05/16/从字典中提取子集/index.html">
 <meta property="og:site_name" content="悟の迹">
 <meta property="og:description" content="需求给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。
 解决方案使用字典推导式：
-12345678910111213prices = &amp;#123;    &apos;ACME&apos;: 45.23,    &apos;AAPL&apos;: 612.78,    &apos;IBM&apos;: 205.55,    &apos;HPQ&apos;: 37.20,    &apos;FB&apos;: 10.75&amp;#125;# Make a dictionary of al">
-<meta property="og:updated_time" content="2017-05-16T15:47:58.805Z">
+123456789101112prices = &amp;#123;    &apos;ACME&apos;: 45.23,    &apos;AAPL&apos;: 612.78,    &apos;IBM&apos;: 205.55,    &apos;HPQ&apos;: 37.20,    &apos;FB&apos;: 10.75&amp;#125;# Make a dictionary of all">
+<meta property="og:updated_time" content="2017-05-16T16:12:08.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从字典中提取子集">
 <meta name="twitter:description" content="需求给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。
 解决方案使用字典推导式：
-12345678910111213prices = &amp;#123;    &apos;ACME&apos;: 45.23,    &apos;AAPL&apos;: 612.78,    &apos;IBM&apos;: 205.55,    &apos;HPQ&apos;: 37.20,    &apos;FB&apos;: 10.75&amp;#125;# Make a dictionary of al">
+123456789101112prices = &amp;#123;    &apos;ACME&apos;: 45.23,    &apos;AAPL&apos;: 612.78,    &apos;IBM&apos;: 205.55,    &apos;HPQ&apos;: 37.20,    &apos;FB&apos;: 10.75&amp;#125;# Make a dictionary of all">
 
 
 
@@ -585,6 +587,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -612,7 +647,8 @@
       
         <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>使用字典推导式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">prices = &#123;</div><div class="line">    <span class="string">'ACME'</span>: 45.23,</div><div class="line">    <span class="string">'AAPL'</span>: 612.78,</div><div class="line">    <span class="string">'IBM'</span>: 205.55,</div><div class="line">    <span class="string">'HPQ'</span>: 37.20,</div><div class="line">    <span class="string">'FB'</span>: 10.75</div><div class="line">&#125;</div><div class="line"><span class="comment"># Make a dictionary of all prices over 200</span></div><div class="line">p1 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> value &gt; 200&#125;</div><div class="line"><span class="comment"># Make a dictionary of tech stocks</span></div><div class="line">tech_names = &#123;<span class="string">'AAPL'</span>, <span class="string">'IBM'</span>, <span class="string">'HPQ'</span>, <span class="string">'MSFT'</span>&#125;</div><div class="line">p2 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> key <span class="keyword">in</span> tech_names&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">prices = &#123;</div><div class="line">    <span class="string">'ACME'</span>: 45.23,</div><div class="line">    <span class="string">'AAPL'</span>: 612.78,</div><div class="line">    <span class="string">'IBM'</span>: 205.55,</div><div class="line">    <span class="string">'HPQ'</span>: 37.20,</div><div class="line">    <span class="string">'FB'</span>: 10.75</div><div class="line">&#125;</div><div class="line"><span class="comment"># Make a dictionary of all prices over 200</span></div><div class="line">p1 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> value &gt; 200&#125;</div><div class="line"><span class="comment"># Make a dictionary of tech stocks</span></div><div class="line">tech_names = &#123;<span class="string">'AAPL'</span>, <span class="string">'IBM'</span>, <span class="string">'HPQ'</span>, <span class="string">'MSFT'</span>&#125;</div><div class="line">p2 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> key <span class="keyword">in</span> tech_names&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 需求：输出phone_bill中每月不为'0.00'的项目</span></div><div class="line"><span class="string">"phone_bill"</span> : [</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.20"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"0.00"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.60"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"15.62"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"4.18"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"56.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.30"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"9.36"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"7.03"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.30"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"0.00"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"10.58"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"0.00"</span></div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line"></div><div class="line"><span class="comment"># 处理逻辑</span></div><div class="line"><span class="keyword">for</span> cursor <span class="keyword">in</span> xrange(0,5):</div><div class="line">     phone_bill_tmp = &#123;key: value[:-1] <span class="keyword">for</span> key, value <span class="keyword">in</span> phone_bill[cursor].items() <span class="keyword">if</span> value not <span class="keyword">in</span> [<span class="string">''</span>,<span class="string">'0.00'</span>]&#125;</div><div class="line">     phone_bill.append(phone_bill_tmp)</div><div class="line"></div><div class="line"><span class="comment"># 结果</span></div><div class="line"><span class="string">"phone_bill"</span> : [</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.2"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.6"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"15.6"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"4.1"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"56.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.3"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"9.3"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"7.0"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.3"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"10.5"</span></div><div class="line">        &#125;</div><div class="line">    ]</div></pre></td></tr></table></figure>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>大多数情况下字典推导能做到的，通过创建一个元组序列然后把它传给 dict() 函数也能实现。比如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p1 = dict((key, value) <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> value &gt; 200)</div></pre></td></tr></table></figure></p>
 <p>但是，字典推导方式表意更清晰，并且实际上也会运行的更快些 (在这个p1中，实际测试几乎比 dcit() 函数方式快整整一倍)。</p>
@@ -754,7 +790,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
