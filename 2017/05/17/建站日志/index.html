@@ -89,39 +89,36 @@
 
 
 
-<meta name="description" content="新增功能：2017-05-17:
+<meta name="description" content="新增功能：2017-05-18：
 
 
-markdown写文章时，添加居中引用模块
+集成百度分享模块
 
-只需在写文章时，添加如下标签即可：1&amp;lt;blockquote class=&amp;quot;blockquote-center&amp;quot;&amp;gt;优秀的人，不是不合群，而是他们合群的人里面没有你&amp;lt;/blockquote&amp;gt;
-预览：
-优秀的人，不是不合群，而是他们合群的人里面没有你">
+首先，编辑 站点配置文件，末尾添加字段:1baidushare: true #百度分享功能
+其次，编辑主题配置文件，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="建站日志">
 <meta property="og:url" content="http://yoursite.com/2017/05/17/建站日志/index.html">
 <meta property="og:site_name" content="悟の迹">
-<meta property="og:description" content="新增功能：2017-05-17:
+<meta property="og:description" content="新增功能：2017-05-18：
 
 
-markdown写文章时，添加居中引用模块
+集成百度分享模块
 
-只需在写文章时，添加如下标签即可：1&amp;lt;blockquote class=&amp;quot;blockquote-center&amp;quot;&amp;gt;优秀的人，不是不合群，而是他们合群的人里面没有你&amp;lt;/blockquote&amp;gt;
-预览：
-优秀的人，不是不合群，而是他们合群的人里面没有你">
+首先，编辑 站点配置文件，末尾添加字段:1baidushare: true #百度分享功能
+其次，编辑主题配置文件，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：">
 <meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_pandas.png">
 <meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png">
-<meta property="og:updated_time" content="2017-05-17T15:50:01.405Z">
+<meta property="og:updated_time" content="2017-05-18T15:50:00.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="建站日志">
-<meta name="twitter:description" content="新增功能：2017-05-17:
+<meta name="twitter:description" content="新增功能：2017-05-18：
 
 
-markdown写文章时，添加居中引用模块
+集成百度分享模块
 
-只需在写文章时，添加如下标签即可：1&amp;lt;blockquote class=&amp;quot;blockquote-center&amp;quot;&amp;gt;优秀的人，不是不合群，而是他们合群的人里面没有你&amp;lt;/blockquote&amp;gt;
-预览：
-优秀的人，不是不合群，而是他们合群的人里面没有你">
+首先，编辑 站点配置文件，末尾添加字段:1baidushare: true #百度分享功能
+其次，编辑主题配置文件，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：">
 <meta name="twitter:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_pandas.png">
 
 
@@ -650,14 +647,30 @@ markdown写文章时，添加居中引用模块
       
 
       
-        <h3 id="新增功能："><a href="#新增功能：" class="headerlink" title="新增功能："></a>新增功能：</h3><p><strong>2017-05-17:</strong></p>
+        <h3 id="新增功能："><a href="#新增功能：" class="headerlink" title="新增功能："></a>新增功能：</h3><p><strong>2017-05-18：</strong></p>
+<hr>
+<ul>
+<li>集成百度分享模块</li>
+</ul>
+<p>首先，编辑 <code>站点配置文件</code>，末尾添加字段:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">baidushare: true #百度分享功能</div></pre></td></tr></table></figure></p>
+<p>其次，编辑<code>主题配置文件</code>，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line"># Warning: Baidu Share does not support https.</div><div class="line">baidushare:</div><div class="line"> type: slide #百度分享展示的方式button|slide</div></pre></td></tr></table></figure>
+<p>*注意：百度分享不支持https方式，可以自己买个域名绑定，或者搜下<code>百度分享不支持https的解决方案</code>，有前辈做出解答</p>
+<p>其实，现在已经完成了；但是，为了折腾，我们接着来自定义百度分享的显示，点击<a href="http://share.baidu.com/code" target="_blank" rel="external">代码获取</a>，一步步进行定制，走完流程，点击<code>直接获取代码</code>，拿到一段js代码，类似如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;window._bd_share_config=&#123;&quot;common&quot;:&#123;&quot;bdSnsKey&quot;:&#123;&#125;,&quot;bdText&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;2&quot;,&quot;bdMiniList&quot;:[&quot;mshare&quot;,&quot;bdysc&quot;,&quot;evernotecn&quot;,&quot;tqq&quot;,&quot;weixin&quot;,&quot;sqq&quot;,&quot;qzone&quot;,&quot;douban&quot;,&quot;tsina&quot;,&quot;tieba&quot;,&quot;youdao&quot;,&quot;mogujie&quot;,&quot;isohu&quot;,&quot;sdo&quot;,&quot;qingbiji&quot;,&quot;mail&quot;,&quot;ty&quot;,&quot;fbook&quot;,&quot;twi&quot;,&quot;linkedin&quot;,&quot;copy&quot;,&quot;print&quot;],&quot;bdPic&quot;:&quot;&quot;,&quot;bdStyle&quot;:&quot;0&quot;,&quot;bdSize&quot;:&quot;16&quot;&#125;,&quot;slide&quot;:&#123;&quot;type&quot;:&quot;slide&quot;,&quot;bdImg&quot;:&quot;0&quot;,&quot;bdPos&quot;:&quot;right&quot;,&quot;bdTop&quot;:&quot;53.5&quot;&#125;,&quot;image&quot;:&#123;&quot;viewList&quot;:[&quot;weixin&quot;,&quot;qzone&quot;,&quot;tsina&quot;,&quot;evernotecn&quot;,&quot;douban&quot;,&quot;bdysc&quot;],&quot;viewText&quot;:&quot;分享到：&quot;,&quot;viewSize&quot;:&quot;16&quot;&#125;,&quot;selectShare&quot;:&#123;&quot;bdContainerClass&quot;:null,&quot;bdSelectMiniList&quot;:[&quot;weixin&quot;,&quot;qzone&quot;,&quot;tsina&quot;,&quot;evernotecn&quot;,&quot;douban&quot;,&quot;bdysc&quot;]&#125;&#125;;with(document)0[(getElementsByTagName(&apos;head&apos;)[0]||body).appendChild(createElement(&apos;script&apos;)).src=&apos;http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=&apos;+~(-new Date()/36e5)];&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>最后，打开如下文件<code>blog\themes\next\layout\_partials\share\baidushare.swing</code>，替换掉里面的js代码，本文以<code>slide</code>模式为例，替换掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% elseif theme.baidushare.type === &quot;slide&quot; %&#125;</div></pre></td></tr></table></figure></p>
+<p>后面的<code>&lt;script&gt;...&lt;/script&gt;</code>即可。</p>
+<p><strong>2017-05-17:</strong></p>
 <hr>
 <ul>
 <li>markdown写文章时，添加居中引用模块</li>
 </ul>
 <p>只需在写文章时，添加如下标签即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;优秀的人，不是不合群，而是他们合群的人里面没有你&lt;/blockquote&gt;</div></pre></td></tr></table></figure></p>
 <p>预览：</p>
-<p><blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote><br><a id="more"></a><br><strong>2017-05-16：</strong></p>
+<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
+
+<p><strong>2017-05-16：</strong></p>
 <hr>
 <ul>
 <li>首页文章预览添加图片</li>
@@ -760,10 +773,7 @@ markdown写文章时，添加居中引用模块
                     "tsina",
                     "tieba",
                     "youdao",
-                    "mogujie",
                     "isohu",
-                    "sdo",
-                    "qingbiji",
                     "mail",
                     "ty",
                     "fbook",
@@ -778,7 +788,7 @@ markdown写文章时，添加居中引用模块
             },
             "slide": {
                 "type": "slide",
-                "bdImg": "0",
+                "bdImg": "5",
                 "bdPos": "right",
                 "bdTop": "53.5"
             },
@@ -806,6 +816,9 @@ markdown写文章时，添加居中引用模块
                 ]
             }
         };
+    </script>
+
+    <script>
         with (document)
             0 [(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' +~ (-new Date() / 36e5)];
     </script>
