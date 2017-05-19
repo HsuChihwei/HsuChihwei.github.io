@@ -3,10 +3,173 @@
 ---
 
 ### **2017-05-19：**
-### SEO优化
+### 添加新 Page
 
 ---
 <!-- more -->
+用如下命令添加新page
+
+hexo new page "Android"
+hexo new page "Python"
+hexo new page "API"
+然后在主题配置文件\themes\next\_config.yml添加：
+
+menu:
+  home: /
+  categories: /categories
+  archives: /archives
+  tags: /tags
+  Android: /Android  # 加在这里
+  Python: /Python
+  API: /API
+打开\themes\next\languages\zh-Hans.yml，这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。
+
+menu:
+  home: 首页
+  archives: 归档
+  categories: 分类
+  tags: 标签
+  about: 关于
+  search: 搜索
+  commonweal: 公益404
+  android: Android
+  python: Python
+  api: API
+注意这里第一列必须全为小写，否则效果是这样的：
+
+### 修改blog页面配色
+
+---
+#### 添加自定义颜色
+打开`\themes\next\source\css\ _variables\base.styl`文件，修改：
+```
+// Colors
+// colors for use across theme.
+// --------------------------------------------------
+$whitesmoke   = #f5f5f5
+$gainsboro    = #eee
+$gray-lighter = #ddd
+$grey-light   = #ccc
+$grey         = #bbb
+$grey-dark    = #999
+$grey-dim     = #666
+$black-light  = #555
+$black-dim    = #333
+$black-deep   = #222
+$red          = #ff2a2a
+$blue-bright  = #87daff
+$blue         = #0684bd
+$blue-deep    = #262a30
+$orange       = #fc6423
+// 下面是我自定义的颜色
+$my-link-blue = #0593d3  //链接颜色
+$my-link-hover-blue = #0477ab  //鼠标悬停后颜色
+$my-code-foreground = #dd0055  // 用``围出的代码块字体颜色
+$my-code-background = #eee  // 用``围出的代码块背景颜色
+```
+#### 修改超链接颜色
+还是`base.styl`文件，修改这几行：
+```
+// Global link color.
+$link-color                   = $my-link-blue
+$link-hover-color             = $my-link-hover-blue
+$link-decoration-color        = $gray-lighter
+$link-decoration-hover-color  = $my-link-hover-blue
+```
+预览：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%B6%85%E9%93%BE%E6%8E%A5.png)
+#### 修改小型代码块颜色
+依旧是`base.styl`文件，修改`$code-background`和`$code-foreground`的值：
+```
+// Code & Code Blocks
+// 用``围出的代码块
+// --------------------------------------------------
+$code-font-family               = $font-family-monospace
+$code-font-size                 = 15px
+$code-background                = $my-code-background
+$code-foreground                = $my-code-foreground
+$code-border-radius             = 4px
+```
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%BB%A3%E7%A0%81%E5%9D%97.png)
+
+### 修改blog页面字体大小
+
+---
+打开`\themes\next\source\css\ _variables\base.styl`文件，找到：
+```
+// Font size
+$font-size-base           = 14px
+```
+改为：
+```
+$font-size-base           = 16px
+```
+
+### 修改blog页面宽度
+
+---
+现在一般都用宽屏显示器，博客页面两侧留白太多，调整一下宽度。
+
+1.打开`\themes\next\source\css\_common\components\post\post-expand.styl`，找到:
+```
+@media (max-width: 767px)
+```
+改为
+```
+@media (max-width: 1080px)
+```
+2.打开`\themes\next\source\css\ _variables\base.styl`文件，找到：
+```
+$main-desktop                   = 960px
+$main-desktop-large             = 1200px
+$content-desktop                = 700px
+```
+改为：
+```
+$main-desktop                   = 1080px
+$main-desktop-large             = 1200px
+$content-desktop                = 810px
+```
+
+### 修改博客部署的message
+
+---
+在`\node_modules\hexo-deployer-git\lib\deployer.js`文件末尾找到：
+```
+Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+```
+改得个性化一点：
+```
+好家伙又改版了悟の迹: {{ now('YYYY-MM-DD HH:mm:ss') }}
+```
+
+### Github项目主页添加README
+
+---
+#### 问题原因：
+
+Github上博客的仓库主页没有README，如果把`README.md`放入`source`文件夹，`hexo g`生成时会被解析成html文件，而放到`public`文件夹中，生成时又会自动删除。
+
+#### 解决方法:
+
+在`source`目录下新建文件`README.mdown`，在里面写README即可。`hexo g`会把它复制到`public`文件夹，且不会被解析成html
+
+### Github项目主页添加LICENSE
+
+---
+修改`主题配置文件`，找到：
+```
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons: by-nc-sa
+#creative_commons:
+```
+将其中第 4 行的注释放开，然后选择你想使用的 LICENSE 即可，可选项参照第 3 行。
+
+### SEO优化
+
+---
 为优化SEO，更改首页标题格式为「关键词-网站名称 - 网站描述」
 
 打开`\themes\next\layout\index.swig`文件，找到这行代码：
