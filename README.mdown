@@ -1,0 +1,236 @@
+---
+title: 建站日志
+date: 2017-05-17 21:39:02
+categories:
+    - Hexo
+tags:
+    - Hexo
+    - Blog
+photos:
+    - http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg
+---
+### **2017-05-19：**
+### SEO优化
+
+---
+<!-- more -->
+为优化SEO，更改首页标题格式为「关键词-网站名称 - 网站描述」
+
+打开`\themes\next\layout\index.swig`文件，找到这行代码：
+```
+{% block title %} {{ config.title }} {% endblock %}
+```
+把它改成：
+```
+{% block title %}
+  {{ theme.keywords }} - {{ config.title }} - {{ theme.description }}
+{% endblock %}
+```
+### 添加“Fork me on Github” ribbon
+
+---
+1.点击[Fork me on Github](https://github.com/blog/273-github-ribbons)；
+
+2.给blog主页选择一个绶带（ribbon），并复制相应代码；
+
+3.找到正在使用的`theme`下的`layou`t文件，将代码插入即可；
+
+4.比如我选择了`红色`的ribbon，使用的`themes`为next，那么只要打开 `blog\themes\next\layout\_layout.swig`文件，复制下面这段代码，放在最后，标签</body>之前即可。（注意将`https://github.com/you`改为你自己的github链接）
+```
+<a href="https://github.com/you">
+    <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67"
+    alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png">
+</a>
+```
+
+### 添加404公益页面
+
+---
+在`blog/source`下新建自己的`404.html`文件即可，强推[腾讯公益404](http://www.qq.com/404/)，代码可参考如下：
+```
+---
+layout: default
+---
+<html>
+    <head>
+         <meta charset="UTF-8" />
+         <title>404</title>
+    </head>
+    <body>
+         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="http://chihweihsu.com/" homePageName="回到悟の迹"></script>
+    </body>
+</html>
+```
+
+### 文章阅读次数统计
+
+---
+1.注册[LeanCloud](https://leancloud.cn/dashboard/login.html#/signup)帐号并验证邮箱；
+
+2.创建应用，新建一个应用来专门进行博客的访问统计的数据操作；
+
+3.创建完成之后我们点击新创建的应用的名字来进行该应用的参数配置；
+
+4.新建一个Class用来专门保存我们博客的文章访问量等数据；
+
+5.新建Class名字必须为Counter，设置默认的ACL权限，建议在此处选择无限制；
+
+6.选择左侧的`应用Key`选项，拿到我们创建应用的`AppID`以及`AppKey`；
+
+7.编辑 `主题配置文件`，如下:
+```
+leancloud_visitors:
+  enable: true
+  app_id: joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz
+  app_key: E9UJsJpw1omCHuS22PdSpKoh
+```
+8.ok，部署后可见。
+
+### **2017-05-18：**
+### 配置导航栏网站小图标
+
+---
+挑选一张图片，名字改为`favicon.ico`，放到`..\blog\source`下，配置`主题配置文件`如下：
+```
+favicon: /favicon.ico
+```
+
+### 集成百度分享模块
+
+---
+首先，编辑 `站点配置文件`，末尾添加字段:
+```
+baidushare: true #百度分享功能
+```
+其次，编辑`主题配置文件`，找到如下代码位置，去掉最后两行\#注释，并选择展示方式，建议slide悬浮状态：
+```
+# Baidu Share
+# Available value:
+#    button | slide
+# Warning: Baidu Share does not support https.
+baidushare:
+ type: slide #百度分享展示的方式button|slide
+
+```
+\*注意：百度分享不支持https方式，可以自己买个域名绑定，或者搜下`百度分享不支持https的解决方案`，有前辈做出解答。
+
+其实，现在已经完成了；但是，为了折腾，我们接着来自定义百度分享的显示，点击[代码获取](http://share.baidu.com/code)，一步步进行定制，走完流程，点击`直接获取代码`，拿到一段js代码，类似如下：
+
+```
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdMiniList": [
+                "mshare",
+                "bdysc",
+                "evernotecn",
+                "tqq",
+                "weixin",
+                "sqq",
+                "qzone",
+                "douban",
+                "tsina",
+                "tieba",
+                "youdao",
+                "isohu",
+                "mail",
+                "ty",
+                "fbook",
+                "twi",
+                "linkedin",
+                "copy",
+                "print"
+            ],
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "slide": {
+            "type": "slide",
+            "bdImg": "5",
+            "bdPos": "right",
+            "bdTop": "53.5"
+        },
+        "image": {
+            "viewList": [
+                "weixin",
+                "qzone",
+                "tsina",
+                "evernotecn",
+                "douban",
+                "bdysc"
+            ],
+            "viewText": "分享到：",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": [
+                "weixin",
+                "qzone",
+                "tsina",
+                "evernotecn",
+                "douban",
+                "bdysc"
+            ]
+        }
+    };
+</script>
+```
+最后，打开如下文件`blog\themes\next\layout\_partials\share\baidushare.swing`，替换掉里面的js代码，本文以`slide`模式为例，替换掉
+```
+{% elseif theme.baidushare.type === "slide" %}
+```
+后面的`<script>...</script>`即可。
+
+### **2017-05-17：**
+###  markdown写文章时，添加居中引用模块
+
+---
+只需在写文章时，添加如下标签即可：
+```
+<blockquote class="blockquote-center">
+    优秀的人，不是不合群，而是他们合群的人里面没有你
+</blockquote>
+```
+预览：
+<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
+
+
+### **2017-05-16：**
+### 首页文章预览添加图片
+
+---
+打开`scaffolds/post.md`文件，在默认参数中添加如下参数：
+```
+# 首页文章预览添加图片：
+photos:
+    - http://xxx.com/photo1.jpg
+    - http://xxx.com/photo2.jpg
+```
+预览：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_pandas.png)
+
+### 首页文章摘要模式
+
+---
+首页开启文章摘要模式，不全文显示，而是出现`阅读全文>`，只需在`主题配置文件`中找到`auto_excerpt`属性进行配置
+```
+# Automatically Excerpt. Not recommend.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: true #改写为true
+  length: 150 #默认展示的高度
+```
+或者，在Markdown文章中不想显示的位置，添加如下代码：
+```
+这里显示
+<!--more-->
+这里不显示
+```
+
+预览：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png)
