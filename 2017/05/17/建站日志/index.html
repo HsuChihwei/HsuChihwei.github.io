@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="2017-05-19：SEO优化">
+<meta name="description" content="2017-05-19：修改博客部署的message">
 <meta property="og:type" content="article">
 <meta property="og:title" content="建站日志">
 <meta property="og:url" content="http://yoursite.com/2017/05/17/建站日志/index.html">
 <meta property="og:site_name" content="悟の迹">
-<meta property="og:description" content="2017-05-19：SEO优化">
+<meta property="og:description" content="2017-05-19：修改博客部署的message">
 <meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg">
-<meta property="og:updated_time" content="2017-05-19T13:58:46.887Z">
+<meta property="og:updated_time" content="2017-05-19T14:22:05.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="建站日志">
-<meta name="twitter:description" content="2017-05-19：SEO优化">
+<meta name="twitter:description" content="2017-05-19：修改博客部署的message">
 <meta name="twitter:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg">
 
 
@@ -655,8 +655,14 @@
       
 
       
-        <h3 id="2017-05-19："><a href="#2017-05-19：" class="headerlink" title="2017-05-19："></a><strong>2017-05-19：</strong></h3><h3 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h3><hr>
+        <h3 id="2017-05-19："><a href="#2017-05-19：" class="headerlink" title="2017-05-19："></a><strong>2017-05-19：</strong></h3><h3 id="修改博客部署的message"><a href="#修改博客部署的message" class="headerlink" title="修改博客部署的message"></a>修改博客部署的message</h3><hr>
 <a id="more"></a>
+<p>在<code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>改得个性化一点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">好家伙又改版了悟の迹: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Github项目主页添加README"><a href="#Github项目主页添加README" class="headerlink" title="Github项目主页添加README"></a>Github项目主页添加README</h3><hr>
+<h4 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h4><p>Github上博客的仓库主页没有README，如果把<code>README.md</code>放入<code>source</code>文件夹，<code>hexo g</code>生成时会被解析成html文件，而放到<code>public</code>文件夹中，生成时又会自动删除。</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h4><p>在<code>source</code>目录下新建文件<code>README.mdown</code>，在里面写README即可。<code>hexo g</code>会把它复制到<code>public</code>文件夹，且不会被解析成html</p>
+<h3 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h3><hr>
 <p>为优化SEO，更改首页标题格式为「关键词-网站名称 - 网站描述」</p>
 <p>打开<code>\themes\next\layout\index.swig</code>文件，找到这行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
 <p>把它改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125;</div><div class="line">  &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
@@ -961,7 +967,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-19："><span class="nav-number">1.</span> <span class="nav-text">2017-05-19：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SEO优化"><span class="nav-number">2.</span> <span class="nav-text">SEO优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加“Fork-me-on-Github”-ribbon"><span class="nav-number">3.</span> <span class="nav-text">添加“Fork me on Github” ribbon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加404公益页面"><span class="nav-number">4.</span> <span class="nav-text">添加404公益页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章阅读次数统计"><span class="nav-number">5.</span> <span class="nav-text">文章阅读次数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-18："><span class="nav-number">6.</span> <span class="nav-text">2017-05-18：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置导航栏网站小图标"><span class="nav-number">7.</span> <span class="nav-text">配置导航栏网站小图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成百度分享模块"><span class="nav-number">8.</span> <span class="nav-text">集成百度分享模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-17："><span class="nav-number">9.</span> <span class="nav-text">2017-05-17：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown写文章时，添加居中引用模块"><span class="nav-number">10.</span> <span class="nav-text">markdown写文章时，添加居中引用模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-16："><span class="nav-number">11.</span> <span class="nav-text">2017-05-16：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首页文章预览添加图片"><span class="nav-number">12.</span> <span class="nav-text">首页文章预览添加图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首页文章摘要模式"><span class="nav-number">13.</span> <span class="nav-text">首页文章摘要模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-19："><span class="nav-number">1.</span> <span class="nav-text">2017-05-19：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改博客部署的message"><span class="nav-number">2.</span> <span class="nav-text">修改博客部署的message</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github项目主页添加README"><span class="nav-number">3.</span> <span class="nav-text">Github项目主页添加README</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题原因："><span class="nav-number">3.1.</span> <span class="nav-text">问题原因：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">3.2.</span> <span class="nav-text">解决方法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SEO优化"><span class="nav-number">4.</span> <span class="nav-text">SEO优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加“Fork-me-on-Github”-ribbon"><span class="nav-number">5.</span> <span class="nav-text">添加“Fork me on Github” ribbon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加404公益页面"><span class="nav-number">6.</span> <span class="nav-text">添加404公益页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章阅读次数统计"><span class="nav-number">7.</span> <span class="nav-text">文章阅读次数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-18："><span class="nav-number">8.</span> <span class="nav-text">2017-05-18：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置导航栏网站小图标"><span class="nav-number">9.</span> <span class="nav-text">配置导航栏网站小图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成百度分享模块"><span class="nav-number">10.</span> <span class="nav-text">集成百度分享模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-17："><span class="nav-number">11.</span> <span class="nav-text">2017-05-17：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown写文章时，添加居中引用模块"><span class="nav-number">12.</span> <span class="nav-text">markdown写文章时，添加居中引用模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-16："><span class="nav-number">13.</span> <span class="nav-text">2017-05-16：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首页文章预览添加图片"><span class="nav-number">14.</span> <span class="nav-text">首页文章预览添加图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首页文章摘要模式"><span class="nav-number">15.</span> <span class="nav-text">首页文章摘要模式</span></a></li></ol></div>
             
 
           </div>
