@@ -9,35 +9,49 @@
 
 ---
 <!-- more -->
-用如下命令添加新page
+1.用如下命令添加新page:
 
-hexo new page "Android"
+```
+hexo new page "categories"
+hexo new page "tags"
 hexo new page "Python"
-hexo new page "API"
-然后在主题配置文件\themes\next\_config.yml添加：
-
+hexo new page "Linux"
+hexo new page "Notes"
+hexo new page "Something"
+hexo new page "Links"
+hexo new page "About"
+```
+2.打开`主题配置文件``\themes\next\_config.yml`文件，在`menu`中添加：
+```
 menu:
   home: /
-  categories: /categories
   archives: /archives
+  categories: /categories
   tags: /tags
-  Android: /Android  # 加在这里
   Python: /Python
-  API: /API
-打开\themes\next\languages\zh-Hans.yml，这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。
-
+  Linux: /Linux
+  Notes: /Notes
+  Something: /Something
+  Links: /Links
+  About: /About
+```
+3.打开`\themes\next\languages\zh-Hans.yml`，修改`menu`：
+```
 menu:
   home: 首页
   archives: 归档
   categories: 分类
   tags: 标签
-  about: 关于
-  search: 搜索
-  commonweal: 公益404
-  android: Android
   python: Python
-  api: API
-注意这里第一列必须全为小写，否则效果是这样的：
+  linux: Linux
+  notes: 笔记
+  something: 有料
+  links: 链接
+  about: 关于
+```
+\*注意这里第一列必须全为小写。
+
+\*这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。
 
 ### 修改blog页面配色
 
@@ -92,6 +106,7 @@ $code-background                = $my-code-background
 $code-foreground                = $my-code-foreground
 $code-border-radius             = 4px
 ```
+预览：
 ![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%BB%A3%E7%A0%81%E5%9D%97.png)
 
 ### 修改blog页面字体大小
