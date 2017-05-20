@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -105,7 +105,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Muse',
     sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
@@ -114,9 +114,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: 'J3J5TUU9O8',
+      apiKey: '7c97f3350661242abe71493b5beece57',
+      indexName: 'blog',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -538,6 +538,28 @@
   
     <div class="site-search">
       
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
 
     </div>
   
@@ -841,7 +863,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj2xaphxb000l3tpvc0ovmyt2"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj2xbhnga000lq6pvfztgnwqp"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
               </a>
@@ -1361,7 +1383,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" rel="gallery_cj2xaphwi00073tpvkawriohn"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" rel="gallery_cj2xbhnfg0007q6pvj01pd9jy"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" itemprop="contentUrl"/>
               </a>
@@ -2045,7 +2067,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 <script type="text/javascript">
@@ -2193,6 +2215,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 
