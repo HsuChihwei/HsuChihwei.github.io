@@ -3,11 +3,34 @@
 
 
     
-    
+  <url>
+    <loc>http://chihweihsu.com/2017/05/17/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2017-05-20T15:09:20.689Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 常用语法</title>
+        <pubTime>2017-05-17T13:46:29.000Z</pubTime>
+        
+        <tag>速查</tag>
+         
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+          
+             
+              <breadCrumb title="Markdown" url="http://chihweihsu.com/categories/Notes/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://chihweihsu.com/2017/05/07/Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-05-20T13:37:45.170Z</lastmod>
+    <lastmod>2017-05-20T15:08:42.231Z</lastmod>
     <data>
         <display>
         <title>Hexo 常用操作</title>
@@ -17,58 +40,7 @@
          
         <tag>Blog</tag>
          
-         
-           
-             
-              <breadCrumb title="速查" url="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2017-05-20T00:45:22.546Z</lastmod>
-    <data>
-        <display>
-        <title>建站日志</title>
-        <pubTime>2017-05-17T13:39:02.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-    
-    
-    
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/05/17/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2017-05-17T16:29:17.110Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown 常用语法</title>
-        <pubTime>2017-05-17T13:46:29.000Z</pubTime>
-        
-        <tag>Markdown</tag>
+        <tag>速查</tag>
          
          
            
@@ -76,7 +48,7 @@
               <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="速查" url="http://chihweihsu.com/categories/Notes/%E9%80%9F%E6%9F%A5/"/>
+              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/Notes/Hexo/"/>
           
         </display>
     </data>
@@ -85,7 +57,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/17/%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</loc>
-    <lastmod>2017-05-17T14:21:57.312Z</lastmod>
+    <lastmod>2017-05-20T15:07:58.664Z</lastmod>
     <data>
         <display>
         <title>命运从不缺席</title>
@@ -98,7 +70,32 @@
          
            
              
-              <breadCrumb title="美文" url="http://chihweihsu.com/categories/%E7%BE%8E%E6%96%87/"/>
+              <breadCrumb title="writings" url="http://chihweihsu.com/categories/writings/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2017-05-20T15:06:12.367Z</lastmod>
+    <data>
+        <display>
+        <title>建站日志</title>
+        <pubTime>2017-05-17T13:39:02.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/Notes/Hexo/"/>
           
         </display>
     </data>
@@ -107,7 +104,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/16/%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/</loc>
-    <lastmod>2017-05-17T14:20:46.586Z</lastmod>
+    <lastmod>2017-05-20T15:05:00.793Z</lastmod>
     <data>
         <display>
         <title>从字典中提取子集</title>
@@ -120,15 +117,25 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
     </url>
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
   <url>
     <loc>http://chihweihsu.com/2017/05/15/pandas-%E5%85%A5%E9%97%A8/</loc>

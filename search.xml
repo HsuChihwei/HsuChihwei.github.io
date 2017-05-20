@@ -186,12 +186,14 @@
             
             <category> Notes </category>
             
-            <category> 速查 </category>
+            <category> Markdown </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 速查 </tag>
             
             <tag> Markdown </tag>
             
@@ -281,6 +283,8 @@
       
         <categories>
             
+            <category> Notes </category>
+            
             <category> Hexo </category>
             
         </categories>
@@ -328,7 +332,7 @@
       
         <categories>
             
-            <category> 美文 </category>
+            <category> writings </category>
             
         </categories>
         
@@ -360,9 +364,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -448,7 +452,7 @@
       
         <categories>
             
-            <category> 速查 </category>
+            <category> Notes </category>
             
             <category> Hexo </category>
             
@@ -460,6 +464,8 @@
             <tag> Hexo </tag>
             
             <tag> Blog </tag>
+            
+            <tag> 速查 </tag>
             
         </tags>
         

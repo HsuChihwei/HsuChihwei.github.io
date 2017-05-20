@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-05-17T16:29:17.110Z</updated>
+  <updated>2017-05-20T15:09:20.689Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://chihweihsu.com/2017/05/17/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
     <id>http://chihweihsu.com/2017/05/17/Markdown-常用语法/</id>
     <published>2017-05-17T13:46:29.000Z</published>
-    <updated>2017-05-17T16:29:17.110Z</updated>
+    <updated>2017-05-20T15:09:20.689Z</updated>
     
     <content type="html"><![CDATA[<h2 id="标题-一"><a href="#标题-一" class="headerlink" title="标题(一)"></a>标题(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div><div class="line">#### 四级标题</div><div class="line">##### 五级标题</div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
@@ -207,8 +207,10 @@
     
       <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
     
-      <category term="速查" scheme="http://chihweihsu.com/categories/Notes/%E9%80%9F%E6%9F%A5/"/>
+      <category term="Markdown" scheme="http://chihweihsu.com/categories/Notes/Markdown/"/>
     
+    
+      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
     
       <category term="Markdown" scheme="http://chihweihsu.com/tags/Markdown/"/>
     
@@ -219,7 +221,7 @@
     <link href="http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
     <id>http://chihweihsu.com/2017/05/17/建站日志/</id>
     <published>2017-05-17T13:39:02.000Z</published>
-    <updated>2017-05-20T00:45:22.546Z</updated>
+    <updated>2017-05-20T15:06:12.367Z</updated>
     
     <content type="html"><![CDATA[<h3 id="2017-05-19："><a href="#2017-05-19：" class="headerlink" title="2017-05-19："></a><strong>2017-05-19：</strong></h3><h3 id="添加新-Page"><a href="#添加新-Page" class="headerlink" title="添加新 Page"></a>添加新 Page</h3><hr>
 <a id="more"></a>
@@ -304,7 +306,9 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://chihweihsu.com/categories/Hexo/"/>
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
     
     
       <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
@@ -318,7 +322,7 @@
     <link href="http://chihweihsu.com/2017/05/17/%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/"/>
     <id>http://chihweihsu.com/2017/05/17/命运从不缺席/</id>
     <published>2017-05-17T13:34:28.000Z</published>
-    <updated>2017-05-17T14:21:57.312Z</updated>
+    <updated>2017-05-20T15:07:58.664Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
@@ -359,7 +363,7 @@
     
     </summary>
     
-      <category term="美文" scheme="http://chihweihsu.com/categories/%E7%BE%8E%E6%96%87/"/>
+      <category term="writings" scheme="http://chihweihsu.com/categories/writings/"/>
     
     
       <category term="美文" scheme="http://chihweihsu.com/tags/%E7%BE%8E%E6%96%87/"/>
@@ -373,7 +377,7 @@
     <link href="http://chihweihsu.com/2017/05/16/%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/"/>
     <id>http://chihweihsu.com/2017/05/16/从字典中提取子集/</id>
     <published>2017-05-16T15:01:03.000Z</published>
-    <updated>2017-05-17T14:20:46.586Z</updated>
+    <updated>2017-05-20T15:05:00.793Z</updated>
     
     <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>使用字典推导式：</p>
@@ -395,9 +399,9 @@
     
     </summary>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Python/"/>
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Python/Notes/"/>
+      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
     
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
@@ -477,7 +481,7 @@
     <link href="http://chihweihsu.com/2017/05/07/Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
     <id>http://chihweihsu.com/2017/05/07/Hexo-常用操作/</id>
     <published>2017-05-07T15:23:35.000Z</published>
-    <updated>2017-05-20T13:37:45.170Z</updated>
+    <updated>2017-05-20T15:08:42.231Z</updated>
     
     <content type="html"><![CDATA[<h2 id="cyg操作"><a href="#cyg操作" class="headerlink" title="cyg操作"></a>cyg操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /cygdrive/d <span class="comment">#切换到D盘</span></div></pre></td></tr></table></figure>
 <h2 id="Hexo-操作"><a href="#Hexo-操作" class="headerlink" title="Hexo 操作"></a>Hexo 操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></div><div class="line">hexo version  <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo algolia  <span class="comment"># 更新search庫</span></div><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo new post <span class="string">"title"</span>  <span class="comment"># 生成新文章：\source\_posts\title.md，可省略post</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div><div class="line">hexo clean <span class="comment">#清除部署緩存</span></div><div class="line">hexo n == hexo new <span class="comment">#新建文章</span></div><div class="line">hexo g == hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo s == hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo d == hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo d -g <span class="comment">#生成加部署</span></div><div class="line">hexo s -g <span class="comment">#生成加预览</span></div></pre></td></tr></table></figure>
@@ -491,14 +495,16 @@
     
     </summary>
     
-      <category term="速查" scheme="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/"/>
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Hexo" scheme="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/Hexo/"/>
+      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
     
     
       <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
     
       <category term="Blog" scheme="http://chihweihsu.com/tags/Blog/"/>
+    
+      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
     
   </entry>
   
