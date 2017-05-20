@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="悟, hexo, python, crawler, 悟の迹" />
+  <meta name="keywords" content="chihweihsu, python, crawler, 悟の迹" />
 
 
 
@@ -308,6 +308,17 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
 
       <!-- 自定义High一下的功能 -->
       <li class="menu-item"> <a title="把这个链接拖到你的工具栏中,任何网页都可以High" href='javascript:(
@@ -520,6 +531,11 @@
   
 
   
+    <div class="site-search">
+      
+
+    </div>
+  
 </nav>
  </div>
     </header>
@@ -541,7 +557,7 @@
 
     
     
-      <div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid"><br>    <div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px"><br>        <img alt="" src="http://ohhmsby4v.bkt.clouddn.com/image/%E6%82%9F.jpg" width="90" height="100"><br>    </div><br>    <div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000"><br>        本文链接：<br>        <a href="<%= post.link %>"><br>            &lt;%= post.title %&gt;<br>        </a> <br> 作者：<br>        <a href="http://chihweihsu.com/" target="_blank" rel="external"> Chihwei·Hsu</a> <br>出处：<br>        <a href="http://chihweihsu.com/" target="_blank" rel="external">http://chihweihsu.com/</a><br>        <br>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a> 国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名<br>        <a href="http://chihweihsu.com/" target="_blank" rel="external">Chihwei·Hsu</a>及链接。<br>    </div><br></div>
+      <div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid"><br>    <div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px"><br>        <img alt="" src="http://ohhmsby4v.bkt.clouddn.com/image/%E6%82%9F.jpg" width="90" height="100"><br>    </div><br>    <div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000"><br>        本文链接：<br>        <a href="<%= post.link %>"><br>            &lt;%= post.title %&gt;<br>        </a> <br> 作者：<br>        <a href="http://chihweihsu.com/"> Chihwei·Hsu</a> <br>出处：<br>        <a href="http://chihweihsu.com/">http://chihweihsu.com/</a><br>        <br>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a> 国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名<br>        <a href="http://chihweihsu.com/">Chihwei·Hsu</a>及链接。<br>    </div><br></div>
 
     
   </div>
@@ -632,6 +648,26 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -675,7 +711,7 @@
   <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
 
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
 
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
@@ -704,7 +740,13 @@
 <script>
 (function(){
     var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();

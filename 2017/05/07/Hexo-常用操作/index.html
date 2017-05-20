@@ -303,6 +303,17 @@ Hexo 操作123456789101112hexo help  # 查看帮助hexo version  #查看Hexo的�
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
 
       <!-- 自定义High一下的功能 -->
       <li class="menu-item"> <a title="把这个链接拖到你的工具栏中,任何网页都可以High" href='javascript:(
@@ -514,6 +525,11 @@ Hexo 操作123456789101112hexo help  # 查看帮助hexo version  #查看Hexo的�
     </ul>
   
 
+  
+    <div class="site-search">
+      
+
+    </div>
   
 </nav>
  </div>
@@ -894,6 +910,26 @@ Hexo 操作123456789101112hexo help  # 查看帮助hexo version  #查看Hexo的�
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -953,7 +989,7 @@ Hexo 操作123456789101112hexo help  # 查看帮助hexo version  #查看Hexo的�
   <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
 
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
 
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
@@ -982,7 +1018,13 @@ Hexo 操作123456789101112hexo help  # 查看帮助hexo version  #查看Hexo的�
 <script>
 (function(){
     var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();

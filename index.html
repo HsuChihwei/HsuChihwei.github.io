@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="悟, hexo, python, crawler, 悟の迹" />
+  <meta name="keywords" content="chihweihsu, python, crawler, 悟の迹" />
 
 
 
@@ -132,7 +132,7 @@
 
 
   <title>
-  悟, hexo, python, crawler, 悟の迹 - 悟の迹 - The harder, the luckier
+  chihweihsu, python, crawler, 悟の迹 - 悟の迹 - The harder, the luckier
 </title>
 </head>
 
@@ -302,6 +302,17 @@
         </li>
       
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
 
       <!-- 自定义High一下的功能 -->
@@ -514,6 +525,11 @@
     </ul>
   
 
+  
+    <div class="site-search">
+      
+
+    </div>
   
 </nav>
  </div>
@@ -815,7 +831,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj2x47tpv000l6vpvr8t9yjzj"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj2x7ykvn000l03pv6s7liggd"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
               </a>
@@ -1335,7 +1351,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" rel="gallery_cj2x47tp200076vpvfeapclns"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" rel="gallery_cj2x7ykuy000703pvhrq3x1mx"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" itemprop="contentUrl"/>
               </a>
@@ -1945,6 +1961,26 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -1988,7 +2024,7 @@
   <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
 
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
 
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
@@ -2017,7 +2053,13 @@
 <script>
 (function(){
     var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
