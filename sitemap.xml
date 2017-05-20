@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chihweihsu.com/tags/index.html</loc>
+    
+    <lastmod>2017-05-20T13:48:35.101Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chihweihsu.com/2017/05/07/Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2017-05-20T13:37:45.170Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chihweihsu.com/google1c4a19302d3916a2.html</loc>
     
     <lastmod>2017-05-20T08:50:07.712Z</lastmod>
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://chihweihsu.com/tags/index.html</loc>
-    
-    <lastmod>2017-05-19T16:11:25.756Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chihweihsu.com/categories/index.html</loc>
     
     <lastmod>2017-05-19T16:11:11.078Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>http://chihweihsu.com/404.html</loc>
     
     <lastmod>2017-05-19T13:13:10.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chihweihsu.com/2017/05/07/Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2017-05-19T11:56:56.606Z</lastmod>
     
   </url>
   

@@ -5,6 +5,32 @@
     
     
   <url>
+    <loc>http://chihweihsu.com/2017/05/07/Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2017-05-20T13:37:45.170Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 常用操作</title>
+        <pubTime>2017-05-07T15:23:35.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="速查" url="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2017-05-20T00:45:22.546Z</lastmod>
     <data>
@@ -33,32 +59,6 @@
     
     
     
-    
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/05/07/Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-05-19T11:56:56.606Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo 常用操作</title>
-        <pubTime>2017-05-07T15:23:35.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="速查" url="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/%E9%80%9F%E6%9F%A5/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://chihweihsu.com/2017/05/17/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
