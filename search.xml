@@ -523,10 +523,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[About]]></title>
+      <title></title>
       <url>/About/index.html</url>
-      <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" alt=""></p>
-</blockquote>
+      <content type="html"><![CDATA[<p><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" alt=""><br><blockquote class="blockquote-center"><p>父母在，人生尚有来处，父母去，人生只剩归途。 </p>
+</blockquote></p>
 ]]></content>
     </entry>
     
