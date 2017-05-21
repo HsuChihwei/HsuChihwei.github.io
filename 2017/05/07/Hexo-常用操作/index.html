@@ -470,9 +470,8 @@ Hexo 操作12345678910111213hexo help  # 查看帮助hexo version  #查看Hexo�
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/07/Hexo-常用操作/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/Hexo-常用操作/" itemprop="commentCount"></span>
+                <a class="cloud-tie-join-count" href="/2017/05/07/Hexo-常用操作/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -688,12 +687,7 @@ Hexo 操作12345678910111213hexo help  # 查看帮助hexo version  #查看Hexo�
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -1018,26 +1012,6 @@ Hexo 操作12345678910111213hexo help  # 查看帮助hexo version  #查看Hexo�
 
   
 
-    
-      <script id="dsq-count-scr" src="https://悟⑦.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://chihweihsu.com/2017/05/07/Hexo-常用操作/';
-          this.page.identifier = '2017/05/07/Hexo-常用操作/';
-          this.page.title = 'Hexo 常用操作';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://悟⑦.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -1048,18 +1022,21 @@ Hexo 操作12345678910111213hexo help  # 查看帮助hexo version  #查看Hexo�
 
 
   
-
-
-
-
-
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "5baf9794f16043d7b6b9cbb93723535f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
 
 
 
 
-
-  
 
 
 
