@@ -221,7 +221,7 @@
     <link href="http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
     <id>http://chihweihsu.com/2017/05/17/建站日志/</id>
     <published>2017-05-17T13:39:02.000Z</published>
-    <updated>2017-05-21T15:18:09.418Z</updated>
+    <updated>2017-05-21T15:20:35.334Z</updated>
     
     <content type="html"><![CDATA[<h3 id="2017-05-21："><a href="#2017-05-21：" class="headerlink" title="2017-05-21："></a><strong>2017-05-21：</strong></h3><h3 id="Markdown内置标签"><a href="#Markdown内置标签" class="headerlink" title="Markdown内置标签"></a>Markdown内置标签</h3><hr>
 <a id="more"></a>
@@ -229,7 +229,7 @@
 <p>预览：<br><blockquote class="blockquote-center"><p>人的一切痛苦，本质上都是对自己的无能的愤怒。 </p>
 </blockquote></p>
 <h4 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</div><div class="line">&lt;!-- 其中 class=&quot;full-image&quot; 是必须的 --&gt;</div><div class="line">&lt;img src=&quot;/image-url&quot; class=&quot;full-image&quot; /&gt;</div><div class="line"></div><div class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</div><div class="line">&#123;% fullimage /image-url, alt, title %&#125;</div><div class="line"></div><div class="line">&lt;!-- 别名 --&gt;</div><div class="line">&#123;% fi /image-url, alt, title %&#125;</div></pre></td></tr></table></figure>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" class="full-image"><br><span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" class="full-image" alt="alt" title="title"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></p>
+<p>预览：<br><span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" class="full-image" alt="alt" title="时光"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></p>
 <h4 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</div></pre></td></tr></table></figure>
 <p>*<code>class_name</code>可以为：<code>default</code>、<code>primary</code>、<code>success</code>、<code>info</code>、<code>warning</code>、<code>danger</code>，也可以为空。<br>预览：<br><div class="note "><p>Content (md partial supported of <strong>none</strong>) </p>
 </div><br><div class="note default"><p>Content (md partial supported of <strong>default</strong>) </p>
