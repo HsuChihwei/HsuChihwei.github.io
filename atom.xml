@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-05-23T15:31:46.918Z</updated>
+  <updated>2017-05-23T15:32:43.112Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://chihweihsu.com/2017/05/23/%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7%E5%BC%95%E8%B5%B7%E7%9A%84BUG/"/>
     <id>http://chihweihsu.com/2017/05/23/一个逗号引起的BUG/</id>
     <published>2017-05-23T14:45:11.000Z</published>
-    <updated>2017-05-23T15:31:46.918Z</updated>
+    <updated>2017-05-23T15:32:43.112Z</updated>
     
     <content type="html"><![CDATA[<p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…<br><a id="more"></a></p>
 <h3 id="前情回要："><a href="#前情回要：" class="headerlink" title="前情回要："></a>前情回要：</h3><p>话说有一个类对象内有一方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def call_frequency(self, data):</div><div class="line">    ...</div><div class="line">    return list</div></pre></td></tr></table></figure></p>
