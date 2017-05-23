@@ -3,6 +3,46 @@
   
     
     <entry>
+      <title><![CDATA[一个逗号(,)引起的BUG]]></title>
+      <url>/2017/05/23/%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…</p>
+<h3 id="前情回要："><a href="#前情回要：" class="headerlink" title="前情回要："></a>前情回要：</h3><p>话说有一个类对象内有一方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def call_frequency(self, data):</div><div class="line">    ...</div><div class="line">    return list</div></pre></td></tr></table></figure></p>
+<p>返回的是一个list，内部是一个个dict，结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;xx:xxx,xx:xxx&#125;,&#123;xx:xxx,&#125;,&#123;x:xxx&#125;,...]</div></pre></td></tr></table></figure></p>
+<h3 id="闹剧上演："><a href="#闹剧上演：" class="headerlink" title="闹剧上演："></a>闹剧上演：</h3><p> ok，开始今天任务，开始在另一方法中调用赋值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data_list = self.call_frequency(data)</div></pre></td></tr></table></figure></p>
+<p>结果<code>print data_list</code>，返回值如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">([&#123;xx:xxx,xx:xxx&#125;,&#123;xx:xxx,&#125;,&#123;x:xxx&#125;,...],)</div></pre></td></tr></table></figure></p>
+<p>what a fxxk，瞬间，凌乱了，还以为发现新天地了，啊！原来，list赋值后会变成tuple，加个马甲，以前怎么没发现呢…<br>还自以为是的在调用<code>data_list</code>时，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call_tel_list = [v.get(&quot;call_tel&quot;,&quot;&quot;) for v in data_list[0]]</div></pre></td></tr></table></figure></p>
+<h3 id="惊天逆转"><a href="#惊天逆转" class="headerlink" title="惊天逆转"></a>惊天逆转</h3><p>晚上，回家，比较得意，欸，又学到一招，不错哟，积蓄，努力。</p>
+<p>8小时后，天亮了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data_list = self.call_frequency(data),</div></pre></td></tr></table></figure></p>
+<p>咦，这里怎么有个逗号？</p>
+<p>瞬间，懵逼…</p>
+<p>四下瞅瞅，</p>
+<p>然后，按下←，整个世界清静了，再悄悄把昨天的杰作恢复本来面目，</p>
+<p>嗯，今天，天气真好。</p>
+<p>真的！</p>
+<blockquote class="blockquote-center"><br>完<br></blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> BUG </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> list </tag>
+            
+            <tag> tuple </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Markdown 常用语法]]></title>
       <url>/2017/05/17/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
       <content type="html"><![CDATA[<h2 id="标题-一"><a href="#标题-一" class="headerlink" title="标题(一)"></a>标题(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div><div class="line">#### 四级标题</div><div class="line">##### 五级标题</div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
