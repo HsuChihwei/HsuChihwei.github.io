@@ -3,12 +3,90 @@
 ---
 # 建站日志
 ---
+### **2017-05-24：**
+### 添加评论
+
+---
+这里我用的是`Hypercomments`，国外的一个第三方评论平台，好处之一就是可以支持匿名评论，不用登录就可以进行评论，取代即将入土的多说。
+<!-- more -->
+1.`Next`主题已经集成了`Hypercomments`，只需到[Hypercomments](https://www.hypercomments.com/)注册一个账号，绑定网站入口，拿到`widget_id`即可。具体位置如下：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Hypercomments.png)
+代码中找到`widget_id: xxxxx`：
+```
+_hcwp.push({widget:"Stream", widget_id: xxxxx});
+```
+2.修改`主题配置文件`，找到如下代码：
+```
+# Hypercomments
+#hypercomments_id:
+```
+3.取消注释，将拿到的`widget_id`填入，即可。
+
+预览：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%AF%84%E8%AE%BA%E6%A0%8F.png)
+
+### 使用七牛做图片图床
+
+---
+为了提高页面加载速度，方便图片管理，将博客所有图片均同步到七牛云，制成外链，加到博客中。
+
+步骤很简单，注册一个七牛云账号，新建一个存储空间，将用到的图片传上去，拿到外链，写博客时，如下使用就可以了。
+```
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%AF%84%E8%AE%BA%E6%A0%8F.png)
+```
+
+### **2017-05-21：**
+### Markdown内置标签
+
+---
+#### 文本居中的引用
+```
+<!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
+<!-- 其中 class="blockquote-center" 是必须的 -->
+<blockquote class="blockquote-center">blah blah blah</blockquote>
+
+<!-- 标签 方式，要求版本在0.4.5或以上 -->
+{% centerquote %}blah blah blah{% endcenterquote %}
+
+<!-- 标签别名 -->
+{% cq %} blah blah blah {% endcq %}
+```
+预览：
+{% cq %} 人的一切痛苦，本质上都是对自己的无能的愤怒。 {% endcq %}
+
+#### 突破容器宽度限制的图片
+```
+<!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
+<!-- 其中 class="full-image" 是必须的 -->
+<img src="/image-url" class="full-image" />
+
+<!-- 标签 方式，要求版本在0.4.5或以上 -->
+{% fullimage /image-url, alt, title %}
+
+<!-- 别名 -->
+{% fi /image-url, alt, title %}
+```
+预览：
+{% fi http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg, alt, 时光 %}
+
+#### Bootstrap Callout
+```
+{% note class_name %} Content (md partial supported) {% endnote %}
+```
+\*`class_name`可以为：`default`、`primary`、`success`、`info`、`warning`、`danger`，也可以为空。
+预览：
+{% note %} Content (md partial supported of **none**) {% endnote %}
+{% note default %} Content (md partial supported of **default**) {% endnote %}
+{% note primary %} Content (md partial supported of **primary**) {% endnote %}
+{% note success %} Content (md partial supported of **success**) {% endnote %}
+{% note info %} Content (md partial supported of **info**) {% endnote %}
+{% note warning %} Content (md partial supported of **warning**) {% endnote %}
+{% note danger %} Content (md partial supported of **danger**) {% endnote %}
 
 ### **2017-05-19：**
 ### 添加新 Page
 
 ---
-<!-- more -->
 1.用如下命令添加新page:
 
 ```
@@ -206,13 +284,13 @@ creative_commons: by-nc-sa
 
 2.给blog主页选择一个绶带（ribbon），并复制相应代码；
 
-3.找到正在使用的`theme`下的`layou`t文件，将代码插入即可；
+3.找到正在使用的`theme`下的`layout`文件，将代码插入即可；
 
 4.比如我选择了`红色`的ribbon，使用的`themes`为next，那么只要打开 `blog\themes\next\layout\_layout.swig`文件，复制下面这段代码，放在最后，标签</body>之前即可。（注意将`https://github.com/you`改为你自己的github链接）
 ```
 <a href="https://github.com/you">
-    <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67"
-    alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+    alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
 </a>
 ```
 
