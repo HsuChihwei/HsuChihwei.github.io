@@ -60,6 +60,19 @@ undefined
 预览：
 <div class="note "><p>Content (md partial supported of <strong>none</strong>) </p>
 </div>
+<div class="note default"><p>Content (md partial supported of <strong>default</strong>) </p>
+</div>
+<div class="note primary"><p>Content (md partial supported of <strong>primary</strong>) </p>
+</div>
+<div class="note success"><p>Content (md partial supported of <strong>success</strong>) </p>
+</div>
+<div class="note info"><p>Content (md partial supported of <strong>info</strong>) </p>
+</div>
+<div class="note warning"><p>Content (md partial supported of <strong>warning</strong>) </p>
+</div>
+<div class="note danger"><p>Content (md partial supported of <strong>danger</strong>) </p>
+</div>
+<blockquote class="blockquote-center">完</blockquote>
 ]]></content>
       
         <categories>
