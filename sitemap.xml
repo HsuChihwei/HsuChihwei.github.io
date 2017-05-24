@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chihweihsu.com/About/index.html</loc>
+    
+    <lastmod>2017-05-24T13:05:14.777Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
     
-    <lastmod>2017-05-24T13:01:51.470Z</lastmod>
+    <lastmod>2017-05-24T13:04:45.841Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://chihweihsu.com/2017/05/23/%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
     
     <lastmod>2017-05-23T15:32:43.112Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chihweihsu.com/About/index.html</loc>
-    
-    <lastmod>2017-05-22T15:03:55.901Z</lastmod>
     
   </url>
   
