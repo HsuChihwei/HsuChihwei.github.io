@@ -28,31 +28,6 @@ undefined
 预览：
 ![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%AF%84%E8%AE%BA%E6%A0%8F.png)
 
-### 使用七牛做图片图床
-
----
-为了提高页面加载速度，方便图片管理，将博客所有图片均同步到七牛云，制成外链，加到博客中。
-
-步骤很简单，注册一个七牛云账号，新建一个存储空间，将用到的图片传上去，拿到外链，写博客时，如下使用就可以了。
-undefined
-
-### **2017-05-21：**
-### Markdown内置标签
-
----
-#### 文本居中的引用
-undefined
-
-预览：
-<blockquote class="blockquote-center"><p>人的一切痛苦，本质上都是对自己的无能的愤怒。 </p>
-</blockquote>
-
-#### 突破容器宽度限制的图片
-undefined
-
-预览：
-<span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" class="full-image" alt="alt" title="时光"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-
 #### Bootstrap Callout
 undefined
 
