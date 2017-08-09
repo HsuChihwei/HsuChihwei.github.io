@@ -419,7 +419,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
                 2017-08-10
               </time>
             
@@ -537,7 +537,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-8-profile-cProfile-效率分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
@@ -559,8 +559,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/08/10/2017-8-6-python-string/" itemprop="url">
-                  2017-8-6 python string
+                <a class="post-title-link" href="/2017/08/10/2017-8-8-profile-cProfile-效率分析/" itemprop="url">
+                  2017-8-8 profile cProfile 效率分析
                 </a>
               
             
@@ -576,7 +576,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
                 2017-08-10
               </time>
             
@@ -596,8 +596,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/10/2017-8-6-python-string/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-6-python-string/" itemprop="commentsCount"></span>
+                <a href="/2017/08/10/2017-8-8-profile-cProfile-效率分析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-8-profile-cProfile-效率分析/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -606,7 +606,7 @@
 
           
           
-             <span id="/2017/08/10/2017-8-6-python-string/" class="leancloud_visitors" data-flag-title="2017-8-6 python string">
+             <span id="/2017/08/10/2017-8-8-profile-cProfile-效率分析/" class="leancloud_visitors" data-flag-title="2017-8-8 profile cProfile 效率分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -637,13 +637,11 @@
       
         
           
-            <h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
-<p><code>rjust/zfill</code> 区别:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zfill:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-00000-txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'+00000+txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div><div class="line">rjust:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000--txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000++txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div></pre></td></tr></table></figure></p>
-<h3 id="numbers"><a href="#numbers" class="headerlink" title="numbers:"></a>numbers:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'%03d'</span> % n</div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> format(n, <span class="string">'03'</span>) <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;0:03d&#125;'</span>.format(n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;foo:03d&#125;'</span>.format(foo=n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;:03d&#125;'</span>.format(n))  <span class="comment"># python &gt;= 2.7 + python3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;0:03d&#125;'</span>.format(n))  <span class="comment"># python 3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">f'<span class="subst">&#123;n:<span class="number">03</span>&#125;</span>'</span>) <span class="comment"># python &gt;= 3.6</span></div><div class="line"><span class="number">004</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p> % formatting 已被 string.format 替代</p>
-</blockquote>
-<h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>
+            <h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
+<h3 id="cProfile用法："><a href="#cProfile用法：" class="headerlink" title="cProfile用法："></a>cProfile用法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成.pstats分析文档</span></div><div class="line">python -m cProfile -o profile.pstats test.py /usr</div><div class="line"><span class="comment"># 查看pstats文档</span></div><div class="line">python -m pstats profile.pstats</div><div class="line"><span class="comment"># ?: 查看可用指令；sort cumtime:排序；stats:查看pstats文档</span></div></pre></td></tr></table></figure>
+<p><img src="./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png" alt="enter description here" title="sort keys"></p>
+<h3 id="gprof2dot用法"><a href="#gprof2dot用法" class="headerlink" title="gprof2dot用法:"></a><a href="https://github.com/jrfonseca/gprof2dot" target="_blank" rel="external">gprof2dot</a>用法:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 gprof2dot</span></div><div class="line">pip install gprof2dot</div><div class="line"><span class="comment"># 通过.pstats文档生成相应的dot文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats</div><div class="line"><span class="comment"># 安装graphviz（centOS系统）</span></div><div class="line">sudo yum install graphviz</div><div class="line"><span class="comment"># 输出png文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats | dot -T png -o profile.png</div></pre></td></tr></table></figure>
+
           
         
       
@@ -686,7 +684,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-1-python-rrule-bug/">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-7-python-args-and-kwargs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
@@ -708,8 +706,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/08/10/2017-8-1-python-rrule-bug/" itemprop="url">
-                  2017-8-1 python rrule bug
+                <a class="post-title-link" href="/2017/08/10/2017-8-7-python-args-and-kwargs/" itemprop="url">
+                  2017-8-7 python args and kwargs
                 </a>
               
             
@@ -725,7 +723,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
                 2017-08-10
               </time>
             
@@ -745,8 +743,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/10/2017-8-1-python-rrule-bug/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-1-python-rrule-bug/" itemprop="commentsCount"></span>
+                <a href="/2017/08/10/2017-8-7-python-args-and-kwargs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-7-python-args-and-kwargs/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -755,7 +753,7 @@
 
           
           
-             <span id="/2017/08/10/2017-8-1-python-rrule-bug/" class="leancloud_visitors" data-flag-title="2017-8-1 python rrule bug">
+             <span id="/2017/08/10/2017-8-7-python-args-and-kwargs/" class="leancloud_visitors" data-flag-title="2017-8-7 python args and kwargs">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -786,11 +784,171 @@
       
         
           
-            <p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
-<h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
-<p>Per RFC section 3.3.10, recurrence instances falling on invalid dates and times are ignored rather than coerced:<br>Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM  on a day where the local time is moved forward by an hour at 1:00 AM).<br>Such recurrence instances MUST be ignored and MUST NOT be  counted as part of the recurrence set.</p>
+            <h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
+<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>This can lead to possibly surprising behavior when, for example, the start date occurs at the end of the month:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> dateutil.rrule <span class="keyword">import</span> rrule, MONTHLY</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>start_date = datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(rrule(freq=MONTHLY, count=<span class="number">4</span>, dtstart=start_date))</div><div class="line">[datetime.datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">3</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure></p>
+<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
+<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chihwei·Hsu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟の迹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="url">
+                  2017-8-7 pandas 获取不符合条件的dataframe
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+             <span id="/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/" class="leancloud_visitors" data-flag-title="2017-8-7 pandas 获取不符合条件的dataframe">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
+<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
+</blockquote>
+<h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>     <span class="keyword">True</span></div><div class="line"><span class="number">1</span>    <span class="keyword">False</span></div><div class="line"><span class="number">2</span>     <span class="keyword">True</span></div><div class="line"><span class="number">3</span>    <span class="keyword">False</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li>
+<li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li>
+</ul>
+</blockquote>
+<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line"><span class="comment"># 多个条件情况下：</span></div><div class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></div></pre></td></tr></table></figure>
+<h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div></pre></td></tr></table></figure>
 
           
         
@@ -873,7 +1031,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
                 2017-08-10
               </time>
             
@@ -1051,7 +1209,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
                 2017-08-10
               </time>
             
@@ -1187,7 +1345,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-1-python-rrule-bug/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
@@ -1209,8 +1367,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="url">
-                  2017-8-7 pandas 获取不符合条件的dataframe
+                <a class="post-title-link" href="/2017/08/10/2017-8-1-python-rrule-bug/" itemprop="url">
+                  2017-8-1 python rrule bug
                 </a>
               
             
@@ -1226,7 +1384,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
                 2017-08-10
               </time>
             
@@ -1246,8 +1404,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="commentsCount"></span>
+                <a href="/2017/08/10/2017-8-1-python-rrule-bug/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-1-python-rrule-bug/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -1256,7 +1414,7 @@
 
           
           
-             <span id="/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/" class="leancloud_visitors" data-flag-title="2017-8-7 pandas 获取不符合条件的dataframe">
+             <span id="/2017/08/10/2017-8-1-python-rrule-bug/" class="leancloud_visitors" data-flag-title="2017-8-1 python rrule bug">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1287,518 +1445,162 @@
       
         
           
-            <h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
-<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
+            <p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
+<h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
+<p>Per RFC section 3.3.10, recurrence instances falling on invalid dates and times are ignored rather than coerced:<br>Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM  on a day where the local time is moved forward by an hour at 1:00 AM).<br>Such recurrence instances MUST be ignored and MUST NOT be  counted as part of the recurrence set.</p>
 </blockquote>
-<h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>     <span class="keyword">True</span></div><div class="line"><span class="number">1</span>    <span class="keyword">False</span></div><div class="line"><span class="number">2</span>     <span class="keyword">True</span></div><div class="line"><span class="number">3</span>    <span class="keyword">False</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</div></pre></td></tr></table></figure>
+<p>This can lead to possibly surprising behavior when, for example, the start date occurs at the end of the month:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> dateutil.rrule <span class="keyword">import</span> rrule, MONTHLY</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>start_date = datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(rrule(freq=MONTHLY, count=<span class="number">4</span>, dtstart=start_date))</div><div class="line">[datetime.datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">3</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chihwei·Hsu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟の迹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/08/10/2017-8-6-python-string/" itemprop="url">
+                  2017-8-6 python string
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/10/2017-8-6-python-string/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-6-python-string/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+             <span id="/2017/08/10/2017-8-6-python-string/" class="leancloud_visitors" data-flag-title="2017-8-6 python string">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
+<p><code>rjust/zfill</code> 区别:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zfill:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-00000-txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'+00000+txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div><div class="line">rjust:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000--txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000++txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div></pre></td></tr></table></figure></p>
+<h3 id="numbers"><a href="#numbers" class="headerlink" title="numbers:"></a>numbers:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'%03d'</span> % n</div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> format(n, <span class="string">'03'</span>) <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;0:03d&#125;'</span>.format(n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;foo:03d&#125;'</span>.format(foo=n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;:03d&#125;'</span>.format(n))  <span class="comment"># python &gt;= 2.7 + python3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;0:03d&#125;'</span>.format(n))  <span class="comment"># python 3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">f'<span class="subst">&#123;n:<span class="number">03</span>&#125;</span>'</span>) <span class="comment"># python &gt;= 3.6</span></div><div class="line"><span class="number">004</span></div></pre></td></tr></table></figure>
 <blockquote>
-<p>注意：</p>
-<ul>
-<li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li>
-<li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li>
-</ul>
+<p> % formatting 已被 string.format 替代</p>
 </blockquote>
-<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line"><span class="comment"># 多个条件情况下：</span></div><div class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></div></pre></td></tr></table></figure>
-<h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div></pre></td></tr></table></figure>
-
+<h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-7-python-args-and-kwargs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chihwei·Hsu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟の迹">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/08/10/2017-8-7-python-args-and-kwargs/" itemprop="url">
-                  2017-8-7 python args and kwargs
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
-                2017-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/10/2017-8-7-python-args-and-kwargs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-7-python-args-and-kwargs/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-             <span id="/2017/08/10/2017-8-7-python-args-and-kwargs/" class="leancloud_visitors" data-flag-title="2017-8-7 python args and kwargs">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
-<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
-<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-8-profile-cProfile-效率分析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chihwei·Hsu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟の迹">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/08/10/2017-8-8-profile-cProfile-效率分析/" itemprop="url">
-                  2017-8-8 profile cProfile 效率分析
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:09:18+08:00">
-                2017-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/10/2017-8-8-profile-cProfile-效率分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-8-profile-cProfile-效率分析/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-             <span id="/2017/08/10/2017-8-8-profile-cProfile-效率分析/" class="leancloud_visitors" data-flag-title="2017-8-8 profile cProfile 效率分析">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
-<h3 id="cProfile用法："><a href="#cProfile用法：" class="headerlink" title="cProfile用法："></a>cProfile用法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成.pstats分析文档</span></div><div class="line">python -m cProfile -o profile.pstats test.py /usr</div><div class="line"><span class="comment"># 查看pstats文档</span></div><div class="line">python -m pstats profile.pstats</div><div class="line"><span class="comment"># ?: 查看可用指令；sort cumtime:排序；stats:查看pstats文档</span></div></pre></td></tr></table></figure>
-<p><img src="./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png" alt="enter description here" title="sort keys"></p>
-<h3 id="gprof2dot用法"><a href="#gprof2dot用法" class="headerlink" title="gprof2dot用法:"></a><a href="https://github.com/jrfonseca/gprof2dot" target="_blank" rel="external">gprof2dot</a>用法:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 gprof2dot</span></div><div class="line">pip install gprof2dot</div><div class="line"><span class="comment"># 通过.pstats文档生成相应的dot文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats</div><div class="line"><span class="comment"># 安装graphviz（centOS系统）</span></div><div class="line">sudo yum install graphviz</div><div class="line"><span class="comment"># 输出png文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats | dot -T png -o profile.png</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/05/24/建站日志（二）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chihwei·Hsu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟の迹">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/24/建站日志（二）/" itemprop="url">
-                  建站日志（二）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T21:09:54+08:00">
-                2017-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Notes</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notes/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/24/建站日志（二）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/05/24/建站日志（二）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-             <span id="/2017/05/24/建站日志（二）/" class="leancloud_visitors" data-flag-title="建站日志（二）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj657jyv9000olmpvixjvuxdr"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <div class="note info"><p>到此，建站告一段落，功能差不多完善了 </p>
-</div>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/24/建站日志（二）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1974,7 +1776,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj657onn6000lmlpv1kjimwrz"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj6581uuq000joipvwagj81r9"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
               </a>
@@ -2029,11 +1831,181 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/05/23/2017-05-23-一个逗号-引起的BUG/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chihwei·Hsu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟の迹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/23/2017-05-23-一个逗号-引起的BUG/" itemprop="url">
+                  2017-05-23 一个逗号(,)引起的BUG
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-23T22:45:11+08:00">
+                2017-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BUG/" itemprop="url" rel="index">
+                    <span itemprop="name">BUG</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/23/2017-05-23-一个逗号-引起的BUG/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/05/23/2017-05-23-一个逗号-引起的BUG/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+             <span id="/2017/05/23/2017-05-23-一个逗号-引起的BUG/" class="leancloud_visitors" data-flag-title="2017-05-23 一个逗号(,)引起的BUG">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/23/2017-05-23-一个逗号-引起的BUG/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2078,7 +2050,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2089,7 +2061,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2100,7 +2072,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

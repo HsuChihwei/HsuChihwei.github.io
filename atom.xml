@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-08-09T16:08:05.618Z</updated>
+  <updated>2017-08-09T16:20:27.501Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>2017-8-9 Map、Filter、Reduce</title>
     <link href="http://chihweihsu.com/2017/08/10/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-9-Map、Filter、Reduce/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <published>2017-08-09T16:20:27.501Z</published>
+    <updated>2017-08-09T16:20:27.501Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><blockquote>
 <p>将一个函数映射到一个输入列表的所有元素上。</p>
@@ -59,23 +59,21 @@
   </entry>
   
   <entry>
-    <title>2017-8-6 python string</title>
-    <link href="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/"/>
-    <id>http://chihweihsu.com/2017/08/10/2017-8-6-python-string/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <title>2017-8-8 profile cProfile 效率分析</title>
+    <link href="http://chihweihsu.com/2017/08/10/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/"/>
+    <id>http://chihweihsu.com/2017/08/10/2017-8-8-profile-cProfile-效率分析/</id>
+    <published>2017-08-09T16:20:27.501Z</published>
+    <updated>2017-08-09T16:20:27.501Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
-<p><code>rjust/zfill</code> 区别:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zfill:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-00000-txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'+00000+txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div><div class="line">rjust:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000--txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000++txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div></pre></td></tr></table></figure></p>
-<h3 id="numbers"><a href="#numbers" class="headerlink" title="numbers:"></a>numbers:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'%03d'</span> % n</div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> format(n, <span class="string">'03'</span>) <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;0:03d&#125;'</span>.format(n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;foo:03d&#125;'</span>.format(foo=n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;:03d&#125;'</span>.format(n))  <span class="comment"># python &gt;= 2.7 + python3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;0:03d&#125;'</span>.format(n))  <span class="comment"># python 3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">f'<span class="subst">&#123;n:<span class="number">03</span>&#125;</span>'</span>) <span class="comment"># python &gt;= 3.6</span></div><div class="line"><span class="number">004</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p> % formatting 已被 string.format 替代</p>
-</blockquote>
-<h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
+<h3 id="cProfile用法："><a href="#cProfile用法：" class="headerlink" title="cProfile用法："></a>cProfile用法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成.pstats分析文档</span></div><div class="line">python -m cProfile -o profile.pstats test.py /usr</div><div class="line"><span class="comment"># 查看pstats文档</span></div><div class="line">python -m pstats profile.pstats</div><div class="line"><span class="comment"># ?: 查看可用指令；sort cumtime:排序；stats:查看pstats文档</span></div></pre></td></tr></table></figure>
+<p><img src="./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png" alt="enter description here" title="sort keys"></p>
+<h3 id="gprof2dot用法"><a href="#gprof2dot用法" class="headerlink" title="gprof2dot用法:"></a><a href="https://github.com/jrfonseca/gprof2dot" target="_blank" rel="external">gprof2dot</a>用法:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 gprof2dot</span></div><div class="line">pip install gprof2dot</div><div class="line"><span class="comment"># 通过.pstats文档生成相应的dot文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats</div><div class="line"><span class="comment"># 安装graphviz（centOS系统）</span></div><div class="line">sudo yum install graphviz</div><div class="line"><span class="comment"># 输出png文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats | dot -T png -o profile.png</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;The-most-pythonic-way-to-pad-zeroes-to-string&quot;&gt;&lt;a href=&quot;#The-most-pythonic-way-to-pad-zeroes-to-string&quot; class=&quot;headerlink&quot; title=&quot;Th
+      &lt;h3 id=&quot;test-py：&quot;&gt;&lt;a href=&quot;#test-py：&quot; class=&quot;headerlink&quot; title=&quot;test.py：&quot;&gt;&lt;/a&gt;test.py：&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
     
     </summary>
     
@@ -85,30 +83,71 @@
   </entry>
   
   <entry>
-    <title>2017-8-1 python rrule bug</title>
-    <link href="http://chihweihsu.com/2017/08/10/2017-8-1-python-rrule-bug/"/>
-    <id>http://chihweihsu.com/2017/08/10/2017-8-1-python-rrule-bug/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <title>2017-8-7 python args and kwargs</title>
+    <link href="http://chihweihsu.com/2017/08/10/2017-8-7-python-args-and-kwargs/"/>
+    <id>http://chihweihsu.com/2017/08/10/2017-8-7-python-args-and-kwargs/</id>
+    <published>2017-08-09T16:20:27.501Z</published>
+    <updated>2017-08-09T16:20:27.501Z</updated>
     
-    <content type="html"><![CDATA[<p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
-<h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
-<p>Per RFC section 3.3.10, recurrence instances falling on invalid dates and times are ignored rather than coerced:<br>Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM  on a day where the local time is moved forward by an hour at 1:00 AM).<br>Such recurrence instances MUST be ignored and MUST NOT be  counted as part of the recurrence set.</p>
+    <content type="html"><![CDATA[<h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
+<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>This can lead to possibly surprising behavior when, for example, the start date occurs at the end of the month:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> dateutil.rrule <span class="keyword">import</span> rrule, MONTHLY</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>start_date = datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(rrule(freq=MONTHLY, count=<span class="number">4</span>, dtstart=start_date))</div><div class="line">[datetime.datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">3</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure></p>
+<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
+<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;code&gt;http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&quot;月份日期超限-BUG&quot;&gt;&lt;a href=&quot;#月份日期超限-BUG&quot; class=&quot;h
+      &lt;h3 id=&quot;args：&quot;&gt;&lt;a href=&quot;#args：&quot; class=&quot;headerlink&quot; title=&quot;*args：&quot;&gt;&lt;/a&gt;&lt;code&gt;*args&lt;/code&gt;：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;传递一个非键值对的可变数量的参数列表给一个函数。&lt;br&gt;&lt;f
     
     </summary>
     
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
     
-      <category term="Bug" scheme="http://chihweihsu.com/tags/Bug/"/>
+      <category term="args" scheme="http://chihweihsu.com/tags/args/"/>
+    
+      <category term="kwargs" scheme="http://chihweihsu.com/tags/kwargs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
+    <link href="http://chihweihsu.com/2017/08/10/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
+    <id>http://chihweihsu.com/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/</id>
+    <published>2017-08-09T16:20:27.501Z</published>
+    <updated>2017-08-09T16:20:27.501Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
+<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
+</blockquote>
+<h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>     <span class="keyword">True</span></div><div class="line"><span class="number">1</span>    <span class="keyword">False</span></div><div class="line"><span class="number">2</span>     <span class="keyword">True</span></div><div class="line"><span class="number">3</span>    <span class="keyword">False</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li>
+<li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li>
+</ul>
+</blockquote>
+<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line"><span class="comment"># 多个条件情况下：</span></div><div class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></div></pre></td></tr></table></figure>
+<h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;search-for-“does-not-contain”-on-a-dataframe-in-pandas&quot;&gt;&lt;a href=&quot;#search-for-“does-not-contain”-on-a-dataframe-in-pandas&quot; class=&quot;hea
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="pandas" scheme="http://chihweihsu.com/tags/pandas/"/>
     
   </entry>
   
@@ -116,8 +155,8 @@
     <title>2017-7-31 python 生成器（Generators）</title>
     <link href="http://chihweihsu.com/2017/08/10/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-7-31-python-生成器（Generators）/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <published>2017-08-09T16:20:27.500Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<h3 id="可迭代对象（iterable）："><a href="#可迭代对象（iterable）：" class="headerlink" title="可迭代对象（iterable）："></a>可迭代对象（iterable）：</h3><blockquote>
 <p>能提供迭代器的任意对象；只要定义了一个迭代器的<strong>iter</strong>方法或定义了支持下标索引的<strong>getitem</strong>方法，那就是一个可迭代对象。</p>
@@ -172,8 +211,8 @@
     <title>2017-7-31 python 交集、并集、差集</title>
     <link href="http://chihweihsu.com/2017/08/10/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-7-31-python-交集、并集、差集/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <published>2017-08-09T16:20:27.500Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<h3 id="交集-intersection"><a href="#交集-intersection" class="headerlink" title="交集(intersection)"></a>交集(intersection)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 方法一:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b=[<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp = [val <span class="keyword">for</span> val <span class="keyword">in</span> a <span class="keyword">if</span> val <span class="keyword">in</span> b]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法二</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).intersection(set(b)))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法三：</span></div><div class="line">&gt;&gt;&gt;list(set(a) &amp; set(b))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div></pre></td></tr></table></figure>
 <h4 id="字符串交集"><a href="#字符串交集" class="headerlink" title="字符串交集"></a>字符串交集</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 方法一：</span></div><div class="line"><span class="string">''</span>.join(sorted(set(str1) &amp; set(str2), key = str1.index))</div><div class="line"></div><div class="line"><span class="comment"># 方法二：</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">strIntersection</span><span class="params">(s1, s2)</span>:</span></div><div class="line">  out = <span class="string">""</span></div><div class="line">  <span class="keyword">for</span> c <span class="keyword">in</span> s1:</div><div class="line">    <span class="keyword">if</span> c <span class="keyword">in</span> s2 <span class="keyword">and</span> <span class="keyword">not</span> c <span class="keyword">in</span> out:</div><div class="line">      out += c</div><div class="line">  <span class="keyword">return</span> out</div><div class="line"></div><div class="line"><span class="comment"># 方法三：</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=<span class="string">'asdfasdfasfd'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b=<span class="string">'qazwsxedc'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>set(a).intersection(b)</div><div class="line">set([<span class="string">'a'</span>, <span class="string">'s'</span>, <span class="string">'d'</span>])</div><div class="line"></div><div class="line"><span class="comment"># 方法四：</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hasIntersection</span><span class="params">(a, b)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">not</span> set(a).isdisjoint(b)</div></pre></td></tr></table></figure>
@@ -221,147 +260,56 @@
   </entry>
   
   <entry>
-    <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
-    <link href="http://chihweihsu.com/2017/08/10/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
-    <id>http://chihweihsu.com/2017/08/10/2017-8-7-pandas-获取不符合条件的dataframe/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <title>2017-8-1 python rrule bug</title>
+    <link href="http://chihweihsu.com/2017/08/10/2017-8-1-python-rrule-bug/"/>
+    <id>http://chihweihsu.com/2017/08/10/2017-8-1-python-rrule-bug/</id>
+    <published>2017-08-09T16:20:27.500Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
-<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
+    <content type="html"><![CDATA[<p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
+<h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
+<p>Per RFC section 3.3.10, recurrence instances falling on invalid dates and times are ignored rather than coerced:<br>Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM  on a day where the local time is moved forward by an hour at 1:00 AM).<br>Such recurrence instances MUST be ignored and MUST NOT be  counted as part of the recurrence set.</p>
 </blockquote>
-<h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>     <span class="keyword">True</span></div><div class="line"><span class="number">1</span>    <span class="keyword">False</span></div><div class="line"><span class="number">2</span>     <span class="keyword">True</span></div><div class="line"><span class="number">3</span>    <span class="keyword">False</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</div></pre></td></tr></table></figure>
+<p>This can lead to possibly surprising behavior when, for example, the start date occurs at the end of the month:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> dateutil.rrule <span class="keyword">import</span> rrule, MONTHLY</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>start_date = datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(rrule(freq=MONTHLY, count=<span class="number">4</span>, dtstart=start_date))</div><div class="line">[datetime.datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">3</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;月份日期超限-BUG&quot;&gt;&lt;a href=&quot;#月份日期超限-BUG&quot; class=&quot;h
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="Bug" scheme="http://chihweihsu.com/tags/Bug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-8-6 python string</title>
+    <link href="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/"/>
+    <id>http://chihweihsu.com/2017/08/10/2017-8-6-python-string/</id>
+    <published>2017-08-09T16:20:27.500Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
+<p><code>rjust/zfill</code> 区别:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zfill:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-00000-txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'+00000+txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div><div class="line">rjust:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000--txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000++txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div></pre></td></tr></table></figure></p>
+<h3 id="numbers"><a href="#numbers" class="headerlink" title="numbers:"></a>numbers:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'%03d'</span> % n</div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> format(n, <span class="string">'03'</span>) <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;0:03d&#125;'</span>.format(n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;foo:03d&#125;'</span>.format(foo=n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;:03d&#125;'</span>.format(n))  <span class="comment"># python &gt;= 2.7 + python3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;0:03d&#125;'</span>.format(n))  <span class="comment"># python 3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">f'<span class="subst">&#123;n:<span class="number">03</span>&#125;</span>'</span>) <span class="comment"># python &gt;= 3.6</span></div><div class="line"><span class="number">004</span></div></pre></td></tr></table></figure>
 <blockquote>
-<p>注意：</p>
-<ul>
-<li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li>
-<li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li>
-</ul>
+<p> % formatting 已被 string.format 替代</p>
 </blockquote>
-<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line"><span class="comment"># 多个条件情况下：</span></div><div class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></div></pre></td></tr></table></figure>
-<h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div></pre></td></tr></table></figure>
-]]></content>
+<h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;search-for-“does-not-contain”-on-a-dataframe-in-pandas&quot;&gt;&lt;a href=&quot;#search-for-“does-not-contain”-on-a-dataframe-in-pandas&quot; class=&quot;hea
+      &lt;h2 id=&quot;The-most-pythonic-way-to-pad-zeroes-to-string&quot;&gt;&lt;a href=&quot;#The-most-pythonic-way-to-pad-zeroes-to-string&quot; class=&quot;headerlink&quot; title=&quot;Th
     
     </summary>
     
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="pandas" scheme="http://chihweihsu.com/tags/pandas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-8-7 python args and kwargs</title>
-    <link href="http://chihweihsu.com/2017/08/10/2017-8-7-python-args-and-kwargs/"/>
-    <id>http://chihweihsu.com/2017/08/10/2017-8-7-python-args-and-kwargs/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
-<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
-<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;args：&quot;&gt;&lt;a href=&quot;#args：&quot; class=&quot;headerlink&quot; title=&quot;*args：&quot;&gt;&lt;/a&gt;&lt;code&gt;*args&lt;/code&gt;：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;传递一个非键值对的可变数量的参数列表给一个函数。&lt;br&gt;&lt;f
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="args" scheme="http://chihweihsu.com/tags/args/"/>
-    
-      <category term="kwargs" scheme="http://chihweihsu.com/tags/kwargs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-8-8 profile cProfile 效率分析</title>
-    <link href="http://chihweihsu.com/2017/08/10/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/"/>
-    <id>http://chihweihsu.com/2017/08/10/2017-8-8-profile-cProfile-效率分析/</id>
-    <published>2017-08-09T16:09:18.549Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
-<h3 id="cProfile用法："><a href="#cProfile用法：" class="headerlink" title="cProfile用法："></a>cProfile用法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成.pstats分析文档</span></div><div class="line">python -m cProfile -o profile.pstats test.py /usr</div><div class="line"><span class="comment"># 查看pstats文档</span></div><div class="line">python -m pstats profile.pstats</div><div class="line"><span class="comment"># ?: 查看可用指令；sort cumtime:排序；stats:查看pstats文档</span></div></pre></td></tr></table></figure>
-<p><img src="./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png" alt="enter description here" title="sort keys"></p>
-<h3 id="gprof2dot用法"><a href="#gprof2dot用法" class="headerlink" title="gprof2dot用法:"></a><a href="https://github.com/jrfonseca/gprof2dot" target="_blank" rel="external">gprof2dot</a>用法:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 gprof2dot</span></div><div class="line">pip install gprof2dot</div><div class="line"><span class="comment"># 通过.pstats文档生成相应的dot文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats</div><div class="line"><span class="comment"># 安装graphviz（centOS系统）</span></div><div class="line">sudo yum install graphviz</div><div class="line"><span class="comment"># 输出png文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats | dot -T png -o profile.png</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;test-py：&quot;&gt;&lt;a href=&quot;#test-py：&quot; class=&quot;headerlink&quot; title=&quot;test.py：&quot;&gt;&lt;/a&gt;test.py：&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建站日志（二）</title>
-    <link href="http://chihweihsu.com/2017/05/24/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://chihweihsu.com/2017/05/24/建站日志（二）/</id>
-    <published>2017-05-24T13:09:54.000Z</published>
-    <updated>2017-08-09T15:49:05.622Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note info"><p>到此，建站告一段落，功能差不多完善了 </p>
-</div>
-<a id="more"></a>
-<h3 id="2017-05-24："><a href="#2017-05-24：" class="headerlink" title="2017-05-24："></a><strong>2017-05-24：</strong></h3><h3 id="Bootstrap-Callout的巨坑BUG"><a href="#Bootstrap-Callout的巨坑BUG" class="headerlink" title="Bootstrap Callout的巨坑BUG"></a>Bootstrap Callout的巨坑BUG</h3><hr>
-<p>在今天新增添加评论后，部署完成后发现，界面变成如下：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81.png" alt=""><br>完全乱码了，真是…<br>经过一晚上排查，发现原因出在：Markdown开头我使用了<code>Bootstrap Callout</code>语句，中间写了其他代码，结尾又再次使用了<code>Bootstrap Callout</code>语句，如下图：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG.png" alt=""><br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG2.png" alt=""><br>把结尾的<code>Bootstrap Callout</code>语句去掉之后，一切又恢复了正常。<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81%E6%AD%A3%E5%B8%B8.png" alt=""></p>
-<p>难道<code>Bootstrap Callout</code>语句一篇文章只能使用一次？？？</p>
-<p>为了验证，做了如下测试：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG4.png" alt=""><br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG3.png" alt=""><br>果然如此，真是绝了…<br>对了，连下面这种情况（<code>Bootstrap Callout</code>）也不能出现，出现了也算一次：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`&#123;% note info %&#125; ... &#123;% endnote %&#125;` #单引号小代码块</div></pre></td></tr></table></figure></p>
-<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><hr>
-<p>这里我用的是<code>Hypercomments</code>，国外的一个第三方评论平台，好处之一就是可以支持匿名评论，不用登录就可以进行评论，取代即将入土的多说。</p>
-<p>1.<code>Next</code>主题已经集成了<code>Hypercomments</code>，只需到<a href="https://www.hypercomments.com/" target="_blank" rel="external">Hypercomments</a>注册一个账号，绑定网站入口，拿到<code>widget_id</code>即可。<br>具体位置如下：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Hypercomments.png" alt=""></p>
-<p>代码中找到<code>widget_id:xxxxx</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">widget:&quot;Stream&quot;, widget_id: xxxxx</div></pre></td></tr></table></figure></p>
-<p>2.修改<code>主题配置文件</code>，找到如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Hypercomments</div><div class="line">#hypercomments_id:</div></pre></td></tr></table></figure></p>
-<p>3.取消注释，将拿到的<code>widget_id</code>填入，即可。<br>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%AF%84%E8%AE%BA%E6%A0%8F.png" alt=""></p>
-<h3 id="使用七牛做图片图床"><a href="#使用七牛做图片图床" class="headerlink" title="使用七牛做图片图床"></a>使用七牛做图片图床</h3><hr>
-<p>为了提高页面加载速度，方便图片管理，将博客所有图片均同步到七牛云，制成外链，加到博客中。</p>
-<p>步骤很简单，注册一个七牛云账号，新建一个存储空间，将用到的图片传上去，拿到外链，写博客时，如下使用就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB.png)</div></pre></td></tr></table></figure></p>
-<h3 id="2017-05-21："><a href="#2017-05-21：" class="headerlink" title="2017-05-21："></a><strong>2017-05-21：</strong></h3><h3 id="Markdown内置标签"><a href="#Markdown内置标签" class="headerlink" title="Markdown内置标签"></a>Markdown内置标签</h3><hr>
-<h4 id="文本居中的引用"><a href="#文本居中的引用" class="headerlink" title="文本居中的引用"></a>文本居中的引用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</div><div class="line">&lt;!-- 其中 class=&quot;blockquote-center&quot; 是必须的 --&gt;</div><div class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;blah blah blah&lt;/blockquote&gt;</div><div class="line"></div><div class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</div><div class="line">&#123;% centerquote %&#125;blah blah blah&#123;% endcenterquote %&#125;</div><div class="line"></div><div class="line">&lt;!-- 标签别名 --&gt;</div><div class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</div></pre></td></tr></table></figure>
-<p>预览：<br><blockquote class="blockquote-center"><p>人的一切痛苦，本质上都是对自己的无能的愤怒。 </p>
-</blockquote></p>
-<h4 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</div><div class="line">&lt;!-- 其中 class=&quot;full-image&quot; 是必须的 --&gt;</div><div class="line">&lt;img src=&quot;/image-url&quot; class=&quot;full-image&quot; /&gt;</div><div class="line"></div><div class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</div><div class="line">&#123;% fullimage /image-url, alt, title %&#125;</div><div class="line"></div><div class="line">&lt;!-- 别名 --&gt;</div><div class="line">&#123;% fi /image-url, alt, title %&#125;</div></pre></td></tr></table></figure>
-<p>预览：<br><span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg" class="full-image" alt="alt" title="时光"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></p>
-<h4 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</div><div class="line">&#123;% note %&#125; Content (md partial supported of **none**) &#123;% endnote %&#125;</div><div class="line">&#123;% note default %&#125; Content (md partial supported of **default**) &#123;% endnote %&#125;</div><div class="line">&#123;% note primary %&#125; Content (md partial supported of **primary**) &#123;% endnote %&#125;</div><div class="line">&#123;% note success %&#125; Content (md partial supported of **success**) &#123;% endnote %&#125;</div><div class="line">&#123;% note info %&#125; Content (md partial supported of **info**) &#123;% endnote %&#125;</div><div class="line">&#123;% note warning %&#125; Content (md partial supported of **warning**) &#123;% endnote %&#125;</div><div class="line">&#123;% note danger %&#125; Content (md partial supported of **danger**) &#123;% endnote %&#125;</div></pre></td></tr></table></figure>
-<p>* <code>class_name</code>可以为：<code>default</code>、<code>primary</code>、<code>success</code>、<code>info</code>、<code>warning</code>、<code>danger</code>，也可以为空。<br>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Bootstrap%20Callout.png" alt=""></p>
-<blockquote class="blockquote-center">完</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note info&quot;&gt;&lt;p&gt;到此，建站告一段落，功能差不多完善了 &lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
-    
-      <category term="Blog" scheme="http://chihweihsu.com/tags/Blog/"/>
     
   </entry>
   
@@ -370,7 +318,7 @@
     <link href="http://chihweihsu.com/2017/05/24/2017-05-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/05/24/2017-05-24-建站日志（二）/</id>
     <published>2017-05-24T13:09:54.000Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<div class="note info"><p>到此，建站告一段落，功能差不多完善了 </p>
 </div>
@@ -419,52 +367,11 @@
   </entry>
   
   <entry>
-    <title>一个逗号(,)引起的BUG</title>
-    <link href="http://chihweihsu.com/2017/05/23/%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7%E5%BC%95%E8%B5%B7%E7%9A%84BUG/"/>
-    <id>http://chihweihsu.com/2017/05/23/一个逗号引起的BUG/</id>
-    <published>2017-05-23T14:45:11.000Z</published>
-    <updated>2017-08-09T15:49:05.622Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…<br><a id="more"></a></p>
-<h3 id="前情回要："><a href="#前情回要：" class="headerlink" title="前情回要："></a>前情回要：</h3><p>话说有一个类对象内有一方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def call_frequency(self, data):</div><div class="line">    ...</div><div class="line">    return list</div></pre></td></tr></table></figure></p>
-<p>返回的是一个list，内部是一个个dict，结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;xx:xxx,xx:xxx&#125;,&#123;xx:xxx,&#125;,&#123;x:xxx&#125;,...]</div></pre></td></tr></table></figure></p>
-<h3 id="闹剧上演："><a href="#闹剧上演：" class="headerlink" title="闹剧上演："></a>闹剧上演：</h3><p> ok，开始今天任务，开始在另一方法中调用赋值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data_list = self.call_frequency(data)</div></pre></td></tr></table></figure></p>
-<p>结果<code>print data_list</code>，返回值如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">([&#123;xx:xxx,xx:xxx&#125;,&#123;xx:xxx,&#125;,&#123;x:xxx&#125;,...],)</div></pre></td></tr></table></figure></p>
-<p>what a fxxk，瞬间，凌乱了，还以为发现新天地了，啊！原来，list赋值后会变成tuple，加个马甲，以前怎么没发现呢…<br>还自以为是的在调用<code>data_list</code>时，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call_tel_list = [v.get(&quot;call_tel&quot;,&quot;&quot;) for v in data_list[0]]</div></pre></td></tr></table></figure></p>
-<h3 id="惊天逆转"><a href="#惊天逆转" class="headerlink" title="惊天逆转"></a>惊天逆转</h3><p>晚上，回家，比较得意，欸，又学到一招，不错哟，积蓄，努力。</p>
-<p>8小时后，天亮了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data_list = self.call_frequency(data),</div></pre></td></tr></table></figure></p>
-<p>咦，这里怎么有个逗号？</p>
-<p>瞬间，懵逼…</p>
-<p>四下瞅瞅，</p>
-<p>然后，按下←，整个世界清静了，再悄悄把昨天的杰作恢复本来面目，</p>
-<p>嗯，今天，天气真好。</p>
-<p>真的！</p>
-<blockquote class="blockquote-center">完</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…&lt;br&gt;
-    
-    </summary>
-    
-      <category term="BUG" scheme="http://chihweihsu.com/categories/BUG/"/>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="list" scheme="http://chihweihsu.com/tags/list/"/>
-    
-      <category term="tuple" scheme="http://chihweihsu.com/tags/tuple/"/>
-    
-  </entry>
-  
-  <entry>
     <title>2017-05-23 一个逗号(,)引起的BUG</title>
     <link href="http://chihweihsu.com/2017/05/23/2017-05-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/"/>
     <id>http://chihweihsu.com/2017/05/23/2017-05-23-一个逗号-引起的BUG/</id>
     <published>2017-05-23T14:45:11.000Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…<br><a id="more"></a></p>
 <h3 id="前情回要："><a href="#前情回要：" class="headerlink" title="前情回要："></a>前情回要：</h3><p>话说有一个类对象内有一方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def call_frequency(self, data):</div><div class="line">    ...</div><div class="line">    return list</div></pre></td></tr></table></figure></p>
@@ -497,207 +404,6 @@
       <category term="list" scheme="http://chihweihsu.com/tags/list/"/>
     
       <category term="tuple" scheme="http://chihweihsu.com/tags/tuple/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown 常用语法</title>
-    <link href="http://chihweihsu.com/2017/05/17/Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
-    <id>http://chihweihsu.com/2017/05/17/Markdown-常用语法/</id>
-    <published>2017-05-17T13:46:29.000Z</published>
-    <updated>2017-08-09T15:49:05.622Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="标题-一"><a href="#标题-一" class="headerlink" title="标题(一)"></a>标题(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div><div class="line">#### 四级标题</div><div class="line">##### 五级标题</div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>效果：</p>
-<p><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-18_markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95_%E6%A0%87%E9%A2%981.png" alt=""></p>
-<hr>
-<h2 id="标题-二"><a href="#标题-二" class="headerlink" title="标题(二)"></a>标题(二)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">标题（#）</div><div class="line">==</div><div class="line">标题（##）</div><div class="line">--</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-18_markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95_%E6%A0%87%E9%A2%982.png" alt=""></p>
-<hr>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- 文本1</div><div class="line">   * 二级文本</div><div class="line">- 文本2</div><div class="line">- 文本3</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<ul>
-<li>文本1<ul>
-<li>二级文本</li>
-</ul>
-</li>
-<li>文本2</li>
-<li>文本3</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 文本1</div><div class="line">2. 文本2</div><div class="line">3. 文本3</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<ol>
-<li>文本1</li>
-<li>文本2</li>
-<li>文本3</li>
-</ol>
-</blockquote>
-<hr>
-<h2 id="文字链接"><a href="#文字链接" class="headerlink" title="文字链接"></a>文字链接</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[显示文本](链接地址)</div><div class="line">[悟の迹](http://chihweihsu.com/)</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <a href="http://chihweihsu.com/">悟の迹</a></p>
-</blockquote>
-<hr>
-<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;http://chihweihsu.com/&gt;</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <a href="http://chihweihsu.com/">http://chihweihsu.com/</a></p>
-</blockquote>
-<hr>
-<h2 id="参考式链接"><a href="#参考式链接" class="headerlink" title="参考式链接"></a>参考式链接</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3],</div><div class="line">but most traffic is [悟の迹] [4].</div><div class="line"></div><div class="line">  [1]: http://google.com/        &quot;Google&quot;</div><div class="line">  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</div><div class="line">  [3]: http://search.msn.com/    &quot;MSN Search&quot;</div><div class="line">  [4]: http://chihweihsu.com/    &quot;悟の迹&quot;</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>, but most traffic is <a href="http://chihweihsu.com/" title="悟の迹">悟の迹</a>.</p>
-</blockquote>
-<hr>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![alt text](图片链接 &quot;title&quot;)</div><div class="line">![悟](http://ohhmsby4v.bkt.clouddn.com/image/%E6%82%9F.jpg)</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <img src="http://ohhmsby4v.bkt.clouddn.com/image/%E6%82%9F.jpg" alt="悟"></p>
-</blockquote>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`code`</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <code>code</code></p>
-</blockquote>
-<hr>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>代码（去空格）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">` ` `</div><div class="line">  code</div><div class="line">` ` `</div></pre></td></tr></table></figure></p>
-<p>效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code</div></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; 引用文字</div><div class="line">&gt;</div><div class="line">&gt; &gt; 二级引用文字</div><div class="line">&gt;</div><div class="line">&gt; 引用文字</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p>引用文字</p>
-<blockquote>
-<p>二级引用文字</p>
-</blockquote>
-<p>引用文字</p>
-</blockquote>
-<hr>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*斜体文字*</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><em>斜体文字</em></p>
-</blockquote>
-<hr>
-<h2 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">**粗体文字**</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><strong>粗体文字</strong></p>
-</blockquote>
-<hr>
-<h2 id="粗斜体"><a href="#粗斜体" class="headerlink" title="粗斜体"></a>粗斜体</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">***粗斜体***</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><strong><em>粗斜体</em></strong></p>
-</blockquote>
-<hr>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~删除线~~</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><del>删除线</del></p>
-</blockquote>
-<hr>
-<h2 id="注脚"><a href="#注脚" class="headerlink" title="注脚"></a>注脚</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">这是一个注脚[^footnote1]的样例</div><div class="line">[^1]: 我就是悟</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p>这是一个注脚[^footnote1]的样例</p>
-<blockquote>
-<p>[^1]: 我就是悟</p>
-</blockquote>
-<hr>
-<h2 id="表格-一"><a href="#表格-一" class="headerlink" title="表格(一)"></a>表格(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Tables        | Are            | Cool       |</div><div class="line">| -----         | :-----:        | -----:     |</div><div class="line">| col 3 is      | right-aligned  | $1600      |</div><div class="line">| col 2 is      | center         | $12        |</div><div class="line">| zebra stipes  | are neat       | $1         |</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">center</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stipes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<hr>
-<h2 id="表格-二"><a href="#表格-二" class="headerlink" title="表格(二)"></a>表格(二)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">dog | bird | cat</div><div class="line">----|------|-----</div><div class="line">foo | foo  | foo</div><div class="line">bar | bar  | bar</div><div class="line">baz | baz  | baz</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th>dog</th>
-<th>bird</th>
-<th>cat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>foo</td>
-<td>foo</td>
-<td>foo</td>
-</tr>
-<tr>
-<td>bar</td>
-<td>bar</td>
-<td>bar</td>
-</tr>
-<tr>
-<td>baz</td>
-<td>baz</td>
-<td>baz</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<hr>
-<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">\*悟の迹\*</div><div class="line"></div><div class="line">支持以下符号转义：</div><div class="line">\   反斜线</div><div class="line">`   反引号</div><div class="line">*   星号</div><div class="line">_   底线</div><div class="line">&#123;&#125;  花括号</div><div class="line">[]  方括号</div><div class="line">()  括弧</div><div class="line">#   井字号</div><div class="line">+   加号</div><div class="line">-   减号</div><div class="line">.   英文句点</div><div class="line">!   惊叹号</div><div class="line">&gt;   大于号</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p>*悟の迹*</p>
-</blockquote>
-<p>最近访客</p>
-<div class="ds-recent-visitors" data-num-items="39" data-avatar-size="40" id="ds-recent-visitors"></div>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;标题-一&quot;&gt;&lt;a href=&quot;#标题-一&quot; class=&quot;headerlink&quot; title=&quot;标题(一)&quot;&gt;&lt;/a&gt;标题(一)&lt;/h2&gt;&lt;p&gt;代码：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# 一级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;## 二级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;### 三级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#### 四级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;##### 五级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;###### 六级标题&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Markdown" scheme="http://chihweihsu.com/categories/Notes/Markdown/"/>
-    
-    
-      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
-    
-      <category term="Markdown" scheme="http://chihweihsu.com/tags/Markdown/"/>
     
   </entry>
   
@@ -706,7 +412,7 @@
     <link href="http://chihweihsu.com/2017/05/17/2017-05-17-Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
     <id>http://chihweihsu.com/2017/05/17/2017-05-17-Markdown-常用语法/</id>
     <published>2017-05-17T13:46:29.000Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<h2 id="标题-一"><a href="#标题-一" class="headerlink" title="标题(一)"></a>标题(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div><div class="line">#### 四级标题</div><div class="line">##### 五级标题</div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
@@ -896,113 +602,9 @@
       <category term="Markdown" scheme="http://chihweihsu.com/categories/Notes/Markdown/"/>
     
     
-      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
-    
       <category term="Markdown" scheme="http://chihweihsu.com/tags/Markdown/"/>
     
-  </entry>
-  
-  <entry>
-    <title>建站日志</title>
-    <link href="http://chihweihsu.com/2017/05/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
-    <id>http://chihweihsu.com/2017/05/17/建站日志/</id>
-    <published>2017-05-17T13:39:02.000Z</published>
-    <updated>2017-08-09T15:49:05.622Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note success"><p>未完待续… </p>
-</div>
-<a id="more"></a>
-<h3 id="2017-05-19："><a href="#2017-05-19：" class="headerlink" title="2017-05-19："></a><strong>2017-05-19：</strong></h3><h3 id="添加新-Page"><a href="#添加新-Page" class="headerlink" title="添加新 Page"></a>添加新 Page</h3><hr>
-<p>1.用如下命令添加新page:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;categories&quot;</div><div class="line">hexo new page &quot;tags&quot;</div><div class="line">hexo new page &quot;Python&quot;</div><div class="line">hexo new page &quot;Linux&quot;</div><div class="line">hexo new page &quot;Notes&quot;</div><div class="line">hexo new page &quot;Something&quot;</div><div class="line">hexo new page &quot;Links&quot;</div><div class="line">hexo new page &quot;About&quot;</div></pre></td></tr></table></figure>
-<p>2.打开<code>主题配置文件``\themes\next\_config.yml</code>文件，在<code>menu</code>中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  Python: /Python</div><div class="line">  Linux: /Linux</div><div class="line">  Notes: /Notes</div><div class="line">  Something: /Something</div><div class="line">  Links: /Links</div><div class="line">  About: /About</div></pre></td></tr></table></figure></p>
-<p>3.打开<code>\themes\next\languages\zh-Hans.yml</code>，修改<code>menu</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  python: Python</div><div class="line">  linux: Linux</div><div class="line">  notes: 笔记</div><div class="line">  something: 有料</div><div class="line">  links: 链接</div><div class="line">  about: 关于</div></pre></td></tr></table></figure></p>
-<p>*注意这里第一列必须全为小写。</p>
-<p>*这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</p>
-<h3 id="修改blog页面配色"><a href="#修改blog页面配色" class="headerlink" title="修改blog页面配色"></a>修改blog页面配色</h3><hr>
-<h4 id="添加自定义颜色"><a href="#添加自定义颜色" class="headerlink" title="添加自定义颜色"></a>添加自定义颜色</h4><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">// Colors</div><div class="line">// colors for use across theme.</div><div class="line">// --------------------------------------------------</div><div class="line">$whitesmoke   = #f5f5f5</div><div class="line">$gainsboro    = #eee</div><div class="line">$gray-lighter = #ddd</div><div class="line">$grey-light   = #ccc</div><div class="line">$grey         = #bbb</div><div class="line">$grey-dark    = #999</div><div class="line">$grey-dim     = #666</div><div class="line">$black-light  = #555</div><div class="line">$black-dim    = #333</div><div class="line">$black-deep   = #222</div><div class="line">$red          = #ff2a2a</div><div class="line">$blue-bright  = #87daff</div><div class="line">$blue         = #0684bd</div><div class="line">$blue-deep    = #262a30</div><div class="line">$orange       = #fc6423</div><div class="line">// 下面是我自定义的颜色</div><div class="line">$my-link-blue = #0593d3  //链接颜色</div><div class="line">$my-link-hover-blue = #0477ab  //鼠标悬停后颜色</div><div class="line">$my-code-foreground = #dd0055  // 用``围出的代码块字体颜色</div><div class="line">$my-code-background = #eee  // 用``围出的代码块背景颜色</div></pre></td></tr></table></figure></p>
-<h4 id="修改超链接颜色"><a href="#修改超链接颜色" class="headerlink" title="修改超链接颜色"></a>修改超链接颜色</h4><p>还是<code>base.styl</code>文件，修改这几行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// Global link color.</div><div class="line">$link-color                   = $my-link-blue</div><div class="line">$link-hover-color             = $my-link-hover-blue</div><div class="line">$link-decoration-color        = $gray-lighter</div><div class="line">$link-decoration-hover-color  = $my-link-hover-blue</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%B6%85%E9%93%BE%E6%8E%A5.png" alt=""></p>
-<h4 id="修改小型代码块颜色"><a href="#修改小型代码块颜色" class="headerlink" title="修改小型代码块颜色"></a>修改小型代码块颜色</h4><p>依旧是<code>base.styl</code>文件，修改<code>$code-background</code>和<code>$code-foreground</code>的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Code &amp; Code Blocks</div><div class="line">// 用``围出的代码块</div><div class="line">// --------------------------------------------------</div><div class="line">$code-font-family               = $font-family-monospace</div><div class="line">$code-font-size                 = 15px</div><div class="line">$code-background                = $my-code-background</div><div class="line">$code-foreground                = $my-code-foreground</div><div class="line">$code-border-radius             = 4px</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%BB%A3%E7%A0%81%E5%9D%97.png" alt=""></p>
-<h3 id="修改blog页面字体大小"><a href="#修改blog页面字体大小" class="headerlink" title="修改blog页面字体大小"></a>修改blog页面字体大小</h3><hr>
-<p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// Font size</div><div class="line">$font-size-base           = 14px</div></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$font-size-base           = 16px</div></pre></td></tr></table></figure></p>
-<h3 id="修改blog页面宽度"><a href="#修改blog页面宽度" class="headerlink" title="修改blog页面宽度"></a>修改blog页面宽度</h3><hr>
-<p>现在一般都用宽屏显示器，博客页面两侧留白太多，调整一下宽度。</p>
-<p>1.打开<code>\themes\next\source\css\_common\components\post\post-expand.styl</code>，找到:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 767px)</div></pre></td></tr></table></figure></p>
-<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 1080px)</div></pre></td></tr></table></figure></p>
-<p>2.打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$main-desktop                   = 960px</div><div class="line">$main-desktop-large             = 1200px</div><div class="line">$content-desktop                = 700px</div></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$main-desktop                   = 1080px</div><div class="line">$main-desktop-large             = 1200px</div><div class="line">$content-desktop                = 810px</div></pre></td></tr></table></figure></p>
-<h3 id="修改博客部署的message"><a href="#修改博客部署的message" class="headerlink" title="修改博客部署的message"></a>修改博客部署的message</h3><hr>
-<p>在<code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
-<p>改得个性化一点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">好家伙又改版了悟の迹: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="Github项目主页添加README"><a href="#Github项目主页添加README" class="headerlink" title="Github项目主页添加README"></a>Github项目主页添加README</h3><hr>
-<h4 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h4><p>Github上博客的仓库主页没有README，如果把<code>README.md</code>放入<code>source</code>文件夹，<code>hexo g</code>生成时会被解析成html文件，而放到<code>public</code>文件夹中，生成时又会自动删除。</p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h4><p>在<code>source</code>目录下新建文件<code>README.mdown</code>，在里面写README即可。<code>hexo g</code>会把它复制到<code>public</code>文件夹，且不会被解析成html</p>
-<h3 id="Github项目主页添加LICENSE"><a href="#Github项目主页添加LICENSE" class="headerlink" title="Github项目主页添加LICENSE"></a>Github项目主页添加LICENSE</h3><hr>
-<p>修改<code>主题配置文件</code>，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Creative Commons 4.0 International License.</div><div class="line"># http://creativecommons.org/</div><div class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</div><div class="line">creative_commons: by-nc-sa</div><div class="line">#creative_commons:</div></pre></td></tr></table></figure></p>
-<p>将其中第 4 行的注释放开，然后选择你想使用的 LICENSE 即可，可选项参照第 3 行。</p>
-<h3 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h3><hr>
-<p>为优化SEO，更改首页标题格式为「关键词-网站名称 - 网站描述」</p>
-<p>打开<code>\themes\next\layout\index.swig</code>文件，找到这行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
-<p>把它改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125;</div><div class="line">  &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="添加“Fork-me-on-Github”-ribbon"><a href="#添加“Fork-me-on-Github”-ribbon" class="headerlink" title="添加“Fork me on Github” ribbon"></a>添加“Fork me on Github” ribbon</h3><hr>
-<p>1.点击<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">Fork me on Github</a>；</p>
-<p>2.给blog主页选择一个绶带（ribbon），并复制相应代码；</p>
-<p>3.找到正在使用的<code>theme</code>下的<code>layout</code>文件，将代码插入即可；</p>
-<p>4.比如我选择了<code>红色</code>的ribbon，使用的<code>themes</code>为next，那么只要打开 <code>blog\themes\next\layout\_layout.swig</code>文件，复制下面这段代码，放在最后，标签之前即可。（注意将<code>https://github.com/you</code>改为你自己的github链接）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;https://github.com/you&quot;&gt;</div><div class="line">    &lt;img style=&quot;position: absolute; top: 0; right: 0; border: 0;&quot; src=&quot;https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67&quot;</div><div class="line">    alt=&quot;Fork me on GitHub&quot; data-canonical-src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png&quot;&gt;</div><div class="line">&lt;/a&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="添加404公益页面"><a href="#添加404公益页面" class="headerlink" title="添加404公益页面"></a>添加404公益页面</h3><hr>
-<p>在<code>blog/source</code>下新建自己的<code>404.html</code>文件即可，强推<a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a>，代码可参考如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">layout: default</div><div class="line">---</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">         &lt;meta charset=&quot;UTF-8&quot; /&gt;</div><div class="line">         &lt;title&gt;404&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">         &lt;script type=&quot;text/javascript&quot; src=&quot;//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js&quot; charset=&quot;utf-8&quot; homePageUrl=&quot;http://chihweihsu.com/&quot; homePageName=&quot;回到悟の迹&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="文章阅读次数统计"><a href="#文章阅读次数统计" class="headerlink" title="文章阅读次数统计"></a>文章阅读次数统计</h3><hr>
-<p>1.注册<a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="external">LeanCloud</a>帐号并验证邮箱；</p>
-<p>2.创建应用，新建一个应用来专门进行博客的访问统计的数据操作；</p>
-<p>3.创建完成之后我们点击新创建的应用的名字来进行该应用的参数配置；</p>
-<p>4.新建一个Class用来专门保存我们博客的文章访问量等数据；</p>
-<p>5.新建Class名字必须为Counter，设置默认的ACL权限，建议在此处选择无限制；</p>
-<p>6.选择左侧的<code>应用Key</code>选项，拿到我们创建应用的<code>AppID</code>以及<code>AppKey</code>；</p>
-<p>7.编辑 <code>主题配置文件</code>，如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz</div><div class="line">  app_key: E9UJsJpw1omCHuS22PdSpKoh</div></pre></td></tr></table></figure></p>
-<p>8.ok，部署后可见。</p>
-<h3 id="2017-05-18："><a href="#2017-05-18：" class="headerlink" title="2017-05-18："></a><strong>2017-05-18：</strong></h3><h3 id="配置导航栏网站小图标"><a href="#配置导航栏网站小图标" class="headerlink" title="配置导航栏网站小图标"></a>配置导航栏网站小图标</h3><hr>
-<p>挑选一张图片，名字改为<code>favicon.ico</code>，放到<code>..\blog\source</code>下，配置<code>主题配置文件</code>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">favicon: /favicon.ico</div></pre></td></tr></table></figure></p>
-<h3 id="集成百度分享模块"><a href="#集成百度分享模块" class="headerlink" title="集成百度分享模块"></a>集成百度分享模块</h3><hr>
-<p>首先，编辑 <code>站点配置文件</code>，末尾添加字段:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">baidushare: true #百度分享功能</div></pre></td></tr></table></figure></p>
-<p>其次，编辑<code>主题配置文件</code>，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line"># Warning: Baidu Share does not support https.</div><div class="line">baidushare:</div><div class="line"> type: slide #百度分享展示的方式button|slide</div></pre></td></tr></table></figure></p>
-<p>*注意：百度分享不支持https方式，可以自己买个域名绑定，或者搜下<code>百度分享不支持https的解决方案</code>，有前辈做出解答。</p>
-<p>其实，现在已经完成了；但是，为了折腾，我们接着来自定义百度分享的显示，点击<a href="http://share.baidu.com/code" target="_blank" rel="external">代码获取</a>，一步步进行定制，走完流程，点击<code>直接获取代码</code>，拿到一段js代码，类似如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    window._bd_share_config = &#123;</div><div class="line">        &quot;common&quot;: &#123;</div><div class="line">            &quot;bdSnsKey&quot;: &#123;&#125;,</div><div class="line">            &quot;bdText&quot;: &quot;&quot;,</div><div class="line">            &quot;bdMini&quot;: &quot;2&quot;,</div><div class="line">            &quot;bdMiniList&quot;: [</div><div class="line">                &quot;mshare&quot;,</div><div class="line">                &quot;bdysc&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;tqq&quot;,</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;sqq&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;tieba&quot;,</div><div class="line">                &quot;youdao&quot;,</div><div class="line">                &quot;isohu&quot;,</div><div class="line">                &quot;mail&quot;,</div><div class="line">                &quot;ty&quot;,</div><div class="line">                &quot;fbook&quot;,</div><div class="line">                &quot;twi&quot;,</div><div class="line">                &quot;linkedin&quot;,</div><div class="line">                &quot;copy&quot;,</div><div class="line">                &quot;print&quot;</div><div class="line">            ],</div><div class="line">            &quot;bdPic&quot;: &quot;&quot;,</div><div class="line">            &quot;bdStyle&quot;: &quot;0&quot;,</div><div class="line">            &quot;bdSize&quot;: &quot;16&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;slide&quot;: &#123;</div><div class="line">            &quot;type&quot;: &quot;slide&quot;,</div><div class="line">            &quot;bdImg&quot;: &quot;5&quot;,</div><div class="line">            &quot;bdPos&quot;: &quot;right&quot;,</div><div class="line">            &quot;bdTop&quot;: &quot;53.5&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;image&quot;: &#123;</div><div class="line">            &quot;viewList&quot;: [</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;bdysc&quot;</div><div class="line">            ],</div><div class="line">            &quot;viewText&quot;: &quot;分享到：&quot;,</div><div class="line">            &quot;viewSize&quot;: &quot;16&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;selectShare&quot;: &#123;</div><div class="line">            &quot;bdContainerClass&quot;: null,</div><div class="line">            &quot;bdSelectMiniList&quot;: [</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;bdysc&quot;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>最后，打开如下文件<code>blog\themes\next\layout\_partials\share\baidushare.swing</code>，替换掉里面的js代码，本文以<code>slide</code>模式为例，替换掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% elseif theme.baidushare.type === &quot;slide&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<p>后面的<code>&lt;script&gt;...&lt;/script&gt;</code>即可。</p>
-<h3 id="2017-05-17："><a href="#2017-05-17：" class="headerlink" title="2017-05-17："></a><strong>2017-05-17：</strong></h3><h3 id="markdown写文章时，添加居中引用模块"><a href="#markdown写文章时，添加居中引用模块" class="headerlink" title="markdown写文章时，添加居中引用模块"></a>markdown写文章时，添加居中引用模块</h3><hr>
-<p>只需在写文章时，添加如下标签即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;</div><div class="line">    优秀的人，不是不合群，而是他们合群的人里面没有你</div><div class="line">&lt;/blockquote&gt;</div></pre></td></tr></table></figure></p>
-<p>预览：</p>
-<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
-
-
-<h3 id="2017-05-16："><a href="#2017-05-16：" class="headerlink" title="2017-05-16："></a><strong>2017-05-16：</strong></h3><h3 id="首页文章预览添加图片"><a href="#首页文章预览添加图片" class="headerlink" title="首页文章预览添加图片"></a>首页文章预览添加图片</h3><hr>
-<p>打开<code>scaffolds/post.md</code>文件，在默认参数中添加如下参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 首页文章预览添加图片：</div><div class="line">photos:</div><div class="line">    - http://xxx.com/photo1.jpg</div><div class="line">    - http://xxx.com/photo2.jpg</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_pandas.png" alt=""></p>
-<h3 id="首页文章摘要模式"><a href="#首页文章摘要模式" class="headerlink" title="首页文章摘要模式"></a>首页文章摘要模式</h3><hr>
-<p>首页开启文章摘要模式，不全文显示，而是出现<code>阅读全文&gt;</code>，只需在<code>主题配置文件</code>中找到<code>auto_excerpt</code>属性进行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">  enable: true #改写为true</div><div class="line">  length: 150 #默认展示的高度</div></pre></td></tr></table></figure></p>
-<p>或者，在Markdown文章中不想显示的位置，添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这里显示</div><div class="line">&lt;!--more--&gt;</div><div class="line">这里不显示</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note success&quot;&gt;&lt;p&gt;未完待续… &lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
-    
-      <category term="Blog" scheme="http://chihweihsu.com/tags/Blog/"/>
+      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
     
   </entry>
   
@@ -1011,7 +613,7 @@
     <link href="http://chihweihsu.com/2017/05/17/2017-05-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
     <id>http://chihweihsu.com/2017/05/17/2017-05-17-建站日志/</id>
     <published>2017-05-17T13:39:02.000Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<div class="note success"><p>未完待续… </p>
 </div>
@@ -1115,62 +717,7 @@
     <link href="http://chihweihsu.com/2017/05/17/2017-05-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/"/>
     <id>http://chihweihsu.com/2017/05/17/2017-05-17-命运从不缺席/</id>
     <published>2017-05-17T13:34:28.000Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
-
-
-<p>纽约时间比加州时间早三个小时,<br><code>New York is 3 hours ahead of California,</code></p>
-<p>但加州时间并没有变慢。<br><code>but it does not make California slow.</code></p>
-<p>有人22岁就毕业了，<br><code>Someone graduated at the age of 22,</code></p>
-<p>但等了五年才找到好的工作！<br><code>but waited 5 years before securing a good job!</code><br><a id="more"></a></p>
-<p>有人25岁就当上CEO，<br><code>Someone became a CEO at 25,</code></p>
-<p>却在50岁去世。<br><code>and died at 50.</code></p>
-<p>也有人迟到50岁才当上CEO，<br><code>While another became a CEO at 50,</code></p>
-<p>然后活到90岁。<br><code>and lived to 90 years.</code></p>
-<p>有人依然单身，<br><code>Someone is still single,</code></p>
-<p>同时也有人已婚。<br><code>while someone else got married.</code><br><code>奥巴马55岁就退休，</code>Obama retires at 55,`</p>
-<p>川普70岁才开始当总统。<br><code>but Trump starts at 70.</code></p>
-<p>世上每个人本来就有自己的发展时区。<br><code>Absolutely everyone in this world works based on their Time Zone.</code></p>
-<p>身边有些人看似走在你前面，<br><code>People around you might seem to go ahead of you,</code></p>
-<p>也有人看似走在你后面。<br><code>some might seem to be behind you.</code></p>
-<p>但其实每个人在自己的时区有自己的步程。<br><code>But everyone is running their own RACE, in their own TIME.</code></p>
-<p>不用嫉妒或嘲笑他们。<br><code>Don’t envy them or mock them.</code></p>
-<p>他们都在自己的时区里，你也是！<br><code>They are in their TIME ZONE, and you are in yours!</code></p>
-<p>生命就是等待正确的行动时机。<br><code>Life is about waiting for the right moment to act.</code></p>
-<p>所以，放轻松。<br><code>So, RELAX.</code></p>
-<p>你没有落后。<br><code>You’re not LATE.</code></p>
-<p>你没有领先。<br><code>You’re not EARLY.</code></p>
-<p>在命运为你安排的属于自己的时区里，一切都准时。<br><code>You are very much ON TIME, and in your TIME ZONE Destiny set up for you.</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;优秀的人，不是不合群，而是他们合群的人里面没有你&lt;/blockquote&gt;
-
-
-&lt;p&gt;纽约时间比加州时间早三个小时,&lt;br&gt;&lt;code&gt;New York is 3 hours ahead of California,&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;但加州时间并没有变慢。&lt;br&gt;&lt;code&gt;but it does not make California slow.&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;有人22岁就毕业了，&lt;br&gt;&lt;code&gt;Someone graduated at the age of 22,&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;但等了五年才找到好的工作！&lt;br&gt;&lt;code&gt;but waited 5 years before securing a good job!&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="writings" scheme="http://chihweihsu.com/categories/writings/"/>
-    
-    
-      <category term="美文" scheme="http://chihweihsu.com/tags/%E7%BE%8E%E6%96%87/"/>
-    
-      <category term="励志" scheme="http://chihweihsu.com/tags/%E5%8A%B1%E5%BF%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>命运从不缺席</title>
-    <link href="http://chihweihsu.com/2017/05/17/%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/"/>
-    <id>http://chihweihsu.com/2017/05/17/命运从不缺席/</id>
-    <published>2017-05-17T13:34:28.000Z</published>
-    <updated>2017-08-09T15:49:05.622Z</updated>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
@@ -1225,7 +772,7 @@
     <link href="http://chihweihsu.com/2017/05/16/2017-05-16-%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/"/>
     <id>http://chihweihsu.com/2017/05/16/2017-05-16-从字典中提取子集/</id>
     <published>2017-05-16T15:01:03.000Z</published>
-    <updated>2017-08-09T16:08:05.618Z</updated>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
     <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>使用字典推导式：</p>
@@ -1259,40 +806,114 @@
   </entry>
   
   <entry>
-    <title>从字典中提取子集</title>
-    <link href="http://chihweihsu.com/2017/05/16/%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/"/>
-    <id>http://chihweihsu.com/2017/05/16/从字典中提取子集/</id>
-    <published>2017-05-16T15:01:03.000Z</published>
-    <updated>2017-08-09T15:49:05.622Z</updated>
+    <title>2017-05-15 pandas-入门</title>
+    <link href="http://chihweihsu.com/2017/05/15/2017-05-15-pandas-%E5%85%A5%E9%97%A8/"/>
+    <id>http://chihweihsu.com/2017/05/15/2017-05-15-pandas-入门/</id>
+    <published>2017-05-15T14:49:44.000Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>使用字典推导式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">prices = &#123;</div><div class="line">    <span class="string">'ACME'</span>: 45.23,</div><div class="line">    <span class="string">'AAPL'</span>: 612.78,</div><div class="line">    <span class="string">'IBM'</span>: 205.55,</div><div class="line">    <span class="string">'HPQ'</span>: 37.20,</div><div class="line">    <span class="string">'FB'</span>: 10.75</div><div class="line">&#125;</div><div class="line"><span class="comment"># Make a dictionary of all prices over 200</span></div><div class="line">p1 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> value &gt; 200&#125;</div><div class="line"><span class="comment"># Make a dictionary of tech stocks</span></div><div class="line">tech_names = &#123;<span class="string">'AAPL'</span>, <span class="string">'IBM'</span>, <span class="string">'HPQ'</span>, <span class="string">'MSFT'</span>&#125;</div><div class="line">p2 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> key <span class="keyword">in</span> tech_names&#125;</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Series: 类似于一维数组的对象；索引（index）在左，数据（value）在右，索引自动创建</div><div class="line">DataFrame: 一种表格型数据结构；二维结构，每列可以存不同类型的值，索引包含行索引及列索引</div></pre></td></tr></table></figure>
+<h3 id="创建Series"><a href="#创建Series" class="headerlink" title="创建Series"></a>创建Series</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">ser_obj = pd.Series(range(10, 20))</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 需求：输出phone_bill中每月不为'0.00'的项目</span></div><div class="line"><span class="string">"phone_bill"</span> : [</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.20"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"0.00"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.60"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"15.62"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"4.18"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"56.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.30"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"9.36"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"7.03"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.00"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.30"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"0.00"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_zengzhifei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_qita"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"10.58"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_daishoufei"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"0.00"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"0.00"</span></div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line"></div><div class="line"><span class="comment"># 处理逻辑</span></div><div class="line"><span class="keyword">for</span> cursor <span class="keyword">in</span> xrange(0,5):</div><div class="line">     phone_bill_tmp = &#123;key: value[:-1] <span class="keyword">for</span> key, value <span class="keyword">in</span> phone_bill[cursor].items() <span class="keyword">if</span> value not <span class="keyword">in</span> [<span class="string">''</span>,<span class="string">'0.00'</span>]&#125;</div><div class="line">     phone_bill.append(phone_bill_tmp)</div><div class="line"></div><div class="line"><span class="comment"># 结果</span></div><div class="line"><span class="string">"phone_bill"</span> : [</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.2"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.6"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"15.6"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"4.1"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"56.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.3"</span>,</div><div class="line">            <span class="string">"bill_ext_data"</span> : <span class="string">"9.3"</span>,</div><div class="line">            <span class="string">"bill_ext_calls"</span> : <span class="string">"7.0"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"46.0"</span>,</div><div class="line">            <span class="string">"bill_ext_sms"</span> : <span class="string">"0.3"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"bill_package"</span> : <span class="string">"10.5"</span></div><div class="line">        &#125;</div><div class="line">    ]</div></pre></td></tr></table></figure>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>大多数情况下字典推导能做到的，通过创建一个元组序列然后把它传给 dict() 函数也能实现。比如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p1 = dict((key, value) <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> value &gt; 200)</div></pre></td></tr></table></figure></p>
-<p>但是，字典推导方式表意更清晰，并且实际上也会运行的更快些 (在这个p1中，实际测试几乎比 dcit() 函数方式快整整一倍)。</p>
-<p>有时候完成同一件事会有多种方式。比如，p2程序也可以像这样重写：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Make a dictionary of tech stocks</span></div><div class="line">tech_names = &#123; <span class="string">'AAPL'</span>, <span class="string">'IBM'</span>, <span class="string">'HPQ'</span>, <span class="string">'MSFT'</span> &#125;</div><div class="line">p2 = &#123; key:prices[key] <span class="keyword">for</span> key <span class="keyword">in</span> prices.keys() &amp; tech_names &#125;</div></pre></td></tr></table></figure></p>
-<p>但是，运行时间测试结果显示这种方案大概比第一种方案慢1.6倍。</p>
-<p>所以，完成一个需求，方案并不是唯一的，也并没有最完美的，只有更好的解决方案，如果对程序运行性能要求比较高的话，这就需要花点时间去做计时测试了。</p>
+<h3 id="获取数据及索引"><a href="#获取数据及索引" class="headerlink" title="获取数据及索引"></a>获取数据及索引</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 获取索引</span></div><div class="line">ser_obj.index</div><div class="line"><span class="comment"># 获取数据</span></div><div class="line">ser_obj.values</div></pre></td></tr></table></figure>
+<h3 id="通过索引获取数据"><a href="#通过索引获取数据" class="headerlink" title="通过索引获取数据"></a>通过索引获取数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ser_obj[0]</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;p&gt;给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。&lt;/p&gt;
-&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;p&gt;使用字典推导式：&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;prices = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;ACME&#39;&lt;/span&gt;: 45.23,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;AAPL&#39;&lt;/span&gt;: 612.78,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;IBM&#39;&lt;/span&gt;: 205.55,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;HPQ&#39;&lt;/span&gt;: 37.20,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;FB&#39;&lt;/span&gt;: 10.75&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Make a dictionary of all prices over 200&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;p1 = &amp;#123;key: value &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; key, value &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; prices.items() &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; value &amp;gt; 200&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Make a dictionary of tech stocks&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;tech_names = &amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;AAPL&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;IBM&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;HPQ&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;MSFT&#39;&lt;/span&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;p2 = &amp;#123;key: value &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; key, value &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; prices.items() &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; key &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; tech_names&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h2 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot; class=&quot;headerlink&quot; title=&quot;数据结构&quot;&gt;&lt;/a&gt;数据结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Series: 类似于一维数组的对象；索引（index）在左，数据（value）在右，索引自动创建&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DataFrame: 一种表格型数据结构；二维结构，每列可以存不同类型的值，索引包含行索引及列索引&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;创建Series&quot;&gt;&lt;a href=&quot;#创建Series&quot; class=&quot;headerlink&quot; title=&quot;创建Series&quot;&gt;&lt;/a&gt;创建Series&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;import pandas as pd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;ser_obj = pd.Series(range(10, 20))&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+    
+    
+      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-05-15 数据分析 入门</title>
+    <link href="http://chihweihsu.com/2017/05/15/2017-05-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/"/>
+    <id>http://chihweihsu.com/2017/05/15/2017-05-15-数据分析-入门/</id>
+    <published>2017-05-15T13:35:48.000Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DIKW体系"><a href="#DIKW体系" class="headerlink" title="DIKW体系"></a>DIKW体系</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">D: Data 数据 原始素材</div><div class="line">I: Information 信息 加工处理后有逻辑的数据</div><div class="line">K: Knowledge 知识 提炼信息之间的联系，行动的能力，完成当下任务</div><div class="line">W: Wisdom 智慧 关心未来，具有预测的能力</div></pre></td></tr></table></figure>
+<h2 id="数据工程"><a href="#数据工程" class="headerlink" title="数据工程"></a>数据工程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数据工程：一整套对数据（D）进行**采集**、处理、提取价值（变为I/K）的过程</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="职业划分"><a href="#职业划分" class="headerlink" title="职业划分"></a>职业划分</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Data Engineer 数据工程师 ：分析数据少不了需要运用计算机和各种工具自动化数据处理的过程， 包括数据格式转换， 储存， 更新， 查询。 数据工程师的工作就是开发工具完成自动化的过程， 属于 基础设施/工具（Infrastructure/Tools）层。但是这个角色出现的频率不多 ，因为有现成的MySQL, Oracle等数据库技术， 很多大公司只需要DBA就足够了。而 Hadoop, MongoDB 等 NoSQL 技术的开源， 更是使在大数据的场景下都没有太多 数据工程师 的事，一般都是交给 数据科学家 。</div><div class="line"></div><div class="line">Data Scientist 数据科学家 : 数据科学家是与数学相结合的中间角色， 需要用数学方法处理原始数据找出肉眼看不到的更高层数据， 一般是运用 统计机器学习（Statistical Machine Learning）或者 深度学习（Deep Learning）。有人称 Data Scientist 为 编程统计学家（Programming Statistician），因为他们需要有很好的统计学基础，但也需要参与程序的开发（基于 Infrastructure 之上），而现在很多很多的数据科学家 职位都要求身兼数据工程师。 数据科学家 是把 D 转为 I 或 K 的主力军。</div><div class="line"></div><div class="line">Data Analyst 数据分析师： 数据工程师和数据科学家做了大量的工作，用计算机程序尽可能多地提取了价值（I/K），然而真正要从数据中洞察出更高的价值， 则需要依靠丰富的行业经验和洞察力， 这些都需要人力的干预。Data Analyst 需要的是对所在业务有深刻了解， 能熟练运用手上的工具（无论是 Excel， SPSS也好， Python/R也好，工程师给你开发的工具也好，必要时还要能自己充当工程师和科学家，力尽所能得到自己需要的工具），有针对性地对数据作分析，并且需要把发现的成果向其他职能部门呈现出来，最终变为行动，这就是把数据最终得出 Wisdom。</div></pre></td></tr></table></figure>
+<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数据分析是指用适当的统计分析方法对收集来的大量数据进行分析，提取有用信息和形成结论而对数据加以详细研究和概括总结的过程。这一过程也是质量管理体系的支持过程。在实用中，数据分析可帮助人们作出判断，以便采取适当行动。</div></pre></td></tr></table></figure>
+<h2 id="数据分析过程"><a href="#数据分析过程" class="headerlink" title="数据分析过程"></a>数据分析过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">数据采集：本地数据或者网络数据的采集与操作。</div><div class="line">数据处理：数据的规整，按照某种格式进行整合存储。</div><div class="line">数据分析：数据的科学计算，使用相关数据工具进行分析。</div><div class="line">数据展现：数据可视化，使用相关工具对分析出的数据进行展示。</div></pre></td></tr></table></figure>
+<h2 id="数据分析工具"><a href="#数据分析工具" class="headerlink" title="数据分析工具"></a>数据分析工具</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SAS:SAS（STATISTICAL ANALYSIS SYSTEM，简称SAS）公司开发的统计分析软件，是一个功能强大的数据库整合平台。价格昂贵，银行或者大企业才买的起，做离线的分析或者模型用。</div><div class="line">SPSS: SPSS（Statistical Product and Service Solutions，统计产品与服务解决方案）是IBM公司推出的一系列用于统计学分析运算、数据挖掘、预测分析和决策支持任务的产品，迄今已有40余年的成长历史，价格昂贵。</div><div class="line">R/MATLAB: 适合做学术性质的数据分析，在实际应用上需要额外转换为Python或Scala来实现，而且MATLAB（MathWorks公司出品的商业数学软件）是收费的。</div><div class="line">Scala：是一门函数式编程语言，熟练使用后开发效率较高，配合Spark适合大规模的数据分析和处理，Scala的运行环境是JVM。</div><div class="line">Python：Python在数据工程领域和机器学习领域有很多成熟的框架和算法库，完全可以只用Python就可以构建以数据为中心的应用程序。在数据工程领域和机器学习领域，Python非常非常流行。</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;DIKW体系&quot;&gt;&lt;a href=&quot;#DIKW体系&quot; class=&quot;headerlink&quot; title=&quot;DIKW体系&quot;&gt;&lt;/a&gt;DIKW体系&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;D: Data 数据 原始素材&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;I: Information 信息 加工处理后有逻辑的数据&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;K: Knowledge 知识 提炼信息之间的联系，行动的能力，完成当下任务&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;W: Wisdom 智慧 关心未来，具有预测的能力&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;数据工程&quot;&gt;&lt;a href=&quot;#数据工程&quot; class=&quot;headerlink&quot; title=&quot;数据工程&quot;&gt;&lt;/a&gt;数据工程&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;数据工程：一整套对数据（D）进行**采集**、处理、提取价值（变为I/K）的过程&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+    
+    
+      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-5-7 Hexo 常用操作</title>
+    <link href="http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-常用操作/</id>
+    <published>2017-05-07T15:23:35.000Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="cyg操作"><a href="#cyg操作" class="headerlink" title="cyg操作"></a>cyg操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /cygdrive/d <span class="comment">#切换到D盘</span></div></pre></td></tr></table></figure>
+<h2 id="Hexo-操作"><a href="#Hexo-操作" class="headerlink" title="Hexo 操作"></a>Hexo 操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></div><div class="line">hexo version  <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo algolia  <span class="comment"># 更新search庫</span></div><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo new post <span class="string">"title"</span>  <span class="comment"># 生成新文章：\source\_posts\title.md，可省略post</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div><div class="line">hexo clean <span class="comment">#清除部署緩存</span></div><div class="line">hexo n == hexo new <span class="comment">#新建文章</span></div><div class="line">hexo g == hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo s == hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo d == hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo d -g <span class="comment">#生成加部署</span></div><div class="line">hexo s -g <span class="comment">#生成加预览</span></div></pre></td></tr></table></figure>
+<p>*post、page等可以改成其他layout，可用layout在scaffolds目录下查看。在同目录下创建文件来添加自己的layout，也可以编辑现有的layout，比如post的layout默认是\scaffolds\post.md。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>每次部署的步骤，可按以下两步来进行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo cl</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;cyg操作&quot;&gt;&lt;a href=&quot;#cyg操作&quot; class=&quot;headerlink&quot; title=&quot;cyg操作&quot;&gt;&lt;/a&gt;cyg操作&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
     
     </summary>
     
       <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
     
-      <category term="字典推导式" scheme="http://chihweihsu.com/tags/%E5%AD%97%E5%85%B8%E6%8E%A8%E5%AF%BC%E5%BC%8F/"/>
+      <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="http://chihweihsu.com/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-04-05 you are my sunshine!</title>
+    <link href="http://chihweihsu.com/2017/04/05/2017-04-05-you-are-my-sunshine/"/>
+    <id>http://chihweihsu.com/2017/04/05/2017-04-05-you-are-my-sunshine/</id>
+    <published>2017-04-05T14:14:22.000Z</published>
+    <updated>2017-08-09T16:20:27.500Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
     
   </entry>
   
