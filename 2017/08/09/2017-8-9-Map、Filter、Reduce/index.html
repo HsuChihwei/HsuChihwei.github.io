@@ -89,7 +89,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="Python,Map,Filter,Reduce," />
 
 
 
@@ -105,16 +105,28 @@
 
 
 
-<meta name="description" content="The most pythonic way to pad zeroes to stringStrings:12345678910111213141516171819&amp;gt;&amp;gt;&amp;gt; n = &apos;4&apos;&amp;gt;&amp;gt;&amp;gt; n.zfill(3)&amp;gt;&amp;gt;&amp;gt; &apos;004&apos;&amp;gt;&amp;gt;&amp;gt; &apos;&amp;#123;:0&amp;gt;3&amp;#125;&apos;.format(n)&amp;gt;&amp;gt;&amp;gt;">
+<meta name="description" content="Map
+将一个函数映射到一个输入列表的所有元素上。
+
+12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]
+map作用于一列表的函数：1234567891011121314151617def multiply(x):	return (x*x)def add(x">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017-8-6 python string">
-<meta property="og:url" content="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/index.html">
+<meta property="og:title" content="2017-8-9 Map、Filter、Reduce">
+<meta property="og:url" content="http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/index.html">
 <meta property="og:site_name" content="悟の迹">
-<meta property="og:description" content="The most pythonic way to pad zeroes to stringStrings:12345678910111213141516171819&amp;gt;&amp;gt;&amp;gt; n = &apos;4&apos;&amp;gt;&amp;gt;&amp;gt; n.zfill(3)&amp;gt;&amp;gt;&amp;gt; &apos;004&apos;&amp;gt;&amp;gt;&amp;gt; &apos;&amp;#123;:0&amp;gt;3&amp;#125;&apos;.format(n)&amp;gt;&amp;gt;&amp;gt;">
-<meta property="og:updated_time" content="2017-08-09T16:20:27.500Z">
+<meta property="og:description" content="Map
+将一个函数映射到一个输入列表的所有元素上。
+
+12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]
+map作用于一列表的函数：1234567891011121314151617def multiply(x):	return (x*x)def add(x">
+<meta property="og:updated_time" content="2017-08-10T14:35:17.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017-8-6 python string">
-<meta name="twitter:description" content="The most pythonic way to pad zeroes to stringStrings:12345678910111213141516171819&amp;gt;&amp;gt;&amp;gt; n = &apos;4&apos;&amp;gt;&amp;gt;&amp;gt; n.zfill(3)&amp;gt;&amp;gt;&amp;gt; &apos;004&apos;&amp;gt;&amp;gt;&amp;gt; &apos;&amp;#123;:0&amp;gt;3&amp;#125;&apos;.format(n)&amp;gt;&amp;gt;&amp;gt;">
+<meta name="twitter:title" content="2017-8-9 Map、Filter、Reduce">
+<meta name="twitter:description" content="Map
+将一个函数映射到一个输入列表的所有元素上。
+
+12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]
+map作用于一列表的函数：1234567891011121314151617def multiply(x):	return (x*x)def add(x">
 
 
 
@@ -142,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/"/>
+  <link rel="canonical" href="http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/"/>
 
 
 
 
 
-  <title> 2017-8-6 python string | 悟の迹 </title>
+  <title> 2017-8-9 Map、Filter、Reduce | 悟の迹 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -377,7 +389,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/10/2017-8-6-python-string/">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
@@ -398,7 +410,7 @@
             
             
               
-                2017-8-6 python string
+                2017-8-9 Map、Filter、Reduce
               
             
           </h1>
@@ -413,8 +425,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T00:20:27+08:00">
-                2017-08-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T00:00:00+08:00">
+                2017-08-09
               </time>
             
 
@@ -433,8 +445,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/10/2017-8-6-python-string/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/10/2017-8-6-python-string/" itemprop="commentsCount"></span>
+                <a href="/2017/08/09/2017-8-9-Map、Filter、Reduce/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/09/2017-8-9-Map、Filter、Reduce/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -443,7 +455,7 @@
 
           
           
-             <span id="/2017/08/10/2017-8-6-python-string/" class="leancloud_visitors" data-flag-title="2017-8-6 python string">
+             <span id="/2017/08/09/2017-8-9-Map、Filter、Reduce/" class="leancloud_visitors" data-flag-title="2017-8-9 Map、Filter、Reduce">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -472,13 +484,21 @@
       
 
       
-        <h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
-<p><code>rjust/zfill</code> 区别:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zfill:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-00000-txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'+00000+txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div><div class="line">rjust:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000--txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000++txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div></pre></td></tr></table></figure></p>
-<h3 id="numbers"><a href="#numbers" class="headerlink" title="numbers:"></a>numbers:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'%03d'</span> % n</div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> format(n, <span class="string">'03'</span>) <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;0:03d&#125;'</span>.format(n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;foo:03d&#125;'</span>.format(foo=n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;:03d&#125;'</span>.format(n))  <span class="comment"># python &gt;= 2.7 + python3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;0:03d&#125;'</span>.format(n))  <span class="comment"># python 3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">f'<span class="subst">&#123;n:<span class="number">03</span>&#125;</span>'</span>) <span class="comment"># python &gt;= 3.6</span></div><div class="line"><span class="number">004</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p> % formatting 已被 string.format 替代</p>
+        <h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><blockquote>
+<p>将一个函数映射到一个输入列表的所有元素上。</p>
 </blockquote>
-<h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">items = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line">squared = list(map(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, items))</div><div class="line"></div><div class="line"><span class="comment"># output:</span></div><div class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</div></pre></td></tr></table></figure>
+<h4 id="map作用于一列表的函数："><a href="#map作用于一列表的函数：" class="headerlink" title="map作用于一列表的函数："></a>map作用于一列表的函数：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x)</span>:</span></div><div class="line">	<span class="keyword">return</span> (x*x)</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x)</span>:</span></div><div class="line">	<span class="keyword">return</span> (x+x)</div><div class="line"></div><div class="line">funcs = [multiply, add]</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="number">5</span>):</div><div class="line">    value = map(<span class="keyword">lambda</span> x: x(i), funcs)</div><div class="line">    print(list(value))</div><div class="line"></div><div class="line"><span class="comment"># Output:</span></div><div class="line"><span class="comment"># [0, 0]</span></div><div class="line"><span class="comment"># [1, 2]</span></div><div class="line"><span class="comment"># [4, 4]</span></div><div class="line"><span class="comment"># [9, 6]</span></div><div class="line"><span class="comment"># [16, 8]</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>注：上面<code>print</code>加list转换，是为了python2/3的兼容，在python2中map直接返回列表，但在python3中返回迭代器。</p>
+</blockquote>
+<h3 id="Filter："><a href="#Filter：" class="headerlink" title="Filter："></a>Filter：</h3><blockquote>
+<p>过滤列表元素，返回符合要求的元素所组成的列表；<br>filter类似for循环，但更快。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">number_list = range(<span class="number">-5</span>, <span class="number">5</span>)</div><div class="line">less_than_zero = filter(<span class="keyword">lambda</span> x: x &lt; <span class="number">0</span>, number_list)</div><div class="line">print(list(less_than_zero))  </div><div class="line"></div><div class="line"><span class="comment"># Output: </span></div><div class="line">[<span class="number">-5</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-2</span>, <span class="number">-1</span>]</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="Reduce："><a href="#Reduce：" class="headerlink" title="Reduce："></a>Reduce：</h3><blockquote>
+<p>对列表进行计算并返回结果。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 计算列表乘积：</span></div><div class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</div><div class="line">product = reduce( (<span class="keyword">lambda</span> x, y: x * y), [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>] )</div><div class="line"></div><div class="line"><span class="comment"># Output: </span></div><div class="line"><span class="number">24</span></div><div class="line"></div><div class="line"><span class="comment"># 计算静默期：</span></div><div class="line">count_times：func，计算静默时间</div><div class="line">blank_ret：list</div><div class="line">reduce(count_times, sorted(blank_ret))</div></pre></td></tr></table></figure></p>
+</blockquote>
+
       
     </div>
 
@@ -530,6 +550,12 @@
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
+            <a href="/tags/Map/" rel="tag"># Map</a>
+          
+            <a href="/tags/Filter/" rel="tag"># Filter</a>
+          
+            <a href="/tags/Reduce/" rel="tag"># Reduce</a>
+          
         </div>
       
 
@@ -541,8 +567,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/24/2017-05-24-建站日志（二）/" rel="next" title="2017-05-24 建站日志（二）">
-                <i class="fa fa-chevron-left"></i> 2017-05-24 建站日志（二）
+              <a href="/2017/08/08/2017-8-8-profile-cProfile-效率分析/" rel="next" title="2017-8-8 profile cProfile 效率分析">
+                <i class="fa fa-chevron-left"></i> 2017-8-8 profile cProfile 效率分析
               </a>
             
           </div>
@@ -551,8 +577,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/10/2017-8-1-python-rrule-bug/" rel="prev" title="2017-8-1 python rrule bug">
-                2017-8-1 python rrule bug <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/10/2017-8-10-string-去掉标点符号/" rel="prev" title="2017-8-10 string 去掉标点符号">
+                2017-8-10 string 去掉标点符号 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -686,7 +712,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -697,7 +723,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -708,7 +734,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -796,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-most-pythonic-way-to-pad-zeroes-to-string"><span class="nav-number">1.</span> <span class="nav-text">The most pythonic way to pad zeroes to string</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Strings"><span class="nav-number">1.1.</span> <span class="nav-text">Strings:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numbers"><span class="nav-number">1.2.</span> <span class="nav-text">numbers:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保留小数位："><span class="nav-number">1.3.</span> <span class="nav-text">保留小数位：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">1.</span> <span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#map作用于一列表的函数："><span class="nav-number">1.1.</span> <span class="nav-text">map作用于一列表的函数：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filter："><span class="nav-number">2.</span> <span class="nav-text">Filter：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reduce："><span class="nav-number">3.</span> <span class="nav-text">Reduce：</span></a></li></ol></div>
             
 
           </div>
@@ -976,7 +1002,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 91321, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 91321, xid: "2017/08/10/2017-8-6-python-string/"});
+		_hcwp.push({widget:"Stream", widget_id: 91321, xid: "2017/08/09/2017-8-9-Map、Filter、Reduce/"});
 		
 
 		(function() {
