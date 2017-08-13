@@ -380,6 +380,184 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/07/31/2017-7-31-python-生成器（Generators）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chihwei·Hsu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟の迹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/31/2017-7-31-python-生成器（Generators）/" itemprop="url">
+                  2017-7-31 python 生成器（Generators）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T00:00:00+08:00">
+                2017-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/31/2017-7-31-python-生成器（Generators）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/07/31/2017-7-31-python-生成器（Generators）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+             <span id="/2017/07/31/2017-7-31-python-生成器（Generators）/" class="leancloud_visitors" data-flag-title="2017-7-31 python 生成器（Generators）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="可迭代对象（iterable）："><a href="#可迭代对象（iterable）：" class="headerlink" title="可迭代对象（iterable）："></a>可迭代对象（iterable）：</h3><blockquote>
+<p>能提供迭代器的任意对象；只要定义了一个迭代器的<strong>iter</strong>方法或定义了支持下标索引的<strong>getitem</strong>方法，那就是一个可迭代对象。</p>
+</blockquote>
+<h3 id="迭代器（iterators）："><a href="#迭代器（iterators）：" class="headerlink" title="迭代器（iterators）："></a>迭代器（iterators）：</h3><blockquote>
+<p>任意对象，只要定义了next或者<strong>next</strong>方法，那就是一个迭代器</p>
+</blockquote>
+<h3 id="迭代（iteration）："><a href="#迭代（iteration）：" class="headerlink" title="迭代（iteration）："></a>迭代（iteration）：</h3><blockquote>
+<p>从某个地方（如列表）取出一个元素的过程；使用一个循环来遍历某个东西（如列表），这个过程就是迭代；</p>
+</blockquote>
+<h3 id="生成器（Generators）："><a href="#生成器（Generators）：" class="headerlink" title="生成器（Generators）："></a>生成器（Generators）：</h3><blockquote>
+<p>也是一种迭代器，但只能对其迭代一次</p>
+<ul>
+<li>因为它们并没有把所有值存在内存中，而是运行时生成值；</li>
+<li>可通过遍历使用它们，要么使用“for”循环，要么传递给任意可以进行迭代的函数和结构；</li>
+<li>大多时候生成器是以函数实现的，但它们并不返回一个值，而是yield（生出）一个值。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_function</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">        <span class="keyword">yield</span> i</div><div class="line"></div><div class="line"><span class="keyword">for</span> item <span class="keyword">in</span> generator_function():</div><div class="line">    print(item)</div><div class="line"></div><div class="line"><span class="comment"># Output: 0</span></div><div class="line"><span class="comment"># 1</span></div><div class="line"><span class="comment"># 2</span></div><div class="line"><span class="comment"># 3</span></div><div class="line"><span class="comment"># 4</span></div><div class="line"><span class="comment"># 5</span></div><div class="line"><span class="comment"># 6</span></div><div class="line"><span class="comment"># 7</span></div><div class="line"><span class="comment"># 8</span></div><div class="line"><span class="comment"># 9</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h4 id="适用场景："><a href="#适用场景：" class="headerlink" title="适用场景："></a>适用场景：</h4><blockquote>
+<p>不想同一时间将所有计算出来的大量结果集分配到内存当中，特别是结果集里还包含循环；因为这样做会消耗大量资源<br>许多Python 2里的标准库函数都会返回列表，而Python 3都修改成了返回生成器，因为生成器占用更少的资源。</p>
+</blockquote>
+<p>**斐波那契数列的生成器：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 传统模式</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibon</span><span class="params">(n)</span>:</span></div><div class="line">    a = b = <span class="number">1</span></div><div class="line">    result = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</div><div class="line">        result.append(a)</div><div class="line">        a, b = b, a + b</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="comment"># 生成器模式</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibon</span><span class="params">(n)</span>:</span></div><div class="line">    a = b = <span class="number">1</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</div><div class="line">        <span class="keyword">yield</span> a</div><div class="line">        a, b = b, a + b</div><div class="line"></div><div class="line"><span class="comment"># Now we can use it like this:</span></div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> fibon(<span class="number">1000000</span>):</div><div class="line">    print(x)</div></pre></td></tr></table></figure>
+<h3 id="Python内置函数：next"><a href="#Python内置函数：next" class="headerlink" title="Python内置函数：next()"></a>Python内置函数：<code>next()</code></h3><blockquote>
+<p>它允许我们获取一个序列的下一个元素<br>特点：</p>
+<ul>
+<li>在<code>yield</code>掉所有的值后，<code>next()</code>会触发一个<code>StopIteration</code>的异常。提示我们所有的值都已经被<code>yield</code>完了；</li>
+<li>在使用<code>for</code>循环时没有这个异常，因为<code>for</code>循环会自动捕捉到这个异常并停止调用<code>next()</code>。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_function</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</div><div class="line">        <span class="keyword">yield</span> i</div><div class="line"></div><div class="line">gen = generator_function()</div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: 0</span></div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: 1</span></div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: 2</span></div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#         File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></div><div class="line"><span class="comment">#         StopIteration</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="Python内置函数：iter"><a href="#Python内置函数：iter" class="headerlink" title="Python内置函数：iter()"></a>Python内置函数：<code>iter()</code></h3><blockquote>
+<p>将一个可迭代对象返回一个迭代器对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">my_string = <span class="string">"Bingo"</span></div><div class="line">next(my_string)</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#      File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></div><div class="line"><span class="comment">#    TypeError: str object is not an iterator</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>这个异常说<code>str</code>对象是一个可迭代对象，而不是一个迭代器；不能直接对其进行迭代操作，所以，使用<code>iter</code>：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">my_string = <span class="string">"Bingo"</span></div><div class="line">my_iter = iter(my_string)</div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'B'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'i'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'n'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'g'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'o'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#         File "&lt;stdin&gt;", line 12, in &lt;module&gt;</span></div><div class="line"><span class="comment">#         StopIteration</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/05/24/2017-05-24-建站日志（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -514,7 +692,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj66jqqta000j51pv0d9ttt04"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj6a68dd3000jfwpv63vu8sba"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
               </a>
@@ -1063,7 +1241,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj66jqqt4000f51pvza4px3cs"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cj6a68dcy000ffwpv6kkqbu63"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
               </a>
@@ -1620,7 +1798,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" rel="gallery_cj66jqqs4000551pv189orq5c"
+                 href="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" rel="gallery_cj6a68dc30005fwpvskwj1vqx"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/pandas_logo.png" itemprop="contentUrl"/>
               </a>
@@ -2037,154 +2215,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/04/05/2017-04-05-you-are-my-sunshine/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chihwei·Hsu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟の迹">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/05/2017-04-05-you-are-my-sunshine/" itemprop="url">
-                  2017-04-05 you are my sunshine!
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-05T22:14:22+08:00">
-                2017-04-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/05/2017-04-05-you-are-my-sunshine/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/05/2017-04-05-you-are-my-sunshine/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-             <span id="/2017/04/05/2017-04-05-you-are-my-sunshine/" class="leancloud_visitors" data-flag-title="2017-04-05 you are my sunshine!">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2229,7 +2264,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
