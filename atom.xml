@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-08-13T03:27:05.687Z</updated>
+  <updated>2017-08-21T02:26:15.745Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSON文件 读写 格式化</title>
+    <link href="http://chihweihsu.com/2017/08/14/JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    <id>http://chihweihsu.com/2017/08/14/JSON文件-读写-格式化/</id>
+    <published>2017-08-14T05:37:04.000Z</published>
+    <updated>2017-08-21T02:26:15.745Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="写文件，格式化"><a href="#写文件，格式化" class="headerlink" title="写文件，格式化"></a>写文件，格式化</h3><blockquote>
+<p><code>indent</code>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_info</span><span class="params">(file_name, file_info)</span>:</span></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'&#123;&#125;.json'</span>.format(file_name), <span class="string">'w'</span>) <span class="keyword">as</span> fp:</div><div class="line">        json.dump(file_info, fp, indent=<span class="number">4</span>, sort_keys=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">write_info(<span class="string">'report'</span>, dict(report_data))</div><div class="line"></div><div class="line"><span class="keyword">import</span> json</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="读文件，格式化"><a href="#读文件，格式化" class="headerlink" title="读文件，格式化"></a>读文件，格式化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">pp_json</span><span class="params">(json_thing, sort=True, indents=<span class="number">4</span>)</span>:</span></div><div class="line">    <span class="keyword">if</span> type(json_thing) <span class="keyword">is</span> str:</div><div class="line">        print(json.dumps(json.loads(json_thing), sort_keys=sort, indent=indents))</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        print(json.dumps(json_thing, sort_keys=sort, indent=indents))</div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">pp_json(your_json_string_or_dict)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</div><div class="line">&gt;&gt;&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>your_json = <span class="string">'["foo", &#123;"bar":["baz", null, 1.0, 2]&#125;]'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parsed = json.loads(your_json)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> json.dumps(parsed, indent=<span class="number">4</span>, sort_keys=<span class="keyword">True</span>)</div><div class="line">[</div><div class="line">    <span class="string">"foo"</span>, </div><div class="line">    &#123;</div><div class="line">        <span class="string">"bar"</span>: [</div><div class="line">            <span class="string">"baz"</span>, </div><div class="line">            null, </div><div class="line">            <span class="number">1.0</span>, </div><div class="line">            <span class="number">2</span></div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;写文件，格式化&quot;&gt;&lt;a href=&quot;#写文件，格式化&quot; class=&quot;headerlink&quot; title=&quot;写文件，格式化&quot;&gt;&lt;/a&gt;写文件，格式化&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;indent&lt;/code&gt;:&lt;br&gt;&lt;figure class
+    
+    </summary>
+    
+      <category term="Python, Notes" scheme="http://chihweihsu.com/categories/Python-Notes/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>三元表达式（条件表达式）</title>
@@ -976,38 +1003,6 @@
       <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-5-7 Hexo 常用操作</title>
-    <link href="http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
-    <id>http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-常用操作/</id>
-    <published>2017-05-07T15:23:35.000Z</published>
-    <updated>2017-08-13T03:27:05.687Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="cyg操作"><a href="#cyg操作" class="headerlink" title="cyg操作"></a>cyg操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /cygdrive/d <span class="comment">#切换到D盘</span></div></pre></td></tr></table></figure>
-<h2 id="Hexo-操作"><a href="#Hexo-操作" class="headerlink" title="Hexo 操作"></a>Hexo 操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></div><div class="line">hexo version  <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo algolia  <span class="comment"># 更新search庫</span></div><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo new post <span class="string">"title"</span>  <span class="comment"># 生成新文章：\source\_posts\title.md，可省略post</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></div><div class="line">hexo clean <span class="comment">#清除部署緩存</span></div><div class="line">hexo n == hexo new <span class="comment">#新建文章</span></div><div class="line">hexo g == hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo s == hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo d == hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo d -g <span class="comment">#生成加部署</span></div><div class="line">hexo s -g <span class="comment">#生成加预览</span></div></pre></td></tr></table></figure>
-<p>*post、page等可以改成其他layout，可用layout在scaffolds目录下查看。在同目录下创建文件来添加自己的layout，也可以编辑现有的layout，比如post的layout默认是\scaffolds\post.md。</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>每次部署的步骤，可按以下两步来进行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo cl</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;cyg操作&quot;&gt;&lt;a href=&quot;#cyg操作&quot; class=&quot;headerlink&quot; title=&quot;cyg操作&quot;&gt;&lt;/a&gt;cyg操作&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
-    
-    
-      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
-    
-      <category term="Blog" scheme="http://chihweihsu.com/tags/Blog/"/>
     
   </entry>
   
