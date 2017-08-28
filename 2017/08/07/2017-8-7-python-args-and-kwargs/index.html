@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="悟の迹">
 <meta property="og:description" content="*args：
 传递一个非键值对的可变数量的参数列表给一个函数。123456789101112def test_var_args(f_arg, *argv):    print(&quot;first normal arg:&quot;, f_arg)    for arg in argv:        print(&quot;another arg through *argv:&quot;, arg)test_var_args(&apos;ya">
-<meta property="og:updated_time" content="2017-08-13T03:27:05.687Z">
+<meta property="og:updated_time" content="2017-08-28T10:40:36.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-7 python args and kwargs">
 <meta name="twitter:description" content="*args：
@@ -478,6 +478,7 @@
         <h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
 <p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
 </blockquote>
+<a id="more"></a>
 <h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
 <p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
 </blockquote>
@@ -696,7 +697,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -707,7 +708,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -718,7 +719,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

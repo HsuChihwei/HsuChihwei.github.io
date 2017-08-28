@@ -105,20 +105,17 @@
 
 
 
-<meta name="description" content="test.py：123456789import osimport sysdef process(filename):	print filenamefor (dirpath, dirnames, filenames) in os.walk(sys.argv[1]):	for filename in filenames:		process(filename)
-cProfile用法：12345# 生成.">
+<meta name="description" content="test.py：123456789import osimport sysdef process(filename):	print filenamefor (dirpath, dirnames, filenames) in os.walk(sys.argv[1]):	for filename in filenames:		process(filename)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-8-8 profile cProfile 效率分析">
 <meta property="og:url" content="http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-效率分析/index.html">
 <meta property="og:site_name" content="悟の迹">
-<meta property="og:description" content="test.py：123456789import osimport sysdef process(filename):	print filenamefor (dirpath, dirnames, filenames) in os.walk(sys.argv[1]):	for filename in filenames:		process(filename)
-cProfile用法：12345# 生成.">
+<meta property="og:description" content="test.py：123456789import osimport sysdef process(filename):	print filenamefor (dirpath, dirnames, filenames) in os.walk(sys.argv[1]):	for filename in filenames:		process(filename)">
 <meta property="og:image" content="http://chihweihsu.com/./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png">
-<meta property="og:updated_time" content="2017-08-13T03:27:05.687Z">
+<meta property="og:updated_time" content="2017-08-28T10:40:36.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-8 profile cProfile 效率分析">
-<meta name="twitter:description" content="test.py：123456789import osimport sysdef process(filename):	print filenamefor (dirpath, dirnames, filenames) in os.walk(sys.argv[1]):	for filename in filenames:		process(filename)
-cProfile用法：12345# 生成.">
+<meta name="twitter:description" content="test.py：123456789import osimport sysdef process(filename):	print filenamefor (dirpath, dirnames, filenames) in os.walk(sys.argv[1]):	for filename in filenames:		process(filename)">
 <meta name="twitter:image" content="http://chihweihsu.com/./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png">
 
 
@@ -478,6 +475,7 @@ cProfile用法：12345# 生成.">
 
       
         <h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="cProfile用法："><a href="#cProfile用法：" class="headerlink" title="cProfile用法："></a>cProfile用法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成.pstats分析文档</span></div><div class="line">python -m cProfile -o profile.pstats test.py /usr</div><div class="line"><span class="comment"># 查看pstats文档</span></div><div class="line">python -m pstats profile.pstats</div><div class="line"><span class="comment"># ?: 查看可用指令；sort cumtime:排序；stats:查看pstats文档</span></div></pre></td></tr></table></figure>
 <p><img src="./images/%E4%BB%A3%E7%A0%81%E6%AE%B5.png" alt="enter description here" title="sort keys"></p>
 <h3 id="gprof2dot用法"><a href="#gprof2dot用法" class="headerlink" title="gprof2dot用法:"></a><a href="https://github.com/jrfonseca/gprof2dot" target="_blank" rel="external">gprof2dot</a>用法:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 gprof2dot</span></div><div class="line">pip install gprof2dot</div><div class="line"><span class="comment"># 通过.pstats文档生成相应的dot文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats</div><div class="line"><span class="comment"># 安装graphviz（centOS系统）</span></div><div class="line">sudo yum install graphviz</div><div class="line"><span class="comment"># 输出png文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats | dot -T png -o profile.png</div></pre></td></tr></table></figure>
@@ -689,7 +687,7 @@ cProfile用法：12345# 生成.">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -700,7 +698,7 @@ cProfile用法：12345# 生成.">
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -711,7 +709,7 @@ cProfile用法：12345# 生成.">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

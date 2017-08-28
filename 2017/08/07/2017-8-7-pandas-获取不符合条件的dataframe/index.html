@@ -106,24 +106,18 @@
 
 
 <meta name="description" content="search for “does-not-contain” on a dataframe in pandas
-问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。
-
-方法一：df[~df.col.str.contains(word)]12345678910111213141516171819&amp;gt;&amp;gt;&amp;gt">
+问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-8-7 pandas 获取不符合条件的dataframe">
 <meta property="og:url" content="http://chihweihsu.com/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/index.html">
 <meta property="og:site_name" content="悟の迹">
 <meta property="og:description" content="search for “does-not-contain” on a dataframe in pandas
-问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。
-
-方法一：df[~df.col.str.contains(word)]12345678910111213141516171819&amp;gt;&amp;gt;&amp;gt">
-<meta property="og:updated_time" content="2017-08-13T03:27:05.687Z">
+问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。">
+<meta property="og:updated_time" content="2017-08-28T10:40:36.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-7 pandas 获取不符合条件的dataframe">
 <meta name="twitter:description" content="search for “does-not-contain” on a dataframe in pandas
-问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。
-
-方法一：df[~df.col.str.contains(word)]12345678910111213141516171819&amp;gt;&amp;gt;&amp;gt">
+问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。">
 
 
 
@@ -484,6 +478,7 @@
         <h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
 <p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
 </blockquote>
+<a id="more"></a>
 <h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>     <span class="keyword">True</span></div><div class="line"><span class="number">1</span>    <span class="keyword">False</span></div><div class="line"><span class="number">2</span>     <span class="keyword">True</span></div><div class="line"><span class="number">3</span>    <span class="keyword">False</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</div></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：</p>
@@ -704,7 +699,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -715,7 +710,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -726,7 +721,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -108,8 +108,7 @@
 <meta name="description" content="Map
 将一个函数映射到一个输入列表的所有元素上。
 
-12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]
-map作用于一列表的函数：1234567891011121314151617def multiply(x):	return (x*x)def add(x">
+12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-8-9 Map、Filter、Reduce">
 <meta property="og:url" content="http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/index.html">
@@ -117,16 +116,14 @@ map作用于一列表的函数：1234567891011121314151617def multiply(x):	retur
 <meta property="og:description" content="Map
 将一个函数映射到一个输入列表的所有元素上。
 
-12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]
-map作用于一列表的函数：1234567891011121314151617def multiply(x):	return (x*x)def add(x">
-<meta property="og:updated_time" content="2017-08-13T03:27:05.687Z">
+12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]">
+<meta property="og:updated_time" content="2017-08-28T10:40:36.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-9 Map、Filter、Reduce">
 <meta name="twitter:description" content="Map
 将一个函数映射到一个输入列表的所有元素上。
 
-12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]
-map作用于一列表的函数：1234567891011121314151617def multiply(x):	return (x*x)def add(x">
+12345items = [1, 2, 3, 4, 5]squared = list(map(lambda x: x**2, items))# output:[1, 4, 9, 16, 25]">
 
 
 
@@ -488,6 +485,7 @@ map作用于一列表的函数：1234567891011121314151617def multiply(x):	retur
 <p>将一个函数映射到一个输入列表的所有元素上。</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">items = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line">squared = list(map(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, items))</div><div class="line"></div><div class="line"><span class="comment"># output:</span></div><div class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h4 id="map作用于一列表的函数："><a href="#map作用于一列表的函数：" class="headerlink" title="map作用于一列表的函数："></a>map作用于一列表的函数：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x)</span>:</span></div><div class="line">	<span class="keyword">return</span> (x*x)</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x)</span>:</span></div><div class="line">	<span class="keyword">return</span> (x+x)</div><div class="line"></div><div class="line">funcs = [multiply, add]</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="number">5</span>):</div><div class="line">    value = map(<span class="keyword">lambda</span> x: x(i), funcs)</div><div class="line">    print(list(value))</div><div class="line"></div><div class="line"><span class="comment"># Output:</span></div><div class="line"><span class="comment"># [0, 0]</span></div><div class="line"><span class="comment"># [1, 2]</span></div><div class="line"><span class="comment"># [4, 4]</span></div><div class="line"><span class="comment"># [9, 6]</span></div><div class="line"><span class="comment"># [16, 8]</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>注：上面<code>print</code>加list转换，是为了python2/3的兼容，在python2中map直接返回列表，但在python3中返回迭代器。</p>
@@ -712,7 +710,7 @@ map作用于一列表的函数：1234567891011121314151617def multiply(x):	retur
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -723,7 +721,7 @@ map作用于一列表的函数：1234567891011121314151617def multiply(x):	retur
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -734,7 +732,7 @@ map作用于一列表的函数：1234567891011121314151617def multiply(x):	retur
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
