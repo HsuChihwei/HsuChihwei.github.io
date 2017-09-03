@@ -1,8 +1,33 @@
-[TOC]
+——————————
+# 建站日志
+——————————
+
+{% note info %} 到此，建站告一段落，功能差不多完善了 {% endnote %}
+<!-- more -->
+### **2017-05-24：**
+### Bootstrap Callout的巨坑BUG
 
 ---
-# 建站日志
----
+在今天新增添加评论后，部署完成后发现，界面变成如下：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81.png)
+完全乱码了，真是...
+经过一晚上排查，发现原因出在：Markdown开头我使用了`Bootstrap Callout`语句，中间写了其他代码，结尾又再次使用了`Bootstrap Callout`语句，如下图：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG.png)
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG2.png)
+把结尾的`Bootstrap Callout`语句去掉之后，一切又恢复了正常。
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81%E6%AD%A3%E5%B8%B8.png)
+
+难道`Bootstrap Callout`语句一篇文章只能使用一次？？？
+
+为了验证，做了如下测试：
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG4.png)
+![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-24_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%B9%B1%E7%A0%81BUG3.png)
+果然如此，真是绝了...
+对了，连下面这种情况（`Bootstrap Callout`）也不能出现，出现了也算一次：
+```
+`{% note info %} ... {% endnote %}` #单引号小代码块
+```
+
 ### **2017-05-24：**
 ### 添加评论
 
