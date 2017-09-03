@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-08-28T10:40:36.848Z</updated>
+  <updated>2017-09-03T02:22:55.750Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -16,11 +16,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python 自动 生成注释文档（docstring）</title>
+    <link href="http://chihweihsu.com/2017/08/31/python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/"/>
+    <id>http://chihweihsu.com/2017/08/31/python-自动-生成注释文档（docstring）/</id>
+    <published>2017-08-31T12:22:52.000Z</published>
+    <updated>2017-09-03T02:22:55.750Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
+<p>项目中，发现很多函数、类没有注释说明，一个个弄比较繁琐，所以……</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="docstring定义："><a href="#docstring定义：" class="headerlink" title="docstring定义："></a><code>docstring</code>定义：</h3><blockquote>
+<p>官方：A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <strong>doc</strong> special attribute of that object；<br>人话：“出现在模块、函数、类、方法里的第一个语句，就叫做<code>docsting</code>”；<br>调用：使用<code>__doc__</code>。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></div><div class="line">  <span class="string">""" This is function foo"""</span></div><div class="line"></div><div class="line">foo.__doc__</div><div class="line"><span class="comment">#  This is function foo</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="docstring风格："><a href="#docstring风格：" class="headerlink" title="docstring风格："></a><code>docstring</code>风格：</h3><blockquote>
+<p>主要四种：<code>javadoc</code>(<code>Epytext</code>), <code>reST</code>, <code>numpydoc</code>, <code>google</code></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Epytext</span></div><div class="line"><span class="string">"""</span></div><div class="line">This is a javadoc style.</div><div class="line"> </div><div class="line">@param param1: this is a first param</div><div class="line">@param param2: this is a second param</div><div class="line">@return: this is a description of what is returned</div><div class="line">@raise keyError: raises an exception</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="comment"># reST（推荐，reST风格，Sphinx的御用格式）</span></div><div class="line"><span class="string">"""</span></div><div class="line">This is a reST style.</div><div class="line"> </div><div class="line">:param param1: this is a first param</div><div class="line">:param param2: this is a second param</div><div class="line">:returns: this is a description of what is returned</div><div class="line">:raises keyError: raises an exception</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="comment"># Google</span></div><div class="line"><span class="string">"""</span></div><div class="line">This is a groups style docs.</div><div class="line"> </div><div class="line">Parameters:</div><div class="line">  param1 - this is the first param</div><div class="line">  param2 - this is a second param</div><div class="line"> </div><div class="line">Returns:</div><div class="line">  This is a description of what is returned</div><div class="line"> </div><div class="line">Raises:</div><div class="line">  KeyError - raises an exception</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="comment"># Numpydoc (Numpy风格)</span></div><div class="line"><span class="string">"""</span></div><div class="line">My numpydoc description of a kind</div><div class="line">of very exhautive numpydoc format docstring.</div><div class="line"> </div><div class="line">Parameters</div><div class="line">----------</div><div class="line">first : array_like</div><div class="line">  the 1st param name `first`</div><div class="line">second :</div><div class="line">  the 2nd param</div><div class="line">third : &#123;'value', 'other'&#125;, optional</div><div class="line">  the 3rd param, by default 'value'</div><div class="line"> </div><div class="line">Returns</div><div class="line">-------</div><div class="line">string</div><div class="line">  a value in a string</div><div class="line"> </div><div class="line">Raises</div><div class="line">------</div><div class="line">KeyError</div><div class="line">  when a key error</div><div class="line">OtherError</div><div class="line">  when an other error</div><div class="line">"""</div></pre></td></tr></table></figure>
+<h3 id="转换工具pyment"><a href="#转换工具pyment" class="headerlink" title="转换工具pyment"></a>转换工具<a href="https://github.com/dadadel/pyment" target="_blank" rel="external"><code>pyment</code></a></h3><blockquote>
+<p>用来创建、转换<code>docsting</code>，<a href="https://github.com/dadadel/pyment" target="_blank" rel="external">点击查看安装</a><br>centos中可能使用不了<code>patch</code>，<a href="http://centos-packages.com/7/package/patch/" target="_blank" rel="external">点击下载安装包</a><br><code>pyment</code>命令帮助：<code>pyment -h</code></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装pyment</span></div><div class="line">$ git clone https://github.com/dadadel/pyment.git  <span class="comment"># or git@github.com:dadadel/pyment.git</span></div><div class="line">$ cd pyment</div><div class="line">$ python setup.py install</div><div class="line"></div><div class="line"><span class="comment"># 安装patch</span></div><div class="line"><span class="comment"># 下载安装包：http://centos-packages.com/7/package/patch/</span></div><div class="line">rpm -i patch<span class="number">-2.7</span><span class="number">.1</span><span class="number">-8.</span>el7.x86_64.rpm</div><div class="line"></div><div class="line"><span class="comment"># 使用方法</span></div><div class="line">$ pyment test.py      <span class="comment">#生成patch</span></div><div class="line">$ patch -p1 &lt; test.py.patch <span class="comment">#打patch</span></div></pre></td></tr></table></figure>
+<h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><blockquote>
+<p>注释前<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># test.py</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(param1=True, param2=<span class="string">'default val'</span>)</span>:</span></div><div class="line">    <span class="string">'''Description of func with docstring groups style.</span></div><div class="line"></div><div class="line">    Params:</div><div class="line">        param1 - descr of param1 that has True for default value.</div><div class="line">        param2 - descr of param2</div><div class="line"></div><div class="line">    Returns:</div><div class="line">        some value</div><div class="line"></div><div class="line">    Raises:</div><div class="line">        keyError: raises key exception</div><div class="line">        TypeError: raises type exception</div><div class="line"></div><div class="line">    '''</div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span><span class="params">(self, param1, param2=None)</span>:</span></div><div class="line">        <span class="keyword">pass</span></div></pre></td></tr></table></figure></p>
+<p>执行<code>pyment test.py</code>，得到<code>patch</code>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"># Patch generated by Pyment v0.2.0</div><div class="line"></div><div class="line">--- a/test.py</div><div class="line">+++ b/test.py</div><div class="line">@@ -1,20 +1,22 @@</div><div class="line"> def func(param1=True, param2=&apos;default val&apos;):</div><div class="line">-    &apos;&apos;&apos;Description of func with docstring groups style.</div><div class="line">+    &quot;&quot;&quot;Description of func with docstring groups style.</div><div class="line"></div><div class="line">-    Params:</div><div class="line">-        param1 - descr of param1 that has True for default value.</div><div class="line">-        param2 - descr of param2</div><div class="line">+    :param param1: descr of param1 that has True for default value</div><div class="line">+    :param param2: descr of param2 (Default value = &apos;default val&apos;)</div><div class="line">+    :returns: some value</div><div class="line">+    :raises keyError: raises key exception</div><div class="line">+    :raises TypeError: raises type exception</div><div class="line"></div><div class="line">-    Returns:</div><div class="line">-        some value</div><div class="line">-</div><div class="line">-    Raises:</div><div class="line">-        keyError: raises key exception</div><div class="line">-        TypeError: raises type exception</div><div class="line">-</div><div class="line">-    &apos;&apos;&apos;</div><div class="line">+    &quot;&quot;&quot;</div><div class="line">     pass</div><div class="line"></div><div class="line"> class A:</div><div class="line">+    &quot;&quot;&quot; &quot;&quot;&quot;</div><div class="line">     def method(self, param1, param2=None):</div><div class="line">+        &quot;&quot;&quot;</div><div class="line">+</div><div class="line">+        :param param1:</div><div class="line">+        :param param2:  (Default value = None)</div><div class="line">+</div><div class="line">+        &quot;&quot;&quot;</div><div class="line">         pass</div></pre></td></tr></table></figure></p>
+<p>执行<code>patch -p1 &lt; test.py.patch</code>，注释后得到</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(param1=True, param2=<span class="string">'default val'</span>)</span>:</span></div><div class="line">    <span class="string">"""Description of func with docstring groups style.</span></div><div class="line"></div><div class="line">    :param param1: descr of param1 that has True for default value</div><div class="line">    :param param2: descr of param2 (Default value = 'default val')</div><div class="line">    :returns: some value</div><div class="line">    :raises keyError: raises key exception</div><div class="line">    :raises TypeError: raises type exception</div><div class="line"></div><div class="line">    """</div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></div><div class="line">    <span class="string">""" """</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span><span class="params">(self, param1, param2=None)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line"></div><div class="line">        :param param1:</div><div class="line">        :param param2:  (Default value = None)</div><div class="line"></div><div class="line">        """</div><div class="line">        <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><blockquote>
+<p>使用<code>sphinx</code>的<code>autodoc</code>自动从<code>docstring</code>生产api文档, 避免重复工作，再娄一遍Api文档。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;情景描述：&quot;&gt;&lt;a href=&quot;#情景描述：&quot; class=&quot;headerlink&quot; title=&quot;情景描述：&quot;&gt;&lt;/a&gt;情景描述：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;项目中，发现很多函数、类没有注释说明，一个个弄比较繁琐，所以……&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Python, Notes" scheme="http://chihweihsu.com/categories/Python-Notes/"/>
+    
+    
+      <category term="Python, Linux" scheme="http://chihweihsu.com/tags/Python-Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python  two sum 问题</title>
+    <link href="http://chihweihsu.com/2017/08/31/python-two-sum-%E9%97%AE%E9%A2%98/"/>
+    <id>http://chihweihsu.com/2017/08/31/python-two-sum-问题/</id>
+    <published>2017-08-31T09:02:59.000Z</published>
+    <updated>2017-09-03T02:22:55.749Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># Time:  O(n)</div><div class="line"># Space: O(n)</div><div class="line"></div><div class="line"># Given an array of integers, return indices of the two numbers</div><div class="line"># such that they add up to a specific target.</div><div class="line">#</div><div class="line"># You may assume that each input would have exactly one solution.</div><div class="line">#</div><div class="line"># Example:</div><div class="line"># Given nums = [2, 7, 11, 15], target = 9,</div><div class="line">#</div><div class="line"># Because nums[0] + nums[1] = 2 + 7 = 9,</div><div class="line"># return [0, 1].</div></pre></td></tr></table></figure>
+<h3 id="Python-解法："><a href="#Python-解法：" class="headerlink" title="Python 解法："></a>Python 解法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        """</div><div class="line">        lookup = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> i, num <span class="keyword">in</span> enumerate(nums):</div><div class="line">            <span class="keyword">if</span> target - num <span class="keyword">in</span> lookup:</div><div class="line">                <span class="keyword">return</span> [lookup[target - num], i]</div><div class="line">            lookup[num] = i</div><div class="line">        <span class="keyword">return</span> []</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum2</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        """</div><div class="line">        k = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</div><div class="line">            j = target - i</div><div class="line">            k += <span class="number">1</span></div><div class="line">            tmp_nums = nums[k:]</div><div class="line">            <span class="keyword">if</span> j <span class="keyword">in</span> tmp_nums:</div><div class="line">                <span class="keyword">return</span> [k - <span class="number">1</span>, tmp_nums.index(j) + k]</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="keyword">print</span> Solution().twoSum((<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>), <span class="number">9</span>)</div><div class="line">	</div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="comment"># med = a[int(len(a)/2)]</span></div><div class="line">    c=[<span class="number">-1</span>, <span class="number">-1</span>]</div><div class="line">    <span class="keyword">for</span> i, v <span class="keyword">in</span> enumerate(a):</div><div class="line">        <span class="keyword">for</span> j,k <span class="keyword">in</span> enumerate(a[i+<span class="number">1</span>:]):</div><div class="line">            c = [i, i+j+<span class="number">1</span>] <span class="keyword">if</span> v+k==b <span class="keyword">else</span> c</div><div class="line">    <span class="keyword">return</span> c</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main2</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    dict 存放查值</div><div class="line">    """</div><div class="line">    c = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</div><div class="line">        <span class="keyword">if</span> b - a[i] <span class="keyword">in</span> c:</div><div class="line">            <span class="keyword">return</span> [c[b-a[i]], i]</div><div class="line">        c[a[i]] = i</div><div class="line">    <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_number</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    dict 存放差值</div><div class="line">    """</div><div class="line">    <span class="keyword">if</span> len(a) &lt;= <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    c = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</div><div class="line">        <span class="keyword">if</span> a[i] <span class="keyword">in</span> c:</div><div class="line">            <span class="keyword">return</span> [c[a[i]], i]</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            c[b - a[i]] = i</div><div class="line">    <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main3</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</div><div class="line">        <span class="keyword">if</span> (b - a[len(a)-i<span class="number">-1</span>]) <span class="keyword">in</span> a[:len(a)-i<span class="number">-1</span>]:</div><div class="line">            <span class="keyword">return</span> [a.index((b - a[len(a)-i<span class="number">-1</span>])),len(a)-i<span class="number">-1</span>]</div><div class="line">    <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main4</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        <span class="comment"># print [[a.index((b - a[len(a)-i-1])),len(a)-i-1] for i in range(len(a)) if (b - a[len(a)-i-1]) in a[:len(a)-i-1]]</span></div><div class="line">        <span class="keyword">return</span> [[a.index((b - a[len(a)-i<span class="number">-1</span>])),len(a)-i<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)) <span class="keyword">if</span> (b - a[len(a)-i<span class="number">-1</span>]) <span class="keyword">in</span> a[:len(a)-i<span class="number">-1</span>]][<span class="number">0</span>]</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">return</span> [<span class="number">-1</span>,<span class="number">-1</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main5</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="keyword">return</span> [[a.index((b - a[len(a)-i<span class="number">-1</span>])),len(a)-i<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)) <span class="keyword">if</span> (b - a[len(a)-i<span class="number">-1</span>]) <span class="keyword">in</span> a[:len(a)-i<span class="number">-1</span>]].pop()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main6</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="keyword">return</span> [[a.index(b-j), i] <span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(a) <span class="keyword">if</span> a.count(b-j) &gt; <span class="number">0</span> <span class="keyword">and</span> a.index(b-j)!=i].pop()</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    a = range(<span class="number">20</span>)</div><div class="line">    b = <span class="number">18</span></div><div class="line">    <span class="comment"># a = [49,1,2,3,50,51]</span></div><div class="line">    <span class="comment"># b=99</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'list:&#123;&#125;,data:&#123;&#125;'</span>.format(a,b)</div><div class="line">    start = time.time()</div><div class="line">    <span class="keyword">print</span> main(a,b)</div><div class="line">    <span class="keyword">print</span> <span class="string">'main_time_used:&#123;&#125;'</span>.format(time.time()-start)</div><div class="line">    start = time.time()</div><div class="line">    <span class="keyword">print</span> main2(a,b)</div><div class="line">    <span class="keyword">print</span> <span class="string">'main2_time_used:&#123;&#125;'</span>.format(time.time()-start)</div><div class="line">    start = time.time()</div><div class="line">    <span class="keyword">print</span> main3(a,b)</div><div class="line">    <span class="keyword">print</span> <span class="string">'main3_time_used:&#123;&#125;'</span>.format(time.time()-start)</div><div class="line">    start = time.time()</div><div class="line">    <span class="keyword">print</span> main4(a,b)</div><div class="line">    <span class="keyword">print</span> <span class="string">'main4_time_used:&#123;&#125;'</span>.format(time.time()-start)</div><div class="line">    start = time.time()</div><div class="line">    <span class="keyword">print</span> main5(a,b)</div><div class="line">    <span class="keyword">print</span> <span class="string">'main5_time_used:&#123;&#125;'</span>.format(time.time()-start)</div><div class="line">    start = time.time()</div><div class="line">    <span class="keyword">print</span> main6(a,b)</div><div class="line">    <span class="keyword">print</span> <span class="string">'main6_time_used:&#123;&#125;'</span>.format(time.time()-start)</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;题目描述：&quot;&gt;&lt;a href=&quot;#题目描述：&quot; class=&quot;headerlink&quot; title=&quot;题目描述：&quot;&gt;&lt;/a&gt;题目描述：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;t
+    
+    </summary>
+    
+      <category term="Python, Notes" scheme="http://chihweihsu.com/categories/Python-Notes/"/>
+    
+    
+      <category term="Python, 算法" scheme="http://chihweihsu.com/tags/Python-%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Pandas dataframe与序列相乘</title>
     <link href="http://chihweihsu.com/2017/08/27/Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/"/>
     <id>http://chihweihsu.com/2017/08/27/Pandas-dataframe与序列相乘/</id>
     <published>2017-08-27T10:28:54.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.749Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>继续完成项目中的评分卡部分，拿到分好箱的数据后，如何进行加权得到最后的分数就是我们接下来要考虑的问题了。</p>
@@ -55,7 +130,7 @@
     <link href="http://chihweihsu.com/2017/08/27/python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/"/>
     <id>http://chihweihsu.com/2017/08/27/python-协程加速/</id>
     <published>2017-08-27T08:05:58.000Z</published>
-    <updated>2017-08-28T10:40:36.849Z</updated>
+    <updated>2017-09-03T02:22:55.750Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>上周，由于产品嫌报告生成太慢，经过使用<code>profile/gprof2dot</code>研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用<code>gevent</code>,以缓解报告生成压力。</p>
@@ -95,7 +170,7 @@
     <link href="http://chihweihsu.com/2017/08/27/Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/27/Pandas-分箱操作（cut）/</id>
     <published>2017-08-27T03:12:47.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.749Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>最新，项目中涉及到评分卡操作，评分项目有大概几十项，每项基本都是按频次区间给一个分数，最后，累计所有项目的分数得出最后所需要的分数。</p>
@@ -130,7 +205,7 @@
     <link href="http://chihweihsu.com/2017/08/23/mongo-insert-many-BulkWriteError/"/>
     <id>http://chihweihsu.com/2017/08/23/mongo-insert-many-BulkWriteError/</id>
     <published>2017-08-23T01:31:08.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.746Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
 <p>在对mongo插入数据时，报写入问题，报错信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/root/crs/call_history_crawler/worker/communicate.py&quot;, line 149, in insert_db_data</div><div class="line">    if db[table].insert_many(data):</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 684, in insert_many</div><div class="line">    blk.execute(self.write_concern.document)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 470, in execute</div><div class="line">    return self.execute_command(sock_info, generator, write_concern)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 314, in execute_command</div><div class="line">    raise BulkWriteError(full_result)</div><div class="line">BulkWriteError: batch op errors occurred</div></pre></td></tr></table></figure></p>
@@ -161,7 +236,7 @@
     <link href="http://chihweihsu.com/2017/08/14/JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     <id>http://chihweihsu.com/2017/08/14/JSON文件-读写-格式化/</id>
     <published>2017-08-14T05:37:04.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.746Z</updated>
     
     <content type="html"><![CDATA[<h3 id="写文件，格式化"><a href="#写文件，格式化" class="headerlink" title="写文件，格式化"></a>写文件，格式化</h3><blockquote>
 <p><code>indent</code>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_info</span><span class="params">(file_name, file_info)</span>:</span></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'&#123;&#125;.json'</span>.format(file_name), <span class="string">'w'</span>) <span class="keyword">as</span> fp:</div><div class="line">        json.dump(file_info, fp, indent=<span class="number">4</span>, sort_keys=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">write_info(<span class="string">'report'</span>, dict(report_data))</div><div class="line"></div><div class="line"><span class="keyword">import</span> json</div></pre></td></tr></table></figure></p>
@@ -190,7 +265,7 @@
     <link href="http://chihweihsu.com/2017/08/13/%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/13/三元表达式（条件表达式）/</id>
     <published>2017-08-13T02:41:33.000Z</published>
-    <updated>2017-08-28T10:40:36.849Z</updated>
+    <updated>2017-09-03T02:22:55.750Z</updated>
     
     <content type="html"><![CDATA[<h3 id="条件表达式："><a href="#条件表达式：" class="headerlink" title="条件表达式："></a>条件表达式：</h3><blockquote>
 <p>使用一行代码快速判断，替换复杂的多行if语句，使得代码简单可维护。</p>
@@ -237,7 +312,7 @@
     <link href="http://chihweihsu.com/2017/08/10/2017-8-10-%E8%B0%83%E8%AF%95-Pdb%EF%BC%88Python-debugger%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-10-调试-Pdb（Python-debugger）/</id>
     <published>2017-08-10T14:20:47.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.738Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Pdb（Python-debugger）："><a href="#Pdb（Python-debugger）：" class="headerlink" title="Pdb（Python debugger）："></a>Pdb（Python debugger）：</h2><h3 id="命令行运行："><a href="#命令行运行：" class="headerlink" title="命令行运行："></a>命令行运行：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pdb my_script.py</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -262,7 +337,7 @@
     <link href="http://chihweihsu.com/2017/08/10/2017-8-10-string-%E5%8E%BB%E6%8E%89%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-10-string-去掉标点符号/</id>
     <published>2017-08-09T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.738Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Python-字符串去掉标点符号最佳实践"><a href="#Python-字符串去掉标点符号最佳实践" class="headerlink" title="Python 字符串去掉标点符号最佳实践"></a>Python 字符串去掉标点符号最佳实践</h3><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><blockquote>
 <p><code>str.isalnum</code>：<br>S.isalnum() -&gt; bool<br>Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.</p>
@@ -308,7 +383,7 @@
     <link href="http://chihweihsu.com/2017/08/09/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/"/>
     <id>http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/</id>
     <published>2017-08-08T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.743Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><blockquote>
 <p>将一个函数映射到一个输入列表的所有元素上。</p>
@@ -352,7 +427,7 @@
     <link href="http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/"/>
     <id>http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-效率分析/</id>
     <published>2017-08-07T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.742Z</updated>
     
     <content type="html"><![CDATA[<h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -373,47 +448,11 @@
   </entry>
   
   <entry>
-    <title>2017-8-7 python args and kwargs</title>
-    <link href="http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/"/>
-    <id>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</id>
-    <published>2017-08-06T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
-<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<a id="more"></a>
-<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
-<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;args：&quot;&gt;&lt;a href=&quot;#args：&quot; class=&quot;headerlink&quot; title=&quot;*args：&quot;&gt;&lt;/a&gt;&lt;code&gt;*args&lt;/code&gt;：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;传递一个非键值对的可变数量的参数列表给一个函数。&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test_var_args&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(f_arg, *argv)&lt;/span&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    print(&lt;span class=&quot;string&quot;&gt;&quot;first normal arg:&quot;&lt;/span&gt;, f_arg)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; arg &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; argv:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        print(&lt;span class=&quot;string&quot;&gt;&quot;another arg through *argv:&quot;&lt;/span&gt;, arg)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;test_var_args(&lt;span class=&quot;string&quot;&gt;&#39;yasoob&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;python&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;eggs&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;test&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# output：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# first normal arg: yasoob&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: python&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: eggs&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: test&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="args" scheme="http://chihweihsu.com/tags/args/"/>
-    
-      <category term="kwargs" scheme="http://chihweihsu.com/tags/kwargs/"/>
-    
-  </entry>
-  
-  <entry>
     <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
     <link href="http://chihweihsu.com/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
     <id>http://chihweihsu.com/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/</id>
     <published>2017-08-06T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.742Z</updated>
     
     <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
 <p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
@@ -447,11 +486,47 @@
   </entry>
   
   <entry>
+    <title>2017-8-7 python args and kwargs</title>
+    <link href="http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/"/>
+    <id>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</id>
+    <published>2017-08-06T16:00:00.000Z</published>
+    <updated>2017-09-03T02:22:55.742Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
+<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<a id="more"></a>
+<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
+<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
+<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;args：&quot;&gt;&lt;a href=&quot;#args：&quot; class=&quot;headerlink&quot; title=&quot;*args：&quot;&gt;&lt;/a&gt;&lt;code&gt;*args&lt;/code&gt;：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;传递一个非键值对的可变数量的参数列表给一个函数。&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test_var_args&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(f_arg, *argv)&lt;/span&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    print(&lt;span class=&quot;string&quot;&gt;&quot;first normal arg:&quot;&lt;/span&gt;, f_arg)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; arg &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; argv:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        print(&lt;span class=&quot;string&quot;&gt;&quot;another arg through *argv:&quot;&lt;/span&gt;, arg)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;test_var_args(&lt;span class=&quot;string&quot;&gt;&#39;yasoob&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;python&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;eggs&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;test&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# output：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# first normal arg: yasoob&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: python&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: eggs&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: test&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="args" scheme="http://chihweihsu.com/tags/args/"/>
+    
+      <category term="kwargs" scheme="http://chihweihsu.com/tags/kwargs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017-8-6 python string</title>
     <link href="http://chihweihsu.com/2017/08/06/2017-8-6-python-string/"/>
     <id>http://chihweihsu.com/2017/08/06/2017-8-6-python-string/</id>
     <published>2017-08-05T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.741Z</updated>
     
     <content type="html"><![CDATA[<h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -478,7 +553,7 @@
     <link href="http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/"/>
     <id>http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/</id>
     <published>2017-07-31T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.741Z</updated>
     
     <content type="html"><![CDATA[<p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
 <h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
@@ -509,7 +584,7 @@
     <link href="http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/"/>
     <id>http://chihweihsu.com/2017/07/31/2017-7-31-python-交集、并集、差集/</id>
     <published>2017-07-30T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.736Z</updated>
     
     <content type="html"><![CDATA[<h3 id="交集-intersection"><a href="#交集-intersection" class="headerlink" title="交集(intersection)"></a>交集(intersection)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">example：</div><div class="line">valid = set([<span class="string">'yellow'</span>, <span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>, <span class="string">'black'</span>])</div><div class="line">input_set = set([<span class="string">'red'</span>, <span class="string">'brown'</span>]) </div><div class="line">print(input_set.intersection(valid))</div><div class="line"><span class="comment">### 输出：set(['red'])</span></div><div class="line"></div><div class="line"><span class="comment"># 方法一:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b=[<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp = [val <span class="keyword">for</span> val <span class="keyword">in</span> a <span class="keyword">if</span> val <span class="keyword">in</span> b]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法二</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).intersection(set(b)))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法三：</span></div><div class="line">&gt;&gt;&gt;list(set(a) &amp; set(b))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -564,7 +639,7 @@
     <link href="http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/07/31/2017-7-31-python-生成器（Generators）/</id>
     <published>2017-07-30T16:00:00.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.737Z</updated>
     
     <content type="html"><![CDATA[<h3 id="可迭代对象（iterable）："><a href="#可迭代对象（iterable）：" class="headerlink" title="可迭代对象（iterable）："></a>可迭代对象（iterable）：</h3><blockquote>
 <p>能提供迭代器的任意对象；只要定义了一个迭代器的<strong>iter</strong>方法或定义了支持下标索引的<strong>getitem</strong>方法，那就是一个可迭代对象。</p>
@@ -628,7 +703,7 @@
     <link href="http://chihweihsu.com/2017/05/24/2017-05-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/05/24/2017-05-24-建站日志（二）/</id>
     <published>2017-05-24T13:09:54.000Z</published>
-    <updated>2017-08-28T10:40:36.848Z</updated>
+    <updated>2017-09-03T02:22:55.732Z</updated>
     
     <content type="html"><![CDATA[<div class="note info"><p>到此，建站告一段落，功能差不多完善了 </p>
 </div>
@@ -681,7 +756,7 @@
     <link href="http://chihweihsu.com/2017/05/23/2017-05-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/"/>
     <id>http://chihweihsu.com/2017/05/23/2017-05-23-一个逗号-引起的BUG/</id>
     <published>2017-05-23T14:45:11.000Z</published>
-    <updated>2017-08-28T10:40:36.847Z</updated>
+    <updated>2017-09-03T02:22:55.730Z</updated>
     
     <content type="html"><![CDATA[<p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…<br><a id="more"></a></p>
 <h3 id="前情回要："><a href="#前情回要：" class="headerlink" title="前情回要："></a>前情回要：</h3><p>话说有一个类对象内有一方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def call_frequency(self, data):</div><div class="line">    ...</div><div class="line">    return list</div></pre></td></tr></table></figure></p>
@@ -714,311 +789,6 @@
       <category term="list" scheme="http://chihweihsu.com/tags/list/"/>
     
       <category term="tuple" scheme="http://chihweihsu.com/tags/tuple/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-05-17 Markdown 常用语法</title>
-    <link href="http://chihweihsu.com/2017/05/17/2017-05-17-Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
-    <id>http://chihweihsu.com/2017/05/17/2017-05-17-Markdown-常用语法/</id>
-    <published>2017-05-17T13:46:29.000Z</published>
-    <updated>2017-08-28T10:40:36.846Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="标题-一"><a href="#标题-一" class="headerlink" title="标题(一)"></a>标题(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div><div class="line">#### 四级标题</div><div class="line">##### 五级标题</div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>效果：</p>
-<p><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-18_markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95_%E6%A0%87%E9%A2%981.png" alt=""></p>
-<hr>
-<h2 id="标题-二"><a href="#标题-二" class="headerlink" title="标题(二)"></a>标题(二)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">标题（#）</div><div class="line">==</div><div class="line">标题（##）</div><div class="line">--</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-18_markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95_%E6%A0%87%E9%A2%982.png" alt=""></p>
-<hr>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- 文本1</div><div class="line">   * 二级文本</div><div class="line">- 文本2</div><div class="line">- 文本3</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<ul>
-<li>文本1<ul>
-<li>二级文本</li>
-</ul>
-</li>
-<li>文本2</li>
-<li>文本3</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 文本1</div><div class="line">2. 文本2</div><div class="line">3. 文本3</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<ol>
-<li>文本1</li>
-<li>文本2</li>
-<li>文本3</li>
-</ol>
-</blockquote>
-<hr>
-<h2 id="文字链接"><a href="#文字链接" class="headerlink" title="文字链接"></a>文字链接</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[显示文本](链接地址)</div><div class="line">[悟の迹](http://chihweihsu.com/)</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <a href="http://chihweihsu.com/">悟の迹</a></p>
-</blockquote>
-<hr>
-<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;http://chihweihsu.com/&gt;</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <a href="http://chihweihsu.com/">http://chihweihsu.com/</a></p>
-</blockquote>
-<hr>
-<h2 id="参考式链接"><a href="#参考式链接" class="headerlink" title="参考式链接"></a>参考式链接</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3],</div><div class="line">but most traffic is [悟の迹] [4].</div><div class="line"></div><div class="line">  [1]: http://google.com/        &quot;Google&quot;</div><div class="line">  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</div><div class="line">  [3]: http://search.msn.com/    &quot;MSN Search&quot;</div><div class="line">  [4]: http://chihweihsu.com/    &quot;悟の迹&quot;</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>, but most traffic is <a href="http://chihweihsu.com/" title="悟の迹">悟の迹</a>.</p>
-</blockquote>
-<hr>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![alt text](图片链接 &quot;title&quot;)</div><div class="line">![悟](http://ohhmsby4v.bkt.clouddn.com/image/%E6%82%9F.jpg)</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <img src="http://ohhmsby4v.bkt.clouddn.com/image/%E6%82%9F.jpg" alt="悟"></p>
-</blockquote>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`code`</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p> <code>code</code></p>
-</blockquote>
-<hr>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>代码（去空格）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">` ` `</div><div class="line">  code</div><div class="line">` ` `</div></pre></td></tr></table></figure></p>
-<p>效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code</div></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; 引用文字</div><div class="line">&gt;</div><div class="line">&gt; &gt; 二级引用文字</div><div class="line">&gt;</div><div class="line">&gt; 引用文字</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p>引用文字</p>
-<blockquote>
-<p>二级引用文字</p>
-</blockquote>
-<p>引用文字</p>
-</blockquote>
-<hr>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*斜体文字*</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><em>斜体文字</em></p>
-</blockquote>
-<hr>
-<h2 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">**粗体文字**</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><strong>粗体文字</strong></p>
-</blockquote>
-<hr>
-<h2 id="粗斜体"><a href="#粗斜体" class="headerlink" title="粗斜体"></a>粗斜体</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">***粗斜体***</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><strong><em>粗斜体</em></strong></p>
-</blockquote>
-<hr>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~删除线~~</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p><del>删除线</del></p>
-</blockquote>
-<hr>
-<h2 id="注脚"><a href="#注脚" class="headerlink" title="注脚"></a>注脚</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">这是一个注脚[^footnote1]的样例</div><div class="line">[^1]: 我就是悟</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p>这是一个注脚[^footnote1]的样例</p>
-<blockquote>
-<p>[^1]: 我就是悟</p>
-</blockquote>
-<hr>
-<h2 id="表格-一"><a href="#表格-一" class="headerlink" title="表格(一)"></a>表格(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Tables        | Are            | Cool       |</div><div class="line">| -----         | :-----:        | -----:     |</div><div class="line">| col 3 is      | right-aligned  | $1600      |</div><div class="line">| col 2 is      | center         | $12        |</div><div class="line">| zebra stipes  | are neat       | $1         |</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">center</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stipes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<hr>
-<h2 id="表格-二"><a href="#表格-二" class="headerlink" title="表格(二)"></a>表格(二)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">dog | bird | cat</div><div class="line">----|------|-----</div><div class="line">foo | foo  | foo</div><div class="line">bar | bar  | bar</div><div class="line">baz | baz  | baz</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th>dog</th>
-<th>bird</th>
-<th>cat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>foo</td>
-<td>foo</td>
-<td>foo</td>
-</tr>
-<tr>
-<td>bar</td>
-<td>bar</td>
-<td>bar</td>
-</tr>
-<tr>
-<td>baz</td>
-<td>baz</td>
-<td>baz</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<hr>
-<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">\*悟の迹\*</div><div class="line"></div><div class="line">支持以下符号转义：</div><div class="line">\   反斜线</div><div class="line">`   反引号</div><div class="line">*   星号</div><div class="line">_   底线</div><div class="line">&#123;&#125;  花括号</div><div class="line">[]  方括号</div><div class="line">()  括弧</div><div class="line">#   井字号</div><div class="line">+   加号</div><div class="line">-   减号</div><div class="line">.   英文句点</div><div class="line">!   惊叹号</div><div class="line">&gt;   大于号</div></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<blockquote>
-<p>*悟の迹*</p>
-</blockquote>
-<p>最近访客</p>
-<div class="ds-recent-visitors" data-num-items="39" data-avatar-size="40" id="ds-recent-visitors"></div>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;标题-一&quot;&gt;&lt;a href=&quot;#标题-一&quot; class=&quot;headerlink&quot; title=&quot;标题(一)&quot;&gt;&lt;/a&gt;标题(一)&lt;/h2&gt;&lt;p&gt;代码：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# 一级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;## 二级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;### 三级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#### 四级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;##### 五级标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;###### 六级标题&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Markdown" scheme="http://chihweihsu.com/categories/Notes/Markdown/"/>
-    
-    
-      <category term="Markdown" scheme="http://chihweihsu.com/tags/Markdown/"/>
-    
-      <category term="速查" scheme="http://chihweihsu.com/tags/%E9%80%9F%E6%9F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-05-17 建站日志</title>
-    <link href="http://chihweihsu.com/2017/05/17/2017-05-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
-    <id>http://chihweihsu.com/2017/05/17/2017-05-17-建站日志/</id>
-    <published>2017-05-17T13:39:02.000Z</published>
-    <updated>2017-08-28T10:40:36.847Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note success"><p>未完待续… </p>
-</div>
-<a id="more"></a>
-<h3 id="2017-05-19："><a href="#2017-05-19：" class="headerlink" title="2017-05-19："></a><strong>2017-05-19：</strong></h3><h3 id="添加新-Page"><a href="#添加新-Page" class="headerlink" title="添加新 Page"></a>添加新 Page</h3><hr>
-<p>1.用如下命令添加新page:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;categories&quot;</div><div class="line">hexo new page &quot;tags&quot;</div><div class="line">hexo new page &quot;Python&quot;</div><div class="line">hexo new page &quot;Linux&quot;</div><div class="line">hexo new page &quot;Notes&quot;</div><div class="line">hexo new page &quot;Something&quot;</div><div class="line">hexo new page &quot;Links&quot;</div><div class="line">hexo new page &quot;About&quot;</div></pre></td></tr></table></figure>
-<p>2.打开<code>主题配置文件``\themes\next\_config.yml</code>文件，在<code>menu</code>中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  Python: /Python</div><div class="line">  Linux: /Linux</div><div class="line">  Notes: /Notes</div><div class="line">  Something: /Something</div><div class="line">  Links: /Links</div><div class="line">  About: /About</div></pre></td></tr></table></figure></p>
-<p>3.打开<code>\themes\next\languages\zh-Hans.yml</code>，修改<code>menu</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  python: Python</div><div class="line">  linux: Linux</div><div class="line">  notes: 笔记</div><div class="line">  something: 有料</div><div class="line">  links: 链接</div><div class="line">  about: 关于</div></pre></td></tr></table></figure></p>
-<p>*注意这里第一列必须全为小写。</p>
-<p>*这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</p>
-<h3 id="修改blog页面配色"><a href="#修改blog页面配色" class="headerlink" title="修改blog页面配色"></a>修改blog页面配色</h3><hr>
-<h4 id="添加自定义颜色"><a href="#添加自定义颜色" class="headerlink" title="添加自定义颜色"></a>添加自定义颜色</h4><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">// Colors</div><div class="line">// colors for use across theme.</div><div class="line">// --------------------------------------------------</div><div class="line">$whitesmoke   = #f5f5f5</div><div class="line">$gainsboro    = #eee</div><div class="line">$gray-lighter = #ddd</div><div class="line">$grey-light   = #ccc</div><div class="line">$grey         = #bbb</div><div class="line">$grey-dark    = #999</div><div class="line">$grey-dim     = #666</div><div class="line">$black-light  = #555</div><div class="line">$black-dim    = #333</div><div class="line">$black-deep   = #222</div><div class="line">$red          = #ff2a2a</div><div class="line">$blue-bright  = #87daff</div><div class="line">$blue         = #0684bd</div><div class="line">$blue-deep    = #262a30</div><div class="line">$orange       = #fc6423</div><div class="line">// 下面是我自定义的颜色</div><div class="line">$my-link-blue = #0593d3  //链接颜色</div><div class="line">$my-link-hover-blue = #0477ab  //鼠标悬停后颜色</div><div class="line">$my-code-foreground = #dd0055  // 用``围出的代码块字体颜色</div><div class="line">$my-code-background = #eee  // 用``围出的代码块背景颜色</div></pre></td></tr></table></figure></p>
-<h4 id="修改超链接颜色"><a href="#修改超链接颜色" class="headerlink" title="修改超链接颜色"></a>修改超链接颜色</h4><p>还是<code>base.styl</code>文件，修改这几行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// Global link color.</div><div class="line">$link-color                   = $my-link-blue</div><div class="line">$link-hover-color             = $my-link-hover-blue</div><div class="line">$link-decoration-color        = $gray-lighter</div><div class="line">$link-decoration-hover-color  = $my-link-hover-blue</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%B6%85%E9%93%BE%E6%8E%A5.png" alt=""></p>
-<h4 id="修改小型代码块颜色"><a href="#修改小型代码块颜色" class="headerlink" title="修改小型代码块颜色"></a>修改小型代码块颜色</h4><p>依旧是<code>base.styl</code>文件，修改<code>$code-background</code>和<code>$code-foreground</code>的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Code &amp; Code Blocks</div><div class="line">// 用``围出的代码块</div><div class="line">// --------------------------------------------------</div><div class="line">$code-font-family               = $font-family-monospace</div><div class="line">$code-font-size                 = 15px</div><div class="line">$code-background                = $my-code-background</div><div class="line">$code-foreground                = $my-code-foreground</div><div class="line">$code-border-radius             = 4px</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%BB%A3%E7%A0%81%E5%9D%97.png" alt=""></p>
-<h3 id="修改blog页面字体大小"><a href="#修改blog页面字体大小" class="headerlink" title="修改blog页面字体大小"></a>修改blog页面字体大小</h3><hr>
-<p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// Font size</div><div class="line">$font-size-base           = 14px</div></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$font-size-base           = 16px</div></pre></td></tr></table></figure></p>
-<h3 id="修改blog页面宽度"><a href="#修改blog页面宽度" class="headerlink" title="修改blog页面宽度"></a>修改blog页面宽度</h3><hr>
-<p>现在一般都用宽屏显示器，博客页面两侧留白太多，调整一下宽度。</p>
-<p>1.打开<code>\themes\next\source\css\_common\components\post\post-expand.styl</code>，找到:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 767px)</div></pre></td></tr></table></figure></p>
-<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 1080px)</div></pre></td></tr></table></figure></p>
-<p>2.打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$main-desktop                   = 960px</div><div class="line">$main-desktop-large             = 1200px</div><div class="line">$content-desktop                = 700px</div></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$main-desktop                   = 1080px</div><div class="line">$main-desktop-large             = 1200px</div><div class="line">$content-desktop                = 810px</div></pre></td></tr></table></figure></p>
-<h3 id="修改博客部署的message"><a href="#修改博客部署的message" class="headerlink" title="修改博客部署的message"></a>修改博客部署的message</h3><hr>
-<p>在<code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
-<p>改得个性化一点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">好家伙又改版了悟の迹: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="Github项目主页添加README"><a href="#Github项目主页添加README" class="headerlink" title="Github项目主页添加README"></a>Github项目主页添加README</h3><hr>
-<h4 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h4><p>Github上博客的仓库主页没有README，如果把<code>README.md</code>放入<code>source</code>文件夹，<code>hexo g</code>生成时会被解析成html文件，而放到<code>public</code>文件夹中，生成时又会自动删除。</p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h4><p>在<code>source</code>目录下新建文件<code>README.mdown</code>，在里面写README即可。<code>hexo g</code>会把它复制到<code>public</code>文件夹，且不会被解析成html</p>
-<h3 id="Github项目主页添加LICENSE"><a href="#Github项目主页添加LICENSE" class="headerlink" title="Github项目主页添加LICENSE"></a>Github项目主页添加LICENSE</h3><hr>
-<p>修改<code>主题配置文件</code>，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Creative Commons 4.0 International License.</div><div class="line"># http://creativecommons.org/</div><div class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</div><div class="line">creative_commons: by-nc-sa</div><div class="line">#creative_commons:</div></pre></td></tr></table></figure></p>
-<p>将其中第 4 行的注释放开，然后选择你想使用的 LICENSE 即可，可选项参照第 3 行。</p>
-<h3 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h3><hr>
-<p>为优化SEO，更改首页标题格式为「关键词-网站名称 - 网站描述」</p>
-<p>打开<code>\themes\next\layout\index.swig</code>文件，找到这行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
-<p>把它改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125;</div><div class="line">  &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="添加“Fork-me-on-Github”-ribbon"><a href="#添加“Fork-me-on-Github”-ribbon" class="headerlink" title="添加“Fork me on Github” ribbon"></a>添加“Fork me on Github” ribbon</h3><hr>
-<p>1.点击<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">Fork me on Github</a>；</p>
-<p>2.给blog主页选择一个绶带（ribbon），并复制相应代码；</p>
-<p>3.找到正在使用的<code>theme</code>下的<code>layout</code>文件，将代码插入即可；</p>
-<p>4.比如我选择了<code>红色</code>的ribbon，使用的<code>themes</code>为next，那么只要打开 <code>blog\themes\next\layout\_layout.swig</code>文件，复制下面这段代码，放在最后，标签之前即可。（注意将<code>https://github.com/you</code>改为你自己的github链接）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;https://github.com/you&quot;&gt;</div><div class="line">    &lt;img style=&quot;position: absolute; top: 0; right: 0; border: 0;&quot; src=&quot;https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67&quot;</div><div class="line">    alt=&quot;Fork me on GitHub&quot; data-canonical-src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png&quot;&gt;</div><div class="line">&lt;/a&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="添加404公益页面"><a href="#添加404公益页面" class="headerlink" title="添加404公益页面"></a>添加404公益页面</h3><hr>
-<p>在<code>blog/source</code>下新建自己的<code>404.html</code>文件即可，强推<a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a>，代码可参考如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">layout: default</div><div class="line">---</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">         &lt;meta charset=&quot;UTF-8&quot; /&gt;</div><div class="line">         &lt;title&gt;404&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">         &lt;script type=&quot;text/javascript&quot; src=&quot;//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js&quot; charset=&quot;utf-8&quot; homePageUrl=&quot;http://chihweihsu.com/&quot; homePageName=&quot;回到悟の迹&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="文章阅读次数统计"><a href="#文章阅读次数统计" class="headerlink" title="文章阅读次数统计"></a>文章阅读次数统计</h3><hr>
-<p>1.注册<a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="external">LeanCloud</a>帐号并验证邮箱；</p>
-<p>2.创建应用，新建一个应用来专门进行博客的访问统计的数据操作；</p>
-<p>3.创建完成之后我们点击新创建的应用的名字来进行该应用的参数配置；</p>
-<p>4.新建一个Class用来专门保存我们博客的文章访问量等数据；</p>
-<p>5.新建Class名字必须为Counter，设置默认的ACL权限，建议在此处选择无限制；</p>
-<p>6.选择左侧的<code>应用Key</code>选项，拿到我们创建应用的<code>AppID</code>以及<code>AppKey</code>；</p>
-<p>7.编辑 <code>主题配置文件</code>，如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz</div><div class="line">  app_key: E9UJsJpw1omCHuS22PdSpKoh</div></pre></td></tr></table></figure></p>
-<p>8.ok，部署后可见。</p>
-<h3 id="2017-05-18："><a href="#2017-05-18：" class="headerlink" title="2017-05-18："></a><strong>2017-05-18：</strong></h3><h3 id="配置导航栏网站小图标"><a href="#配置导航栏网站小图标" class="headerlink" title="配置导航栏网站小图标"></a>配置导航栏网站小图标</h3><hr>
-<p>挑选一张图片，名字改为<code>favicon.ico</code>，放到<code>..\blog\source</code>下，配置<code>主题配置文件</code>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">favicon: /favicon.ico</div></pre></td></tr></table></figure></p>
-<h3 id="集成百度分享模块"><a href="#集成百度分享模块" class="headerlink" title="集成百度分享模块"></a>集成百度分享模块</h3><hr>
-<p>首先，编辑 <code>站点配置文件</code>，末尾添加字段:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">baidushare: true #百度分享功能</div></pre></td></tr></table></figure></p>
-<p>其次，编辑<code>主题配置文件</code>，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line"># Warning: Baidu Share does not support https.</div><div class="line">baidushare:</div><div class="line"> type: slide #百度分享展示的方式button|slide</div></pre></td></tr></table></figure></p>
-<p>*注意：百度分享不支持https方式，可以自己买个域名绑定，或者搜下<code>百度分享不支持https的解决方案</code>，有前辈做出解答。</p>
-<p>其实，现在已经完成了；但是，为了折腾，我们接着来自定义百度分享的显示，点击<a href="http://share.baidu.com/code" target="_blank" rel="external">代码获取</a>，一步步进行定制，走完流程，点击<code>直接获取代码</code>，拿到一段js代码，类似如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    window._bd_share_config = &#123;</div><div class="line">        &quot;common&quot;: &#123;</div><div class="line">            &quot;bdSnsKey&quot;: &#123;&#125;,</div><div class="line">            &quot;bdText&quot;: &quot;&quot;,</div><div class="line">            &quot;bdMini&quot;: &quot;2&quot;,</div><div class="line">            &quot;bdMiniList&quot;: [</div><div class="line">                &quot;mshare&quot;,</div><div class="line">                &quot;bdysc&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;tqq&quot;,</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;sqq&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;tieba&quot;,</div><div class="line">                &quot;youdao&quot;,</div><div class="line">                &quot;isohu&quot;,</div><div class="line">                &quot;mail&quot;,</div><div class="line">                &quot;ty&quot;,</div><div class="line">                &quot;fbook&quot;,</div><div class="line">                &quot;twi&quot;,</div><div class="line">                &quot;linkedin&quot;,</div><div class="line">                &quot;copy&quot;,</div><div class="line">                &quot;print&quot;</div><div class="line">            ],</div><div class="line">            &quot;bdPic&quot;: &quot;&quot;,</div><div class="line">            &quot;bdStyle&quot;: &quot;0&quot;,</div><div class="line">            &quot;bdSize&quot;: &quot;16&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;slide&quot;: &#123;</div><div class="line">            &quot;type&quot;: &quot;slide&quot;,</div><div class="line">            &quot;bdImg&quot;: &quot;5&quot;,</div><div class="line">            &quot;bdPos&quot;: &quot;right&quot;,</div><div class="line">            &quot;bdTop&quot;: &quot;53.5&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;image&quot;: &#123;</div><div class="line">            &quot;viewList&quot;: [</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;bdysc&quot;</div><div class="line">            ],</div><div class="line">            &quot;viewText&quot;: &quot;分享到：&quot;,</div><div class="line">            &quot;viewSize&quot;: &quot;16&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;selectShare&quot;: &#123;</div><div class="line">            &quot;bdContainerClass&quot;: null,</div><div class="line">            &quot;bdSelectMiniList&quot;: [</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;bdysc&quot;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>最后，打开如下文件<code>blog\themes\next\layout\_partials\share\baidushare.swing</code>，替换掉里面的js代码，本文以<code>slide</code>模式为例，替换掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% elseif theme.baidushare.type === &quot;slide&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<p>后面的<code>&lt;script&gt;...&lt;/script&gt;</code>即可。</p>
-<h3 id="2017-05-17："><a href="#2017-05-17：" class="headerlink" title="2017-05-17："></a><strong>2017-05-17：</strong></h3><h3 id="markdown写文章时，添加居中引用模块"><a href="#markdown写文章时，添加居中引用模块" class="headerlink" title="markdown写文章时，添加居中引用模块"></a>markdown写文章时，添加居中引用模块</h3><hr>
-<p>只需在写文章时，添加如下标签即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;</div><div class="line">    优秀的人，不是不合群，而是他们合群的人里面没有你</div><div class="line">&lt;/blockquote&gt;</div></pre></td></tr></table></figure></p>
-<p>预览：</p>
-<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
-
-
-<h3 id="2017-05-16："><a href="#2017-05-16：" class="headerlink" title="2017-05-16："></a><strong>2017-05-16：</strong></h3><h3 id="首页文章预览添加图片"><a href="#首页文章预览添加图片" class="headerlink" title="首页文章预览添加图片"></a>首页文章预览添加图片</h3><hr>
-<p>打开<code>scaffolds/post.md</code>文件，在默认参数中添加如下参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 首页文章预览添加图片：</div><div class="line">photos:</div><div class="line">    - http://xxx.com/photo1.jpg</div><div class="line">    - http://xxx.com/photo2.jpg</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_pandas.png" alt=""></p>
-<h3 id="首页文章摘要模式"><a href="#首页文章摘要模式" class="headerlink" title="首页文章摘要模式"></a>首页文章摘要模式</h3><hr>
-<p>首页开启文章摘要模式，不全文显示，而是出现<code>阅读全文&gt;</code>，只需在<code>主题配置文件</code>中找到<code>auto_excerpt</code>属性进行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">  enable: true #改写为true</div><div class="line">  length: 150 #默认展示的高度</div></pre></td></tr></table></figure></p>
-<p>或者，在Markdown文章中不想显示的位置，添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这里显示</div><div class="line">&lt;!--more--&gt;</div><div class="line">这里不显示</div></pre></td></tr></table></figure></p>
-<p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note success&quot;&gt;&lt;p&gt;未完待续… &lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/categories/Notes/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://chihweihsu.com/tags/Hexo/"/>
-    
-      <category term="Blog" scheme="http://chihweihsu.com/tags/Blog/"/>
     
   </entry>
   
