@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-09-06T11:05:14.846Z</updated>
+  <updated>2017-09-06T11:11:44.917Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/"/>
     <id>http://chihweihsu.com/2017/09/05/2017-9-5-计算体脂率/</id>
     <published>2017-09-05T09:12:11.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>用来计算一个人的体脂率<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_BFR</span><span class="params">(weight, height, age, gender)</span>:</span></div><div class="line">	<span class="string">"""计算BMI及体脂率</span></div><div class="line">	:param weight: 体重（kg）</div><div class="line">	:param height: 身高（m）</div><div class="line">	:param age: 年龄（岁）</div><div class="line">	:param gender: 性别（男--1，女--0）</div><div class="line">	:returns: 体脂率，float</div><div class="line">	"""</div><div class="line">	<span class="comment"># BMI</span></div><div class="line">	BMI = weight /(height*height)</div><div class="line">	<span class="comment"># 体脂率 </span></div><div class="line">	BFR = <span class="number">1.2</span>*BMI + <span class="number">0.23</span>*age - <span class="number">5.4</span> - <span class="number">10.8</span>*gender</div><div class="line">	<span class="keyword">return</span> BFR</div><div class="line"></div><div class="line">get_BFR(<span class="number">55</span>, <span class="number">1.7</span>, <span class="number">26</span>, <span class="number">1</span>)</div><div class="line"><span class="comment"># 12.61737024221453</span></div></pre></td></tr></table></figure></p>
@@ -50,7 +50,7 @@
     <link href="http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/"/>
     <id>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-排序-sort、sorted/</id>
     <published>2017-09-05T07:17:50.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>项目中，有一个list，list内部组成元素为dict，现需要根据dict中某个键的值来进行排序。</p>
@@ -87,7 +87,7 @@
     <link href="http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/31/2017-8-31-python-自动-生成注释文档（docstring）/</id>
     <published>2017-08-31T12:22:52.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>项目中，发现很多函数、类没有注释说明，一个个弄比较繁琐，所以……</p>
@@ -141,7 +141,7 @@
     <link href="http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/"/>
     <id>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-问题/</id>
     <published>2017-08-31T09:02:59.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
 </blockquote>
@@ -172,7 +172,7 @@
     <link href="http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/"/>
     <id>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe与序列相乘/</id>
     <published>2017-08-27T10:28:54.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>继续完成项目中的评分卡部分，拿到分好箱的数据后，如何进行加权得到最后的分数就是我们接下来要考虑的问题了。</p>
@@ -213,7 +213,7 @@
     <link href="http://chihweihsu.com/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/"/>
     <id>http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/</id>
     <published>2017-08-27T08:05:58.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>上周，由于产品嫌报告生成太慢，经过使用<code>profile/gprof2dot</code>研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用<code>gevent</code>,以缓解报告生成压力。</p>
@@ -257,7 +257,7 @@
     <link href="http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-分箱操作（cut）/</id>
     <published>2017-08-27T03:12:47.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>最新，项目中涉及到评分卡操作，评分项目有大概几十项，每项基本都是按频次区间给一个分数，最后，累计所有项目的分数得出最后所需要的分数。</p>
@@ -300,7 +300,7 @@
     <link href="http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/"/>
     <id>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</id>
     <published>2017-08-23T01:31:08.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
 <p>在对mongo插入数据时，报写入问题，报错信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/root/crs/call_history_crawler/worker/communicate.py&quot;, line 149, in insert_db_data</div><div class="line">    if db[table].insert_many(data):</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 684, in insert_many</div><div class="line">    blk.execute(self.write_concern.document)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 470, in execute</div><div class="line">    return self.execute_command(sock_info, generator, write_concern)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 314, in execute_command</div><div class="line">    raise BulkWriteError(full_result)</div><div class="line">BulkWriteError: batch op errors occurred</div></pre></td></tr></table></figure></p>
@@ -337,7 +337,7 @@
     <link href="http://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     <id>http://chihweihsu.com/2017/08/14/2017-8-14-JSON文件-读写-格式化/</id>
     <published>2017-08-14T05:37:04.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="写文件，格式化"><a href="#写文件，格式化" class="headerlink" title="写文件，格式化"></a>写文件，格式化</h3><blockquote>
 <p><code>indent</code>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_info</span><span class="params">(file_name, file_info)</span>:</span></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'&#123;&#125;.json'</span>.format(file_name), <span class="string">'w'</span>) <span class="keyword">as</span> fp:</div><div class="line">        json.dump(file_info, fp, indent=<span class="number">4</span>, sort_keys=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">write_info(<span class="string">'report'</span>, dict(report_data))</div><div class="line"></div><div class="line"><span class="keyword">import</span> json</div></pre></td></tr></table></figure></p>
@@ -370,7 +370,7 @@
     <link href="http://chihweihsu.com/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/13/2017-8-13-三元表达式（条件表达式）/</id>
     <published>2017-08-13T02:41:33.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="条件表达式："><a href="#条件表达式：" class="headerlink" title="条件表达式："></a>条件表达式：</h3><blockquote>
 <p>使用一行代码快速判断，替换复杂的多行if语句，使得代码简单可维护。</p>
@@ -421,7 +421,7 @@
     <link href="http://chihweihsu.com/2017/08/10/2017-8-10-%E8%B0%83%E8%AF%95-Pdb%EF%BC%88Python-debugger%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-10-调试-Pdb（Python-debugger）/</id>
     <published>2017-08-10T14:20:47.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Pdb（Python-debugger）："><a href="#Pdb（Python-debugger）：" class="headerlink" title="Pdb（Python debugger）："></a>Pdb（Python debugger）：</h2><h3 id="命令行运行："><a href="#命令行运行：" class="headerlink" title="命令行运行："></a>命令行运行：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pdb my_script.py</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -450,7 +450,7 @@
     <link href="http://chihweihsu.com/2017/08/10/2017-8-10-string-%E5%8E%BB%E6%8E%89%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-10-string-去掉标点符号/</id>
     <published>2017-08-09T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Python-字符串去掉标点符号最佳实践"><a href="#Python-字符串去掉标点符号最佳实践" class="headerlink" title="Python 字符串去掉标点符号最佳实践"></a>Python 字符串去掉标点符号最佳实践</h3><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><blockquote>
 <p><code>str.isalnum</code>：<br>S.isalnum() -&gt; bool<br>Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.</p>
@@ -502,7 +502,7 @@
     <link href="http://chihweihsu.com/2017/08/09/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/"/>
     <id>http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/</id>
     <published>2017-08-08T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><blockquote>
 <p>将一个函数映射到一个输入列表的所有元素上。</p>
@@ -550,7 +550,7 @@
     <link href="http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/"/>
     <id>http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-效率分析/</id>
     <published>2017-08-07T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -581,7 +581,7 @@
     <link href="http://chihweihsu.com/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
     <id>http://chihweihsu.com/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/</id>
     <published>2017-08-06T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
 <p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
@@ -625,7 +625,7 @@
     <link href="http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/"/>
     <id>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</id>
     <published>2017-08-06T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
 <p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
@@ -665,7 +665,7 @@
     <link href="http://chihweihsu.com/2017/08/06/2017-8-6-python-string/"/>
     <id>http://chihweihsu.com/2017/08/06/2017-8-6-python-string/</id>
     <published>2017-08-05T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.846Z</updated>
+    <updated>2017-09-06T11:11:44.917Z</updated>
     
     <content type="html"><![CDATA[<h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -698,7 +698,7 @@
     <link href="http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/"/>
     <id>http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/</id>
     <published>2017-07-31T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
 <h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
@@ -733,7 +733,7 @@
     <link href="http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/"/>
     <id>http://chihweihsu.com/2017/07/31/2017-7-31-python-交集、并集、差集/</id>
     <published>2017-07-30T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="交集-intersection"><a href="#交集-intersection" class="headerlink" title="交集(intersection)"></a>交集(intersection)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">example：</div><div class="line">valid = set([<span class="string">'yellow'</span>, <span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>, <span class="string">'black'</span>])</div><div class="line">input_set = set([<span class="string">'red'</span>, <span class="string">'brown'</span>]) </div><div class="line">print(input_set.intersection(valid))</div><div class="line"><span class="comment">### 输出：set(['red'])</span></div><div class="line"></div><div class="line"><span class="comment"># 方法一:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b=[<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp = [val <span class="keyword">for</span> val <span class="keyword">in</span> a <span class="keyword">if</span> val <span class="keyword">in</span> b]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法二</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).intersection(set(b)))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法三：</span></div><div class="line">&gt;&gt;&gt;list(set(a) &amp; set(b))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -794,7 +794,7 @@
     <link href="http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/07/31/2017-7-31-python-生成器（Generators）/</id>
     <published>2017-07-30T16:00:00.000Z</published>
-    <updated>2017-09-06T11:05:14.845Z</updated>
+    <updated>2017-09-06T11:11:44.916Z</updated>
     
     <content type="html"><![CDATA[<h3 id="可迭代对象（iterable）："><a href="#可迭代对象（iterable）：" class="headerlink" title="可迭代对象（iterable）："></a>可迭代对象（iterable）：</h3><blockquote>
 <p>能提供迭代器的任意对象；只要定义了一个迭代器的<strong>iter</strong>方法或定义了支持下标索引的<strong>getitem</strong>方法，那就是一个可迭代对象。</p>
