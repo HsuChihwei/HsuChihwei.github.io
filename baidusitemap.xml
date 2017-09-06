@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</loc>
+    <lastmod>2017-09-06T11:11:44.915Z</lastmod>
+    <data>
+        <display>
+        <title>2017-5-17 命运从不缺席</title>
+        <pubTime>2017-05-17T13:34:28.000Z</pubTime>
+        
+        <tag>美文</tag>
+         
+        <tag>励志</tag>
+         
+         
+           
+             
+              <breadCrumb title="Writings" url="http://chihweihsu.com/categories/Writings/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/</loc>
     <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
@@ -189,31 +211,6 @@
 
     
   <url>
-    <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/</loc>
-    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
-    <data>
-        <display>
-        <title>2017-7-31 python 生成器（Generators）</title>
-        <pubTime>2017-07-30T16:00:00.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>generators</tag>
-         
-         
-           
-             
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
-          
-             
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/</loc>
     <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
@@ -314,21 +311,26 @@
 
     
   <url>
-    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</loc>
+    <loc>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</loc>
     <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
-        <title>2017-5-17 命运从不缺席</title>
-        <pubTime>2017-05-17T13:34:28.000Z</pubTime>
+        <title>2017-8-23 mongo insert_many BulkWriteError</title>
+        <pubTime>2017-08-23T01:31:08.000Z</pubTime>
         
-        <tag>美文</tag>
+        <tag>Python</tag>
          
-        <tag>励志</tag>
+        <tag>Bug</tag>
+         
+        <tag>mongo</tag>
          
          
            
              
-              <breadCrumb title="writings" url="http://chihweihsu.com/categories/writings/"/>
+              <breadCrumb title="Bug" url="http://chihweihsu.com/categories/Bug/"/>
+          
+             
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Bug/Python/"/>
           
         </display>
     </data>
@@ -469,33 +471,6 @@
 
     
   <url>
-    <loc>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</loc>
-    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
-    <data>
-        <display>
-        <title>2017-8-23 mongo insert_many BulkWriteError</title>
-        <pubTime>2017-08-23T01:31:08.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Bug</tag>
-         
-        <tag>mongo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Bug" url="http://chihweihsu.com/categories/Bug/"/>
-          
-             
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Bug/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
@@ -610,6 +585,31 @@
         <tag>Python</tag>
          
         <tag>set</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+          
+             
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-7-31 python 生成器（Generators）</title>
+        <pubTime>2017-07-30T16:00:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>generators</tag>
          
          
            
