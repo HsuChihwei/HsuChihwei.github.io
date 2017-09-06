@@ -3,8 +3,58 @@
   
     
     <entry>
-      <title><![CDATA[python 自动 生成注释文档（docstring）]]></title>
-      <url>/2017/08/31/python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/</url>
+      <title><![CDATA[2017-9-5 计算体脂率]]></title>
+      <url>/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/</url>
+      <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
+<p>用来计算一个人的体脂率<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_BFR</span><span class="params">(weight, height, age, gender)</span>:</span></div><div class="line">	<span class="string">"""计算BMI及体脂率</span></div><div class="line">	:param weight: 体重（kg）</div><div class="line">	:param height: 身高（m）</div><div class="line">	:param age: 年龄（岁）</div><div class="line">	:param gender: 性别（男--1，女--0）</div><div class="line">	:returns: 体脂率，float</div><div class="line">	"""</div><div class="line">	<span class="comment"># BMI</span></div><div class="line">	BMI = weight /(height*height)</div><div class="line">	<span class="comment"># 体脂率 </span></div><div class="line">	BFR = <span class="number">1.2</span>*BMI + <span class="number">0.23</span>*age - <span class="number">5.4</span> - <span class="number">10.8</span>*gender</div><div class="line">	<span class="keyword">return</span> BFR</div><div class="line"></div><div class="line">get_BFR(<span class="number">55</span>, <span class="number">1.7</span>, <span class="number">26</span>, <span class="number">1</span>)</div><div class="line"><span class="comment"># 12.61737024221453</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2017-9-5 python  list 排序 sort、sorted]]></title>
+      <url>/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/</url>
+      <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
+<p>项目中，有一个list，list内部组成元素为dict，现需要根据dict中某个键的值来进行排序。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><blockquote>
+<p> <code>reverse</code>: False–默认，正序；True–逆序，由大到小；<br> <code>key</code>: 可以根据<code>key</code>值自定义排序；<br> <code>sort</code>与<code>sorted</code>区别: <code>sort</code>list自身发生改变；<code>sorted</code>list本身不发生改变。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">9</span>,<span class="number">6</span>]        </div><div class="line"> </div><div class="line"> <span class="comment"># sorted 用法</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(a)                  <span class="comment">#将a从小到大排序,不影响a本身结构 </span></div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(a,reverse = <span class="keyword">True</span>)   <span class="comment">#将a从大到小排序,不影响a本身结构 </span></div><div class="line">[<span class="number">9</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>] </div><div class="line"> </div><div class="line"> <span class="comment"># sort 用法</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort()                   <span class="comment">#将a从小到大排序,影响a本身结构 </span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a </div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort(reverse = <span class="keyword">True</span>)     <span class="comment">#将a从大到小排序,影响a本身结构 </span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a </div><div class="line">[<span class="number">9</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>] </div><div class="line"> </div><div class="line"><span class="comment"># 注意，a.sort() 已改变其结构，b = a.sort() 是错误的写法! </span></div><div class="line"></div><div class="line"><span class="comment"># 非数字排序</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="string">'aa'</span>,<span class="string">'BB'</span>,<span class="string">'bb'</span>,<span class="string">'zz'</span>,<span class="string">'CC'</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(b) </div><div class="line">[<span class="string">'BB'</span>, <span class="string">'CC'</span>, <span class="string">'aa'</span>, <span class="string">'bb'</span>, <span class="string">'zz'</span>]    <span class="comment">#按列表中元素每个字母的ascii码从小到大排序,如果要从大到小,请用sorted(b,reverse=True)下同 </span></div><div class="line"> </div><div class="line"> <span class="comment"># 根据key值自定义排序</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>c =[<span class="string">'CCC'</span>, <span class="string">'bb'</span>, <span class="string">'ffff'</span>, <span class="string">'z'</span>]  </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(c,key=len)             <span class="comment">#按列表的元素的长度排序 </span></div><div class="line">[<span class="string">'z'</span>, <span class="string">'bb'</span>, <span class="string">'CCC'</span>, <span class="string">'ffff'</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>d =[<span class="string">'CCC'</span>, <span class="string">'bb'</span>, <span class="string">'ffff'</span>, <span class="string">'z'</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(d,key = str.lower )    <span class="comment">#将列表中的每个元素变为小写，再按每个元素中的每个字母的ascii码从小到大排序 </span></div><div class="line">[<span class="string">'bb'</span>, <span class="string">'CCC'</span>, <span class="string">'ffff'</span>, <span class="string">'z'</span>] </div><div class="line"> </div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">lastchar</span><span class="params">(s)</span>:</span> </div><div class="line">       <span class="keyword">return</span> s[<span class="number">-1</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>e = [<span class="string">'abc'</span>,<span class="string">'b'</span>,<span class="string">'AAz'</span>,<span class="string">'ef'</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(e,key = lastchar)      <span class="comment">#自定义函数排序,lastchar为函数名，这个函数返回列表e中每个元素的最后一个字母 </span></div><div class="line">[<span class="string">'b'</span>, <span class="string">'abc'</span>, <span class="string">'ef'</span>, <span class="string">'AAz'</span>]         <span class="comment">#sorted(e,key=lastchar)作用就是 按列表e中每个元素的最后一个字母的ascii码从小到大排序 </span></div><div class="line"> </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>f = [&#123;<span class="string">'name'</span>:<span class="string">'abc'</span>,<span class="string">'age'</span>:<span class="number">20</span>&#125;,&#123;<span class="string">'name'</span>:<span class="string">'def'</span>,<span class="string">'age'</span>:<span class="number">30</span>&#125;,&#123;<span class="string">'name'</span>:<span class="string">'ghi'</span>,<span class="string">'age'</span>:<span class="number">25</span>&#125;]     <span class="comment">#列表中的元素为字典 </span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">age</span><span class="params">(s)</span>:</span> </div><div class="line">       <span class="keyword">return</span> s[<span class="string">'age'</span>] </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>ff = sorted(f,key = age)      <span class="comment">#自定义函数按列表f中字典的age从小到大排序  </span></div><div class="line">[&#123;<span class="string">'age'</span>: <span class="number">20</span>, <span class="string">'name'</span>: <span class="string">'abc'</span>&#125;, &#123;<span class="string">'age'</span>: <span class="number">25</span>, <span class="string">'name'</span>: <span class="string">'ghi'</span>&#125;, &#123;<span class="string">'age'</span>: <span class="number">30</span>, <span class="string">'name'</span>: <span class="string">'def'</span>&#125;] </div><div class="line"> </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>f2 = sorted(f,key = <span class="keyword">lambda</span> x:x[<span class="string">'age'</span>])    <span class="comment">#如果觉得上面定义一个函数代码不美观，可以用lambda的形式来定义函数,效果[&#123;'age': 20, 'name': 'abc'&#125;, &#123;'age': 25, 'name': 'ghi'&#125;, &#123;'age': 30, 'name': 'def'&#125;]</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> list </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2017-8-31 自动 生成注释文档（docstring）]]></title>
+      <url>/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/</url>
       <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>项目中，发现很多函数、类没有注释说明，一个个弄比较繁琐，所以……</p>
 </blockquote>
@@ -33,22 +83,26 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Python, Linux </tag>
+            <tag> Python </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[python  two sum 问题]]></title>
-      <url>/2017/08/31/python-two-sum-%E9%97%AE%E9%A2%98/</url>
+      <title><![CDATA[2017-8-31 python  two sum 问题]]></title>
+      <url>/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># Time:  O(n)</div><div class="line"># Space: O(n)</div><div class="line"></div><div class="line"># Given an array of integers, return indices of the two numbers</div><div class="line"># such that they add up to a specific target.</div><div class="line">#</div><div class="line"># You may assume that each input would have exactly one solution.</div><div class="line">#</div><div class="line"># Example:</div><div class="line"># Given nums = [2, 7, 11, 15], target = 9,</div><div class="line">#</div><div class="line"># Because nums[0] + nums[1] = 2 + 7 = 9,</div><div class="line"># return [0, 1].</div></pre></td></tr></table></figure>
@@ -56,22 +110,26 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Python, 算法 </tag>
+            <tag> Python </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[Pandas dataframe与序列相乘]]></title>
-      <url>/2017/08/27/Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/</url>
+      <title><![CDATA[2017-8-27 dataframe与序列相乘]]></title>
+      <url>/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/</url>
       <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>继续完成项目中的评分卡部分，拿到分好箱的数据后，如何进行加权得到最后的分数就是我们接下来要考虑的问题了。</p>
 </blockquote>
@@ -87,22 +145,26 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Python, Pandas </tag>
+            <tag> Pandas </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[python 协程加速]]></title>
-      <url>/2017/08/27/python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/</url>
+      <title><![CDATA[2017-8-27 python 协程加速]]></title>
+      <url>/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/</url>
       <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>上周，由于产品嫌报告生成太慢，经过使用<code>profile/gprof2dot</code>研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用<code>gevent</code>,以缓解报告生成压力。</p>
 </blockquote>
@@ -123,22 +185,26 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Python, gevent </tag>
+            <tag> Python </tag>
+            
+            <tag> gevent </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[Pandas 分箱操作（cut）]]></title>
-      <url>/2017/08/27/Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/</url>
+      <title><![CDATA[2017-8-27 Pandas 分箱操作（cut）]]></title>
+      <url>/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/</url>
       <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>最新，项目中涉及到评分卡操作，评分项目有大概几十项，每项基本都是按频次区间给一个分数，最后，累计所有项目的分数得出最后所需要的分数。</p>
 </blockquote>
@@ -154,22 +220,26 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Python, Pandas </tag>
+            <tag> Pandas </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[mongo insert_many BulkWriteError]]></title>
-      <url>/2017/08/23/mongo-insert-many-BulkWriteError/</url>
+      <title><![CDATA[2017-8-23 mongo insert_many BulkWriteError]]></title>
+      <url>/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</url>
       <content type="html"><![CDATA[<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
 <p>在对mongo插入数据时，报写入问题，报错信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/root/crs/call_history_crawler/worker/communicate.py&quot;, line 149, in insert_db_data</div><div class="line">    if db[table].insert_many(data):</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 684, in insert_many</div><div class="line">    blk.execute(self.write_concern.document)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 470, in execute</div><div class="line">    return self.execute_command(sock_info, generator, write_concern)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 314, in execute_command</div><div class="line">    raise BulkWriteError(full_result)</div><div class="line">BulkWriteError: batch op errors occurred</div></pre></td></tr></table></figure></p>
 </blockquote>
@@ -183,20 +253,24 @@
             
             <category> Python </category>
             
+            <category> Bug </category>
+            
         </categories>
         
         
         <tags>
             
-            <tag> Python, Bug </tag>
+            <tag> Python </tag>
+            
+            <tag> mongo </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[JSON文件 读写 格式化]]></title>
-      <url>/2017/08/14/JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
+      <title><![CDATA[2017-8-14 JSON文件 读写 格式化]]></title>
+      <url>/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
       <content type="html"><![CDATA[<h3 id="写文件，格式化"><a href="#写文件，格式化" class="headerlink" title="写文件，格式化"></a>写文件，格式化</h3><blockquote>
 <p><code>indent</code>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_info</span><span class="params">(file_name, file_info)</span>:</span></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'&#123;&#125;.json'</span>.format(file_name), <span class="string">'w'</span>) <span class="keyword">as</span> fp:</div><div class="line">        json.dump(file_info, fp, indent=<span class="number">4</span>, sort_keys=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">write_info(<span class="string">'report'</span>, dict(report_data))</div><div class="line"></div><div class="line"><span class="keyword">import</span> json</div></pre></td></tr></table></figure></p>
 </blockquote>
@@ -206,7 +280,9 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
@@ -215,13 +291,15 @@
             
             <tag> Python </tag>
             
+            <tag> json </tag>
+            
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[三元表达式（条件表达式）]]></title>
-      <url>/2017/08/13/%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/</url>
+      <title><![CDATA[2017-8-13 三元表达式（条件表达式）]]></title>
+      <url>/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/</url>
       <content type="html"><![CDATA[<h3 id="条件表达式："><a href="#条件表达式：" class="headerlink" title="条件表达式："></a>条件表达式：</h3><blockquote>
 <p>使用一行代码快速判断，替换复杂的多行if语句，使得代码简单可维护。</p>
 </blockquote>
@@ -248,7 +326,9 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
@@ -256,6 +336,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> 条件表达式 </tag>
             
         </tags>
         
@@ -271,14 +353,18 @@
       
         <categories>
             
-            <category> Python, Notes </category>
+            <category> Python </category>
+            
+            <category> Notes </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Python, Debugger </tag>
+            <tag> Python </tag>
+            
+            <tag> Debugger </tag>
             
         </tags>
         
@@ -308,10 +394,20 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line">s =<span class="string">"string. With. Punctuation?"</span></div><div class="line">s = re.sub(<span class="string">r'[^\w\s]'</span>,<span class="string">''</span>,s)</div></pre></td></tr></table></figure>
 <h3 id="测时："><a href="#测时：" class="headerlink" title="测时："></a>测时：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re, string, timeit</div><div class="line"></div><div class="line">s =<span class="string">"string. With. Punctuation"</span></div><div class="line"></div><div class="line">exclude = set(string.punctuation)</div><div class="line">table = string.maketrans(<span class="string">""</span>,<span class="string">""</span>)</div><div class="line">regex = re.compile(<span class="string">'[%s]'</span> % re.escape(string.punctuation))</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_set</span><span class="params">(s)</span>:</span></div><div class="line">	<span class="keyword">return</span> <span class="string">''</span>.join(ch <span class="keyword">for</span> ch <span class="keyword">in</span> s <span class="keyword">if</span> ch <span class="keyword">not</span> <span class="keyword">in</span> exclude)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_re</span><span class="params">(s)</span>:</span> </div><div class="line">	<span class="keyword">return</span> regex.sub(<span class="string">''</span>, s)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_trans</span><span class="params">(s)</span>:</span></div><div class="line">	<span class="keyword">return</span> s.translate(table, string.punctuation)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_repl</span><span class="params">(s)</span>:</span></div><div class="line">	<span class="keyword">for</span> c <span class="keyword">in</span> string.punctuation:</div><div class="line">		s=s.replace(c,<span class="string">""</span>)</div><div class="line">	<span class="keyword">return</span> s</div><div class="line"></div><div class="line"><span class="keyword">print</span><span class="string">"sets :"</span>,timeit.Timer(<span class="string">'f(s)'</span>, <span class="string">'from __main__ import s,test_set as f'</span>).timeit(<span class="number">1000000</span>)</div><div class="line"><span class="keyword">print</span><span class="string">"regex :"</span>,timeit.Timer(<span class="string">'f(s)'</span>, <span class="string">'from __main__ import s,test_re as f'</span>).timeit(<span class="number">1000000</span>)</div><div class="line"><span class="keyword">print</span><span class="string">"translate :"</span>,timeit.Timer(<span class="string">'f(s)'</span>, <span class="string">'from __main__ import s,test_trans as f'</span>).timeit(<span class="number">1000000</span>)</div><div class="line"><span class="keyword">print</span><span class="string">"replace :"</span>,timeit.Timer(<span class="string">'f(s)'</span>, <span class="string">'from __main__ import s,test_repl as f'</span>).timeit(<span class="number">1000000</span>)</div><div class="line"></div><div class="line">out_put:</div><div class="line"><span class="comment"># sets : 19.8566138744</span></div><div class="line"><span class="comment"># regex : 6.86155414581</span></div><div class="line"><span class="comment"># translate : 2.12455511093</span></div><div class="line"><span class="comment"># replace : 28.4436721802</span></div></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> string </tag>
             
         </tags>
         
@@ -337,6 +433,14 @@
 </blockquote>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -362,10 +466,20 @@
 <h3 id="gprof2dot用法"><a href="#gprof2dot用法" class="headerlink" title="gprof2dot用法:"></a><a href="https://github.com/jrfonseca/gprof2dot" target="_blank" rel="external">gprof2dot</a>用法:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装 gprof2dot</span></div><div class="line">pip install gprof2dot</div><div class="line"><span class="comment"># 通过.pstats文档生成相应的dot文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats</div><div class="line"><span class="comment"># 安装graphviz（centOS系统）</span></div><div class="line">sudo yum install graphviz</div><div class="line"><span class="comment"># 输出png文档</span></div><div class="line">python -m gprof2dot -f pstats profile.pstats | dot -T png -o profile.png</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> 效率 </tag>
             
         </tags>
         
@@ -390,6 +504,14 @@
 <h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -416,6 +538,14 @@
 </blockquote>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -441,10 +571,20 @@
 </blockquote>
 <h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> string </tag>
             
         </tags>
         
@@ -461,6 +601,14 @@
 <p>This can lead to possibly surprising behavior when, for example, the start date occurs at the end of the month:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> dateutil.rrule <span class="keyword">import</span> rrule, MONTHLY</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>start_date = datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(rrule(freq=MONTHLY, count=<span class="number">4</span>, dtstart=start_date))</div><div class="line">[datetime.datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">3</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -512,10 +660,20 @@
 <p>综上，三种方法依次对内存的依赖减小，耗时增加，可依据集合大小以及硬件环境来选择。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> set </tag>
             
         </tags>
         
@@ -562,18 +720,28 @@
 <p>这个异常说<code>str</code>对象是一个可迭代对象，而不是一个迭代器；不能直接对其进行迭代操作，所以，使用<code>iter</code>：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">my_string = <span class="string">"Bingo"</span></div><div class="line">my_iter = iter(my_string)</div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'B'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'i'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'n'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'g'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'o'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#         File "&lt;stdin&gt;", line 12, in &lt;module&gt;</span></div><div class="line"><span class="comment">#         StopIteration</span></div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Python </category>
+            
+            <category> Notes </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> generators </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-24 建站日志（二）]]></title>
-      <url>/2017/05/24/2017-05-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+      <title><![CDATA[2017-5-24 建站日志（二）]]></title>
+      <url>/2017/05/24/2017-5-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
       <content type="html"><![CDATA[<div class="note info"><p>到此，建站告一段落，功能差不多完善了 </p>
 </div>
 <a id="more"></a>
@@ -606,8 +774,6 @@
             
             <category> Notes </category>
             
-            <category> Hexo </category>
-            
         </categories>
         
         
@@ -622,8 +788,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-23 一个逗号(,)引起的BUG]]></title>
-      <url>/2017/05/23/2017-05-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</url>
+      <title><![CDATA[2017-5-23 一个逗号(,)引起的BUG]]></title>
+      <url>/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</url>
       <content type="html"><![CDATA[<p>昨天工作，突然发现之前好好的list，在赋值给新变量后居然类型变了，一个好好的list几分钟不见妥妥的叛变了，变成了tuple，由此，一场闹剧开始上演…<br><a id="more"></a></p>
 <h3 id="前情回要："><a href="#前情回要：" class="headerlink" title="前情回要："></a>前情回要：</h3><p>话说有一个类对象内有一方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def call_frequency(self, data):</div><div class="line">    ...</div><div class="line">    return list</div></pre></td></tr></table></figure></p>
 <p>返回的是一个list，内部是一个个dict，结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;xx:xxx,xx:xxx&#125;,&#123;xx:xxx,&#125;,&#123;x:xxx&#125;,...]</div></pre></td></tr></table></figure></p>
@@ -661,8 +827,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-17 Markdown 常用语法]]></title>
-      <url>/2017/05/17/2017-05-17-Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
+      <title><![CDATA[2017-5-17 Markdown 常用语法]]></title>
+      <url>/2017/05/17/2017-5-17-Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
       <content type="html"><![CDATA[<h2 id="标题-一"><a href="#标题-一" class="headerlink" title="标题(一)"></a>标题(一)</h2><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div><div class="line">#### 四级标题</div><div class="line">##### 五级标题</div><div class="line">###### 六级标题</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>效果：</p>
@@ -844,8 +1010,6 @@
             
             <category> Notes </category>
             
-            <category> Markdown </category>
-            
         </categories>
         
         
@@ -860,8 +1024,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-17 建站日志]]></title>
-      <url>/2017/05/17/2017-05-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</url>
+      <title><![CDATA[2017-5-17 建站日志]]></title>
+      <url>/2017/05/17/2017-5-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</url>
       <content type="html"><![CDATA[<div class="note success"><p>未完待续… </p>
 </div>
 <a id="more"></a>
@@ -945,8 +1109,6 @@
             
             <category> Notes </category>
             
-            <category> Hexo </category>
-            
         </categories>
         
         
@@ -961,8 +1123,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-17 命运从不缺席]]></title>
-      <url>/2017/05/17/2017-05-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</url>
+      <title><![CDATA[2017-5-17 命运从不缺席]]></title>
+      <url>/2017/05/17/2017-5-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</url>
       <content type="html"><![CDATA[<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
 
@@ -1008,8 +1170,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-16 从字典中提取子集]]></title>
-      <url>/2017/05/16/2017-05-16-%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/</url>
+      <title><![CDATA[2017-5-16 从字典中提取子集]]></title>
+      <url>/2017/05/16/2017-5-16-%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/</url>
       <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>给你一个条件，从已给字典中构造一个符合条件的新字典，为原字典的子集。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>使用字典推导式：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">prices = &#123;</div><div class="line">    <span class="string">'ACME'</span>: 45.23,</div><div class="line">    <span class="string">'AAPL'</span>: 612.78,</div><div class="line">    <span class="string">'IBM'</span>: 205.55,</div><div class="line">    <span class="string">'HPQ'</span>: 37.20,</div><div class="line">    <span class="string">'FB'</span>: 10.75</div><div class="line">&#125;</div><div class="line"><span class="comment"># Make a dictionary of all prices over 200</span></div><div class="line">p1 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> value &gt; 200&#125;</div><div class="line"><span class="comment"># Make a dictionary of tech stocks</span></div><div class="line">tech_names = &#123;<span class="string">'AAPL'</span>, <span class="string">'IBM'</span>, <span class="string">'HPQ'</span>, <span class="string">'MSFT'</span>&#125;</div><div class="line">p2 = &#123;key: value <span class="keyword">for</span> key, value <span class="keyword">in</span> prices.items() <span class="keyword">if</span> key <span class="keyword">in</span> tech_names&#125;</div></pre></td></tr></table></figure>
@@ -1042,8 +1204,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-15 pandas-入门]]></title>
-      <url>/2017/05/15/2017-05-15-pandas-%E5%85%A5%E9%97%A8/</url>
+      <title><![CDATA[2017-5-15 pandas-入门]]></title>
+      <url>/2017/05/15/2017-5-15-pandas-%E5%85%A5%E9%97%A8/</url>
       <content type="html"><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Series: 类似于一维数组的对象；索引（index）在左，数据（value）在右，索引自动创建</div><div class="line">DataFrame: 一种表格型数据结构；二维结构，每列可以存不同类型的值，索引包含行索引及列索引</div></pre></td></tr></table></figure>
 <h3 id="创建Series"><a href="#创建Series" class="headerlink" title="创建Series"></a>创建Series</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">ser_obj = pd.Series(range(10, 20))</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -1071,8 +1233,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-05-15 数据分析 入门]]></title>
-      <url>/2017/05/15/2017-05-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/</url>
+      <title><![CDATA[2017-5-15 数据分析 入门]]></title>
+      <url>/2017/05/15/2017-5-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/</url>
       <content type="html"><![CDATA[<h2 id="DIKW体系"><a href="#DIKW体系" class="headerlink" title="DIKW体系"></a>DIKW体系</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">D: Data 数据 原始素材</div><div class="line">I: Information 信息 加工处理后有逻辑的数据</div><div class="line">K: Knowledge 知识 提炼信息之间的联系，行动的能力，完成当下任务</div><div class="line">W: Wisdom 智慧 关心未来，具有预测的能力</div></pre></td></tr></table></figure>
 <h2 id="数据工程"><a href="#数据工程" class="headerlink" title="数据工程"></a>数据工程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数据工程：一整套对数据（D）进行**采集**、处理、提取价值（变为I/K）的过程</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -1102,7 +1264,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Hexo 常用操作]]></title>
+      <title><![CDATA[2017-05-07 Hexo 常用操作]]></title>
       <url>/2017/05/07/2017-5-7-Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
       <content type="html"><![CDATA[<h2 id="cyg操作"><a href="#cyg操作" class="headerlink" title="cyg操作"></a>cyg操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /cygdrive/d <span class="comment">#切换到D盘</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -1114,8 +1276,6 @@
         <categories>
             
             <category> Notes </category>
-            
-            <category> Hexo </category>
             
         </categories>
         
@@ -1133,8 +1293,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2017-04-05 you are my sunshine!]]></title>
-      <url>/2017/04/05/2017-04-05-you-are-my-sunshine/</url>
+      <title><![CDATA[2017-4-5 you are my sunshine!]]></title>
+      <url>/2017/04/05/2017-4-5-you-are-my-sunshine/</url>
       <content type="html"></content>
       
         
