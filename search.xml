@@ -12,12 +12,16 @@
       
         <categories>
             
+            <category> Notes </category>
+            
             <category> Python </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> Python </tag>
             
             <tag> life </tag>
             
@@ -39,6 +43,8 @@
       
         <categories>
             
+            <category> Notes </category>
+            
             <category> Python </category>
             
         </categories>
@@ -46,7 +52,11 @@
         
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> list </tag>
+            
+            <tag> sort </tag>
             
         </tags>
         
@@ -83,9 +93,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -95,6 +105,8 @@
             <tag> Python </tag>
             
             <tag> Linux </tag>
+            
+            <tag> Docstring </tag>
             
         </tags>
         
@@ -110,9 +122,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -145,9 +157,9 @@
       
         <categories>
             
-            <category> Python </category>
+            <category> 数据分析 </category>
             
-            <category> Notes </category>
+            <category> Pandas </category>
             
         </categories>
         
@@ -157,6 +169,8 @@
             <tag> Pandas </tag>
             
             <tag> Python </tag>
+            
+            <tag> DataFrame </tag>
             
         </tags>
         
@@ -185,9 +199,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -220,9 +234,9 @@
       
         <categories>
             
-            <category> Python </category>
+            <category> 数据分析 </category>
             
-            <category> Notes </category>
+            <category> Pandas </category>
             
         </categories>
         
@@ -232,6 +246,10 @@
             <tag> Pandas </tag>
             
             <tag> Python </tag>
+            
+            <tag> cut </tag>
+            
+            <tag> 评分卡 </tag>
             
         </tags>
         
@@ -251,9 +269,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Bug </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -261,6 +279,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> Bug </tag>
             
             <tag> mongo </tag>
             
@@ -280,9 +300,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -326,9 +346,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -353,9 +373,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -396,9 +416,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -435,9 +455,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -468,9 +488,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -506,18 +526,20 @@
       
         <categories>
             
-            <category> Python </category>
+            <category> 数据分析 </category>
             
-            <category> Notes </category>
+            <category> Pandas </category>
             
         </categories>
         
         
         <tags>
             
+            <tag> Pandas </tag>
+            
             <tag> Python </tag>
             
-            <tag> pandas </tag>
+            <tag> Contains </tag>
             
         </tags>
         
@@ -540,9 +562,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -573,9 +595,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -603,9 +625,9 @@
       
         <categories>
             
-            <category> Python </category>
+            <category> Bug </category>
             
-            <category> Notes </category>
+            <category> Python </category>
             
         </categories>
         
@@ -662,9 +684,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -722,9 +744,9 @@
       
         <categories>
             
-            <category> Python </category>
-            
             <category> Notes </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -774,6 +796,8 @@
             
             <category> Notes </category>
             
+            <category> Hexo </category>
+            
         </categories>
         
         
@@ -809,7 +833,9 @@
       
         <categories>
             
-            <category> BUG </category>
+            <category> Bug </category>
+            
+            <category> Python </category>
             
         </categories>
         
@@ -1010,6 +1036,8 @@
             
             <category> Notes </category>
             
+            <category> Markdown </category>
+            
         </categories>
         
         
@@ -1108,6 +1136,8 @@
         <categories>
             
             <category> Notes </category>
+            
+            <category> Hexo </category>
             
         </categories>
         
@@ -1277,6 +1307,8 @@
             
             <category> Notes </category>
             
+            <category> Hexo </category>
+            
         </categories>
         
         
@@ -1305,6 +1337,13 @@
     
     <entry>
       <title></title>
+      <url>/google1c4a19302d3916a2.html</url>
+      <content type="html"><![CDATA[google-site-verification: google1c4a19302d3916a2.html
+]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
       <url>/404.html</url>
       <content type="html"><![CDATA[<html>
     <head>
@@ -1320,13 +1359,6 @@
     
     <entry>
       <title></title>
-      <url>/google1c4a19302d3916a2.html</url>
-      <content type="html"><![CDATA[google-site-verification: google1c4a19302d3916a2.html
-]]></content>
-    </entry>
-    
-    <entry>
-      <title></title>
       <url>/About/index.html</url>
       <content type="html"><![CDATA[<!-- ![](http://ohhmsby4v.bkt.clouddn.com/image/2017-05-21_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_full_img1.jpg) -->
 <p><img src="http://ohhmsby4v.bkt.clouddn.com/%E6%97%B6%E5%85%89-%E7%81%AB%E8%BD%A6-%E6%A4%85.jpg" alt=""><br><blockquote class="blockquote-center"><p>父母在，人生尚有來處；父母去，人生祗剩歸途。 </p>
@@ -1336,14 +1368,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[categories]]></title>
-      <url>/categories/index.html</url>
+      <title><![CDATA[tags]]></title>
+      <url>/tags/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>/tags/index.html</url>
+      <title><![CDATA[categories]]></title>
+      <url>/categories/index.html</url>
       <content type="html"></content>
     </entry>
     

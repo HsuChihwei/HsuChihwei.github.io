@@ -5,43 +5,23 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-9-5 计算体脂率</title>
         <pubTime>2017-09-05T09:12:11.000Z</pubTime>
         
+        <tag>Python</tag>
+         
         <tag>life</tag>
          
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
-    <data>
-        <display>
-        <title>2017-8-31 自动 生成注释文档（docstring）</title>
-        <pubTime>2017-08-31T12:22:52.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -50,7 +30,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/06/2017-8-6-python-string/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-8-6 python string</title>
@@ -63,10 +43,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -75,23 +55,25 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
         <pubTime>2017-08-06T16:00:00.000Z</pubTime>
         
+        <tag>Pandas</tag>
+         
         <tag>Python</tag>
          
-        <tag>pandas</tag>
+        <tag>Contains</tag>
          
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="数据分析" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Pandas" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
           
         </display>
     </data>
@@ -100,7 +82,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-8-7 python args and kwargs</title>
@@ -115,10 +97,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -127,7 +109,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-8-8 profile cProfile 效率分析</title>
@@ -140,10 +122,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -152,7 +134,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/09/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-8-9 Map、Filter、Reduce</title>
@@ -169,10 +151,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -181,43 +163,25 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/</loc>
-    <lastmod>2017-09-06T10:32:48.651Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.846Z</lastmod>
     <data>
         <display>
         <title>2017-9-5 python  list 排序 sort、sorted</title>
         <pubTime>2017-09-05T07:17:50.000Z</pubTime>
         
-        <tag>list</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
-    <data>
-        <display>
-        <title>2017-8-27 Pandas 分箱操作（cut）</title>
-        <pubTime>2017-08-27T03:12:47.000Z</pubTime>
-        
-        <tag>Pandas</tag>
-         
         <tag>Python</tag>
          
+        <tag>list</tag>
+         
+        <tag>sort</tag>
+         
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -226,7 +190,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-7-31 python 生成器（Generators）</title>
@@ -239,60 +203,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
-    <data>
-        <display>
-        <title>2017-8-31 python  two sum 问题</title>
-        <pubTime>2017-08-31T09:02:59.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>算法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
-          
-             
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
-    <data>
-        <display>
-        <title>2017-8-23 mongo insert_many BulkWriteError</title>
-        <pubTime>2017-08-23T01:31:08.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>mongo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
-          
-             
-              <breadCrumb title="Bug" url="http://chihweihsu.com/categories/Python/Bug/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -301,7 +215,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-8-1 python rrule bug</title>
@@ -314,10 +228,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Bug" url="http://chihweihsu.com/categories/Bug/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Bug/Python/"/>
           
         </display>
     </data>
@@ -326,7 +240,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/10/2017-8-10-string-%E5%8E%BB%E6%8E%89%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-8-10 string 去掉标点符号</title>
@@ -339,10 +253,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -351,7 +265,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/10/2017-8-10-%E8%B0%83%E8%AF%95-Pdb%EF%BC%88Python-debugger%EF%BC%89/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-8-10 调试 Pdb（Python debugger）</title>
@@ -364,10 +278,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -376,7 +290,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-8-13 三元表达式（条件表达式）</title>
@@ -389,10 +303,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -400,24 +314,21 @@
 
     
   <url>
-    <loc>http://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
-        <title>2017-8-14 JSON文件 读写 格式化</title>
-        <pubTime>2017-08-14T05:37:04.000Z</pubTime>
+        <title>2017-5-17 命运从不缺席</title>
+        <pubTime>2017-05-17T13:34:28.000Z</pubTime>
         
-        <tag>Python</tag>
+        <tag>美文</tag>
          
-        <tag>json</tag>
+        <tag>励志</tag>
          
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
-          
-             
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="writings" url="http://chihweihsu.com/categories/writings/"/>
           
         </display>
     </data>
@@ -426,7 +337,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-8-27 dataframe与序列相乘</title>
@@ -436,13 +347,44 @@
          
         <tag>Python</tag>
          
+        <tag>DataFrame</tag>
+         
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="数据分析" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Pandas" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-8-27 Pandas 分箱操作（cut）</title>
+        <pubTime>2017-08-27T03:12:47.000Z</pubTime>
+        
+        <tag>Pandas</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>cut</tag>
+         
+        <tag>评分卡</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据分析" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+          
+             
+              <breadCrumb title="Pandas" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
           
         </display>
     </data>
@@ -451,7 +393,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/</loc>
-    <lastmod>2017-09-06T10:32:48.650Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-8-27 python 协程加速</title>
@@ -464,10 +406,141 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-8-31 python  two sum 问题</title>
+        <pubTime>2017-08-31T09:02:59.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+          
+             
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-8-31 自动 生成注释文档（docstring）</title>
+        <pubTime>2017-08-31T12:22:52.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docstring</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+          
+             
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-8-23 mongo insert_many BulkWriteError</title>
+        <pubTime>2017-08-23T01:31:08.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Bug</tag>
+         
+        <tag>mongo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Bug" url="http://chihweihsu.com/categories/Bug/"/>
+          
+             
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Bug/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-5-17 建站日志</title>
+        <pubTime>2017-05-17T13:39:02.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/Notes/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
+    <data>
+        <display>
+        <title>2017-5-23 一个逗号(,)引起的BUG</title>
+        <pubTime>2017-05-23T14:45:11.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>list</tag>
+         
+        <tag>tuple</tag>
+         
+         
+           
+             
+              <breadCrumb title="Bug" url="http://chihweihsu.com/categories/Bug/"/>
+          
+             
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Bug/Python/"/>
           
         </display>
     </data>
@@ -476,7 +549,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/24/2017-5-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-5-24 建站日志（二）</title>
@@ -491,6 +564,9 @@
              
               <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
+             
+              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/Notes/Hexo/"/>
+          
         </display>
     </data>
     </url>
@@ -498,7 +574,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-05-07 Hexo 常用操作</title>
@@ -515,6 +591,9 @@
              
               <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
+             
+              <breadCrumb title="Hexo" url="http://chihweihsu.com/categories/Notes/Hexo/"/>
+          
         </display>
     </data>
     </url>
@@ -522,7 +601,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
         <title>2017-7-31 python set 交集、并集、差集</title>
@@ -535,10 +614,10 @@
          
            
              
-              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Python/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Python/Notes/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -546,39 +625,24 @@
 
     
   <url>
-    <loc>http://chihweihsu.com/2017/04/05/2017-4-5-you-are-my-sunshine/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <loc>http://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
+    <lastmod>2017-09-06T11:05:14.845Z</lastmod>
     <data>
         <display>
-        <title>2017-4-5 you are my sunshine!</title>
-        <pubTime>2017-04-05T14:14:22.000Z</pubTime>
+        <title>2017-8-14 JSON文件 读写 格式化</title>
+        <pubTime>2017-08-14T05:37:04.000Z</pubTime>
         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/05/15/2017-5-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
-    <data>
-        <display>
-        <title>2017-5-15 数据分析 入门</title>
-        <pubTime>2017-05-15T13:35:48.000Z</pubTime>
-        
-        <tag>Pandas</tag>
-         
         <tag>Python</tag>
          
+        <tag>json</tag>
+         
          
            
              
-              <breadCrumb title="数据分析" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
              
-              <breadCrumb title="Pandas" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+              <breadCrumb title="Python" url="http://chihweihsu.com/categories/Notes/Python/"/>
           
         </display>
     </data>
@@ -587,7 +651,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/16/2017-5-16-%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.835Z</lastmod>
     <data>
         <display>
         <title>2017-5-16 从字典中提取子集</title>
@@ -612,7 +676,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/17/2017-5-17-Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.835Z</lastmod>
     <data>
         <display>
         <title>2017-5-17 Markdown 常用语法</title>
@@ -627,49 +691,8 @@
              
               <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
-    <data>
-        <display>
-        <title>2017-5-17 命运从不缺席</title>
-        <pubTime>2017-05-17T13:34:28.000Z</pubTime>
-        
-        <tag>美文</tag>
-         
-        <tag>励志</tag>
-         
-         
-           
              
-              <breadCrumb title="writings" url="http://chihweihsu.com/categories/writings/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
-    <data>
-        <display>
-        <title>2017-5-17 建站日志</title>
-        <pubTime>2017-05-17T13:39:02.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="Notes" url="http://chihweihsu.com/categories/Notes/"/>
+              <breadCrumb title="Markdown" url="http://chihweihsu.com/categories/Notes/Markdown/"/>
           
         </display>
     </data>
@@ -678,7 +701,7 @@
     
   <url>
     <loc>http://chihweihsu.com/2017/05/15/2017-5-15-pandas-%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <lastmod>2017-09-06T11:05:14.835Z</lastmod>
     <data>
         <display>
         <title>2017-5-15 pandas-入门</title>
@@ -702,23 +725,39 @@
 
     
   <url>
-    <loc>http://chihweihsu.com/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
-    <lastmod>2017-09-06T10:32:48.649Z</lastmod>
+    <loc>http://chihweihsu.com/2017/04/05/2017-4-5-you-are-my-sunshine/</loc>
+    <lastmod>2017-09-06T11:05:14.835Z</lastmod>
     <data>
         <display>
-        <title>2017-5-23 一个逗号(,)引起的BUG</title>
-        <pubTime>2017-05-23T14:45:11.000Z</pubTime>
+        <title>2017-4-5 you are my sunshine!</title>
+        <pubTime>2017-04-05T14:14:22.000Z</pubTime>
         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chihweihsu.com/2017/05/15/2017-5-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2017-09-06T11:05:14.835Z</lastmod>
+    <data>
+        <display>
+        <title>2017-5-15 数据分析 入门</title>
+        <pubTime>2017-05-15T13:35:48.000Z</pubTime>
+        
+        <tag>Pandas</tag>
+         
         <tag>Python</tag>
-         
-        <tag>list</tag>
-         
-        <tag>tuple</tag>
          
          
            
              
-              <breadCrumb title="BUG" url="http://chihweihsu.com/categories/BUG/"/>
+              <breadCrumb title="数据分析" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+          
+             
+              <breadCrumb title="Pandas" url="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
           
         </display>
     </data>
