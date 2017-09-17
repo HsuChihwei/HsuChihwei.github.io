@@ -115,7 +115,7 @@
 上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
 <meta property="og:image" content="http://chihweihsu.com/./images/gevent_bug_1.png">
 <meta property="og:image" content="http://chihweihsu.com/./images/gevent_pool_1.png">
-<meta property="og:updated_time" content="2017-09-06T11:56:24.264Z">
+<meta property="og:updated_time" content="2017-09-17T06:04:12.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-27 python 协程加速">
 <meta name="twitter:description" content="情景描述：
@@ -442,8 +442,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Notes</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -453,8 +453,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notes/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Python/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -524,6 +524,9 @@
 <p>经过分析，解决办法：<code>monkey.patch_socket()</code>换为<code>monkey.patch_all()</code>，或者，在使用完<code>gevent</code>后使用<code>reload(socket)</code>将socket初始化。<br>原因：应该是mongo写数据是阻塞的，请求快于写操作，导致写操作堆积越来越多，最终导致程序抛出<code>Too many open files</code>错误。<br>最终代码，如下：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> gevent</div><div class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</div><div class="line">monkey.patch_all()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></div><div class="line">	p = pool.Pool(<span class="number">10</span>)</div><div class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">	gevent.joinall(jobs)</div><div class="line">	<span class="comment"># print [x.value for x in jobs]</span></div><div class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</div><div class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">		self.logger.error(tlist)</div><div class="line">		self.logger.error(message_list)</div><div class="line">		<span class="keyword">raise</span> Exception(message_list)</div><div class="line">	<span class="keyword">return</span> tlist</div><div class="line">	</div><div class="line">	</div><div class="line"><span class="comment"># 或者使用</span></div><div class="line">p = pool.Pool(<span class="number">10</span>)</div><div class="line">jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">gevent.joinall(jobs)</div><div class="line"><span class="keyword">import</span> socket</div><div class="line">reload(socket)</div></pre></td></tr></table></figure>
+<h4 id="另一个用例："><a href="#另一个用例：" class="headerlink" title="另一个用例："></a>另一个用例：</h4><blockquote>
+<p>给传递两个参数，直接后面跟着就行，逗号分开；<br>返回如是多个情况的，value是一个以tuple为元素的list。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">p = pool.Pool(<span class="number">10</span>)</div><div class="line">jobs = []</div><div class="line"><span class="comment"># date ('2017-07-01', '2017-07-14')</span></div><div class="line">jobs = [p.spawn(self.crawl_a_call_log, date[<span class="number">0</span>], date[<span class="number">1</span>]) <span class="keyword">for</span> date <span class="keyword">in</span> dates]</div><div class="line">gevent.joinall(jobs)</div><div class="line">data_list = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line"><span class="keyword">print</span> data_list</div><div class="line"><span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> data_list:</div><div class="line">	message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	self.log(<span class="string">'crawler'</span>, data_list, message_list)</div><div class="line">	<span class="keyword">raise</span> Exception(message_list)</div></pre></td></tr></table></figure></p>
+</blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
 <p>协程(gevent)是把双刃剑，monkey.patch 是一个邪恶的东西；<br>提升效果不要太好，耗时足足降了60%，而且，请求越多，效果越明显。</p>
 </blockquote>
@@ -737,7 +740,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -748,7 +751,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -759,7 +762,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">44</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -847,7 +850,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#情景描述："><span class="nav-number">1.</span> <span class="nav-text">情景描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现代码："><span class="nav-number">2.</span> <span class="nav-text">实现代码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">3.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法："><span class="nav-number">4.</span> <span class="nav-text">解决办法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#情景描述："><span class="nav-number">1.</span> <span class="nav-text">情景描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现代码："><span class="nav-number">2.</span> <span class="nav-text">实现代码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">3.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法："><span class="nav-number">4.</span> <span class="nav-text">解决办法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#另一个用例："><span class="nav-number">4.1.</span> <span class="nav-text">另一个用例：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

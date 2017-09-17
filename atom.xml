@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2017-09-06T11:56:24.267Z</updated>
+  <updated>2017-09-17T06:04:12.603Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -16,11 +16,215 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017-9-14 通过__slots__节省内存</title>
+    <link href="http://chihweihsu.com/2017/09/14/2017-9-14-%E9%80%9A%E8%BF%87-slots-%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98/"/>
+    <id>http://chihweihsu.com/2017/09/14/2017-9-14-通过-slots-节省内存/</id>
+    <published>2017-09-14T07:01:38.000Z</published>
+    <updated>2017-09-17T06:04:12.603Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.datadependence.com/2016/07/pythonic-code-video-series-slots/" target="_blank" rel="external">见原文</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Measurement</span>:</span></div><div class="line">    __slots__ = [<span class="string">'x'</span>, <span class="string">'y'</span>, <span class="string">'val'</span>]</div><div class="line"> </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x, y, value)</span>:</span></div><div class="line">        self.x = x</div><div class="line">        self.y = y</div><div class="line">        self.val = value</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>merge dict </p>
+</blockquote>
+<p><a href="http://www.datadependence.com/2016/08/pythonic-code-video-series-merging-dictionaries/" target="_blank" rel="external">merged_dict</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dict_merged = &#123;**a, **b, **c&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.datadependence.com/2016/07/pythonic-code-video-series-slots/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;见原文&lt;/a&gt;&lt;br&gt;&lt;figure class
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="内存" scheme="http://chihweihsu.com/tags/%E5%86%85%E5%AD%98/"/>
+    
+      <category term="slots" scheme="http://chihweihsu.com/tags/slots/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-9-13 cProfile</title>
+    <link href="http://chihweihsu.com/2017/09/13/2017-9-13-cProfile/"/>
+    <id>http://chihweihsu.com/2017/09/13/2017-9-13-cProfile/</id>
+    <published>2017-09-13T08:51:02.000Z</published>
+    <updated>2017-09-17T06:04:12.603Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">python -m cProfile -s tottime myscript.py</div><div class="line"></div><div class="line">-s 选项：</div><div class="line"><span class="string">'calls'</span> (call count)</div><div class="line"><span class="string">'cumulative'</span> (cumulative time)</div><div class="line"><span class="string">'cumtime'</span> (cumulative time)</div><div class="line"><span class="string">'file'</span> (file name)</div><div class="line"><span class="string">'filename'</span> (file name)</div><div class="line"><span class="string">'module'</span> (file name)</div><div class="line"><span class="string">'ncalls'</span> (call count)</div><div class="line"><span class="string">'pcalls'</span> (primitive call count)</div><div class="line"><span class="string">'line'</span> (line number)</div><div class="line"><span class="string">'name'</span> (function name)</div><div class="line"><span class="string">'nfl'</span> (name/file/line)</div><div class="line"><span class="string">'stdname'</span> (standard name)</div><div class="line"><span class="string">'time'</span> (internal time)</div><div class="line"><span class="string">'tottime'</span> (internal time)</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/d
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="效率" scheme="http://chihweihsu.com/tags/%E6%95%88%E7%8E%87/"/>
+    
+      <category term="cProfile" scheme="http://chihweihsu.com/tags/cProfile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-9-7 机器学习分类</title>
+    <link href="http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/"/>
+    <id>http://chihweihsu.com/2017/09/07/2017-9-7-机器学习分类/</id>
+    <published>2017-09-07T00:19:51.000Z</published>
+    <updated>2017-09-17T06:04:12.604Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="机器学习："><a href="#机器学习：" class="headerlink" title="机器学习："></a>机器学习：</h4><blockquote>
+<ul>
+<li>线性回归<ul>
+<li>岭回归</li>
+<li>LASSO</li>
+<li>弹性网络</li>
+</ul>
+</li>
+<li>逻辑回归<ul>
+<li>Softmax 回归</li>
+</ul>
+</li>
+<li>决策树<ul>
+<li>ID3</li>
+<li>C4.5</li>
+<li>CART</li>
+</ul>
+</li>
+<li>神经网络<ul>
+<li>普通网络</li>
+<li>CNN</li>
+<li>RNN</li>
+<li>GAN</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="架构总览："><a href="#架构总览：" class="headerlink" title="架构总览："></a>架构总览：</h4><blockquote>
+<p>数据仓库</p>
+<ul>
+<li>SparkStreaming<ul>
+<li>tensorflow</li>
+<li>scikit-learn<br>模型库</li>
+</ul>
+</li>
+<li>django<ul>
+<li>xgboost</li>
+<li>SparkMLLib<br>特征库</li>
+</ul>
+</li>
+<li>redis<ul>
+<li>numpy</li>
+<li>pandas</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;机器学习：&quot;&gt;&lt;a href=&quot;#机器学习：&quot; class=&quot;headerlink&quot; title=&quot;机器学习：&quot;&gt;&lt;/a&gt;机器学习：&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;线性回归&lt;ul&gt;
+&lt;li&gt;岭回归&lt;/li&gt;
+&lt;li&gt;LASSO&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="机器学习" scheme="http://chihweihsu.com/categories/Notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="机器学习" scheme="http://chihweihsu.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-9-7 机器学习路线</title>
+    <link href="http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <id>http://chihweihsu.com/2017/09/07/2017-9-7-机器学习路线/</id>
+    <published>2017-09-06T23:21:28.000Z</published>
+    <updated>2017-09-17T06:04:12.604Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="准备知识："><a href="#准备知识：" class="headerlink" title="准备知识："></a>准备知识：</h3><blockquote>
+<p>编程语言：Python，C++，Spark（大数据环境下）；<br>知识储备：英语、线性代数、概率论、图论、神经科学。</p>
+</blockquote>
+<h4 id="第一步-统领大局："><a href="#第一步-统领大局：" class="headerlink" title="第一步 统领大局："></a>第一步 统领大局：</h4><blockquote>
+<p>建立大局观，是入门第一要务； 从宏观了解机器学习的全貌；<br>机器学习：根据已有特征，选择模型，训练模型，预测未知数据；<br>推荐书籍：<br>-《图解机器学习》：通俗易懂，算法图解，入门必备；<br>-《集体智慧编程》：代码实现，一个字“敲”；<br>-《机器学习（周志华西瓜书）》：系统严谨，数学推导；</p>
+</blockquote>
+<h4 id="第二步-了解算法："><a href="#第二步-了解算法：" class="headerlink" title="第二步 了解算法："></a>第二步 了解算法：</h4><blockquote>
+<p>看遍所有算法原理，主要书籍：《机器学习（周志华）》；<br><code>coursera</code> 上Andrew NG的机器学习公开课，网易云也开了；<br>邹博的《机器学习实战》；<br>李沐《一起动手学习深度学习》；<br>必学：线性回归，Logistics回归，决策树。</p>
+</blockquote>
+<h4 id="第三步-利用框架："><a href="#第三步-利用框架：" class="headerlink" title="第三步 利用框架："></a>第三步 利用框架：</h4><blockquote>
+<p>利用<code>scikit-learn</code>实现所学的算法（推荐鸢尾花分类、MNIST分类）</p>
+</blockquote>
+<h4 id="第四步-神经网络："><a href="#第四步-神经网络：" class="headerlink" title="第四步 神经网络："></a>第四步 神经网络：</h4><blockquote>
+<p>看懂<code>Tensorflow</code>官网demo：RNN、CNN、GAN；<br>莫凡<code>Tensorflow</code>；</p>
+</blockquote>
+<h4 id="第五步-实操演练："><a href="#第五步-实操演练：" class="headerlink" title="第五步 实操演练："></a>第五步 实操演练：</h4><blockquote>
+<p>注册<code>kangle</code>，奋斗吧！<br>上线一个小模型（django+scikit-learn）</p>
+</blockquote>
+<h4 id="第六步-关注落地："><a href="#第六步-关注落地：" class="headerlink" title="第六步 关注落地："></a>第六步 关注落地：</h4><blockquote>
+<p>机器学习MVP开发；<br>针对小规模，有质量、已标注的数据进行训练；<br>明确需求、特征量化、目标量化、特征清洗、模型选型、模型训练、线下验证、模型上线、特征清洗、模型预测、结果应用、运行监控；</p>
+<p>实例一：客户动用率预测：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">明确需求：与业务同事讨论本次需求的目标是什么，这里说的就是动用率预测；</div><div class="line">特征量化：选出可能有影响的特征，如：年龄，性别，近三个月是否动用等；</div><div class="line">目标量化：选择是否动用为目标；</div><div class="line">特征清洗：样本筛选，缺失值补全，利用先验知识去掉明显不符合常理的数据；</div><div class="line">模型选择：直接丢个逻辑回归试试看；</div><div class="line">模型训练：看训练集和测试集，讨论出一个精准度即可；</div><div class="line">模型上线：丢上线去跑跑看，看看结果，暂时不接入关键流程即可。</div></pre></td></tr></table></figure></p>
+<p>实例二：客户逾期率预测：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">明确需求：与业务同事讨论本次需求的目标是什么，这里说的就是逾期率预测；</div><div class="line">特征量化：选出可能有影响的特征，如：年龄，性别，近三个月是否逾期等；</div><div class="line">目标量化：选择客户是否逾期作为目标；</div><div class="line">特征清洗：样本筛选，缺失值补全，利用先验知识去掉明显不符合常理的数据；</div><div class="line">模型选择：直接丢个softmax回归试试看；</div><div class="line">模型训练：看训练集和测试集，讨论出一个精准度即可；</div><div class="line">模型上线：丢上线去跑跑看，看看结果，暂时不接入关键流程即可。</div></pre></td></tr></table></figure></p>
+<p>实例三：客户风险级别预测：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">明确需求：与业务同事讨论本次需求的目标是什么，这里说的就是风险级别预测；</div><div class="line">特征量化：选出可能有影响的特征，如：年龄，性别，近三个月是否逾期等；</div><div class="line">目标量化：选择预期风险等级作为目标；</div><div class="line">特征清洗：样本筛选，缺失值补全，利用先验知识去掉明显不符合常理的数据；</div><div class="line">模型选择：直接丢个决策树试试看；</div><div class="line">模型训练：看训练集和测试集，讨论出一个精准度即可；</div><div class="line">模型上线：丢上线去跑跑看，看看结果，暂时不接入关键流程即可。</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="第七步-补充数学："><a href="#第七步-补充数学：" class="headerlink" title="第七步 补充数学："></a>第七步 补充数学：</h4><blockquote>
+<p>《概率论与数理统计》陈希孺<br>《线性代数应该这样学》</p>
+</blockquote>
+<h4 id="第八步-特征工程："><a href="#第八步-特征工程：" class="headerlink" title="第八步 特征工程："></a>第八步 特征工程：</h4><blockquote>
+<p>好的特征决是成功的一半；<br>特征选择，特征清洗，决定模型的上限，算法和优化只是不断趋近这个上限；<br>特征工程非常重要。</p>
+</blockquote>
+<h4 id="第九步-深入前沿："><a href="#第九步-深入前沿：" class="headerlink" title="第九步 深入前沿："></a>第九步 深入前沿：</h4><blockquote>
+<p>深入了解前沿的底层原理<br>阅读实践优秀论文，如：MapReduce原理的，李沐Parameter原理的，GAN原理的，LPA原理的……</p>
+</blockquote>
+<h4 id="书单："><a href="#书单：" class="headerlink" title="书单："></a>书单：</h4><blockquote>
+<p>《深入浅出统计学》<br>《深入浅出数据分析》<br>《大数据智能》<br>《深度学习》<br>《优雅的理性》<br>《创新者的窘境》<br>《数学之美》</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;准备知识：&quot;&gt;&lt;a href=&quot;#准备知识：&quot; class=&quot;headerlink&quot; title=&quot;准备知识：&quot;&gt;&lt;/a&gt;准备知识：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;编程语言：Python，C++，Spark（大数据环境下）；&lt;br&gt;知识储备：英语、线性代
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="机器学习" scheme="http://chihweihsu.com/categories/Notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="机器学习" scheme="http://chihweihsu.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="路线" scheme="http://chihweihsu.com/tags/%E8%B7%AF%E7%BA%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017-9-5 计算体脂率</title>
     <link href="http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/"/>
     <id>http://chihweihsu.com/2017/09/05/2017-9-5-计算体脂率/</id>
     <published>2017-09-05T09:12:11.000Z</published>
-    <updated>2017-09-06T11:56:24.267Z</updated>
+    <updated>2017-09-17T06:04:12.604Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>用来计算一个人的体脂率<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_BFR</span><span class="params">(weight, height, age, gender)</span>:</span></div><div class="line">	<span class="string">"""计算BMI及体脂率</span></div><div class="line">	:param weight: 体重（kg）</div><div class="line">	:param height: 身高（m）</div><div class="line">	:param age: 年龄（岁）</div><div class="line">	:param gender: 性别（男--1，女--0）</div><div class="line">	:returns: 体脂率，float</div><div class="line">	"""</div><div class="line">	<span class="comment"># BMI</span></div><div class="line">	BMI = weight /(height*height)</div><div class="line">	<span class="comment"># 体脂率 </span></div><div class="line">	BFR = <span class="number">1.2</span>*BMI + <span class="number">0.23</span>*age - <span class="number">5.4</span> - <span class="number">10.8</span>*gender</div><div class="line">	<span class="keyword">return</span> BFR</div><div class="line"></div><div class="line">get_BFR(<span class="number">55</span>, <span class="number">1.7</span>, <span class="number">26</span>, <span class="number">1</span>)</div><div class="line"><span class="comment"># 12.61737024221453</span></div></pre></td></tr></table></figure></p>
@@ -50,7 +254,7 @@
     <link href="http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/"/>
     <id>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-排序-sort、sorted/</id>
     <published>2017-09-05T07:17:50.000Z</published>
-    <updated>2017-09-06T11:56:24.267Z</updated>
+    <updated>2017-09-17T06:04:12.603Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>项目中，有一个list，list内部组成元素为dict，现需要根据dict中某个键的值来进行排序。</p>
@@ -87,7 +291,7 @@
     <link href="http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/31/2017-8-31-python-自动-生成注释文档（docstring）/</id>
     <published>2017-08-31T12:22:52.000Z</published>
-    <updated>2017-09-06T11:56:24.264Z</updated>
+    <updated>2017-09-17T06:04:12.599Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>项目中，发现很多函数、类没有注释说明，一个个弄比较繁琐，所以……</p>
@@ -141,7 +345,7 @@
     <link href="http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/"/>
     <id>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-问题/</id>
     <published>2017-08-31T09:02:59.000Z</published>
-    <updated>2017-09-06T11:56:24.264Z</updated>
+    <updated>2017-09-17T06:04:12.599Z</updated>
     
     <content type="html"><![CDATA[<h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
 <p>来自<code>LeetCode</code></p>
@@ -171,11 +375,82 @@
   </entry>
   
   <entry>
+    <title>2017-8-28 python interval  区间处理</title>
+    <link href="http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-%E5%8C%BA%E9%97%B4%E5%A4%84%E7%90%86/"/>
+    <id>http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/</id>
+    <published>2017-08-28T10:25:08.000Z</published>
+    <updated>2017-09-17T06:04:12.599Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume1 = Interval.between(<span class="string">"A"</span>, <span class="string">"Foe"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume2 = Interval.between(<span class="string">"Fog"</span>, <span class="string">"McAfee"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume3 = Interval.between(<span class="string">"McDonalds"</span>, <span class="string">"Space"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume4 = Interval.between(<span class="string">"Spade"</span>, <span class="string">"Zygote"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>encyclopedia = IntervalSet([volume1, volume2, volume3, volume4])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>mySet = IntervalSet([volume1, volume3, volume4])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Meteor"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Goose"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Goose"</span> <span class="keyword">in</span> mySet</div><div class="line"><span class="keyword">False</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume2 <span class="keyword">in</span> (encyclopedia ^ mySet)</div><div class="line"><span class="keyword">True</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a= <span class="number">112</span> </div><div class="line">In [<span class="number">4</span>]:  a <span class="keyword">in</span> range(<span class="number">300</span>,<span class="number">400</span>) </div><div class="line">   ...: </div><div class="line">Out[<span class="number">4</span>]: <span class="keyword">False</span> </div><div class="line">In [<span class="number">5</span>]:  a <span class="keyword">in</span> range(<span class="number">101</span>,<span class="number">300</span>) </div><div class="line">   ...: </div><div class="line">Out[<span class="number">5</span>]: <span class="keyword">True</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">python强大的区间处理库interval用法介绍</div><div class="line">原文发表在我的博客主页，转载请注明出处</div><div class="line"></div><div class="line">前言</div><div class="line"></div><div class="line">这个库是在阅读别人的源码的时候看到的，觉得十分好用，然而在网上找到的相关资料甚少，所以阅读了源码来做一个简单的用法总结。在网络的路由表中，经常会通过掩码来表示流表的匹配域，在python中有的时候为了方便的模拟流表的匹配过程，可以通过一个整数区间来表示诸如IP等的匹配范围，而本文介绍的库在区间处理上是十分的强大与方便。</div><div class="line"></div><div class="line">用法举例</div><div class="line"></div><div class="line">不论是在Linux系统还是Windows系统上，我们都可以方便的安装pip或者easy_install库来方便的安装大多数python库，interval也不例外。</div><div class="line">在这个库中提供了两个主要的类，分别是Interval和IntervalSet两个类。</div><div class="line">Interval类描述了一个连续的范围区间，这个区间可以是闭、开、半闭半开、无穷的，他的区间值不一定是数字，可以包含任何的数据类型，比如字符串，时间等等，同时他和python的各种操作（&lt;, &lt;=, ==, &gt;=, &gt;等）也是兼容的。IntervalSet包含了一个或多个互不相交的Interval集合。下面的这几个例子是源码中的。</div><div class="line"></div><div class="line"> &gt;&gt;&gt;volume1 = Interval.between(<span class="string">"A"</span>, <span class="string">"Foe"</span>)</div><div class="line">&gt;&gt;&gt;volume2 = Interval.between(<span class="string">"Fog"</span>, <span class="string">"McAfee"</span>)</div><div class="line">&gt;&gt;&gt;volume3 = Interval.between(<span class="string">"McDonalds"</span>, <span class="string">"Space"</span>)</div><div class="line">&gt;&gt;&gt;volume4 = Interval.between(<span class="string">"Spade"</span>, <span class="string">"Zygote"</span>)</div><div class="line">&gt;&gt;&gt;encyclopedia = IntervalSet([volume1, volume2, volume3, volume4])</div><div class="line">&gt;&gt;&gt;mySet = IntervalSet([volume1, volume3, volume4])</div><div class="line">&gt;&gt;&gt;<span class="string">"Meteor"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;<span class="string">"Goose"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;<span class="string">"Goose"</span> <span class="keyword">in</span> mySet</div><div class="line"><span class="keyword">False</span></div><div class="line">&gt;&gt;&gt;volume2 <span class="keyword">in</span> (encyclopedia ^ mySet)</div><div class="line"><span class="keyword">True</span></div><div class="line">前面的三个例子比较容易理解，最后一个例子中，encyclopedia的区别就是mySet多了一个volume2，而异或就是将两个集合中相同的元素去掉，不同的元素保留，所以最后只剩下了volume2。</div><div class="line">除了字符串，利用interval还可以很方便的处理时间，下面的例子同样来自于源码。</div><div class="line"></div><div class="line"> &gt;&gt;&gt;officeHours = IntervalSet.between(<span class="string">"08:00"</span>, <span class="string">"17:00"</span>)</div><div class="line">&gt;&gt;&gt;myLunch = IntervalSet.between(<span class="string">"11:30"</span>, <span class="string">"12:30"</span>)</div><div class="line">&gt;&gt;&gt;myHours = IntervalSet.between(<span class="string">"08:30"</span>, <span class="string">"19:30"</span>) - myLunch</div><div class="line">&gt;&gt;&gt;myHours.issubset(officeHours)</div><div class="line"><span class="keyword">False</span></div><div class="line">&gt;&gt;&gt;<span class="string">"12:00"</span> <span class="keyword">in</span> myHours</div><div class="line"><span class="keyword">False</span></div><div class="line">&gt;&gt;&gt;<span class="string">"15:30"</span> <span class="keyword">in</span> myHours</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;inOffice = officeHours &amp; myHours</div><div class="line">&gt;&gt;&gt;<span class="keyword">print</span> inOffice</div><div class="line">[<span class="string">'08:30'</span>..<span class="string">'11:30'</span>),(<span class="string">'12:30'</span>..<span class="string">'17:00'</span>]</div><div class="line">&gt;&gt;&gt;overtime = myHours - officeHours</div><div class="line">&gt;&gt;&gt;<span class="keyword">print</span> overtime</div><div class="line">(<span class="string">'17:00'</span>..<span class="string">'19:30'</span>]</div><div class="line">在前言中说道interval库可以处理IP地址，简单的列举应用如下：</div><div class="line"></div><div class="line"> <span class="comment"># coding</span></div><div class="line">r1 = IntervalSet([Interval(<span class="number">1</span>, <span class="number">1000</span>), Interval(<span class="number">1100</span>, <span class="number">1200</span>)])</div><div class="line">r2 = IntervalSet([Interval(<span class="number">30</span>, <span class="number">50</span>), Interval(<span class="number">60</span>, <span class="number">200</span>), Interval(<span class="number">1150</span>, <span class="number">1300</span>)])</div><div class="line"></div><div class="line">r3 = IntervalSet([Interval(<span class="number">1000</span>, <span class="number">3000</span>)])</div><div class="line">r4 = IntervalSet([Interval(<span class="number">1000</span>, <span class="number">3000</span>)])</div><div class="line">r5 = IntervalSet([Interval(<span class="number">30000</span>, <span class="number">12000</span>)])</div><div class="line"></div><div class="line"><span class="keyword">print</span> (r3 - r4), (r4 - r3), r3 &amp; r4</div><div class="line"><span class="keyword">print</span> len(IntervalSet.empty())</div><div class="line"></div><div class="line"><span class="keyword">if</span> r3 &amp; r4 == r4:</div><div class="line">    <span class="keyword">print</span> <span class="string">'yes'</span></div><div class="line"></div><div class="line"><span class="keyword">print</span> r3 &amp; r4</div><div class="line"><span class="keyword">if</span> (r3 - r4).empty():</div><div class="line">   <span class="keyword">print</span> <span class="string">"true"</span></div><div class="line"><span class="keyword">print</span> (r3 - r4).empty()</div><div class="line"></div><div class="line"><span class="comment"># output</span></div><div class="line">&lt;Empty&gt; &lt;Empty&gt; [<span class="number">1000.</span><span class="number">.3000</span>]</div><div class="line"><span class="number">0</span></div><div class="line">yes</div><div class="line">[<span class="number">1000.</span><span class="number">.3000</span>]</div><div class="line">&lt;Empty&gt;</div><div class="line">常用方法</div><div class="line"></div><div class="line">interval对象初始化参数（lower_bound=-Inf, upper_bound=Inf, **kwargs）三个boolean参数closed,lower_closed,upper_closed分表表示全闭，左闭右开，左开右闭。比如：r = Interval(upper_bound=<span class="number">62</span>, closed=<span class="keyword">False</span>)</div><div class="line">between(a, b, closed=<span class="keyword">True</span>)：返回以a和b为界的区间</div><div class="line">less_than(a)：小于a的所有值构成interval，类似的还有less_than_or_equal_to，greater_than，greater_than_or_equal_to函数</div><div class="line">join(other)：将两个连续的intervals组合起来</div><div class="line">overlaps(other)：两个区间是否有重叠</div><div class="line">adjacent_to(other)：两个区间是否不重叠的毗邻</div><div class="line">总结</div><div class="line"></div><div class="line">是一篇总结文章，并没有什么深度，只是为了不再重复造轮子，在必要的时候一个库可以极大的提高效率。</div><div class="line">MeasureMeasure</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/d
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="区间" scheme="http://chihweihsu.com/tags/%E5%8C%BA%E9%97%B4/"/>
+    
+      <category term="interval" scheme="http://chihweihsu.com/tags/interval/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-8-28 Pandas agg 使用lambda</title>
+    <link href="http://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-%E4%BD%BF%E7%94%A8lambda/"/>
+    <id>http://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-使用lambda/</id>
+    <published>2017-08-28T10:12:25.000Z</published>
+    <updated>2017-09-17T06:04:12.598Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line">N = <span class="number">100</span></div><div class="line">data = pd.DataFrame(&#123;</div><div class="line">    <span class="string">'type'</span>: np.random.randint(<span class="number">10</span>, size=N),</div><div class="line">    <span class="string">'status'</span>: np.random.randint(<span class="number">10</span>, size=N),</div><div class="line">    <span class="string">'name'</span>: np.random.randint(<span class="number">10</span>, size=N),</div><div class="line">    <span class="string">'value'</span>: np.random.randint(<span class="number">10</span>, size=N),</div><div class="line">&#125;)</div><div class="line"></div><div class="line">reading = np.random.random(<span class="number">10</span>,)</div><div class="line"></div><div class="line">data = data.groupby([<span class="string">'type'</span>, <span class="string">'status'</span>, <span class="string">'name'</span>])[<span class="string">'value'</span>].agg(&#123;</div><div class="line">    <span class="string">'one'</span> : np.mean, </div><div class="line">    <span class="string">'two'</span> : <span class="keyword">lambda</span> value: <span class="number">100</span>* ((value&gt;<span class="number">32</span>).sum() / reading.mean()), </div><div class="line">    <span class="string">'test2'</span>: <span class="keyword">lambda</span> value: <span class="number">100</span>* ((value &gt; <span class="number">45</span>).sum() / value.mean())</div><div class="line">&#125;)</div><div class="line">print(data)</div></pre></td></tr></table></figure>
+<h3 id="获取一列数据中最大值"><a href="#获取一列数据中最大值" class="headerlink" title="获取一列数据中最大值"></a>获取一列数据中最大值</h3><p>```python<br>In [34]: df.loc[df[‘Value’].idxmax()]<br>Out[34]:<br>Country        US<br>Place      Kansas<br>Value         894<br>Name: 7</p>
+<p>df = df.reset_index()</p>
+<p>data.groupby([‘Country’,’Place’])[‘Value’].max().item()</p>
+<p>df.groupby([‘country’,’place’], as_index=False)[‘value’].max()</p>
+<p>df.groupby(“country”).apply(lambda df:df.irow(df.value.argmax()))</p>
+<p>In [5]: df = pandas.DataFrame(np.random.randn(10,3),columns=[‘A’,’B’,’C’])</p>
+<p>In [6]: df<br>Out[6]:<br>          A         B         C<br>0  2.001289  0.482561  1.579985<br>1 -0.991646 -0.387835  1.320236<br>2  0.143826 -1.096889  1.486508<br>3 -0.193056 -0.499020  1.536540<br>4 -2.083647 -3.074591  0.175772<br>5 -0.186138 -1.949731  0.287432<br>6 -0.480790 -1.771560 -0.930234<br>7  0.227383 -0.278253  2.102004<br>8 -0.002592  1.434192 -1.624915<br>9  0.404911 -2.167599 -0.452900</p>
+<p>In [7]: df.idxmax()<br>Out[7]:<br>A    0<br>B    8<br>C    7</p>
+<p>In [8]: df.ix[df[‘A’].idxmax()]<br>Out[8]:<br>A    2.001289<br>B    0.482561<br>C    1.579985</p>
+<p>···</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/d
+    
+    </summary>
+    
+      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+    
+    
+      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="lambda" scheme="http://chihweihsu.com/tags/lambda/"/>
+    
+      <category term="agg" scheme="http://chihweihsu.com/tags/agg/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017-8-27 dataframe与序列相乘</title>
     <link href="http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/"/>
     <id>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe与序列相乘/</id>
     <published>2017-08-27T10:28:54.000Z</published>
-    <updated>2017-09-06T11:56:24.263Z</updated>
+    <updated>2017-09-17T06:04:12.597Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>继续完成项目中的评分卡部分，拿到分好箱的数据后，如何进行加权得到最后的分数就是我们接下来要考虑的问题了。</p>
@@ -216,7 +491,7 @@
     <link href="http://chihweihsu.com/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/"/>
     <id>http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/</id>
     <published>2017-08-27T08:05:58.000Z</published>
-    <updated>2017-09-06T11:56:24.264Z</updated>
+    <updated>2017-09-17T06:04:12.598Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>上周，由于产品嫌报告生成太慢，经过使用<code>profile/gprof2dot</code>研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用<code>gevent</code>,以缓解报告生成压力。</p>
@@ -231,6 +506,9 @@
 <p>经过分析，解决办法：<code>monkey.patch_socket()</code>换为<code>monkey.patch_all()</code>，或者，在使用完<code>gevent</code>后使用<code>reload(socket)</code>将socket初始化。<br>原因：应该是mongo写数据是阻塞的，请求快于写操作，导致写操作堆积越来越多，最终导致程序抛出<code>Too many open files</code>错误。<br>最终代码，如下：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> gevent</div><div class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</div><div class="line">monkey.patch_all()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></div><div class="line">	p = pool.Pool(<span class="number">10</span>)</div><div class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">	gevent.joinall(jobs)</div><div class="line">	<span class="comment"># print [x.value for x in jobs]</span></div><div class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</div><div class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">		self.logger.error(tlist)</div><div class="line">		self.logger.error(message_list)</div><div class="line">		<span class="keyword">raise</span> Exception(message_list)</div><div class="line">	<span class="keyword">return</span> tlist</div><div class="line">	</div><div class="line">	</div><div class="line"><span class="comment"># 或者使用</span></div><div class="line">p = pool.Pool(<span class="number">10</span>)</div><div class="line">jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">gevent.joinall(jobs)</div><div class="line"><span class="keyword">import</span> socket</div><div class="line">reload(socket)</div></pre></td></tr></table></figure>
+<h4 id="另一个用例："><a href="#另一个用例：" class="headerlink" title="另一个用例："></a>另一个用例：</h4><blockquote>
+<p>给传递两个参数，直接后面跟着就行，逗号分开；<br>返回如是多个情况的，value是一个以tuple为元素的list。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">p = pool.Pool(<span class="number">10</span>)</div><div class="line">jobs = []</div><div class="line"><span class="comment"># date ('2017-07-01', '2017-07-14')</span></div><div class="line">jobs = [p.spawn(self.crawl_a_call_log, date[<span class="number">0</span>], date[<span class="number">1</span>]) <span class="keyword">for</span> date <span class="keyword">in</span> dates]</div><div class="line">gevent.joinall(jobs)</div><div class="line">data_list = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line"><span class="keyword">print</span> data_list</div><div class="line"><span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> data_list:</div><div class="line">	message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	self.log(<span class="string">'crawler'</span>, data_list, message_list)</div><div class="line">	<span class="keyword">raise</span> Exception(message_list)</div></pre></td></tr></table></figure></p>
+</blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
 <p>协程(gevent)是把双刃剑，monkey.patch 是一个邪恶的东西；<br>提升效果不要太好，耗时足足降了60%，而且，请求越多，效果越明显。</p>
 </blockquote>
@@ -244,9 +522,9 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Python" scheme="http://chihweihsu.com/categories/Python/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Python/Notes/"/>
     
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
@@ -260,7 +538,7 @@
     <link href="http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-分箱操作（cut）/</id>
     <published>2017-08-27T03:12:47.000Z</published>
-    <updated>2017-09-06T11:56:24.263Z</updated>
+    <updated>2017-09-17T06:04:12.598Z</updated>
     
     <content type="html"><![CDATA[<h3 id="情景描述："><a href="#情景描述：" class="headerlink" title="情景描述："></a>情景描述：</h3><blockquote>
 <p>最新，项目中涉及到评分卡操作，评分项目有大概几十项，每项基本都是按频次区间给一个分数，最后，累计所有项目的分数得出最后所需要的分数。</p>
@@ -303,7 +581,7 @@
     <link href="http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/"/>
     <id>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</id>
     <published>2017-08-23T01:31:08.000Z</published>
-    <updated>2017-09-06T11:56:24.263Z</updated>
+    <updated>2017-09-17T06:04:12.596Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
 <p>在对mongo插入数据时，报写入问题，报错信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/root/crs/call_history_crawler/worker/communicate.py&quot;, line 149, in insert_db_data</div><div class="line">    if db[table].insert_many(data):</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/collection.py&quot;, line 684, in insert_many</div><div class="line">    blk.execute(self.write_concern.document)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 470, in execute</div><div class="line">    return self.execute_command(sock_info, generator, write_concern)</div><div class="line">  File &quot;/root/crs/call_history_crawler/venv/lib/python2.7/site-packages/pymongo/bulk.py&quot;, line 314, in execute_command</div><div class="line">    raise BulkWriteError(full_result)</div><div class="line">BulkWriteError: batch op errors occurred</div></pre></td></tr></table></figure></p>
@@ -340,7 +618,7 @@
     <link href="http://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     <id>http://chihweihsu.com/2017/08/14/2017-8-14-JSON文件-读写-格式化/</id>
     <published>2017-08-14T05:37:04.000Z</published>
-    <updated>2017-09-06T11:56:24.262Z</updated>
+    <updated>2017-09-17T06:04:12.594Z</updated>
     
     <content type="html"><![CDATA[<h3 id="写文件，格式化"><a href="#写文件，格式化" class="headerlink" title="写文件，格式化"></a>写文件，格式化</h3><blockquote>
 <p><code>indent</code>: 缩进（一般填4，缩进4格）；<br><code>sort_keys</code>: 是否排序（默认<code>False</code>–不排序）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_info</span><span class="params">(file_name, file_info)</span>:</span></div><div class="line">    <span class="keyword">with</span> open(<span class="string">'&#123;&#125;.json'</span>.format(file_name), <span class="string">'w'</span>) <span class="keyword">as</span> fp:</div><div class="line">        json.dump(file_info, fp, indent=<span class="number">4</span>, sort_keys=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">write_info(<span class="string">'report'</span>, dict(report_data))</div><div class="line"></div><div class="line"><span class="keyword">import</span> json</div></pre></td></tr></table></figure></p>
@@ -373,7 +651,7 @@
     <link href="http://chihweihsu.com/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/13/2017-8-13-三元表达式（条件表达式）/</id>
     <published>2017-08-13T02:41:33.000Z</published>
-    <updated>2017-09-06T11:56:24.262Z</updated>
+    <updated>2017-09-17T06:04:12.594Z</updated>
     
     <content type="html"><![CDATA[<h3 id="条件表达式："><a href="#条件表达式：" class="headerlink" title="条件表达式："></a>条件表达式：</h3><blockquote>
 <p>使用一行代码快速判断，替换复杂的多行if语句，使得代码简单可维护。</p>
@@ -424,7 +702,7 @@
     <link href="http://chihweihsu.com/2017/08/10/2017-8-10-%E8%B0%83%E8%AF%95-Pdb%EF%BC%88Python-debugger%EF%BC%89/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-10-调试-Pdb（Python-debugger）/</id>
     <published>2017-08-10T14:20:47.000Z</published>
-    <updated>2017-09-06T11:56:24.262Z</updated>
+    <updated>2017-09-17T06:04:12.594Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Pdb（Python-debugger）："><a href="#Pdb（Python-debugger）：" class="headerlink" title="Pdb（Python debugger）："></a>Pdb（Python debugger）：</h2><h3 id="命令行运行："><a href="#命令行运行：" class="headerlink" title="命令行运行："></a>命令行运行：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pdb my_script.py</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -453,7 +731,7 @@
     <link href="http://chihweihsu.com/2017/08/10/2017-8-10-string-%E5%8E%BB%E6%8E%89%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7/"/>
     <id>http://chihweihsu.com/2017/08/10/2017-8-10-string-去掉标点符号/</id>
     <published>2017-08-09T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.261Z</updated>
+    <updated>2017-09-17T06:04:12.594Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Python-字符串去掉标点符号最佳实践"><a href="#Python-字符串去掉标点符号最佳实践" class="headerlink" title="Python 字符串去掉标点符号最佳实践"></a>Python 字符串去掉标点符号最佳实践</h3><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><blockquote>
 <p><code>str.isalnum</code>：<br>S.isalnum() -&gt; bool<br>Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.</p>
@@ -505,7 +783,7 @@
     <link href="http://chihweihsu.com/2017/08/09/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/"/>
     <id>http://chihweihsu.com/2017/08/09/2017-8-9-Map、Filter、Reduce/</id>
     <published>2017-08-08T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.267Z</updated>
+    <updated>2017-09-17T06:04:12.603Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><blockquote>
 <p>将一个函数映射到一个输入列表的所有元素上。</p>
@@ -553,7 +831,7 @@
     <link href="http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/"/>
     <id>http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-效率分析/</id>
     <published>2017-08-07T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.267Z</updated>
+    <updated>2017-09-17T06:04:12.602Z</updated>
     
     <content type="html"><![CDATA[<h3 id="test-py："><a href="#test-py：" class="headerlink" title="test.py："></a>test.py：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span><span class="params">(filename)</span>:</span></div><div class="line">	<span class="keyword">print</span> filename</div><div class="line"></div><div class="line"><span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(sys.argv[<span class="number">1</span>]):</div><div class="line">	<span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</div><div class="line">		process(filename)</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -576,289 +854,6 @@
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
     
       <category term="效率" scheme="http://chihweihsu.com/tags/%E6%95%88%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
-    <link href="http://chihweihsu.com/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
-    <id>http://chihweihsu.com/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/</id>
-    <published>2017-08-06T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.266Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
-<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>     <span class="keyword">True</span></div><div class="line"><span class="number">1</span>    <span class="keyword">False</span></div><div class="line"><span class="number">2</span>     <span class="keyword">True</span></div><div class="line"><span class="number">3</span>    <span class="keyword">False</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</div></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：</p>
-<ul>
-<li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li>
-<li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li>
-</ul>
-</blockquote>
-<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div><div class="line"></div><div class="line"><span class="comment"># 多个条件情况下：</span></div><div class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></div></pre></td></tr></table></figure>
-<h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</div><div class="line"><span class="number">0</span>    <span class="keyword">False</span></div><div class="line"><span class="number">1</span>     <span class="keyword">True</span></div><div class="line"><span class="number">2</span>    <span class="keyword">False</span></div><div class="line"><span class="number">3</span>     <span class="keyword">True</span></div><div class="line">Name: A, dtype: bool</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</div><div class="line">       A</div><div class="line"><span class="number">1</span>   this</div><div class="line"><span class="number">3</span>  apple</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;search-for-“does-not-contain”-on-a-dataframe-in-pandas&quot;&gt;&lt;a href=&quot;#search-for-“does-not-contain”-on-a-dataframe-in-pandas&quot; class=&quot;headerlink&quot; title=&quot;search for “does-not-contain” on a dataframe in pandas&quot;&gt;&lt;/a&gt;search for “does-not-contain” on a dataframe in pandas&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
-    
-    
-      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="Contains" scheme="http://chihweihsu.com/tags/Contains/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-8-7 python args and kwargs</title>
-    <link href="http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/"/>
-    <id>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</id>
-    <published>2017-08-06T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.266Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
-<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></div><div class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</div><div class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</div><div class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</div><div class="line"></div><div class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</div><div class="line"></div><div class="line"><span class="comment"># output：</span></div><div class="line"><span class="comment"># first normal arg: yasoob</span></div><div class="line"><span class="comment"># another arg through *argv: python</span></div><div class="line"><span class="comment"># another arg through *argv: eggs</span></div><div class="line"><span class="comment"># another arg through *argv: test</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<a id="more"></a>
-<h3 id="kwargs："><a href="#kwargs：" class="headerlink" title="**kwargs："></a><code>**kwargs</code>：</h3><blockquote>
-<p>传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_me</span><span class="params">(**kwargs)</span>:</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</div><div class="line">        print(<span class="string">"&#123;0&#125; == &#123;1&#125;"</span>.format(key, value))</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>greet_me(name=<span class="string">"yasoob"</span>)</div><div class="line">name == yasoob</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><blockquote>
-<p>不是必须写成<code>*args</code>和<code>**kwargs</code>，只有变量前面的 <code>*</code>(星号)才是必须的；可以写成<code>*var</code> 和<code>**vars</code>，写成<code>*args</code> 和<code>**kwargs</code>只是一个通俗的命名约定；<br><code>*args</code>： 顺序不能变动；<code>**kwargs</code>：可以根据键指定顺序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_args_kwargs</span><span class="params">(arg1, arg2, arg3)</span>:</span></div><div class="line">    print(<span class="string">"arg1:"</span>, arg1)</div><div class="line">    print(<span class="string">"arg2:"</span>, arg2)</div><div class="line">    print(<span class="string">"arg3:"</span>, arg3)</div><div class="line">	</div><div class="line"><span class="comment"># 首先使用 *args</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>args = (<span class="string">"two"</span>, <span class="number">3</span>, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(*args)</div><div class="line">arg1: two</div><div class="line">arg2: <span class="number">3</span></div><div class="line">arg3: <span class="number">5</span></div><div class="line"></div><div class="line"><span class="comment"># 现在使用 **kwargs:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>kwargs = &#123;<span class="string">"arg3"</span>: <span class="number">3</span>, <span class="string">"arg2"</span>: <span class="string">"two"</span>, <span class="string">"arg1"</span>: <span class="number">5</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>test_args_kwargs(**kwargs)</div><div class="line">arg1: <span class="number">5</span></div><div class="line">arg2: two</div><div class="line">arg3: <span class="number">3</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;args：&quot;&gt;&lt;a href=&quot;#args：&quot; class=&quot;headerlink&quot; title=&quot;*args：&quot;&gt;&lt;/a&gt;&lt;code&gt;*args&lt;/code&gt;：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;传递一个非键值对的可变数量的参数列表给一个函数。&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test_var_args&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(f_arg, *argv)&lt;/span&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    print(&lt;span class=&quot;string&quot;&gt;&quot;first normal arg:&quot;&lt;/span&gt;, f_arg)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; arg &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; argv:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        print(&lt;span class=&quot;string&quot;&gt;&quot;another arg through *argv:&quot;&lt;/span&gt;, arg)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;test_var_args(&lt;span class=&quot;string&quot;&gt;&#39;yasoob&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;python&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;eggs&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;test&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# output：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# first normal arg: yasoob&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: python&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: eggs&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# another arg through *argv: test&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="args" scheme="http://chihweihsu.com/tags/args/"/>
-    
-      <category term="kwargs" scheme="http://chihweihsu.com/tags/kwargs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-8-6 python string</title>
-    <link href="http://chihweihsu.com/2017/08/06/2017-8-6-python-string/"/>
-    <id>http://chihweihsu.com/2017/08/06/2017-8-6-python-string/</id>
-    <published>2017-08-05T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.266Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="The-most-pythonic-way-to-pad-zeroes-to-string"><a href="#The-most-pythonic-way-to-pad-zeroes-to-string" class="headerlink" title="The most pythonic way to pad zeroes to string"></a>The most pythonic way to pad zeroes to string</h2><h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings:"></a>Strings:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="string">'4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.zfill(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&gt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;1&#125;&#123;1&#125;&#123;0&#125;'</span>.format(n, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:0&lt;3&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:-^11&#125;'</span>.format(n)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.rjust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'004'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>n.ljust(<span class="number">3</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'400'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'4'</span>.center(<span class="number">11</span>,<span class="string">"-"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-----4-----'</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><code>rjust/zfill</code> 区别:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zfill:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'-00000-txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'+00000+txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.zfill(<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div><div class="line">rjust:</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'--txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000--txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'++txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000++txt'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'..txt'</span>.rjust(<span class="number">10</span>, <span class="string">'0'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'00000..txt'</span></div></pre></td></tr></table></figure></p>
-<h3 id="numbers"><a href="#numbers" class="headerlink" title="numbers:"></a>numbers:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>n = <span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'%03d'</span> % n</div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> format(n, <span class="string">'03'</span>) <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;0:03d&#125;'</span>.format(n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> <span class="string">'&#123;foo:03d&#125;'</span>.format(foo=n)  <span class="comment"># python &gt;= 2.6</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;:03d&#125;'</span>.format(n))  <span class="comment"># python &gt;= 2.7 + python3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'&#123;0:03d&#125;'</span>.format(n))  <span class="comment"># python 3</span></div><div class="line"><span class="number">004</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">f'<span class="subst">&#123;n:<span class="number">03</span>&#125;</span>'</span>) <span class="comment"># python &gt;= 3.6</span></div><div class="line"><span class="number">004</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p> % formatting 已被 string.format 替代</p>
-</blockquote>
-<h3 id="保留小数位："><a href="#保留小数位：" class="headerlink" title="保留小数位："></a>保留小数位：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format(value, <span class="string">'.6f'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>format(<span class="number">2.0</span>, <span class="string">'.6f'</span>)</div><div class="line"><span class="string">'2.000000'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;:.6f&#125;'</span>.format(<span class="number">2.0</span>)</div><div class="line"><span class="string">'2.000000'</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;The-most-pythonic-way-to-pad-zeroes-to-string&quot;&gt;&lt;a href=&quot;#The-most-pythonic-way-to-pad-zeroes-to-string&quot; class=&quot;headerlink&quot; title=&quot;The most pythonic way to pad zeroes to string&quot;&gt;&lt;/a&gt;The most pythonic way to pad zeroes to string&lt;/h2&gt;&lt;h3 id=&quot;Strings&quot;&gt;&lt;a href=&quot;#Strings&quot; class=&quot;headerlink&quot; title=&quot;Strings:&quot;&gt;&lt;/a&gt;Strings:&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;n = &lt;span class=&quot;string&quot;&gt;&#39;4&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;n.zfill(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;004&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;:0&amp;gt;3&amp;#125;&#39;&lt;/span&gt;.format(n)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;004&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;1&amp;#125;&amp;#123;1&amp;#125;&amp;#123;0&amp;#125;&#39;&lt;/span&gt;.format(n, &lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;004&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;:0&amp;lt;3&amp;#125;&#39;&lt;/span&gt;.format(n)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;400&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;:-^11&amp;#125;&#39;&lt;/span&gt;.format(n)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;-----4-----&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;n.rjust(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;004&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;n.ljust(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;400&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;4&#39;&lt;/span&gt;.center(&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;-&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;-----4-----&#39;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="string" scheme="http://chihweihsu.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-8-1 python rrule bug</title>
-    <link href="http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/"/>
-    <id>http://chihweihsu.com/2017/08/01/2017-8-1-python-rrule-bug/</id>
-    <published>2017-07-31T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.262Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html</code></p>
-<h3 id="月份日期超限-BUG"><a href="#月份日期超限-BUG" class="headerlink" title="月份日期超限 BUG"></a>月份日期超限 BUG</h3><blockquote>
-<p>Per RFC section 3.3.10, recurrence instances falling on invalid dates and times are ignored rather than coerced:<br>Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM  on a day where the local time is moved forward by an hour at 1:00 AM).<br>Such recurrence instances MUST be ignored and MUST NOT be  counted as part of the recurrence set.</p>
-</blockquote>
-<a id="more"></a>
-<p>This can lead to possibly surprising behavior when, for example, the start date occurs at the end of the month:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> dateutil.rrule <span class="keyword">import</span> rrule, MONTHLY</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>start_date = datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(rrule(freq=MONTHLY, count=<span class="number">4</span>, dtstart=start_date))</div><div class="line">[datetime.datetime(<span class="number">2014</span>, <span class="number">12</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">3</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>),</div><div class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">31</span>, <span class="number">0</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;http://dateutil.readthedocs.io/en/stable/_modules/dateutil/rrule.html&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&quot;月份日期超限-BUG&quot;&gt;&lt;a href=&quot;#月份日期超限-BUG&quot; class=&quot;headerlink&quot; title=&quot;月份日期超限 BUG&quot;&gt;&lt;/a&gt;月份日期超限 BUG&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Per RFC section 3.3.10, recurrence instances falling on invalid dates and times are ignored rather than coerced:&lt;br&gt;Recurrence rules may generate recurrence instances with an invalid date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM  on a day where the local time is moved forward by an hour at 1:00 AM).&lt;br&gt;Such recurrence instances MUST be ignored and MUST NOT be  counted as part of the recurrence set.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Bug" scheme="http://chihweihsu.com/categories/Bug/"/>
-    
-      <category term="Python" scheme="http://chihweihsu.com/categories/Bug/Python/"/>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="Bug" scheme="http://chihweihsu.com/tags/Bug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-7-31 python set 交集、并集、差集</title>
-    <link href="http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/"/>
-    <id>http://chihweihsu.com/2017/07/31/2017-7-31-python-交集、并集、差集/</id>
-    <published>2017-07-30T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.260Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="交集-intersection"><a href="#交集-intersection" class="headerlink" title="交集(intersection)"></a>交集(intersection)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">example：</div><div class="line">valid = set([<span class="string">'yellow'</span>, <span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>, <span class="string">'black'</span>])</div><div class="line">input_set = set([<span class="string">'red'</span>, <span class="string">'brown'</span>]) </div><div class="line">print(input_set.intersection(valid))</div><div class="line"><span class="comment">### 输出：set(['red'])</span></div><div class="line"></div><div class="line"><span class="comment"># 方法一:</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b=[<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp = [val <span class="keyword">for</span> val <span class="keyword">in</span> a <span class="keyword">if</span> val <span class="keyword">in</span> b]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tmp</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法二</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).intersection(set(b)))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法三：</span></div><div class="line">&gt;&gt;&gt;list(set(a) &amp; set(b))</div><div class="line">[<span class="number">2</span>, <span class="number">5</span>]</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h4 id="字符串交集"><a href="#字符串交集" class="headerlink" title="字符串交集"></a>字符串交集</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 方法一：</span></div><div class="line"><span class="string">''</span>.join(sorted(set(str1) &amp; set(str2), key = str1.index))</div><div class="line"></div><div class="line"><span class="comment"># 方法二：</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">strIntersection</span><span class="params">(s1, s2)</span>:</span></div><div class="line">  out = <span class="string">""</span></div><div class="line">  <span class="keyword">for</span> c <span class="keyword">in</span> s1:</div><div class="line">    <span class="keyword">if</span> c <span class="keyword">in</span> s2 <span class="keyword">and</span> <span class="keyword">not</span> c <span class="keyword">in</span> out:</div><div class="line">      out += c</div><div class="line">  <span class="keyword">return</span> out</div><div class="line"></div><div class="line"><span class="comment"># 方法三：</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a=<span class="string">'asdfasdfasfd'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>b=<span class="string">'qazwsxedc'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>set(a).intersection(b)</div><div class="line">set([<span class="string">'a'</span>, <span class="string">'s'</span>, <span class="string">'d'</span>])</div><div class="line"></div><div class="line"><span class="comment"># 方法四：</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hasIntersection</span><span class="params">(a, b)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">not</span> set(a).isdisjoint(b)</div></pre></td></tr></table></figure>
-<h4 id="最大交集"><a href="#最大交集" class="headerlink" title="最大交集"></a>最大交集</h4><blockquote>
-<p>How to find all intersections (also called the longest common substrings) of two strings and their positions in both strings?<br>For example:<br>if S1=”never” and S2=”forever” then resulted intersection must be [“ever”] and its positions are [(1,3)].<br>If S1=”address” and S2=”oddness” then resulted intersections are [“dd”,”ess”] and their positions are [(1,1),(4,4)].</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 方法一：</span></div><div class="line">In [<span class="number">31</span>]: <span class="keyword">import</span> difflib</div><div class="line"></div><div class="line">In [<span class="number">32</span>]: difflib.SequenceMatcher(<span class="keyword">None</span>, <span class="string">"never"</span>, <span class="string">"forever"</span>).get_matching_blocks()</div><div class="line">Out[<span class="number">32</span>]: [Match(a=<span class="number">1</span>, b=<span class="number">3</span>, size=<span class="number">4</span>), Match(a=<span class="number">5</span>, b=<span class="number">7</span>, size=<span class="number">0</span>)]</div><div class="line"></div><div class="line">In [<span class="number">33</span>]: difflib.SequenceMatcher(<span class="keyword">None</span>, <span class="string">"address"</span>, <span class="string">"oddness"</span>).get_matching_blocks()</div><div class="line">Out[<span class="number">33</span>]: [Match(a=<span class="number">1</span>, b=<span class="number">1</span>, size=<span class="number">2</span>), Match(a=<span class="number">4</span>, b=<span class="number">4</span>, size=<span class="number">3</span>), Match(a=<span class="number">7</span>, b=<span class="number">7</span>, size=<span class="number">0</span>)]</div><div class="line"></div><div class="line"><span class="comment"># 方法二：</span></div><div class="line"><span class="keyword">import</span> itertools</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">longest_common_substring</span><span class="params">(s1, s2)</span>:</span></div><div class="line">   set1 = set(s1[begin:end] <span class="keyword">for</span> (begin, end) <span class="keyword">in</span></div><div class="line">              itertools.combinations(range(len(s1)+<span class="number">1</span>), <span class="number">2</span>))</div><div class="line">   set2 = set(s2[begin:end] <span class="keyword">for</span> (begin, end) <span class="keyword">in</span></div><div class="line">              itertools.combinations(range(len(s2)+<span class="number">1</span>), <span class="number">2</span>))</div><div class="line">   common = set1.intersection(set2)</div><div class="line">   maximal = [com <span class="keyword">for</span> com <span class="keyword">in</span> common</div><div class="line">              <span class="keyword">if</span> sum((s.find(com) <span class="keyword">for</span> s <span class="keyword">in</span> common)) == <span class="number">-1</span> * (len(common)<span class="number">-1</span>)]</div><div class="line">   <span class="keyword">return</span> [(s, s1.index(s), s2.index(s)) <span class="keyword">for</span> s <span class="keyword">in</span> maximal]</div><div class="line">   </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>longest_common_substring(<span class="string">'address'</span>, <span class="string">'oddness'</span>)</div><div class="line">[(<span class="string">'dd'</span>, <span class="number">1</span>, <span class="number">1</span>), (<span class="string">'ess'</span>, <span class="number">4</span>, <span class="number">4</span>)]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>longest_common_substring(<span class="string">'never'</span>, <span class="string">'forever'</span>)</div><div class="line">[(<span class="string">'ever'</span>, <span class="number">1</span>, <span class="number">3</span>)]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>longest_common_substring(<span class="string">'call'</span>, <span class="string">'wall'</span>)</div><div class="line">[(<span class="string">'all'</span>, <span class="number">1</span>, <span class="number">1</span>)]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>longest_common_substring(<span class="string">'abcd1234'</span>, <span class="string">'1234abcd'</span>)</div><div class="line">[(<span class="string">'abcd'</span>, <span class="number">0</span>, <span class="number">4</span>), (<span class="string">'1234'</span>, <span class="number">4</span>, <span class="number">0</span>)]</div></pre></td></tr></table></figure>
-<h3 id="并集-union"><a href="#并集-union" class="headerlink" title="并集(union)"></a>并集(union)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 方法一：</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).union(set(b)))</div><div class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">8</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法二：</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(b) | (set(a)))</div><div class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">8</span>]</div></pre></td></tr></table></figure>
-<h3 id="差集-difference"><a href="#差集-difference" class="headerlink" title="差集(difference)"></a>差集(difference)</h3><blockquote>
-<p>差集：找出无效的数据，相当于用一个集合减去另一个集合的数据。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># example：</span></div><div class="line">valid = set([<span class="string">'yellow'</span>, <span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>, <span class="string">'black'</span>])</div><div class="line">input_set = set([<span class="string">'red'</span>, <span class="string">'brown'</span>])</div><div class="line">print(input_set.difference(valid))</div><div class="line"><span class="comment">### 输出: set(['brown'])</span></div><div class="line"></div><div class="line"><span class="comment"># 方法一：</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(b).difference(set(a)))       <span class="comment"># b中有而a中没有的</span></div><div class="line">[<span class="number">8</span>]</div><div class="line"></div><div class="line"><span class="comment"># 方法二：</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(b) - (set(a)))</div><div class="line">[<span class="number">8</span>]</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="集合操作汇总"><a href="#集合操作汇总" class="headerlink" title="集合操作汇总"></a>集合操作汇总</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>x = set(<span class="string">'abcde'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>y = set(<span class="string">'bdxyz'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x</div><div class="line">set([<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'b'</span>, <span class="string">'e'</span>, <span class="string">'d'</span>])                    <span class="comment"># 2.6 display format</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'e'</span> <span class="keyword">in</span> x                                      <span class="comment"># Membership 成员</span></div><div class="line"><span class="keyword">True</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x – y                                         <span class="comment"># Difference 差集</span></div><div class="line">set([<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'e'</span>])</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x | y                                         <span class="comment"># Union 并集</span></div><div class="line">set([<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'b'</span>, <span class="string">'e'</span>, <span class="string">'d'</span>, <span class="string">'y'</span>, <span class="string">'x'</span>, <span class="string">'z'</span>])</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x &amp; y                                         <span class="comment"># Intersection 交集</span></div><div class="line">set([<span class="string">'b'</span>, <span class="string">'d'</span>])</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x ^ y                                         <span class="comment"># Symmetric difference (XOR) 补集</span></div><div class="line">set([<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'e'</span>, <span class="string">'y'</span>, <span class="string">'x'</span>, <span class="string">'z'</span>])</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x &gt; y, x &lt; y                                  <span class="comment"># Superset, subset  父级，子级</span></div><div class="line">(<span class="keyword">False</span>, <span class="keyword">False</span>)</div></pre></td></tr></table></figure>
-<h3 id="巨型集合处理（数量在百万，千万甚至更大）"><a href="#巨型集合处理（数量在百万，千万甚至更大）" class="headerlink" title="巨型集合处理（数量在百万，千万甚至更大）"></a>巨型集合处理（数量在百万，千万甚至更大）</h3><blockquote>
-<p>方法一：set<br>特点：</p>
-<ul>
-<li>速度快；</li>
-<li>内存消耗大，一个1万个元素的集合，其占用的内存远大于1万 * 每个元素的大小，因为整个set数据结构占用大量其他空间来存储索引之类的东西。</li>
-</ul>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">并集：s.union(t) 或者 s | t</div><div class="line">交集：s.intersection(t) 或者 s &amp; t</div><div class="line">差集：s.difference(t) 或者 s - t</div></pre></td></tr></table></figure>
-<blockquote>
-<p>方法二：Numpy<br>特点：</p>
-<ul>
-<li>先把要操作的元素放在数组而不是set中，同样内容的数组占用的内存比set小的多；占用内存小于set的方式；</li>
-<li>速度接近set方式。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line">并集： np.union1d(s, t)    <span class="comment"># 返回排序的、去重的两个list的合集</span></div><div class="line">交集： np.intersect1d(s, t, assume_unique=<span class="keyword">True</span>)    <span class="comment"># 返回排序的、去重的两个list的交集，尽可能保证传入的两个list是去重的，这可以加快运算速度。</span></div><div class="line">差集： np.setdiff1d(s, t, assume_unique=<span class="keyword">True</span>)    <span class="comment"># 返回排序的，去重的差集，assume_unique参数同上。</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>方法三：cmd<br>以上两种方法的缺点就是当集合足够大而内存又不够的时候，会MemoryError（在试验中2000万个长度为24的字符串在4G的内存中就报MemoryError了）；<br>解决办法：使用linux 命令。<br>特点：</p>
-<ul>
-<li>内存消耗小，会使用临时文件来避免内存问题；</li>
-<li>耗时长。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1.文件排序，使用sort命令：</div><div class="line">sort --buffer-size=1G --output=/path/to/output /path/to/src_file    # --buffer-size在Debian上可用，其他平台未知，不是标准参数.</div><div class="line"></div><div class="line">并集：sort -m /path/to/src1 /path/tosrc2 -u --output=/path/to/result    # 注意src1, src2必须是已排序的文件，而且结果也是已排序的。</div><div class="line">交集：comm -12 file1 file2 &gt; output    # 使用comm命令，注意传入的文件必须都是已排序的。</div><div class="line">差集：comm -3 file1 file2 &gt; output    # 使用comm命令，注意传入的文件必须都是已排序的。</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<p>综上，三种方法依次对内存的依赖减小，耗时增加，可依据集合大小以及硬件环境来选择。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;交集-intersection&quot;&gt;&lt;a href=&quot;#交集-intersection&quot; class=&quot;headerlink&quot; title=&quot;交集(intersection)&quot;&gt;&lt;/a&gt;交集(intersection)&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;example：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;valid = set([&lt;span class=&quot;string&quot;&gt;&#39;yellow&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;red&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;blue&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;green&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;black&#39;&lt;/span&gt;])&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;input_set = set([&lt;span class=&quot;string&quot;&gt;&#39;red&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;brown&#39;&lt;/span&gt;]) &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;print(input_set.intersection(valid))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;### 输出：set([&#39;red&#39;])&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 方法一:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;a=[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;b=[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;tmp = [val &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; val &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; a &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; val &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; b]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;tmp&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 方法二&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;list(set(a).intersection(set(b)))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 方法三：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;list(set(a) &amp;amp; set(b))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="set" scheme="http://chihweihsu.com/tags/set/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-7-31 python 生成器（Generators）</title>
-    <link href="http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/"/>
-    <id>http://chihweihsu.com/2017/07/31/2017-7-31-python-生成器（Generators）/</id>
-    <published>2017-07-30T16:00:00.000Z</published>
-    <updated>2017-09-06T11:56:24.261Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="可迭代对象（iterable）："><a href="#可迭代对象（iterable）：" class="headerlink" title="可迭代对象（iterable）："></a>可迭代对象（iterable）：</h3><blockquote>
-<p>能提供迭代器的任意对象；只要定义了一个迭代器的<strong>iter</strong>方法或定义了支持下标索引的<strong>getitem</strong>方法，那就是一个可迭代对象。</p>
-</blockquote>
-<h3 id="迭代器（iterators）："><a href="#迭代器（iterators）：" class="headerlink" title="迭代器（iterators）："></a>迭代器（iterators）：</h3><blockquote>
-<p>任意对象，只要定义了next或者<strong>next</strong>方法，那就是一个迭代器</p>
-</blockquote>
-<h3 id="迭代（iteration）："><a href="#迭代（iteration）：" class="headerlink" title="迭代（iteration）："></a>迭代（iteration）：</h3><blockquote>
-<p>从某个地方（如列表）取出一个元素的过程；使用一个循环来遍历某个东西（如列表），这个过程就是迭代；</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="生成器（Generators）："><a href="#生成器（Generators）：" class="headerlink" title="生成器（Generators）："></a>生成器（Generators）：</h3><blockquote>
-<p>也是一种迭代器，但只能对其迭代一次</p>
-<ul>
-<li>因为它们并没有把所有值存在内存中，而是运行时生成值；</li>
-<li>可通过遍历使用它们，要么使用“for”循环，要么传递给任意可以进行迭代的函数和结构；</li>
-<li>大多时候生成器是以函数实现的，但它们并不返回一个值，而是yield（生出）一个值。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_function</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">        <span class="keyword">yield</span> i</div><div class="line"></div><div class="line"><span class="keyword">for</span> item <span class="keyword">in</span> generator_function():</div><div class="line">    print(item)</div><div class="line"></div><div class="line"><span class="comment"># Output: 0</span></div><div class="line"><span class="comment"># 1</span></div><div class="line"><span class="comment"># 2</span></div><div class="line"><span class="comment"># 3</span></div><div class="line"><span class="comment"># 4</span></div><div class="line"><span class="comment"># 5</span></div><div class="line"><span class="comment"># 6</span></div><div class="line"><span class="comment"># 7</span></div><div class="line"><span class="comment"># 8</span></div><div class="line"><span class="comment"># 9</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<h4 id="适用场景："><a href="#适用场景：" class="headerlink" title="适用场景："></a>适用场景：</h4><blockquote>
-<p>不想同一时间将所有计算出来的大量结果集分配到内存当中，特别是结果集里还包含循环；因为这样做会消耗大量资源<br>许多Python 2里的标准库函数都会返回列表，而Python 3都修改成了返回生成器，因为生成器占用更少的资源。</p>
-</blockquote>
-<p>**斐波那契数列的生成器：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 传统模式</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibon</span><span class="params">(n)</span>:</span></div><div class="line">    a = b = <span class="number">1</span></div><div class="line">    result = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</div><div class="line">        result.append(a)</div><div class="line">        a, b = b, a + b</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="comment"># 生成器模式</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibon</span><span class="params">(n)</span>:</span></div><div class="line">    a = b = <span class="number">1</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</div><div class="line">        <span class="keyword">yield</span> a</div><div class="line">        a, b = b, a + b</div><div class="line"></div><div class="line"><span class="comment"># Now we can use it like this:</span></div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> fibon(<span class="number">1000000</span>):</div><div class="line">    print(x)</div></pre></td></tr></table></figure>
-<h3 id="Python内置函数：next"><a href="#Python内置函数：next" class="headerlink" title="Python内置函数：next()"></a>Python内置函数：<code>next()</code></h3><blockquote>
-<p>它允许我们获取一个序列的下一个元素<br>特点：</p>
-<ul>
-<li>在<code>yield</code>掉所有的值后，<code>next()</code>会触发一个<code>StopIteration</code>的异常。提示我们所有的值都已经被<code>yield</code>完了；</li>
-<li>在使用<code>for</code>循环时没有这个异常，因为<code>for</code>循环会自动捕捉到这个异常并停止调用<code>next()</code>。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_function</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</div><div class="line">        <span class="keyword">yield</span> i</div><div class="line"></div><div class="line">gen = generator_function()</div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: 0</span></div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: 1</span></div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: 2</span></div><div class="line">print(next(gen))</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#         File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></div><div class="line"><span class="comment">#         StopIteration</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<h3 id="Python内置函数：iter"><a href="#Python内置函数：iter" class="headerlink" title="Python内置函数：iter()"></a>Python内置函数：<code>iter()</code></h3><blockquote>
-<p>将一个可迭代对象返回一个迭代器对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">my_string = <span class="string">"Bingo"</span></div><div class="line">next(my_string)</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#      File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></div><div class="line"><span class="comment">#    TypeError: str object is not an iterator</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>这个异常说<code>str</code>对象是一个可迭代对象，而不是一个迭代器；不能直接对其进行迭代操作，所以，使用<code>iter</code>：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">my_string = <span class="string">"Bingo"</span></div><div class="line">my_iter = iter(my_string)</div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'B'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'i'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'n'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'g'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: 'o'</span></div><div class="line">next(my_iter)</div><div class="line"><span class="comment"># Output: Traceback (most recent call last):</span></div><div class="line"><span class="comment">#         File "&lt;stdin&gt;", line 12, in &lt;module&gt;</span></div><div class="line"><span class="comment">#         StopIteration</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;可迭代对象（iterable）：&quot;&gt;&lt;a href=&quot;#可迭代对象（iterable）：&quot; class=&quot;headerlink&quot; title=&quot;可迭代对象（iterable）：&quot;&gt;&lt;/a&gt;可迭代对象（iterable）：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;能提供迭代器的任意对象；只要定义了一个迭代器的&lt;strong&gt;iter&lt;/strong&gt;方法或定义了支持下标索引的&lt;strong&gt;getitem&lt;/strong&gt;方法，那就是一个可迭代对象。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;迭代器（iterators）：&quot;&gt;&lt;a href=&quot;#迭代器（iterators）：&quot; class=&quot;headerlink&quot; title=&quot;迭代器（iterators）：&quot;&gt;&lt;/a&gt;迭代器（iterators）：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;任意对象，只要定义了next或者&lt;strong&gt;next&lt;/strong&gt;方法，那就是一个迭代器&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;迭代（iteration）：&quot;&gt;&lt;a href=&quot;#迭代（iteration）：&quot; class=&quot;headerlink&quot; title=&quot;迭代（iteration）：&quot;&gt;&lt;/a&gt;迭代（iteration）：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;从某个地方（如列表）取出一个元素的过程；使用一个循环来遍历某个东西（如列表），这个过程就是迭代；&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
-    
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
-    
-    
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
-    
-      <category term="generators" scheme="http://chihweihsu.com/tags/generators/"/>
     
   </entry>
   
