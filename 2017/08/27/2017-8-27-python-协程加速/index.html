@@ -113,14 +113,14 @@
 <meta property="og:site_name" content="悟の迹">
 <meta property="og:description" content="情景描述：
 上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
-<meta property="og:image" content="http://chihweihsu.com/./images/gevent_bug_1.png">
-<meta property="og:image" content="http://chihweihsu.com/./images/gevent_pool_1.png">
-<meta property="og:updated_time" content="2017-09-17T06:04:12.598Z">
+<meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_1.png">
+<meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_2.png">
+<meta property="og:updated_time" content="2017-09-17T06:46:23.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-27 python 协程加速">
 <meta name="twitter:description" content="情景描述：
 上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
-<meta name="twitter:image" content="http://chihweihsu.com/./images/gevent_bug_1.png">
+<meta name="twitter:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_1.png">
 
 
 
@@ -442,8 +442,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -453,8 +453,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Notes</span>
+                  <a href="/categories/Notes/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -517,7 +517,7 @@
 <a id="more"></a>
 <h3 id="实现代码："><a href="#实现代码：" class="headerlink" title="实现代码："></a>实现代码：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> gevent</div><div class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</div><div class="line">monkey.patch_socket()</div><div class="line">p = pool.Pool(<span class="number">300</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">requests_parse</span><span class="params">(self, tel_tuple)</span>:</span></div><div class="line">	<span class="string">"""</span></div><div class="line">	主要处理requests请求</div><div class="line">	"""</div><div class="line">	print(<span class="string">'Size of pool'</span>, len(p))</div><div class="line">	……</div><div class="line">	……</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></div><div class="line">	<span class="string">"""</span></div><div class="line">	使用gevent实现协程处理I/O网络请求</div><div class="line">	"""</div><div class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">	gevent.joinall(jobs)</div><div class="line"></div><div class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</div><div class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">		self.logger.error(tlist)</div><div class="line">		self.logger.error(message_list)</div><div class="line">		<span class="keyword">raise</span> Exception(message_list)</div><div class="line">	<span class="keyword">return</span> tlist</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_data_step</span><span class="params">(self, tel)</span>:</span></div><div class="line">	<span class="string">"""</span></div><div class="line">	主要将请求回来处理好的数据写入数据库（mongo）</div><div class="line">	"""</div><div class="line">	res = self.db.update()</div><div class="line">	……</div><div class="line">	……</div><div class="line"></div><div class="line">tel_data = [……] <span class="comment"># 一大堆待请求参数list</span></div><div class="line">tlist = self.generator_label(set(tel_data))</div><div class="line">map(<span class="keyword">lambda</span> x: self.update_data_step(x[<span class="number">0</span>])(x[<span class="number">1</span>],x[<span class="number">2</span>],x[<span class="number">3</span>],x[<span class="number">4</span>],x[<span class="number">5</span>],x[<span class="number">6</span>]), tlist)</div></pre></td></tr></table></figure>
 <h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
-<p>上线后发现，代码运行一段时间后，请求一上来，任务数直线上升，一直增加：<br><img src="./images/gevent_bug_1.png" alt="enter description here" title="gevent_bug"><br>但是，pool的数量是正常的：<br><img src="./images/gevent_pool_1.png" alt="enter description here" title="gevent_pool"><br>之后log里报错信息：</p>
+<p>上线后发现，代码运行一段时间后，请求一上来，任务数直线上升，一直增加：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_1.png" alt="enter description here"><br>但是，pool的数量是正常的：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_2.png" alt="enter description here"><br>之后log里报错信息：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">  File <span class="string">"run.py"</span>, line <span class="number">42</span>, <span class="keyword">in</span> update_data</div><div class="line">  File <span class="string">"report/generate/calls_sa_by_tel.py"</span>, line <span class="number">396</span>, <span class="keyword">in</span> run</div><div class="line">  File <span class="string">"report/generate/calls_sa_by_tel.py"</span>, line <span class="number">38</span>, <span class="keyword">in</span> base_call</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/cursor.py"</span>, line <span class="number">729</span>, <span class="keyword">in</span> count</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/collection.py"</span>, line <span class="number">1344</span>, <span class="keyword">in</span> _count</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/mongo_client.py"</span>, line <span class="number">904</span>, <span class="keyword">in</span> _socket_for_reads</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/mongo_client.py"</span>, line <span class="number">870</span>, <span class="keyword">in</span> _get_socket</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/server.py"</span>, line <span class="number">168</span>, <span class="keyword">in</span> get_socket</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">844</span>, <span class="keyword">in</span> get_socket</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">881</span>, <span class="keyword">in</span> _get_socket_no_auth</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">817</span>, <span class="keyword">in</span> connect</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">263</span>, <span class="keyword">in</span> _raise_connection_failure</div><div class="line">AutoReconnect: xxx.xxx.xxx<span class="number">.117</span>:<span class="number">27017</span>: [Errno <span class="number">24</span>] Too many open files</div></pre></td></tr></table></figure>
 <h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><blockquote>
@@ -751,7 +751,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
