@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chihweihsu.com/"/>
-  <updated>2018-02-24T08:53:20.049Z</updated>
+  <updated>2018-02-24T08:53:20.046Z</updated>
   <id>http://chihweihsu.com/</id>
   
   <author>
@@ -14,26 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://chihweihsu.com/2018/02/24/README/"/>
-    <id>http://chihweihsu.com/2018/02/24/README/</id>
-    <published>2018-02-24T08:53:20.049Z</published>
-    <updated>2018-02-24T08:53:20.049Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="python-note"><a href="#python-note" class="headerlink" title="python_note"></a>python_note</h1><p>The note of my Python</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;python-note&quot;&gt;&lt;a href=&quot;#python-note&quot; class=&quot;headerlink&quot; title=&quot;python_note&quot;&gt;&lt;/a&gt;python_note&lt;/h1&gt;&lt;p&gt;The note of my Python&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>2017-10-16 The unit test and mock in python</title>
@@ -948,6 +928,35 @@
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
     
       <category term="条件表达式" scheme="http://chihweihsu.com/tags/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-8-10 调试 Pdb（Python debugger）</title>
+    <link href="http://chihweihsu.com/2017/08/10/2017-8-10-%E8%B0%83%E8%AF%95-Pdb%EF%BC%88Python-debugger%EF%BC%89/"/>
+    <id>http://chihweihsu.com/2017/08/10/2017-8-10-调试-Pdb（Python-debugger）/</id>
+    <published>2017-08-11T02:20:47.000Z</published>
+    <updated>2018-02-24T08:53:20.046Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Pdb（Python-debugger）："><a href="#Pdb（Python-debugger）：" class="headerlink" title="Pdb（Python debugger）："></a>Pdb（Python debugger）：</h2><h3 id="命令行运行："><a href="#命令行运行：" class="headerlink" title="命令行运行："></a>命令行运行：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pdb my_script.py</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="脚本内部运行："><a href="#脚本内部运行：" class="headerlink" title="脚本内部运行："></a>脚本内部运行：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pdb</div><div class="line">pdb.set_trace()</div></pre></td></tr></table></figure>
+<h3 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">c ：继续执行；</div><div class="line">w：显示上下文；</div><div class="line">a：打印当前函数参数列表；</div><div class="line">s：单步进入，进入函数内部（step）；</div><div class="line">n：单步跳过，不进入函数（next）；</div><div class="line">q：退出Pdb</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Pdb（Python-debugger）：&quot;&gt;&lt;a href=&quot;#Pdb（Python-debugger）：&quot; class=&quot;headerlink&quot; title=&quot;Pdb（Python debugger）：&quot;&gt;&lt;/a&gt;Pdb（Python debugger）：&lt;/h2&gt;&lt;h3 id=&quot;命令行运行：&quot;&gt;&lt;a href=&quot;#命令行运行：&quot; class=&quot;headerlink&quot; title=&quot;命令行运行：&quot;&gt;&lt;/a&gt;命令行运行：&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;python -m pdb my_script.py&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+    
+      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+    
+      <category term="Debugger" scheme="http://chihweihsu.com/tags/Debugger/"/>
     
   </entry>
   
