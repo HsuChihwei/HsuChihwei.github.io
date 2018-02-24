@@ -105,16 +105,16 @@
 
 
 
-<meta name="description" content="1234567891011121314151617&amp;gt;&amp;gt;&amp;gt; data = &amp;#123;&apos;jsonKey&apos;: &apos;jsonValue&apos;,&quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;&amp;gt;&amp;gt; print json.dumps(data)&amp;#123;&quot;jsonKey&quot;: &quot;jsonValue&quot;, &quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;">
+<meta name="description" content="str() 与 json.dumps()的区别1234567891011121314151617&amp;gt;&amp;gt;&amp;gt; data = &amp;#123;&apos;jsonKey&apos;: &apos;jsonValue&apos;,&quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;&amp;gt;&amp;gt; print json.dumps(data)&amp;#123;&quot;jsonKey&quot;: &quot;jsonValue&quot;, &quot;title&quot;:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-9-12 str() vs json.dumps()">
 <meta property="og:url" content="http://chihweihsu.com/2017/09/12/2017-9-12-str-vs-json-dumps/index.html">
 <meta property="og:site_name" content="悟の迹">
-<meta property="og:description" content="1234567891011121314151617&amp;gt;&amp;gt;&amp;gt; data = &amp;#123;&apos;jsonKey&apos;: &apos;jsonValue&apos;,&quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;&amp;gt;&amp;gt; print json.dumps(data)&amp;#123;&quot;jsonKey&quot;: &quot;jsonValue&quot;, &quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;">
-<meta property="og:updated_time" content="2018-02-24T08:53:20.049Z">
+<meta property="og:description" content="str() 与 json.dumps()的区别1234567891011121314151617&amp;gt;&amp;gt;&amp;gt; data = &amp;#123;&apos;jsonKey&apos;: &apos;jsonValue&apos;,&quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;&amp;gt;&amp;gt; print json.dumps(data)&amp;#123;&quot;jsonKey&quot;: &quot;jsonValue&quot;, &quot;title&quot;:">
+<meta property="og:updated_time" content="2018-02-24T10:16:33.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-9-12 str() vs json.dumps()">
-<meta name="twitter:description" content="1234567891011121314151617&amp;gt;&amp;gt;&amp;gt; data = &amp;#123;&apos;jsonKey&apos;: &apos;jsonValue&apos;,&quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;&amp;gt;&amp;gt; print json.dumps(data)&amp;#123;&quot;jsonKey&quot;: &quot;jsonValue&quot;, &quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;">
+<meta name="twitter:description" content="str() 与 json.dumps()的区别1234567891011121314151617&amp;gt;&amp;gt;&amp;gt; data = &amp;#123;&apos;jsonKey&apos;: &apos;jsonValue&apos;,&quot;title&quot;: &quot;hello world&quot;&amp;#125;&amp;gt;&amp;gt;&amp;gt; print json.dumps(data)&amp;#123;&quot;jsonKey&quot;: &quot;jsonValue&quot;, &quot;title&quot;:">
 
 
 
@@ -506,7 +506,7 @@
 
       
         <a id="more"></a>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>data = &#123;<span class="string">'jsonKey'</span>: <span class="string">'jsonValue'</span>,<span class="string">"title"</span>: <span class="string">"hello world"</span>&#125;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> json.dumps(data)</div><div class="line"></div><div class="line">&#123;<span class="string">"jsonKey"</span>: <span class="string">"jsonValue"</span>, <span class="string">"title"</span>: <span class="string">"hello world"</span>&#125;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> str(data)</div><div class="line"></div><div class="line">&#123;<span class="string">'jsonKey'</span>: <span class="string">'jsonValue'</span>, <span class="string">'title'</span>: <span class="string">'hello world'</span>&#125;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>json.dumps(data)</div><div class="line"></div><div class="line"><span class="string">'&#123;"jsonKey": "jsonValue", "title": "hello world"&#125;'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>str(data)</div><div class="line"></div><div class="line"><span class="string">"&#123;'jsonKey': 'jsonValue', 'title': 'hello world'&#125;"</span></div></pre></td></tr></table></figure>
+<h3 id="str-与-json-dumps-的区别"><a href="#str-与-json-dumps-的区别" class="headerlink" title="str() 与 json.dumps()的区别"></a>str() 与 json.dumps()的区别</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>data = &#123;<span class="string">'jsonKey'</span>: <span class="string">'jsonValue'</span>,<span class="string">"title"</span>: <span class="string">"hello world"</span>&#125;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> json.dumps(data)</div><div class="line"></div><div class="line">&#123;<span class="string">"jsonKey"</span>: <span class="string">"jsonValue"</span>, <span class="string">"title"</span>: <span class="string">"hello world"</span>&#125;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> str(data)</div><div class="line"></div><div class="line">&#123;<span class="string">'jsonKey'</span>: <span class="string">'jsonValue'</span>, <span class="string">'title'</span>: <span class="string">'hello world'</span>&#125;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>json.dumps(data)</div><div class="line"></div><div class="line"><span class="string">'&#123;"jsonKey": "jsonValue", "title": "hello world"&#125;'</span></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>str(data)</div><div class="line"></div><div class="line"><span class="string">"&#123;'jsonKey': 'jsonValue', 'title': 'hello world'&#125;"</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>In fact, I am more interested in their difference in single quote and double quote in output strings. It seems that I already know one difference between them (mentioned above) and whether json.loads() can load the output string. </p>
 <p>json.dumps() is much more than just making a string out of a Python object, it would always produce a valid JSON string (assuming everything inside the object is serializable) following the Type Conversion Table.</p>
@@ -719,8 +719,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -835,6 +844,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#str-与-json-dumps-的区别"><span class="nav-number">1.</span> <span class="nav-text">str() 与 json.dumps()的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
