@@ -1,0 +1,1268 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,unittest,mock,单元测试,挡板,测试," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="mock 功效">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017-10-16 The unit test and mock in python">
+<meta property="og:url" content="http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/index.html">
+<meta property="og:site_name" content="悟の迹">
+<meta property="og:description" content="mock 功效">
+<meta property="og:updated_time" content="2018-02-24T08:53:20.046Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017-10-16 The unit test and mock in python">
+<meta name="twitter:description" content="mock 功效">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'B2V0FMAY9S',
+      apiKey: 'f0103c0303469a54383a005caef96aec',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/"/>
+
+
+
+
+
+  <title> 2017-10-16 The unit test and mock in python | 悟の迹 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4dedea2c4f78342b6f61bb4de6c827db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">悟の迹</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">You are my sunshine!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+
+      <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a href='javascript:(
+    function go() {
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://m10.music.126.net/20170522233922/f0147f943d137e34c5226579d97b5ec6/ymusic/09e3/f63d/98b4/990b7f7b3a2b31bd6c9f4b665a30df9b.mp3",
+                "http://m10.music.126.net/20170522234010/78a581d497731e830048de7a8a53ca2d/ymusic/0a3b/2871/cd17/e6704d0822c919813911255d04f0823d.mp3"
+    ];
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+        }
+        e.src = i;
+        e.play()
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+          e = document.createElement("audio");
+          e.setAttribute("curSongIndex", 0);
+          e.id = "audio_element_id";
+          e.loop = false;
+          e.bgcolor = 0;
+          e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+          document.body.appendChild(e);
+          e.addEventListener("ended", function() {
+            go();
+          }, true);
+        }
+    }
+
+    initAudioEle();
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    S();
+  })()'>
+<i class="menu-item-icon fa fa-music fa-fw"></i> Music 起！</a> </li>
+      <!-- end Music 起！ -->
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chihwei·Hsu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟の迹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                2017-10-16 The unit test and mock in python
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-16T18:48:19-04:00">
+                2017-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+             <span id="/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/" class="leancloud_visitors" data-flag-title="2017-10-16 The unit test and mock in python">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="mock-功效"><a href="#mock-功效" class="headerlink" title="mock 功效"></a>mock 功效</h3><a id="more"></a>
+<h4 id="完成功能测试"><a href="#完成功能测试" class="headerlink" title="完成功能测试"></a>完成功能测试</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># module.py</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Count</span><span class="params">()</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, a, b)</span>:</span></div><div class="line">        <span class="keyword">return</span> a + b</div><div class="line"></div><div class="line"><span class="comment"># test.py</span></div><div class="line"><span class="keyword">from</span> unittest <span class="keyword">import</span> mock</div><div class="line"><span class="keyword">import</span> unittest</div><div class="line"><span class="keyword">from</span> module <span class="keyword">import</span> Count</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MockDemo</span><span class="params">(unittest.TestCase)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_add</span><span class="params">(self)</span>:</span></div><div class="line">        count = Count()</div><div class="line">        count.add = mock.Mock(return_value=<span class="number">13</span>, side_effect=count.add)       </div><div class="line">		<span class="comment"># side_effect参数和return_value是相反的。它给mock分配了可替换的结果，覆盖了return_value。简单的说，一个模拟工厂调用将返回side_effect值，而不是return_value；所以，设置side_effect参数为Count类add()方法，那么return_value的作用失效。</span></div><div class="line">        result = count.add(<span class="number">8</span>, <span class="number">8</span>)</div><div class="line">        print(result)</div><div class="line">		<span class="comment"># 将会真正的调用add()方法，得到的返回值为16（8+8）。通过print打印结果。</span></div><div class="line">        count.add.assert_called_with(<span class="number">8</span>, <span class="number">8</span>)</div><div class="line">		<span class="comment"># 检查mock方法是否获得了正确的参数。</span></div><div class="line">        self.assertEqual(result, <span class="number">16</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    unittest.main()</div></pre></td></tr></table></figure>
+<h4 id="解决测试依赖"><a href="#解决测试依赖" class="headerlink" title="解决测试依赖"></a>解决测试依赖</h4><blockquote>
+<p>例如，我们要测试A模块，然后A模块依赖于B模块的调用。但是，由于B模块的改变，导致了A模块返回结果的改变，从而使A模块的测试用例失败。其实，对于A模块，以及A模块的用例来说，并没有变化，不应该失败才对。这个时候就是mock发挥作用的时候了。通过mock模拟掉影响A模块的部分（B模块）。至于mock掉的部分（B模块）应该由其它用例来测试。</p>
+<p>add_and_multiply()函数依赖了multiply()函数的返回值<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># function.py</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_and_multiply</span><span class="params">(x, y)</span>:</span></div><div class="line">    addition = x + y</div><div class="line">    multiple = multiply(x, y)</div><div class="line">    <span class="keyword">return</span> (addition, multiple)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x, y)</span>:</span></div><div class="line">    <span class="keyword">return</span> x * y</div><div class="line">	</div><div class="line"><span class="comment"># test.py</span></div><div class="line"><span class="keyword">import</span> unittest</div><div class="line"><span class="keyword">import</span> function</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTestCase</span><span class="params">(unittest.TestCase)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_add_and_multiply</span><span class="params">(self)</span>:</span></div><div class="line">        x = <span class="number">3</span></div><div class="line">        y = <span class="number">5</span></div><div class="line">        addition, multiple = function.add_and_multiply(x, y)</div><div class="line">        self.assertEqual(<span class="number">8</span>, addition)</div><div class="line">        self.assertEqual(<span class="number">15</span>, multiple)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    unittest.main()</div></pre></td></tr></table></figure></p>
+<p>修改multiply()函数的代码，这样测试会失败<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x, y)</span>:</span></div><div class="line">    <span class="keyword">return</span> x * y + <span class="number">3</span></div></pre></td></tr></table></figure></p>
+<p>把 multiply()函数mock掉，解决依赖<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> unittest</div><div class="line"><span class="keyword">from</span> unittest.mock <span class="keyword">import</span> patch</div><div class="line"><span class="keyword">import</span> function</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTestCase</span><span class="params">(unittest.TestCase)</span>:</span></div><div class="line"></div><div class="line"><span class="meta">    @patch("function.multiply")</span></div><div class="line">	<span class="comment"># patch()装饰/上下文管理器可以很容易地模拟类或对象在模块测试。在测试过程中，您指定的对象将被替换为一个模拟（或其他对象），并在测试结束时还原。这里模拟function.py文件中multiply()函数。</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_add_and_multiply2</span><span class="params">(self, mock_multiply)</span>:</span></div><div class="line">		<span class="comment"># 在定义测试用例中，将mock的multiply()函数（对象）重命名为 mock_multiply对象。</span></div><div class="line">        x = <span class="number">3</span></div><div class="line">        y = <span class="number">5</span></div><div class="line">        mock_multiply.return_value = <span class="number">15</span></div><div class="line">		<span class="comment"># 设定mock_multiply对象的返回值为固定的15。</span></div><div class="line">        addition, multiple = function.add_and_multiply(x, y)</div><div class="line">        mock_multiply.assert_called_once_with(<span class="number">3</span>, <span class="number">5</span>)</div><div class="line">		<span class="comment"># 检查mock_multiply方法的参数是否正确。</span></div><div class="line"></div><div class="line">        self.assertEqual(<span class="number">8</span>, addition)</div><div class="line">        self.assertEqual(<span class="number">15</span>, multiple)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    unittest.main()</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="Mock-attributes-in-Python-mock"><a href="#Mock-attributes-in-Python-mock" class="headerlink" title="Mock attributes in Python mock?"></a>Mock attributes in Python mock?</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> patch(<span class="string">'requests.post'</span>) <span class="keyword">as</span> patched_post:</div><div class="line">    type(patched_post.return_value).ok = PropertyMock(return_value=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
+<h3 id="Mock-session-in-requests-library？"><a href="#Mock-session-in-requests-library？" class="headerlink" title="Mock session in requests library？"></a>Mock session in requests library？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># main.py</span></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_session_get</span><span class="params">()</span>:</span></div><div class="line">    session = requests.session()</div><div class="line">    <span class="keyword">return</span> session.get(<span class="string">'foo'</span>).status_code</div><div class="line"></div><div class="line"><span class="comment"># tests.py</span></div><div class="line"><span class="keyword">import</span> unittest</div><div class="line"><span class="keyword">import</span> mock</div><div class="line"></div><div class="line"><span class="keyword">from</span> main <span class="keyword">import</span> do_session_get</div><div class="line"></div><div class="line"><span class="comment"># The module of we mock, return the exact data that we expected</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">mocked_requests</span><span class="params">(*args, **kwargs)</span>:</span></div><div class="line">    <span class="comment"># print args</span></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MockResponse</span><span class="params">(object)</span>:</span></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, status_code, text, json_data=None, content=None)</span>:</span></div><div class="line">            self.json_data = json_data</div><div class="line">            self.status_code = status_code</div><div class="line">            self.text = text</div><div class="line">            self.content = content</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">json</span><span class="params">(self)</span>:</span></div><div class="line">            <span class="keyword">return</span> self.json_data</div><div class="line"></div><div class="line">    <span class="keyword">if</span> args[<span class="number">0</span>] == <span class="string">'foo'</span>:</div><div class="line">        <span class="keyword">return</span> MockResponse(<span class="number">200</span>, <span class="string">'success'</span>)</div><div class="line">    <span class="keyword">elif</span> args[<span class="number">0</span>] == <span class="string">'http://someurl.com/'</span>:</div><div class="line">        <span class="keyword">return</span> MockResponse(<span class="number">200</span>, <span class="string">'success'</span>)</div><div class="line">    <span class="keyword">return</span> MockResponse(<span class="number">404</span>, <span class="string">'-1'</span>)</div><div class="line"><span class="comment"># from main import do_session_get</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestDoSessionGet</span><span class="params">(unittest.TestCase)</span>:</span></div><div class="line"><span class="meta">    @mock.patch('requests.session')</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_should_mock_session_get</span><span class="params">(self, mocked_session)</span>:</span></div><div class="line">        mocked_session.return_value = mock.MagicMock(get=mock.MagicMock(side_effect=mocked_requests))</div><div class="line">        <span class="comment"># print do_session_get()</span></div><div class="line">        self.assertEqual(do_session_get(), <span class="number">200</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    unittest.main()</div></pre></td></tr></table></figure>
+<h3 id="assert-常用断言速查"><a href="#assert-常用断言速查" class="headerlink" title="assert 常用断言速查"></a>assert 常用断言速查</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assertEqual(a, b)</td>
+<td>a == b</td>
+</tr>
+<tr>
+<td>assertNotEqual(a, b)</td>
+<td>a != b</td>
+</tr>
+<tr>
+<td>assertGreater(a, b)</td>
+<td>a &gt; b</td>
+</tr>
+<tr>
+<td>assertGreaterEqual(a, b)</td>
+<td>a &gt;= b</td>
+</tr>
+<tr>
+<td>assertLess(a, b)</td>
+<td>a &lt; b</td>
+</tr>
+<tr>
+<td>assertLessEqual(a, b)</td>
+<td>a &lt;= b</td>
+</tr>
+<tr>
+<td>assertTrue(x)</td>
+<td>bool(x) is True</td>
+</tr>
+<tr>
+<td>assertFalse(x)</td>
+<td>bool(x) is False</td>
+</tr>
+<tr>
+<td>assertIs(a, b)</td>
+<td>a is b</td>
+</tr>
+<tr>
+<td>assertIsNot(a, b)</td>
+<td>a is not b</td>
+</tr>
+<tr>
+<td>assertIsNone(x)</td>
+<td>x is None</td>
+</tr>
+<tr>
+<td>assertIsNotNone(x)</td>
+<td>x is not None</td>
+</tr>
+<tr>
+<td>assertIn(a, b)</td>
+<td>a in b</td>
+</tr>
+<tr>
+<td>assertNotIn(a, b)</td>
+<td>a not in b</td>
+</tr>
+<tr>
+<td>assertIsInstance(a, b)</td>
+<td>isinstance(a, b)</td>
+</tr>
+<tr>
+<td>assertNotIsInstance(a, b)</td>
+<td>not isinstance(a, b)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="干货：mock模板（requests）"><a href="#干货：mock模板（requests）" class="headerlink" title="干货：mock模板（requests）"></a>干货：mock模板（requests）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># common_test.py</span></div><div class="line"></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">import</span> unittest</div><div class="line"><span class="keyword">import</span> mock</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">If the module is import from others files, like:</div><div class="line"></div><div class="line">from my.great.package import FlowType</div><div class="line"></div><div class="line">Then, we should do this, below:</div><div class="line"></div><div class="line"># Now we must patch 'my.great.package.requests.get'</div><div class="line">@mock.patch('my.great.package.requests.get', side_effect=mocked_requests)</div><div class="line"></div><div class="line">instead of "@mock.patch('common_test.requests.get', side_effect=mocked_requests)"</div><div class="line">because the requests module was imported in that file</div><div class="line">"""</div><div class="line"><span class="comment"># The module that need unittest</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">FlowType</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">pass</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">flow_type</span><span class="params">(self)</span>:</span></div><div class="line">        url = <span class="string">'http://chihweihsu.com/'</span></div><div class="line">        resp = requests.get(url)</div><div class="line">        <span class="keyword">return</span> resp</div><div class="line"></div><div class="line"><span class="comment"># The data of we mock</span></div><div class="line">mock_status_code = <span class="number">200</span></div><div class="line">mock_text = <span class="string">'You are my sunshine!'</span></div><div class="line">mock_json = &#123;<span class="string">'data'</span>: <span class="string">'You are my sunshine!'</span>&#125;</div><div class="line">mock_content = <span class="string">'You are my sunshine!'</span></div><div class="line"></div><div class="line"><span class="comment"># The module of we mock, return the exact data that we expected</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">mocked_requests</span><span class="params">(*args, **kwargs)</span>:</span></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MockResponse</span><span class="params">(object)</span>:</span></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, status_code, text, json_data=None, content=None)</span>:</span></div><div class="line">            self.json_data = json_data</div><div class="line">            self.status_code = status_code</div><div class="line">            self.text = text</div><div class="line">            self.content = content</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">json</span><span class="params">(self)</span>:</span></div><div class="line">            <span class="keyword">return</span> self.json_data</div><div class="line"></div><div class="line">    <span class="keyword">if</span> args[<span class="number">0</span>] == <span class="string">'http://chihweihsu.com/'</span>:</div><div class="line">        <span class="keyword">return</span> MockResponse(mock_status_code, mock_text, json_data=mock_json, content=mock_content)</div><div class="line">    <span class="keyword">elif</span> args[<span class="number">0</span>] == <span class="string">'http://someurl.com/'</span>:</div><div class="line">        <span class="keyword">return</span> MockResponse(<span class="number">200</span>, <span class="string">'success'</span>)</div><div class="line">    <span class="keyword">return</span> MockResponse(<span class="number">404</span>, <span class="string">'-1'</span>)</div><div class="line"></div><div class="line"><span class="comment"># The whole test case module</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestCommon</span><span class="params">(unittest.TestCase)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">pass</span></div><div class="line"></div><div class="line">    <span class="comment"># We patch 'common_test.requests.get' with our own method. The mock object is passed in to our test case method.</span></div><div class="line"><span class="meta">    @mock.patch('common_test.requests.get', side_effect=mocked_requests)</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_flow_type</span><span class="params">(self, mocked_get)</span>:</span></div><div class="line">        f = FlowType()</div><div class="line">        resp = f.flow_type()</div><div class="line">        self.assertIsNotNone(resp)</div><div class="line">        self.assertEqual(resp.status_code, mock_status_code)</div><div class="line">        self.assertIs(resp.text, mock_text)</div><div class="line">        self.assertIn(resp.content, mock_content)</div><div class="line">        self.assertDictEqual(resp.json(), mock_json)</div><div class="line">        self.assertIsInstance(resp.json(), dict)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    unittest.main()</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>看得爽？賞一賞！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/unittest/" rel="tag"># unittest</a>
+          
+            <a href="/tags/mock/" rel="tag"># mock</a>
+          
+            <a href="/tags/单元测试/" rel="tag"># 单元测试</a>
+          
+            <a href="/tags/挡板/" rel="tag"># 挡板</a>
+          
+            <a href="/tags/测试/" rel="tag"># 测试</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/16/2017-10-16-描述统计学笔记（Udacity）/" rel="next" title="2017-10-16 描述统计学笔记（Udacity）">
+                <i class="fa fa-chevron-left"></i> 2017-10-16 描述统计学笔记（Udacity）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/24/README/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+    <script>
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": [
+                    "mshare",
+                    "bdysc",
+                    "evernotecn",
+                    "tqq",
+                    "weixin",
+                    "sqq",
+                    "qzone",
+                    "douban",
+                    "tsina",
+                    "tieba",
+                    "youdao",
+                    "isohu",
+                    "mail",
+                    "ty",
+                    "fbook",
+                    "twi",
+                    "linkedin",
+                    "copy",
+                    "print"
+                ],
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "slide": {
+                "type": "slide",
+                "bdImg": "5",
+                "bdPos": "right",
+                "bdTop": "53.5"
+            },
+            "image": {
+                "viewList": [
+                    "weixin",
+                    "qzone",
+                    "tsina",
+                    "evernotecn",
+                    "douban",
+                    "bdysc"
+                ],
+                "viewText": "分享到：",
+                "viewSize": "16"
+            }
+        };
+    </script>
+
+    <script>
+        with (document)
+            0 [(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' +~ (-new Date() / 36e5)];
+    </script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Chihwei·Hsu" />
+          <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
+           
+              <p class="site-description motion-element" itemprop="description">The harder, the luckier</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">55</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#mock-功效"><span class="nav-number">1.</span> <span class="nav-text">mock 功效</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#完成功能测试"><span class="nav-number">1.1.</span> <span class="nav-text">完成功能测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决测试依赖"><span class="nav-number">1.2.</span> <span class="nav-text">解决测试依赖</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mock-attributes-in-Python-mock"><span class="nav-number">2.</span> <span class="nav-text">Mock attributes in Python mock?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mock-session-in-requests-library？"><span class="nav-number">3.</span> <span class="nav-text">Mock session in requests library？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#assert-常用断言速查"><span class="nav-number">4.</span> <span class="nav-text">assert 常用断言速查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#干货：mock模板（requests）"><span class="nav-number">5.</span> <span class="nav-text">干货：mock模板（requests）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
+  </span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <!-- 背景动画 -->
+    <script type="text/javascript" src="/js/src/particle.js"></script>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 91321, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 91321, xid: "2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/91321/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("Ul0rI7a4UprnwAasP0uonUva-gzGzoHsz", "OnUol9qVbAtSW0tOxG2Xnvwr");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  <!-- <a href="https://github.com/HsuChihwei">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+      alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+  </a> -->
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
