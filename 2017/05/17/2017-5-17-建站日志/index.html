@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -6,15 +6,44 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://chihweihsu.com/"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
 
 
 
@@ -32,7 +61,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -84,21 +113,31 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo,Blog," />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
 
 
 
 
 
+  <meta name="keywords" content="Hexo,Blog,">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
 
 
 
@@ -106,11 +145,13 @@
 
 
 <meta name="description" content="未完待续…">
+<meta name="keywords" content="Hexo,Blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-5-17 建站日志">
 <meta property="og:url" content="http://chihweihsu.com/2017/05/17/2017-5-17-建站日志/index.html">
 <meta property="og:site_name" content="悟の迹">
 <meta property="og:description" content="未完待续…">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg">
 <meta property="og:updated_time" content="2018-02-24T08:53:20.046Z">
 <meta name="twitter:card" content="summary">
@@ -125,9 +166,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -144,17 +187,13 @@
 
 
 
-  <link rel="canonical" href="http://chihweihsu.com/2017/05/17/2017-5-17-建站日志/"/>
+  <link rel="canonical" href="http://chihweihsu.com/2017/05/17/2017-5-17-建站日志/">
 
 
 
 
 
-  <title> 2017-5-17 建站日志 | 悟の迹 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>2017-5-17 建站日志 | 悟の迹</title>
   
 
 
@@ -174,26 +213,24 @@
 
 
 
+</head>
 
-
-
-
-
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">悟の迹</span>
       <span class="logo-line-after"><i></i></span>
@@ -220,9 +257,13 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
+<<<<<<< Updated upstream
             首页
+=======
+            首页
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -230,9 +271,13 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
+<<<<<<< Updated upstream
             归档
+=======
+            归档
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -240,9 +285,13 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
+<<<<<<< Updated upstream
             分类
+=======
+            分类
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -250,9 +299,13 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
+<<<<<<< Updated upstream
             标签
+=======
+            标签
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -260,9 +313,41 @@
         <li class="menu-item menu-item-about">
           <a href="/About" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
+<<<<<<< Updated upstream
             关于
+=======
+            关于
+>>>>>>> Stashed changes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+<<<<<<< Updated upstream
+            站点地图
+=======
+            站点地图
+>>>>>>> Stashed changes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+<<<<<<< Updated upstream
+            baidusitemap
+=======
+            menu.baidusitemap
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -273,7 +358,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -281,7 +366,7 @@
       
 
       <!-- 自定义High一下的功能 -->
-      <li class="menu-item"> <a href='javascript:(
+      <li class="menu-item"> <a href="javascript:(
     function go() {
 
     var songs = [
@@ -325,7 +410,7 @@
     var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
     var i = songs[curSongIndex];
     S();
-  })()'>
+  })()">
 <i class="menu-item-icon fa fa-music fa-fw"></i> Music 起！</a> </li>
       <!-- end Music 起！ -->
     </ul>
@@ -378,16 +463,20 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/05/17/2017-5-17-建站日志/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="悟の迹">
     </span>
 
@@ -396,17 +485,15 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                2017-5-17 建站日志
-              
-            
-          </h1>
+          <h2 class="post-title" itemprop="name headline">2017-5-17 建站日志</h2>
         
 
         <div class="post-meta">
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color="7D26CD">置顶</font>
+            <span class="post-meta-divider">|</span>
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -415,7 +502,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T21:39:02-04:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T21:39:02+00:00">
                 2017-05-17
               </time>
             
@@ -426,7 +513,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -437,7 +524,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Notes/" itemprop="url" rel="index">
                     <span itemprop="name">Notes</span>
                   </a>
@@ -448,7 +535,7 @@
                   ， 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Notes/Hexo/" itemprop="url" rel="index">
                     <span itemprop="name">Hexo</span>
                   </a>
@@ -484,7 +571,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数 </span>
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -493,6 +580,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9 分钟
+                </span>
+              
+            </div>
+          
 
           
 
@@ -500,19 +618,19 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cje1858lo000jz8v34dvup30m"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl"/>
+              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq0tm0ij000n2ov3mayp388w" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -523,142 +641,152 @@
       
 
       
-        <div class="note success"><p>未完待续… </p>
-</div>
+        <div class="note success"><p>未完待续… </p></div>
 <a id="more"></a>
 <h3 id="2017-05-19："><a href="#2017-05-19：" class="headerlink" title="2017-05-19："></a><strong>2017-05-19：</strong></h3><h3 id="添加新-Page"><a href="#添加新-Page" class="headerlink" title="添加新 Page"></a>添加新 Page</h3><hr>
 <p>1.用如下命令添加新page:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;categories&quot;</div><div class="line">hexo new page &quot;tags&quot;</div><div class="line">hexo new page &quot;Python&quot;</div><div class="line">hexo new page &quot;Linux&quot;</div><div class="line">hexo new page &quot;Notes&quot;</div><div class="line">hexo new page &quot;Something&quot;</div><div class="line">hexo new page &quot;Links&quot;</div><div class="line">hexo new page &quot;About&quot;</div></pre></td></tr></table></figure>
-<p>2.打开<code>主题配置文件``\themes\next\_config.yml</code>文件，在<code>menu</code>中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  Python: /Python</div><div class="line">  Linux: /Linux</div><div class="line">  Notes: /Notes</div><div class="line">  Something: /Something</div><div class="line">  Links: /Links</div><div class="line">  About: /About</div></pre></td></tr></table></figure></p>
-<p>3.打开<code>\themes\next\languages\zh-Hans.yml</code>，修改<code>menu</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  python: Python</div><div class="line">  linux: Linux</div><div class="line">  notes: 笔记</div><div class="line">  something: 有料</div><div class="line">  links: 链接</div><div class="line">  about: 关于</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;categories&quot;</span><br><span class="line">hexo new page &quot;tags&quot;</span><br><span class="line">hexo new page &quot;Python&quot;</span><br><span class="line">hexo new page &quot;Linux&quot;</span><br><span class="line">hexo new page &quot;Notes&quot;</span><br><span class="line">hexo new page &quot;Something&quot;</span><br><span class="line">hexo new page &quot;Links&quot;</span><br><span class="line">hexo new page &quot;About&quot;</span><br></pre></td></tr></table></figure>
+<p>2.打开<code>主题配置文件`</code>\themes\next_config.yml<code>文件，在</code>menu`中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  Python: /Python</span><br><span class="line">  Linux: /Linux</span><br><span class="line">  Notes: /Notes</span><br><span class="line">  Something: /Something</span><br><span class="line">  Links: /Links</span><br><span class="line">  About: /About</span><br></pre></td></tr></table></figure></p>
+<p>3.打开<code>\themes\next\languages\zh-Hans.yml</code>，修改<code>menu</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  python: Python</span><br><span class="line">  linux: Linux</span><br><span class="line">  notes: 笔记</span><br><span class="line">  something: 有料</span><br><span class="line">  links: 链接</span><br><span class="line">  about: 关于</span><br></pre></td></tr></table></figure></p>
 <p>*注意这里第一列必须全为小写。</p>
 <p>*这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</p>
 <h3 id="修改blog页面配色"><a href="#修改blog页面配色" class="headerlink" title="修改blog页面配色"></a>修改blog页面配色</h3><hr>
-<h4 id="添加自定义颜色"><a href="#添加自定义颜色" class="headerlink" title="添加自定义颜色"></a>添加自定义颜色</h4><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">// Colors</div><div class="line">// colors for use across theme.</div><div class="line">// --------------------------------------------------</div><div class="line">$whitesmoke   = #f5f5f5</div><div class="line">$gainsboro    = #eee</div><div class="line">$gray-lighter = #ddd</div><div class="line">$grey-light   = #ccc</div><div class="line">$grey         = #bbb</div><div class="line">$grey-dark    = #999</div><div class="line">$grey-dim     = #666</div><div class="line">$black-light  = #555</div><div class="line">$black-dim    = #333</div><div class="line">$black-deep   = #222</div><div class="line">$red          = #ff2a2a</div><div class="line">$blue-bright  = #87daff</div><div class="line">$blue         = #0684bd</div><div class="line">$blue-deep    = #262a30</div><div class="line">$orange       = #fc6423</div><div class="line">// 下面是我自定义的颜色</div><div class="line">$my-link-blue = #0593d3  //链接颜色</div><div class="line">$my-link-hover-blue = #0477ab  //鼠标悬停后颜色</div><div class="line">$my-code-foreground = #dd0055  // 用``围出的代码块字体颜色</div><div class="line">$my-code-background = #eee  // 用``围出的代码块背景颜色</div></pre></td></tr></table></figure></p>
-<h4 id="修改超链接颜色"><a href="#修改超链接颜色" class="headerlink" title="修改超链接颜色"></a>修改超链接颜色</h4><p>还是<code>base.styl</code>文件，修改这几行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// Global link color.</div><div class="line">$link-color                   = $my-link-blue</div><div class="line">$link-hover-color             = $my-link-hover-blue</div><div class="line">$link-decoration-color        = $gray-lighter</div><div class="line">$link-decoration-hover-color  = $my-link-hover-blue</div></pre></td></tr></table></figure></p>
+<h4 id="添加自定义颜色"><a href="#添加自定义颜色" class="headerlink" title="添加自定义颜色"></a>添加自定义颜色</h4><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// Colors</span><br><span class="line">// colors for use across theme.</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">$whitesmoke   = #f5f5f5</span><br><span class="line">$gainsboro    = #eee</span><br><span class="line">$gray-lighter = #ddd</span><br><span class="line">$grey-light   = #ccc</span><br><span class="line">$grey         = #bbb</span><br><span class="line">$grey-dark    = #999</span><br><span class="line">$grey-dim     = #666</span><br><span class="line">$black-light  = #555</span><br><span class="line">$black-dim    = #333</span><br><span class="line">$black-deep   = #222</span><br><span class="line">$red          = #ff2a2a</span><br><span class="line">$blue-bright  = #87daff</span><br><span class="line">$blue         = #0684bd</span><br><span class="line">$blue-deep    = #262a30</span><br><span class="line">$orange       = #fc6423</span><br><span class="line">// 下面是我自定义的颜色</span><br><span class="line">$my-link-blue = #0593d3  //链接颜色</span><br><span class="line">$my-link-hover-blue = #0477ab  //鼠标悬停后颜色</span><br><span class="line">$my-code-foreground = #dd0055  // 用``围出的代码块字体颜色</span><br><span class="line">$my-code-background = #eee  // 用``围出的代码块背景颜色</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改超链接颜色"><a href="#修改超链接颜色" class="headerlink" title="修改超链接颜色"></a>修改超链接颜色</h4><p>还是<code>base.styl</code>文件，修改这几行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Global link color.</span><br><span class="line">$link-color                   = $my-link-blue</span><br><span class="line">$link-hover-color             = $my-link-hover-blue</span><br><span class="line">$link-decoration-color        = $gray-lighter</span><br><span class="line">$link-decoration-hover-color  = $my-link-hover-blue</span><br></pre></td></tr></table></figure></p>
 <p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E8%B6%85%E9%93%BE%E6%8E%A5.png" alt=""></p>
-<h4 id="修改小型代码块颜色"><a href="#修改小型代码块颜色" class="headerlink" title="修改小型代码块颜色"></a>修改小型代码块颜色</h4><p>依旧是<code>base.styl</code>文件，修改<code>$code-background</code>和<code>$code-foreground</code>的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Code &amp; Code Blocks</div><div class="line">// 用``围出的代码块</div><div class="line">// --------------------------------------------------</div><div class="line">$code-font-family               = $font-family-monospace</div><div class="line">$code-font-size                 = 15px</div><div class="line">$code-background                = $my-code-background</div><div class="line">$code-foreground                = $my-code-foreground</div><div class="line">$code-border-radius             = 4px</div></pre></td></tr></table></figure></p>
+<h4 id="修改小型代码块颜色"><a href="#修改小型代码块颜色" class="headerlink" title="修改小型代码块颜色"></a>修改小型代码块颜色</h4><p>依旧是<code>base.styl</code>文件，修改<code>$code-background</code>和<code>$code-foreground</code>的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// Code &amp; Code Blocks</span><br><span class="line">// 用``围出的代码块</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">$code-font-family               = $font-family-monospace</span><br><span class="line">$code-font-size                 = 15px</span><br><span class="line">$code-background                = $my-code-background</span><br><span class="line">$code-foreground                = $my-code-foreground</span><br><span class="line">$code-border-radius             = 4px</span><br></pre></td></tr></table></figure></p>
 <p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E4%BB%A3%E7%A0%81%E5%9D%97.png" alt=""></p>
 <h3 id="修改blog页面字体大小"><a href="#修改blog页面字体大小" class="headerlink" title="修改blog页面字体大小"></a>修改blog页面字体大小</h3><hr>
-<p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// Font size</div><div class="line">$font-size-base           = 14px</div></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$font-size-base           = 16px</div></pre></td></tr></table></figure></p>
+<p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 14px</span><br></pre></td></tr></table></figure></p>
+<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$font-size-base           = 16px</span><br></pre></td></tr></table></figure></p>
 <h3 id="修改blog页面宽度"><a href="#修改blog页面宽度" class="headerlink" title="修改blog页面宽度"></a>修改blog页面宽度</h3><hr>
 <p>现在一般都用宽屏显示器，博客页面两侧留白太多，调整一下宽度。</p>
-<p>1.打开<code>\themes\next\source\css\_common\components\post\post-expand.styl</code>，找到:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 767px)</div></pre></td></tr></table></figure></p>
-<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 1080px)</div></pre></td></tr></table></figure></p>
-<p>2.打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$main-desktop                   = 960px</div><div class="line">$main-desktop-large             = 1200px</div><div class="line">$content-desktop                = 700px</div></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$main-desktop                   = 1080px</div><div class="line">$main-desktop-large             = 1200px</div><div class="line">$content-desktop                = 810px</div></pre></td></tr></table></figure></p>
+<p>1.打开<code>\themes\next\source\css\_common\components\post\post-expand.styl</code>，找到:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 767px)</span><br></pre></td></tr></table></figure></p>
+<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 1080px)</span><br></pre></td></tr></table></figure></p>
+<p>2.打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$main-desktop                   = 960px</span><br><span class="line">$main-desktop-large             = 1200px</span><br><span class="line">$content-desktop                = 700px</span><br></pre></td></tr></table></figure></p>
+<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$main-desktop                   = 1080px</span><br><span class="line">$main-desktop-large             = 1200px</span><br><span class="line">$content-desktop                = 810px</span><br></pre></td></tr></table></figure></p>
 <h3 id="修改博客部署的message"><a href="#修改博客部署的message" class="headerlink" title="修改博客部署的message"></a>修改博客部署的message</h3><hr>
-<p>在<code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
-<p>改得个性化一点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">好家伙又改版了悟の迹: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>在<code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>改得个性化一点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">好家伙又改版了悟の迹: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="Github项目主页添加README"><a href="#Github项目主页添加README" class="headerlink" title="Github项目主页添加README"></a>Github项目主页添加README</h3><hr>
 <h4 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h4><p>Github上博客的仓库主页没有README，如果把<code>README.md</code>放入<code>source</code>文件夹，<code>hexo g</code>生成时会被解析成html文件，而放到<code>public</code>文件夹中，生成时又会自动删除。</p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h4><p>在<code>source</code>目录下新建文件<code>README.mdown</code>，在里面写README即可。<code>hexo g</code>会把它复制到<code>public</code>文件夹，且不会被解析成html</p>
 <h3 id="Github项目主页添加LICENSE"><a href="#Github项目主页添加LICENSE" class="headerlink" title="Github项目主页添加LICENSE"></a>Github项目主页添加LICENSE</h3><hr>
-<p>修改<code>主题配置文件</code>，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Creative Commons 4.0 International License.</div><div class="line"># http://creativecommons.org/</div><div class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</div><div class="line">creative_commons: by-nc-sa</div><div class="line">#creative_commons:</div></pre></td></tr></table></figure></p>
+<p>修改<code>主题配置文件</code>，找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Creative Commons 4.0 International License.</span><br><span class="line"># http://creativecommons.org/</span><br><span class="line"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</span><br><span class="line">creative_commons: by-nc-sa</span><br><span class="line">#creative_commons:</span><br></pre></td></tr></table></figure></p>
 <p>将其中第 4 行的注释放开，然后选择你想使用的 LICENSE 即可，可选项参照第 3 行。</p>
 <h3 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h3><hr>
 <p>为优化SEO，更改首页标题格式为「关键词-网站名称 - 网站描述」</p>
-<p>打开<code>\themes\next\layout\index.swig</code>文件，找到这行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
-<p>把它改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125;</div><div class="line">  &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
+<p>打开<code>\themes\next\layout\index.swig</code>文件，找到这行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>把它改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;</span><br><span class="line">  &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="添加“Fork-me-on-Github”-ribbon"><a href="#添加“Fork-me-on-Github”-ribbon" class="headerlink" title="添加“Fork me on Github” ribbon"></a>添加“Fork me on Github” ribbon</h3><hr>
-<p>1.点击<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">Fork me on Github</a>；</p>
+<p>1.点击<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="noopener">Fork me on Github</a>；</p>
 <p>2.给blog主页选择一个绶带（ribbon），并复制相应代码；</p>
 <p>3.找到正在使用的<code>theme</code>下的<code>layout</code>文件，将代码插入即可；</p>
-<p>4.比如我选择了<code>红色</code>的ribbon，使用的<code>themes</code>为next，那么只要打开 <code>blog\themes\next\layout\_layout.swig</code>文件，复制下面这段代码，放在最后，标签之前即可。（注意将<code>https://github.com/you</code>改为你自己的github链接）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;https://github.com/you&quot;&gt;</div><div class="line">    &lt;img style=&quot;position: absolute; top: 0; right: 0; border: 0;&quot; src=&quot;https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67&quot;</div><div class="line">    alt=&quot;Fork me on GitHub&quot; data-canonical-src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png&quot;&gt;</div><div class="line">&lt;/a&gt;</div></pre></td></tr></table></figure></p>
+<p>4.比如我选择了<code>红色</code>的ribbon，使用的<code>themes</code>为next，那么只要打开 <code>blog\themes\next\layout\_layout.swig</code>文件，复制下面这段代码，放在最后，标签之前即可。（注意将<code>https://github.com/you</code>改为你自己的github链接）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://github.com/you&quot;&gt;</span><br><span class="line">    &lt;img style=&quot;position: absolute; top: 0; right: 0; border: 0;&quot; src=&quot;https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67&quot;</span><br><span class="line">    alt=&quot;Fork me on GitHub&quot; data-canonical-src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png&quot;&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="添加404公益页面"><a href="#添加404公益页面" class="headerlink" title="添加404公益页面"></a>添加404公益页面</h3><hr>
-<p>在<code>blog/source</code>下新建自己的<code>404.html</code>文件即可，强推<a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a>，代码可参考如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">layout: default</div><div class="line">---</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">         &lt;meta charset=&quot;UTF-8&quot; /&gt;</div><div class="line">         &lt;title&gt;404&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">         &lt;script type=&quot;text/javascript&quot; src=&quot;//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js&quot; charset=&quot;utf-8&quot; homePageUrl=&quot;http://chihweihsu.com/&quot; homePageName=&quot;回到悟の迹&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>在<code>blog/source</code>下新建自己的<code>404.html</code>文件即可，强推<a href="http://www.qq.com/404/" target="_blank" rel="noopener">腾讯公益404</a>，代码可参考如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: default</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">         &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">         &lt;title&gt;404&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">         &lt;script type=&quot;text/javascript&quot; src=&quot;//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js&quot; charset=&quot;utf-8&quot; homePageUrl=&quot;http://chihweihsu.com/&quot; homePageName=&quot;回到悟の迹&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="文章阅读次数统计"><a href="#文章阅读次数统计" class="headerlink" title="文章阅读次数统计"></a>文章阅读次数统计</h3><hr>
-<p>1.注册<a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="external">LeanCloud</a>帐号并验证邮箱；</p>
+<p>1.注册<a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="noopener">LeanCloud</a>帐号并验证邮箱；</p>
 <p>2.创建应用，新建一个应用来专门进行博客的访问统计的数据操作；</p>
 <p>3.创建完成之后我们点击新创建的应用的名字来进行该应用的参数配置；</p>
 <p>4.新建一个Class用来专门保存我们博客的文章访问量等数据；</p>
 <p>5.新建Class名字必须为Counter，设置默认的ACL权限，建议在此处选择无限制；</p>
 <p>6.选择左侧的<code>应用Key</code>选项，拿到我们创建应用的<code>AppID</code>以及<code>AppKey</code>；</p>
-<p>7.编辑 <code>主题配置文件</code>，如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz</div><div class="line">  app_key: E9UJsJpw1omCHuS22PdSpKoh</div></pre></td></tr></table></figure></p>
+<p>7.编辑 <code>主题配置文件</code>，如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz</span><br><span class="line">  app_key: E9UJsJpw1omCHuS22PdSpKoh</span><br></pre></td></tr></table></figure></p>
 <p>8.ok，部署后可见。</p>
 <h3 id="2017-05-18："><a href="#2017-05-18：" class="headerlink" title="2017-05-18："></a><strong>2017-05-18：</strong></h3><h3 id="配置导航栏网站小图标"><a href="#配置导航栏网站小图标" class="headerlink" title="配置导航栏网站小图标"></a>配置导航栏网站小图标</h3><hr>
-<p>挑选一张图片，名字改为<code>favicon.ico</code>，放到<code>..\blog\source</code>下，配置<code>主题配置文件</code>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">favicon: /favicon.ico</div></pre></td></tr></table></figure></p>
+<p>挑选一张图片，名字改为<code>favicon.ico</code>，放到<code>..\blog\source</code>下，配置<code>主题配置文件</code>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">favicon: /favicon.ico</span><br></pre></td></tr></table></figure></p>
 <h3 id="集成百度分享模块"><a href="#集成百度分享模块" class="headerlink" title="集成百度分享模块"></a>集成百度分享模块</h3><hr>
-<p>首先，编辑 <code>站点配置文件</code>，末尾添加字段:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">baidushare: true #百度分享功能</div></pre></td></tr></table></figure></p>
-<p>其次，编辑<code>主题配置文件</code>，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Baidu Share</div><div class="line"># Available value:</div><div class="line">#    button | slide</div><div class="line"># Warning: Baidu Share does not support https.</div><div class="line">baidushare:</div><div class="line"> type: slide #百度分享展示的方式button|slide</div></pre></td></tr></table></figure></p>
+<p>首先，编辑 <code>站点配置文件</code>，末尾添加字段:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidushare: true #百度分享功能</span><br></pre></td></tr></table></figure></p>
+<p>其次，编辑<code>主题配置文件</code>，找到如下代码位置，去掉最后两行#注释，并选择展示方式，建议slide悬浮状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Baidu Share</span><br><span class="line"># Available value:</span><br><span class="line">#    button | slide</span><br><span class="line"># Warning: Baidu Share does not support https.</span><br><span class="line">baidushare:</span><br><span class="line"> type: slide #百度分享展示的方式button|slide</span><br></pre></td></tr></table></figure></p>
 <p>*注意：百度分享不支持https方式，可以自己买个域名绑定，或者搜下<code>百度分享不支持https的解决方案</code>，有前辈做出解答。</p>
-<p>其实，现在已经完成了；但是，为了折腾，我们接着来自定义百度分享的显示，点击<a href="http://share.baidu.com/code" target="_blank" rel="external">代码获取</a>，一步步进行定制，走完流程，点击<code>直接获取代码</code>，拿到一段js代码，类似如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    window._bd_share_config = &#123;</div><div class="line">        &quot;common&quot;: &#123;</div><div class="line">            &quot;bdSnsKey&quot;: &#123;&#125;,</div><div class="line">            &quot;bdText&quot;: &quot;&quot;,</div><div class="line">            &quot;bdMini&quot;: &quot;2&quot;,</div><div class="line">            &quot;bdMiniList&quot;: [</div><div class="line">                &quot;mshare&quot;,</div><div class="line">                &quot;bdysc&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;tqq&quot;,</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;sqq&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;tieba&quot;,</div><div class="line">                &quot;youdao&quot;,</div><div class="line">                &quot;isohu&quot;,</div><div class="line">                &quot;mail&quot;,</div><div class="line">                &quot;ty&quot;,</div><div class="line">                &quot;fbook&quot;,</div><div class="line">                &quot;twi&quot;,</div><div class="line">                &quot;linkedin&quot;,</div><div class="line">                &quot;copy&quot;,</div><div class="line">                &quot;print&quot;</div><div class="line">            ],</div><div class="line">            &quot;bdPic&quot;: &quot;&quot;,</div><div class="line">            &quot;bdStyle&quot;: &quot;0&quot;,</div><div class="line">            &quot;bdSize&quot;: &quot;16&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;slide&quot;: &#123;</div><div class="line">            &quot;type&quot;: &quot;slide&quot;,</div><div class="line">            &quot;bdImg&quot;: &quot;5&quot;,</div><div class="line">            &quot;bdPos&quot;: &quot;right&quot;,</div><div class="line">            &quot;bdTop&quot;: &quot;53.5&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;image&quot;: &#123;</div><div class="line">            &quot;viewList&quot;: [</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;bdysc&quot;</div><div class="line">            ],</div><div class="line">            &quot;viewText&quot;: &quot;分享到：&quot;,</div><div class="line">            &quot;viewSize&quot;: &quot;16&quot;</div><div class="line">        &#125;,</div><div class="line">        &quot;selectShare&quot;: &#123;</div><div class="line">            &quot;bdContainerClass&quot;: null,</div><div class="line">            &quot;bdSelectMiniList&quot;: [</div><div class="line">                &quot;weixin&quot;,</div><div class="line">                &quot;qzone&quot;,</div><div class="line">                &quot;tsina&quot;,</div><div class="line">                &quot;evernotecn&quot;,</div><div class="line">                &quot;douban&quot;,</div><div class="line">                &quot;bdysc&quot;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>最后，打开如下文件<code>blog\themes\next\layout\_partials\share\baidushare.swing</code>，替换掉里面的js代码，本文以<code>slide</code>模式为例，替换掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% elseif theme.baidushare.type === &quot;slide&quot; %&#125;</div></pre></td></tr></table></figure></p>
+<p>其实，现在已经完成了；但是，为了折腾，我们接着来自定义百度分享的显示，点击<a href="http://share.baidu.com/code" target="_blank" rel="noopener">代码获取</a>，一步步进行定制，走完流程，点击<code>直接获取代码</code>，拿到一段js代码，类似如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window._bd_share_config = &#123;</span><br><span class="line">        &quot;common&quot;: &#123;</span><br><span class="line">            &quot;bdSnsKey&quot;: &#123;&#125;,</span><br><span class="line">            &quot;bdText&quot;: &quot;&quot;,</span><br><span class="line">            &quot;bdMini&quot;: &quot;2&quot;,</span><br><span class="line">            &quot;bdMiniList&quot;: [</span><br><span class="line">                &quot;mshare&quot;,</span><br><span class="line">                &quot;bdysc&quot;,</span><br><span class="line">                &quot;evernotecn&quot;,</span><br><span class="line">                &quot;tqq&quot;,</span><br><span class="line">                &quot;weixin&quot;,</span><br><span class="line">                &quot;sqq&quot;,</span><br><span class="line">                &quot;qzone&quot;,</span><br><span class="line">                &quot;douban&quot;,</span><br><span class="line">                &quot;tsina&quot;,</span><br><span class="line">                &quot;tieba&quot;,</span><br><span class="line">                &quot;youdao&quot;,</span><br><span class="line">                &quot;isohu&quot;,</span><br><span class="line">                &quot;mail&quot;,</span><br><span class="line">                &quot;ty&quot;,</span><br><span class="line">                &quot;fbook&quot;,</span><br><span class="line">                &quot;twi&quot;,</span><br><span class="line">                &quot;linkedin&quot;,</span><br><span class="line">                &quot;copy&quot;,</span><br><span class="line">                &quot;print&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;bdPic&quot;: &quot;&quot;,</span><br><span class="line">            &quot;bdStyle&quot;: &quot;0&quot;,</span><br><span class="line">            &quot;bdSize&quot;: &quot;16&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;slide&quot;: &#123;</span><br><span class="line">            &quot;type&quot;: &quot;slide&quot;,</span><br><span class="line">            &quot;bdImg&quot;: &quot;5&quot;,</span><br><span class="line">            &quot;bdPos&quot;: &quot;right&quot;,</span><br><span class="line">            &quot;bdTop&quot;: &quot;53.5&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;image&quot;: &#123;</span><br><span class="line">            &quot;viewList&quot;: [</span><br><span class="line">                &quot;weixin&quot;,</span><br><span class="line">                &quot;qzone&quot;,</span><br><span class="line">                &quot;tsina&quot;,</span><br><span class="line">                &quot;evernotecn&quot;,</span><br><span class="line">                &quot;douban&quot;,</span><br><span class="line">                &quot;bdysc&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;viewText&quot;: &quot;分享到：&quot;,</span><br><span class="line">            &quot;viewSize&quot;: &quot;16&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;selectShare&quot;: &#123;</span><br><span class="line">            &quot;bdContainerClass&quot;: null,</span><br><span class="line">            &quot;bdSelectMiniList&quot;: [</span><br><span class="line">                &quot;weixin&quot;,</span><br><span class="line">                &quot;qzone&quot;,</span><br><span class="line">                &quot;tsina&quot;,</span><br><span class="line">                &quot;evernotecn&quot;,</span><br><span class="line">                &quot;douban&quot;,</span><br><span class="line">                &quot;bdysc&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>最后，打开如下文件<code>blog\themes\next\layout\_partials\share\baidushare.swing</code>，替换掉里面的js代码，本文以<code>slide</code>模式为例，替换掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif theme.baidushare.type === &quot;slide&quot; %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>后面的<code>&lt;script&gt;...&lt;/script&gt;</code>即可。</p>
 <h3 id="2017-05-17："><a href="#2017-05-17：" class="headerlink" title="2017-05-17："></a><strong>2017-05-17：</strong></h3><h3 id="markdown写文章时，添加居中引用模块"><a href="#markdown写文章时，添加居中引用模块" class="headerlink" title="markdown写文章时，添加居中引用模块"></a>markdown写文章时，添加居中引用模块</h3><hr>
-<p>只需在写文章时，添加如下标签即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;</div><div class="line">    优秀的人，不是不合群，而是他们合群的人里面没有你</div><div class="line">&lt;/blockquote&gt;</div></pre></td></tr></table></figure></p>
+<p>只需在写文章时，添加如下标签即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;</span><br><span class="line">    优秀的人，不是不合群，而是他们合群的人里面没有你</span><br><span class="line">&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure></p>
 <p>预览：</p>
 <blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
 
 <h3 id="2017-05-16："><a href="#2017-05-16：" class="headerlink" title="2017-05-16："></a><strong>2017-05-16：</strong></h3><h3 id="首页文章预览添加图片"><a href="#首页文章预览添加图片" class="headerlink" title="首页文章预览添加图片"></a>首页文章预览添加图片</h3><hr>
-<p>打开<code>scaffolds/post.md</code>文件，在默认参数中添加如下参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 首页文章预览添加图片：</div><div class="line">photos:</div><div class="line">    - http://xxx.com/photo1.jpg</div><div class="line">    - http://xxx.com/photo2.jpg</div></pre></td></tr></table></figure></p>
+<p>打开<code>scaffolds/post.md</code>文件，在默认参数中添加如下参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 首页文章预览添加图片：</span><br><span class="line">photos:</span><br><span class="line">    - http://xxx.com/photo1.jpg</span><br><span class="line">    - http://xxx.com/photo2.jpg</span><br></pre></td></tr></table></figure></p>
 <p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_pandas.png" alt=""></p>
 <h3 id="首页文章摘要模式"><a href="#首页文章摘要模式" class="headerlink" title="首页文章摘要模式"></a>首页文章摘要模式</h3><hr>
-<p>首页开启文章摘要模式，不全文显示，而是出现<code>阅读全文&gt;</code>，只需在<code>主题配置文件</code>中找到<code>auto_excerpt</code>属性进行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">  enable: true #改写为true</div><div class="line">  length: 150 #默认展示的高度</div></pre></td></tr></table></figure></p>
-<p>或者，在Markdown文章中不想显示的位置，添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">这里显示</div><div class="line">&lt;!--more--&gt;</div><div class="line">这里不显示</div></pre></td></tr></table></figure></p>
+<p>首页开启文章摘要模式，不全文显示，而是出现<code>阅读全文&gt;</code>，只需在<code>主题配置文件</code>中找到<code>auto_excerpt</code>属性进行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true #改写为true</span><br><span class="line">  length: 150 #默认展示的高度</span><br></pre></td></tr></table></figure></p>
+<p>或者，在Markdown文章中不想显示的位置，添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这里显示</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">这里不显示</span><br></pre></td></tr></table></figure></p>
 <p>预览：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-17_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png" alt=""></p>
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>支持小徐？賞一賞！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>看得爽？賞一賞！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
   </div>
+</div>
 
+      </div>
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
 
-      
-    </div>
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/Hexo/" rel="tag"> <i class="fa fa-tag"></i> Hexo</a>
           
-            <a href="/tags/Blog/" rel="tag"># Blog</a>
+            <a href="/tags/Blog/" rel="tag"> <i class="fa fa-tag"></i> Blog</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -686,6 +814,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -760,11 +892,14 @@
 
 
           
-  <div class="comments" id="comments">
-    
+
+  
+    <div class="comments" id="comments">
       <div id="hypercomments_widget"></div>
-    
-  </div>
+    </div>
+
+  
+
 
 
         </div>
@@ -780,134 +915,130 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="Chihwei·Hsu" />
-          <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
-           
-              <p class="site-description motion-element" itemprop="description">The harder, the luckier</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">39</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="Chihwei·Hsu">
             
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">55</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Github
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
-                  
-                    <i class="fa fa-fw fa-envelope"></i>
-                  
-                  Email
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
-                  
-                    <i class="fa fa-fw fa-book"></i>
-                  
-                  简书
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
+              <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
-        
 
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HsuChihwei" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-book"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Chihwei_Hsu" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-cuttlefish"></i>csdn</a>
+                  </span>
+                
             </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
-                </li>
-              
-            </ul>
-          </div>
-        
+          
 
-        
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
 
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐网站
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
+          
+
+        </div>
       </section>
 
       
@@ -940,30 +1071,36 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
-  </span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu</span>
+
+  
+    &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+  </div>
+
+  
 </div>
 
+<!-- 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+-->
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
 <script type="text/javascript">
     var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
     document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));
@@ -990,13 +1127,17 @@
 })();
 </script>
 
+        
+
+
+
+
+
 
 
         
-
-        
-      </div>
-    </footer>
+      </footer></div>
+    
 
     <!-- 背景动画 -->
     <script type="text/javascript" src="/js/src/particle.js"></script>
@@ -1005,10 +1146,14 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
-  </div>
+    
+
+  
 
   
 
@@ -1033,54 +1178,72 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -1127,7 +1290,350 @@
 
 
 
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
@@ -1142,14 +1648,14 @@
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
   <script>AV.initialize("Ul0rI7a4UprnwAasP0uonUva-gzGzoHsz", "OnUol9qVbAtSW0tOxG2Xnvwr");</script>
   <script>
     function showTime(Counter) {
@@ -1254,6 +1760,28 @@
   </script>
 
 
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
 
   
 

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -6,15 +6,44 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://chihweihsu.com/"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
 
 
 
@@ -32,7 +61,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -84,42 +113,51 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Python,gevent," />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
 
 
 
 
-<meta name="description" content="情景描述：
-上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
+
+  <meta name="keywords" content="Python,gevent,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="情景描述： 上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
+<meta name="keywords" content="Python,gevent">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-8-27 python 协程加速">
 <meta property="og:url" content="http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/index.html">
 <meta property="og:site_name" content="悟の迹">
-<meta property="og:description" content="情景描述：
-上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
+<meta property="og:description" content="情景描述： 上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_1.png">
 <meta property="og:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_2.png">
 <meta property="og:updated_time" content="2018-02-24T08:53:20.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-27 python 协程加速">
-<meta name="twitter:description" content="情景描述：
-上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
+<meta name="twitter:description" content="情景描述： 上周，由于产品嫌报告生成太慢，经过使用profile/gprof2dot研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用gevent,以缓解报告生成压力。">
 <meta name="twitter:image" content="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_1.png">
 
 
@@ -129,9 +167,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -148,17 +188,13 @@
 
 
 
-  <link rel="canonical" href="http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/"/>
+  <link rel="canonical" href="http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/">
 
 
 
 
 
-  <title> 2017-8-27 python 协程加速 | 悟の迹 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>2017-8-27 python 协程加速 | 悟の迹</title>
   
 
 
@@ -178,26 +214,24 @@
 
 
 
+</head>
 
-
-
-
-
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">悟の迹</span>
       <span class="logo-line-after"><i></i></span>
@@ -224,9 +258,13 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
+<<<<<<< Updated upstream
             首页
+=======
+            首页
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -234,9 +272,13 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
+<<<<<<< Updated upstream
             归档
+=======
+            归档
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -244,9 +286,13 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
+<<<<<<< Updated upstream
             分类
+=======
+            分类
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -254,9 +300,13 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
+<<<<<<< Updated upstream
             标签
+=======
+            标签
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -264,9 +314,41 @@
         <li class="menu-item menu-item-about">
           <a href="/About" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
+<<<<<<< Updated upstream
             关于
+=======
+            关于
+>>>>>>> Stashed changes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+<<<<<<< Updated upstream
+            站点地图
+=======
+            站点地图
+>>>>>>> Stashed changes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+<<<<<<< Updated upstream
+            baidusitemap
+=======
+            menu.baidusitemap
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -277,7 +359,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -285,7 +367,7 @@
       
 
       <!-- 自定义High一下的功能 -->
-      <li class="menu-item"> <a href='javascript:(
+      <li class="menu-item"> <a href="javascript:(
     function go() {
 
     var songs = [
@@ -329,7 +411,7 @@
     var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
     var i = songs[curSongIndex];
     S();
-  })()'>
+  })()">
 <i class="menu-item-icon fa fa-music fa-fw"></i> Music 起！</a> </li>
       <!-- end Music 起！ -->
     </ul>
@@ -382,16 +464,20 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="悟の迹">
     </span>
 
@@ -400,17 +486,11 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                2017-8-27 python 协程加速
-              
-            
-          </h1>
+          <h2 class="post-title" itemprop="name headline">2017-8-27 python 协程加速</h2>
         
 
         <div class="post-meta">
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -419,7 +499,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T16:05:58-04:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T16:05:58+00:00">
                 2017-08-27
               </time>
             
@@ -430,7 +510,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -441,7 +521,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Notes/" itemprop="url" rel="index">
                     <span itemprop="name">Notes</span>
                   </a>
@@ -452,7 +532,7 @@
                   ， 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Notes/Python/" itemprop="url" rel="index">
                     <span itemprop="name">Python</span>
                   </a>
@@ -488,7 +568,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数 </span>
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -497,6 +577,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  805 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
 
           
 
@@ -504,7 +615,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -515,17 +628,17 @@
 <p>上周，由于产品嫌报告生成太慢，经过使用<code>profile/gprof2dot</code>研究后，发现主要时间耗费在接口网络请求上，于是我决定在项目中大量处理I/O网络请求的地方使用<code>gevent</code>,以缓解报告生成压力。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="实现代码："><a href="#实现代码：" class="headerlink" title="实现代码："></a>实现代码：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> gevent</div><div class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</div><div class="line">monkey.patch_socket()</div><div class="line">p = pool.Pool(<span class="number">300</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">requests_parse</span><span class="params">(self, tel_tuple)</span>:</span></div><div class="line">	<span class="string">"""</span></div><div class="line">	主要处理requests请求</div><div class="line">	"""</div><div class="line">	print(<span class="string">'Size of pool'</span>, len(p))</div><div class="line">	……</div><div class="line">	……</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></div><div class="line">	<span class="string">"""</span></div><div class="line">	使用gevent实现协程处理I/O网络请求</div><div class="line">	"""</div><div class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">	gevent.joinall(jobs)</div><div class="line"></div><div class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</div><div class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">		self.logger.error(tlist)</div><div class="line">		self.logger.error(message_list)</div><div class="line">		<span class="keyword">raise</span> Exception(message_list)</div><div class="line">	<span class="keyword">return</span> tlist</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_data_step</span><span class="params">(self, tel)</span>:</span></div><div class="line">	<span class="string">"""</span></div><div class="line">	主要将请求回来处理好的数据写入数据库（mongo）</div><div class="line">	"""</div><div class="line">	res = self.db.update()</div><div class="line">	……</div><div class="line">	……</div><div class="line"></div><div class="line">tel_data = [……] <span class="comment"># 一大堆待请求参数list</span></div><div class="line">tlist = self.generator_label(set(tel_data))</div><div class="line">map(<span class="keyword">lambda</span> x: self.update_data_step(x[<span class="number">0</span>])(x[<span class="number">1</span>],x[<span class="number">2</span>],x[<span class="number">3</span>],x[<span class="number">4</span>],x[<span class="number">5</span>],x[<span class="number">6</span>]), tlist)</div></pre></td></tr></table></figure>
+<h3 id="实现代码："><a href="#实现代码：" class="headerlink" title="实现代码："></a>实现代码：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gevent</span><br><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</span><br><span class="line">monkey.patch_socket()</span><br><span class="line">p = pool.Pool(<span class="number">300</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">requests_parse</span><span class="params">(self, tel_tuple)</span>:</span></span><br><span class="line">	<span class="string">"""</span></span><br><span class="line"><span class="string">	主要处理requests请求</span></span><br><span class="line"><span class="string">	"""</span></span><br><span class="line">	print(<span class="string">'Size of pool'</span>, len(p))</span><br><span class="line">	……</span><br><span class="line">	……</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></span><br><span class="line">	<span class="string">"""</span></span><br><span class="line"><span class="string">	使用gevent实现协程处理I/O网络请求</span></span><br><span class="line"><span class="string">	"""</span></span><br><span class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</span><br><span class="line">	gevent.joinall(jobs)</span><br><span class="line"></span><br><span class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</span><br><span class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</span><br><span class="line">		self.logger.error(tlist)</span><br><span class="line">		self.logger.error(message_list)</span><br><span class="line">		<span class="keyword">raise</span> Exception(message_list)</span><br><span class="line">	<span class="keyword">return</span> tlist</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_data_step</span><span class="params">(self, tel)</span>:</span></span><br><span class="line">	<span class="string">"""</span></span><br><span class="line"><span class="string">	主要将请求回来处理好的数据写入数据库（mongo）</span></span><br><span class="line"><span class="string">	"""</span></span><br><span class="line">	res = self.db.update()</span><br><span class="line">	……</span><br><span class="line">	……</span><br><span class="line"></span><br><span class="line">tel_data = [……] <span class="comment"># 一大堆待请求参数list</span></span><br><span class="line">tlist = self.generator_label(set(tel_data))</span><br><span class="line">map(<span class="keyword">lambda</span> x: self.update_data_step(x[<span class="number">0</span>])(x[<span class="number">1</span>],x[<span class="number">2</span>],x[<span class="number">3</span>],x[<span class="number">4</span>],x[<span class="number">5</span>],x[<span class="number">6</span>]), tlist)</span><br></pre></td></tr></table></figure>
 <h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
 <p>上线后发现，代码运行一段时间后，请求一上来，任务数直线上升，一直增加：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_1.png" alt="enter description here"><br>但是，pool的数量是正常的：<br><img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-8-27%20python%20%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F_2.png" alt="enter description here"><br>之后log里报错信息：</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">  File <span class="string">"run.py"</span>, line <span class="number">42</span>, <span class="keyword">in</span> update_data</div><div class="line">  File <span class="string">"report/generate/calls_sa_by_tel.py"</span>, line <span class="number">396</span>, <span class="keyword">in</span> run</div><div class="line">  File <span class="string">"report/generate/calls_sa_by_tel.py"</span>, line <span class="number">38</span>, <span class="keyword">in</span> base_call</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/cursor.py"</span>, line <span class="number">729</span>, <span class="keyword">in</span> count</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/collection.py"</span>, line <span class="number">1344</span>, <span class="keyword">in</span> _count</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/mongo_client.py"</span>, line <span class="number">904</span>, <span class="keyword">in</span> _socket_for_reads</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/mongo_client.py"</span>, line <span class="number">870</span>, <span class="keyword">in</span> _get_socket</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/server.py"</span>, line <span class="number">168</span>, <span class="keyword">in</span> get_socket</div><div class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">844</span>, <span class="keyword">in</span> get_socket</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">881</span>, <span class="keyword">in</span> _get_socket_no_auth</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">817</span>, <span class="keyword">in</span> connect</div><div class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">263</span>, <span class="keyword">in</span> _raise_connection_failure</div><div class="line">AutoReconnect: xxx.xxx.xxx<span class="number">.117</span>:<span class="number">27017</span>: [Errno <span class="number">24</span>] Too many open files</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">  File <span class="string">"run.py"</span>, line <span class="number">42</span>, <span class="keyword">in</span> update_data</span><br><span class="line">  File <span class="string">"report/generate/calls_sa_by_tel.py"</span>, line <span class="number">396</span>, <span class="keyword">in</span> run</span><br><span class="line">  File <span class="string">"report/generate/calls_sa_by_tel.py"</span>, line <span class="number">38</span>, <span class="keyword">in</span> base_call</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/cursor.py"</span>, line <span class="number">729</span>, <span class="keyword">in</span> count</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/collection.py"</span>, line <span class="number">1344</span>, <span class="keyword">in</span> _count</span><br><span class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/mongo_client.py"</span>, line <span class="number">904</span>, <span class="keyword">in</span> _socket_for_reads</span><br><span class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/mongo_client.py"</span>, line <span class="number">870</span>, <span class="keyword">in</span> _get_socket</span><br><span class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/server.py"</span>, line <span class="number">168</span>, <span class="keyword">in</span> get_socket</span><br><span class="line">  File <span class="string">"/usr/lib64/python2.7/contextlib.py"</span>, line <span class="number">17</span>, <span class="keyword">in</span> __enter__</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">844</span>, <span class="keyword">in</span> get_socket</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">881</span>, <span class="keyword">in</span> _get_socket_no_auth</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">817</span>, <span class="keyword">in</span> connect</span><br><span class="line">  File <span class="string">"venv/lib/python2.7/site-packages/pymongo/pool.py"</span>, line <span class="number">263</span>, <span class="keyword">in</span> _raise_connection_failure</span><br><span class="line">AutoReconnect: xxx.xxx.xxx<span class="number">.117</span>:<span class="number">27017</span>: [Errno <span class="number">24</span>] Too many open files</span><br></pre></td></tr></table></figure>
 <h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><blockquote>
 <p>经过分析，解决办法：<code>monkey.patch_socket()</code>换为<code>monkey.patch_all()</code>，或者，在使用完<code>gevent</code>后使用<code>reload(socket)</code>将socket初始化。<br>原因：应该是mongo写数据是阻塞的，请求快于写操作，导致写操作堆积越来越多，最终导致程序抛出<code>Too many open files</code>错误。<br>最终代码，如下：</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> gevent</div><div class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</div><div class="line">monkey.patch_all()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></div><div class="line">	p = pool.Pool(<span class="number">10</span>)</div><div class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">	gevent.joinall(jobs)</div><div class="line">	<span class="comment"># print [x.value for x in jobs]</span></div><div class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</div><div class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">		self.logger.error(tlist)</div><div class="line">		self.logger.error(message_list)</div><div class="line">		<span class="keyword">raise</span> Exception(message_list)</div><div class="line">	<span class="keyword">return</span> tlist</div><div class="line">	</div><div class="line">	</div><div class="line"><span class="comment"># 或者使用</span></div><div class="line">p = pool.Pool(<span class="number">10</span>)</div><div class="line">jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</div><div class="line">gevent.joinall(jobs)</div><div class="line"><span class="keyword">import</span> socket</div><div class="line">reload(socket)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gevent</span><br><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, pool</span><br><span class="line">monkey.patch_all()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generator_label</span><span class="params">(self, tel_data)</span>:</span></span><br><span class="line">	p = pool.Pool(<span class="number">10</span>)</span><br><span class="line">	jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</span><br><span class="line">	gevent.joinall(jobs)</span><br><span class="line">	<span class="comment"># print [x.value for x in jobs]</span></span><br><span class="line">	tlist = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> tlist:</span><br><span class="line">		message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</span><br><span class="line">		self.logger.error(tlist)</span><br><span class="line">		self.logger.error(message_list)</span><br><span class="line">		<span class="keyword">raise</span> Exception(message_list)</span><br><span class="line">	<span class="keyword">return</span> tlist</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"><span class="comment"># 或者使用</span></span><br><span class="line">p = pool.Pool(<span class="number">10</span>)</span><br><span class="line">jobs = [p.spawn(self.requests_parse, tel) <span class="keyword">for</span> tel <span class="keyword">in</span> tel_data]</span><br><span class="line">gevent.joinall(jobs)</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">reload(socket)</span><br></pre></td></tr></table></figure>
 <h4 id="另一个用例："><a href="#另一个用例：" class="headerlink" title="另一个用例："></a>另一个用例：</h4><blockquote>
-<p>给传递两个参数，直接后面跟着就行，逗号分开；<br>返回如是多个情况的，value是一个以tuple为元素的list。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">p = pool.Pool(<span class="number">10</span>)</div><div class="line">jobs = []</div><div class="line"><span class="comment"># date ('2017-07-01', '2017-07-14')</span></div><div class="line">jobs = [p.spawn(self.crawl_a_call_log, date[<span class="number">0</span>], date[<span class="number">1</span>]) <span class="keyword">for</span> date <span class="keyword">in</span> dates]</div><div class="line">gevent.joinall(jobs)</div><div class="line">data_list = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line"><span class="keyword">print</span> data_list</div><div class="line"><span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> data_list:</div><div class="line">	message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</div><div class="line">	self.log(<span class="string">'crawler'</span>, data_list, message_list)</div><div class="line">	<span class="keyword">raise</span> Exception(message_list)</div></pre></td></tr></table></figure></p>
+<p>给传递两个参数，直接后面跟着就行，逗号分开；<br>返回如是多个情况的，value是一个以tuple为元素的list。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">p = pool.Pool(<span class="number">10</span>)</span><br><span class="line">jobs = []</span><br><span class="line"><span class="comment"># date ('2017-07-01', '2017-07-14')</span></span><br><span class="line">jobs = [p.spawn(self.crawl_a_call_log, date[<span class="number">0</span>], date[<span class="number">1</span>]) <span class="keyword">for</span> date <span class="keyword">in</span> dates]</span><br><span class="line">gevent.joinall(jobs)</span><br><span class="line">data_list = [x.value <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</span><br><span class="line"><span class="keyword">print</span> data_list</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">None</span> <span class="keyword">in</span> data_list:</span><br><span class="line">	message_list = [x.exception <span class="keyword">for</span> x <span class="keyword">in</span> jobs]</span><br><span class="line">	self.log(<span class="string">'crawler'</span>, data_list, message_list)</span><br><span class="line">	<span class="keyword">raise</span> Exception(message_list)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
 <p>协程(gevent)是把双刃剑，monkey.patch 是一个邪恶的东西；<br>提升效果不要太好，耗时足足降了60%，而且，请求越多，效果越明显。</p>
@@ -533,62 +646,73 @@
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>支持小徐？賞一賞！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>看得爽？賞一賞！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
   </div>
+</div>
 
+      </div>
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
 
-      
-    </div>
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Python/" rel="tag"> <i class="fa fa-tag"></i> Python</a>
           
-            <a href="/tags/gevent/" rel="tag"># gevent</a>
+            <a href="/tags/gevent/" rel="tag"> <i class="fa fa-tag"></i> gevent</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -616,6 +740,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -690,11 +818,14 @@
 
 
           
-  <div class="comments" id="comments">
-    
+
+  
+    <div class="comments" id="comments">
       <div id="hypercomments_widget"></div>
-    
-  </div>
+    </div>
+
+  
+
 
 
         </div>
@@ -710,134 +841,130 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="Chihwei·Hsu" />
-          <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
-           
-              <p class="site-description motion-element" itemprop="description">The harder, the luckier</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">39</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="Chihwei·Hsu">
             
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">55</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Github
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
-                  
-                    <i class="fa fa-fw fa-envelope"></i>
-                  
-                  Email
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
-                  
-                    <i class="fa fa-fw fa-book"></i>
-                  
-                  简书
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
+              <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
-        
 
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HsuChihwei" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-book"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Chihwei_Hsu" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-cuttlefish"></i>csdn</a>
+                  </span>
+                
             </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
-                </li>
-              
-            </ul>
-          </div>
-        
+          
 
-        
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
 
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐网站
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
+          
+
+        </div>
       </section>
 
       
@@ -870,30 +997,36 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
-  </span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu</span>
+
+  
+    &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+  </div>
+
+  
 </div>
 
+<!-- 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+-->
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
 <script type="text/javascript">
     var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
     document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));
@@ -920,13 +1053,17 @@
 })();
 </script>
 
+        
+
+
+
+
+
 
 
         
-
-        
-      </div>
-    </footer>
+      </footer></div>
+    
 
     <!-- 背景动画 -->
     <script type="text/javascript" src="/js/src/particle.js"></script>
@@ -935,10 +1072,14 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
-  </div>
+    
+
+  
 
   
 
@@ -963,54 +1104,72 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -1057,7 +1216,350 @@
 
 
 
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
@@ -1072,14 +1574,14 @@
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
   <script>AV.initialize("Ul0rI7a4UprnwAasP0uonUva-gzGzoHsz", "OnUol9qVbAtSW0tOxG2Xnvwr");</script>
   <script>
     function showTime(Counter) {
@@ -1184,6 +1686,28 @@
   </script>
 
 
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
 
   
 

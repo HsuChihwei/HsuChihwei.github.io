@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -6,15 +6,44 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://chihweihsu.com/"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
 
 
 
@@ -32,7 +61,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -84,21 +113,31 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Python,区间,interval," />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
 
 
 
 
 
+  <meta name="keywords" content="Python,区间,interval,">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
 
 
 
@@ -106,11 +145,13 @@
 
 
 <meta name="description" content="1234567891011121314&amp;gt;&amp;gt;&amp;gt; volume1 = Interval.between(&quot;A&quot;, &quot;Foe&quot;)&amp;gt;&amp;gt;&amp;gt; volume2 = Interval.between(&quot;Fog&quot;, &quot;McAfee&quot;)&amp;gt;&amp;gt;&amp;gt; volume3 = Interval.between(&quot;McDonalds&quot;, &quot;Space&quot;)&amp;gt;&amp;gt;&amp;gt;">
+<meta name="keywords" content="Python,区间,interval">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017-8-28 python interval  区间处理">
 <meta property="og:url" content="http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/index.html">
 <meta property="og:site_name" content="悟の迹">
 <meta property="og:description" content="1234567891011121314&amp;gt;&amp;gt;&amp;gt; volume1 = Interval.between(&quot;A&quot;, &quot;Foe&quot;)&amp;gt;&amp;gt;&amp;gt; volume2 = Interval.between(&quot;Fog&quot;, &quot;McAfee&quot;)&amp;gt;&amp;gt;&amp;gt; volume3 = Interval.between(&quot;McDonalds&quot;, &quot;Space&quot;)&amp;gt;&amp;gt;&amp;gt;">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-24T08:53:20.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-8-28 python interval  区间处理">
@@ -123,9 +164,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -142,17 +185,13 @@
 
 
 
-  <link rel="canonical" href="http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/"/>
+  <link rel="canonical" href="http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/">
 
 
 
 
 
-  <title> 2017-8-28 python interval  区间处理 | 悟の迹 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>2017-8-28 python interval  区间处理 | 悟の迹</title>
   
 
 
@@ -172,26 +211,24 @@
 
 
 
+</head>
 
-
-
-
-
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">悟の迹</span>
       <span class="logo-line-after"><i></i></span>
@@ -218,9 +255,13 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
+<<<<<<< Updated upstream
             首页
+=======
+            首页
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -228,9 +269,13 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
+<<<<<<< Updated upstream
             归档
+=======
+            归档
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -238,9 +283,13 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
+<<<<<<< Updated upstream
             分类
+=======
+            分类
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -248,9 +297,13 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
+<<<<<<< Updated upstream
             标签
+=======
+            标签
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -258,9 +311,41 @@
         <li class="menu-item menu-item-about">
           <a href="/About" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
+<<<<<<< Updated upstream
             关于
+=======
+            关于
+>>>>>>> Stashed changes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+<<<<<<< Updated upstream
+            站点地图
+=======
+            站点地图
+>>>>>>> Stashed changes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+<<<<<<< Updated upstream
+            baidusitemap
+=======
+            menu.baidusitemap
+>>>>>>> Stashed changes
           </a>
         </li>
       
@@ -271,7 +356,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -279,7 +364,7 @@
       
 
       <!-- 自定义High一下的功能 -->
-      <li class="menu-item"> <a href='javascript:(
+      <li class="menu-item"> <a href="javascript:(
     function go() {
 
     var songs = [
@@ -323,7 +408,7 @@
     var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
     var i = songs[curSongIndex];
     S();
-  })()'>
+  })()">
 <i class="menu-item-icon fa fa-music fa-fw"></i> Music 起！</a> </li>
       <!-- end Music 起！ -->
     </ul>
@@ -376,16 +461,20 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="悟の迹">
     </span>
 
@@ -394,17 +483,11 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                2017-8-28 python interval  区间处理
-              
-            
-          </h1>
+          <h2 class="post-title" itemprop="name headline">2017-8-28 python interval  区间处理</h2>
         
 
         <div class="post-meta">
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -413,7 +496,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T18:25:08-04:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T18:25:08+00:00">
                 2017-08-28
               </time>
             
@@ -424,7 +507,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -435,7 +518,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Notes/" itemprop="url" rel="index">
                     <span itemprop="name">Notes</span>
                   </a>
@@ -446,7 +529,7 @@
                   ， 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Notes/Python/" itemprop="url" rel="index">
                     <span itemprop="name">Python</span>
                   </a>
@@ -482,7 +565,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数 </span>
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -491,6 +574,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  976 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
 
           
 
@@ -498,76 +612,89 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume1 = Interval.between(<span class="string">"A"</span>, <span class="string">"Foe"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume2 = Interval.between(<span class="string">"Fog"</span>, <span class="string">"McAfee"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume3 = Interval.between(<span class="string">"McDonalds"</span>, <span class="string">"Space"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume4 = Interval.between(<span class="string">"Spade"</span>, <span class="string">"Zygote"</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>encyclopedia = IntervalSet([volume1, volume2, volume3, volume4])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>mySet = IntervalSet([volume1, volume3, volume4])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Meteor"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Goose"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Goose"</span> <span class="keyword">in</span> mySet</div><div class="line"><span class="keyword">False</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>volume2 <span class="keyword">in</span> (encyclopedia ^ mySet)</div><div class="line"><span class="keyword">True</span></div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a= <span class="number">112</span> </div><div class="line">In [<span class="number">4</span>]:  a <span class="keyword">in</span> range(<span class="number">300</span>,<span class="number">400</span>) </div><div class="line">   ...: </div><div class="line">Out[<span class="number">4</span>]: <span class="keyword">False</span> </div><div class="line">In [<span class="number">5</span>]:  a <span class="keyword">in</span> range(<span class="number">101</span>,<span class="number">300</span>) </div><div class="line">   ...: </div><div class="line">Out[<span class="number">5</span>]: <span class="keyword">True</span></div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">python强大的区间处理库interval用法介绍</div><div class="line">原文发表在我的博客主页，转载请注明出处</div><div class="line"></div><div class="line">前言</div><div class="line"></div><div class="line">这个库是在阅读别人的源码的时候看到的，觉得十分好用，然而在网上找到的相关资料甚少，所以阅读了源码来做一个简单的用法总结。在网络的路由表中，经常会通过掩码来表示流表的匹配域，在python中有的时候为了方便的模拟流表的匹配过程，可以通过一个整数区间来表示诸如IP等的匹配范围，而本文介绍的库在区间处理上是十分的强大与方便。</div><div class="line"></div><div class="line">用法举例</div><div class="line"></div><div class="line">不论是在Linux系统还是Windows系统上，我们都可以方便的安装pip或者easy_install库来方便的安装大多数python库，interval也不例外。</div><div class="line">在这个库中提供了两个主要的类，分别是Interval和IntervalSet两个类。</div><div class="line">Interval类描述了一个连续的范围区间，这个区间可以是闭、开、半闭半开、无穷的，他的区间值不一定是数字，可以包含任何的数据类型，比如字符串，时间等等，同时他和python的各种操作（&lt;, &lt;=, ==, &gt;=, &gt;等）也是兼容的。IntervalSet包含了一个或多个互不相交的Interval集合。下面的这几个例子是源码中的。</div><div class="line"></div><div class="line"> &gt;&gt;&gt;volume1 = Interval.between(<span class="string">"A"</span>, <span class="string">"Foe"</span>)</div><div class="line">&gt;&gt;&gt;volume2 = Interval.between(<span class="string">"Fog"</span>, <span class="string">"McAfee"</span>)</div><div class="line">&gt;&gt;&gt;volume3 = Interval.between(<span class="string">"McDonalds"</span>, <span class="string">"Space"</span>)</div><div class="line">&gt;&gt;&gt;volume4 = Interval.between(<span class="string">"Spade"</span>, <span class="string">"Zygote"</span>)</div><div class="line">&gt;&gt;&gt;encyclopedia = IntervalSet([volume1, volume2, volume3, volume4])</div><div class="line">&gt;&gt;&gt;mySet = IntervalSet([volume1, volume3, volume4])</div><div class="line">&gt;&gt;&gt;<span class="string">"Meteor"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;<span class="string">"Goose"</span> <span class="keyword">in</span> encyclopedia</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;<span class="string">"Goose"</span> <span class="keyword">in</span> mySet</div><div class="line"><span class="keyword">False</span></div><div class="line">&gt;&gt;&gt;volume2 <span class="keyword">in</span> (encyclopedia ^ mySet)</div><div class="line"><span class="keyword">True</span></div><div class="line">前面的三个例子比较容易理解，最后一个例子中，encyclopedia的区别就是mySet多了一个volume2，而异或就是将两个集合中相同的元素去掉，不同的元素保留，所以最后只剩下了volume2。</div><div class="line">除了字符串，利用interval还可以很方便的处理时间，下面的例子同样来自于源码。</div><div class="line"></div><div class="line"> &gt;&gt;&gt;officeHours = IntervalSet.between(<span class="string">"08:00"</span>, <span class="string">"17:00"</span>)</div><div class="line">&gt;&gt;&gt;myLunch = IntervalSet.between(<span class="string">"11:30"</span>, <span class="string">"12:30"</span>)</div><div class="line">&gt;&gt;&gt;myHours = IntervalSet.between(<span class="string">"08:30"</span>, <span class="string">"19:30"</span>) - myLunch</div><div class="line">&gt;&gt;&gt;myHours.issubset(officeHours)</div><div class="line"><span class="keyword">False</span></div><div class="line">&gt;&gt;&gt;<span class="string">"12:00"</span> <span class="keyword">in</span> myHours</div><div class="line"><span class="keyword">False</span></div><div class="line">&gt;&gt;&gt;<span class="string">"15:30"</span> <span class="keyword">in</span> myHours</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;inOffice = officeHours &amp; myHours</div><div class="line">&gt;&gt;&gt;<span class="keyword">print</span> inOffice</div><div class="line">[<span class="string">'08:30'</span>..<span class="string">'11:30'</span>),(<span class="string">'12:30'</span>..<span class="string">'17:00'</span>]</div><div class="line">&gt;&gt;&gt;overtime = myHours - officeHours</div><div class="line">&gt;&gt;&gt;<span class="keyword">print</span> overtime</div><div class="line">(<span class="string">'17:00'</span>..<span class="string">'19:30'</span>]</div><div class="line">在前言中说道interval库可以处理IP地址，简单的列举应用如下：</div><div class="line"></div><div class="line"> <span class="comment"># coding</span></div><div class="line">r1 = IntervalSet([Interval(<span class="number">1</span>, <span class="number">1000</span>), Interval(<span class="number">1100</span>, <span class="number">1200</span>)])</div><div class="line">r2 = IntervalSet([Interval(<span class="number">30</span>, <span class="number">50</span>), Interval(<span class="number">60</span>, <span class="number">200</span>), Interval(<span class="number">1150</span>, <span class="number">1300</span>)])</div><div class="line"></div><div class="line">r3 = IntervalSet([Interval(<span class="number">1000</span>, <span class="number">3000</span>)])</div><div class="line">r4 = IntervalSet([Interval(<span class="number">1000</span>, <span class="number">3000</span>)])</div><div class="line">r5 = IntervalSet([Interval(<span class="number">30000</span>, <span class="number">12000</span>)])</div><div class="line"></div><div class="line"><span class="keyword">print</span> (r3 - r4), (r4 - r3), r3 &amp; r4</div><div class="line"><span class="keyword">print</span> len(IntervalSet.empty())</div><div class="line"></div><div class="line"><span class="keyword">if</span> r3 &amp; r4 == r4:</div><div class="line">    <span class="keyword">print</span> <span class="string">'yes'</span></div><div class="line"></div><div class="line"><span class="keyword">print</span> r3 &amp; r4</div><div class="line"><span class="keyword">if</span> (r3 - r4).empty():</div><div class="line">   <span class="keyword">print</span> <span class="string">"true"</span></div><div class="line"><span class="keyword">print</span> (r3 - r4).empty()</div><div class="line"></div><div class="line"><span class="comment"># output</span></div><div class="line">&lt;Empty&gt; &lt;Empty&gt; [<span class="number">1000.</span><span class="number">.3000</span>]</div><div class="line"><span class="number">0</span></div><div class="line">yes</div><div class="line">[<span class="number">1000.</span><span class="number">.3000</span>]</div><div class="line">&lt;Empty&gt;</div><div class="line">常用方法</div><div class="line"></div><div class="line">interval对象初始化参数（lower_bound=-Inf, upper_bound=Inf, **kwargs）三个boolean参数closed,lower_closed,upper_closed分表表示全闭，左闭右开，左开右闭。比如：r = Interval(upper_bound=<span class="number">62</span>, closed=<span class="keyword">False</span>)</div><div class="line">between(a, b, closed=<span class="keyword">True</span>)：返回以a和b为界的区间</div><div class="line">less_than(a)：小于a的所有值构成interval，类似的还有less_than_or_equal_to，greater_than，greater_than_or_equal_to函数</div><div class="line">join(other)：将两个连续的intervals组合起来</div><div class="line">overlaps(other)：两个区间是否有重叠</div><div class="line">adjacent_to(other)：两个区间是否不重叠的毗邻</div><div class="line">总结</div><div class="line"></div><div class="line">是一篇总结文章，并没有什么深度，只是为了不再重复造轮子，在必要的时候一个库可以极大的提高效率。</div><div class="line">MeasureMeasure</div></pre></td></tr></table></figure>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>volume1 = Interval.between(<span class="string">"A"</span>, <span class="string">"Foe"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>volume2 = Interval.between(<span class="string">"Fog"</span>, <span class="string">"McAfee"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>volume3 = Interval.between(<span class="string">"McDonalds"</span>, <span class="string">"Space"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>volume4 = Interval.between(<span class="string">"Spade"</span>, <span class="string">"Zygote"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>encyclopedia = IntervalSet([volume1, volume2, volume3, volume4])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mySet = IntervalSet([volume1, volume3, volume4])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Meteor"</span> <span class="keyword">in</span> encyclopedia</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Goose"</span> <span class="keyword">in</span> encyclopedia</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"Goose"</span> <span class="keyword">in</span> mySet</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>volume2 <span class="keyword">in</span> (encyclopedia ^ mySet)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a= <span class="number">112</span> </span><br><span class="line">In [<span class="number">4</span>]:  a <span class="keyword">in</span> range(<span class="number">300</span>,<span class="number">400</span>) </span><br><span class="line">   ...: </span><br><span class="line">Out[<span class="number">4</span>]: <span class="keyword">False</span> </span><br><span class="line">In [<span class="number">5</span>]:  a <span class="keyword">in</span> range(<span class="number">101</span>,<span class="number">300</span>) </span><br><span class="line">   ...: </span><br><span class="line">Out[<span class="number">5</span>]: <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">python强大的区间处理库interval用法介绍</span><br><span class="line">原文发表在我的博客主页，转载请注明出处</span><br><span class="line"></span><br><span class="line">前言</span><br><span class="line"></span><br><span class="line">这个库是在阅读别人的源码的时候看到的，觉得十分好用，然而在网上找到的相关资料甚少，所以阅读了源码来做一个简单的用法总结。在网络的路由表中，经常会通过掩码来表示流表的匹配域，在python中有的时候为了方便的模拟流表的匹配过程，可以通过一个整数区间来表示诸如IP等的匹配范围，而本文介绍的库在区间处理上是十分的强大与方便。</span><br><span class="line"></span><br><span class="line">用法举例</span><br><span class="line"></span><br><span class="line">不论是在Linux系统还是Windows系统上，我们都可以方便的安装pip或者easy_install库来方便的安装大多数python库，interval也不例外。</span><br><span class="line">在这个库中提供了两个主要的类，分别是Interval和IntervalSet两个类。</span><br><span class="line">Interval类描述了一个连续的范围区间，这个区间可以是闭、开、半闭半开、无穷的，他的区间值不一定是数字，可以包含任何的数据类型，比如字符串，时间等等，同时他和python的各种操作（&lt;, &lt;=, ==, &gt;=, &gt;等）也是兼容的。IntervalSet包含了一个或多个互不相交的Interval集合。下面的这几个例子是源码中的。</span><br><span class="line"></span><br><span class="line"> &gt;&gt;&gt;volume1 = Interval.between(<span class="string">"A"</span>, <span class="string">"Foe"</span>)</span><br><span class="line">&gt;&gt;&gt;volume2 = Interval.between(<span class="string">"Fog"</span>, <span class="string">"McAfee"</span>)</span><br><span class="line">&gt;&gt;&gt;volume3 = Interval.between(<span class="string">"McDonalds"</span>, <span class="string">"Space"</span>)</span><br><span class="line">&gt;&gt;&gt;volume4 = Interval.between(<span class="string">"Spade"</span>, <span class="string">"Zygote"</span>)</span><br><span class="line">&gt;&gt;&gt;encyclopedia = IntervalSet([volume1, volume2, volume3, volume4])</span><br><span class="line">&gt;&gt;&gt;mySet = IntervalSet([volume1, volume3, volume4])</span><br><span class="line">&gt;&gt;&gt;<span class="string">"Meteor"</span> <span class="keyword">in</span> encyclopedia</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;<span class="string">"Goose"</span> <span class="keyword">in</span> encyclopedia</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;<span class="string">"Goose"</span> <span class="keyword">in</span> mySet</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line">&gt;&gt;&gt;volume2 <span class="keyword">in</span> (encyclopedia ^ mySet)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">前面的三个例子比较容易理解，最后一个例子中，encyclopedia的区别就是mySet多了一个volume2，而异或就是将两个集合中相同的元素去掉，不同的元素保留，所以最后只剩下了volume2。</span><br><span class="line">除了字符串，利用interval还可以很方便的处理时间，下面的例子同样来自于源码。</span><br><span class="line"></span><br><span class="line"> &gt;&gt;&gt;officeHours = IntervalSet.between(<span class="string">"08:00"</span>, <span class="string">"17:00"</span>)</span><br><span class="line">&gt;&gt;&gt;myLunch = IntervalSet.between(<span class="string">"11:30"</span>, <span class="string">"12:30"</span>)</span><br><span class="line">&gt;&gt;&gt;myHours = IntervalSet.between(<span class="string">"08:30"</span>, <span class="string">"19:30"</span>) - myLunch</span><br><span class="line">&gt;&gt;&gt;myHours.issubset(officeHours)</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line">&gt;&gt;&gt;<span class="string">"12:00"</span> <span class="keyword">in</span> myHours</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line">&gt;&gt;&gt;<span class="string">"15:30"</span> <span class="keyword">in</span> myHours</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;inOffice = officeHours &amp; myHours</span><br><span class="line">&gt;&gt;&gt;<span class="keyword">print</span> inOffice</span><br><span class="line">[<span class="string">'08:30'</span>..<span class="string">'11:30'</span>),(<span class="string">'12:30'</span>..<span class="string">'17:00'</span>]</span><br><span class="line">&gt;&gt;&gt;overtime = myHours - officeHours</span><br><span class="line">&gt;&gt;&gt;<span class="keyword">print</span> overtime</span><br><span class="line">(<span class="string">'17:00'</span>..<span class="string">'19:30'</span>]</span><br><span class="line">在前言中说道interval库可以处理IP地址，简单的列举应用如下：</span><br><span class="line"></span><br><span class="line"> <span class="comment"># coding</span></span><br><span class="line">r1 = IntervalSet([Interval(<span class="number">1</span>, <span class="number">1000</span>), Interval(<span class="number">1100</span>, <span class="number">1200</span>)])</span><br><span class="line">r2 = IntervalSet([Interval(<span class="number">30</span>, <span class="number">50</span>), Interval(<span class="number">60</span>, <span class="number">200</span>), Interval(<span class="number">1150</span>, <span class="number">1300</span>)])</span><br><span class="line"></span><br><span class="line">r3 = IntervalSet([Interval(<span class="number">1000</span>, <span class="number">3000</span>)])</span><br><span class="line">r4 = IntervalSet([Interval(<span class="number">1000</span>, <span class="number">3000</span>)])</span><br><span class="line">r5 = IntervalSet([Interval(<span class="number">30000</span>, <span class="number">12000</span>)])</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (r3 - r4), (r4 - r3), r3 &amp; r4</span><br><span class="line"><span class="keyword">print</span> len(IntervalSet.empty())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> r3 &amp; r4 == r4:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'yes'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> r3 &amp; r4</span><br><span class="line"><span class="keyword">if</span> (r3 - r4).empty():</span><br><span class="line">   <span class="keyword">print</span> <span class="string">"true"</span></span><br><span class="line"><span class="keyword">print</span> (r3 - r4).empty()</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line">&lt;Empty&gt; &lt;Empty&gt; [<span class="number">1000.</span><span class="number">.3000</span>]</span><br><span class="line"><span class="number">0</span></span><br><span class="line">yes</span><br><span class="line">[<span class="number">1000.</span><span class="number">.3000</span>]</span><br><span class="line">&lt;Empty&gt;</span><br><span class="line">常用方法</span><br><span class="line"></span><br><span class="line">interval对象初始化参数（lower_bound=-Inf, upper_bound=Inf, **kwargs）三个boolean参数closed,lower_closed,upper_closed分表表示全闭，左闭右开，左开右闭。比如：r = Interval(upper_bound=<span class="number">62</span>, closed=<span class="keyword">False</span>)</span><br><span class="line">between(a, b, closed=<span class="keyword">True</span>)：返回以a和b为界的区间</span><br><span class="line">less_than(a)：小于a的所有值构成interval，类似的还有less_than_or_equal_to，greater_than，greater_than_or_equal_to函数</span><br><span class="line">join(other)：将两个连续的intervals组合起来</span><br><span class="line">overlaps(other)：两个区间是否有重叠</span><br><span class="line">adjacent_to(other)：两个区间是否不重叠的毗邻</span><br><span class="line">总结</span><br><span class="line"></span><br><span class="line">是一篇总结文章，并没有什么深度，只是为了不再重复造轮子，在必要的时候一个库可以极大的提高效率。</span><br><span class="line">MeasureMeasure</span><br></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>支持小徐？賞一賞！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>看得爽？賞一賞！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Chihwei·Hsu 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Chihwei·Hsu 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
   </div>
+</div>
 
+      </div>
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
 
-      
-    </div>
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Python/" rel="tag"> <i class="fa fa-tag"></i> Python</a>
           
-            <a href="/tags/区间/" rel="tag"># 区间</a>
+            <a href="/tags/区间/" rel="tag"> <i class="fa fa-tag"></i> 区间</a>
           
-            <a href="/tags/interval/" rel="tag"># interval</a>
+            <a href="/tags/interval/" rel="tag"> <i class="fa fa-tag"></i> interval</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -595,6 +722,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -669,11 +800,14 @@
 
 
           
-  <div class="comments" id="comments">
-    
+
+  
+    <div class="comments" id="comments">
       <div id="hypercomments_widget"></div>
-    
-  </div>
+    </div>
+
+  
+
 
 
         </div>
@@ -689,125 +823,121 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="Chihwei·Hsu" />
-          <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
-           
-              <p class="site-description motion-element" itemprop="description">The harder, the luckier</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">39</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="Chihwei·Hsu">
             
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">55</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/HsuChihwei" target="_blank" title="Github">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Github
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="Email">
-                  
-                    <i class="fa fa-fw fa-envelope"></i>
-                  
-                  Email
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
-                  
-                    <i class="fa fa-fw fa-book"></i>
-                  
-                  简书
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
+              <p class="site-author-name" itemprop="name">Chihwei·Hsu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
-        
 
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HsuChihwei" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:qwxuzhiwei@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.jianshu.com/u/655466ac9ae2" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-book"></i>简书</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Chihwei_Hsu" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-cuttlefish"></i>csdn</a>
+                  </span>
+                
             </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
-                </li>
-              
-            </ul>
-          </div>
-        
+          
 
-        
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
 
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐网站
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://theme-next.iissnan.com/" title="Next" target="_blank">Next</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
+          
+
+        </div>
       </section>
 
       
@@ -824,30 +954,36 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu
-  </span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+  <span class="author" itemprop="copyrightHolder">Chihwei·Hsu</span>
+
+  
+    &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+  </div>
+
+  
 </div>
 
+<!-- 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+-->
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
 <script type="text/javascript">
     var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
     document.write(unescape("%3Cspan id='cnzz_stat_icon_1261961424'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261961424%26online%3D2' type='text/javascript'%3E%3C/script%3E"));
@@ -874,13 +1010,17 @@
 })();
 </script>
 
+        
+
+
+
+
+
 
 
         
-
-        
-      </div>
-    </footer>
+      </footer></div>
+    
 
     <!-- 背景动画 -->
     <script type="text/javascript" src="/js/src/particle.js"></script>
@@ -889,10 +1029,14 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
-  </div>
+    
+
+  
 
   
 
@@ -917,54 +1061,72 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -1011,7 +1173,350 @@
 
 
 
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
@@ -1026,14 +1531,14 @@
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
   <script>AV.initialize("Ul0rI7a4UprnwAasP0uonUva-gzGzoHsz", "OnUol9qVbAtSW0tOxG2Xnvwr");</script>
   <script>
     function showTime(Counter) {
@@ -1138,6 +1643,28 @@
   </script>
 
 
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
 
   
 
