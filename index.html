@@ -198,7 +198,7 @@
     </div>
     
       
-        <p class="site-subtitle">You are my sunshine!</p>
+        <h1 class="site-subtitle" itemprop="description">You are my sunshine!</h1>
       
     
     
@@ -370,13 +370,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/" class="post-title-link" itemprop="http://chihweihsu.com/index.html">2017-10-16 The unit test and mock in python</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -555,13 +555,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/10/16/2017-10-16-描述统计学笔记（Udacity）/" class="post-title-link" itemprop="http://chihweihsu.com/index.html">2017-10-16 描述统计学笔记（Udacity）</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -744,13 +744,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/09/28/2017-9-28-Python-编码之禅/" class="post-title-link" itemprop="http://chihweihsu.com/index.html">2017-9-28 Python 编码之禅</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -931,13 +931,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/09/14/2017-9-14-通过-slots-节省内存/" class="post-title-link" itemprop="http://chihweihsu.com/index.html">2017-9-14 通过__slots__节省内存</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1036,14 +1036,18 @@
       
         
           
-            <a id="more"></a>
-<p><a href="http://www.datadependence.com/2016/07/pythonic-code-video-series-slots/" target="_blank" rel="noopener">见原文</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Measurement</span>:</span></span><br><span class="line">    __slots__ = [<span class="string">'x'</span>, <span class="string">'y'</span>, <span class="string">'val'</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x, y, value)</span>:</span></span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line">        self.val = value</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>merge dict </p>
-</blockquote>
-<p><a href="http://www.datadependence.com/2016/08/pythonic-code-video-series-merging-dictionaries/" target="_blank" rel="noopener">merged_dict</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dict_merged = &#123;**a, **b, **c&#125;</span><br></pre></td></tr></table></figure></p>
-
           
+见原文1234567class Measurement:    __slots__ = ['x', 'y', 'val']     def __init__(self, x, y, value):        self.x = x        self.y = y        self.va
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/09/14/2017-9-14-通过-slots-节省内存/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1115,13 +1119,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/09/12/2017-9-12-str-vs-json-dumps/" class="post-title-link" itemprop="http://chihweihsu.com/index.html">2017-9-12 str() vs json.dumps()</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1220,45 +1224,18 @@
       
         
           
-            <a id="more"></a>
-<h3 id="str-与-json-dumps-的区别"><a href="#str-与-json-dumps-的区别" class="headerlink" title="str() 与 json.dumps()的区别"></a>str() 与 json.dumps()的区别</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = &#123;<span class="string">'jsonKey'</span>: <span class="string">'jsonValue'</span>,<span class="string">"title"</span>: <span class="string">"hello world"</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> json.dumps(data)</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">"jsonKey"</span>: <span class="string">"jsonValue"</span>, <span class="string">"title"</span>: <span class="string">"hello world"</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> str(data)</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">'jsonKey'</span>: <span class="string">'jsonValue'</span>, <span class="string">'title'</span>: <span class="string">'hello world'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>json.dumps(data)</span><br><span class="line"></span><br><span class="line"><span class="string">'&#123;"jsonKey": "jsonValue", "title": "hello world"&#125;'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(data)</span><br><span class="line"></span><br><span class="line"><span class="string">"&#123;'jsonKey': 'jsonValue', 'title': 'hello world'&#125;"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>In fact, I am more interested in their difference in single quote and double quote in output strings. It seems that I already know one difference between them (mentioned above) and whether json.loads() can load the output string. </p>
-</blockquote>
-<blockquote>
-<p>json.dumps() is much more than just making a string out of a Python object, it would always produce a valid JSON string (assuming everything inside the object is serializable) following the Type Conversion Table.</p>
-</blockquote>
-<blockquote>
-<p>For instance, if one of the values is None, the str() would produce an invalid JSON which cannot be loaded:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = &#123;<span class="string">'jsonKey'</span>: <span class="keyword">None</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(data)</span><br><span class="line"><span class="string">"&#123;'jsonKey': None&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>json.loads(str(data))</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py"</span>, line <span class="number">338</span>, <span class="keyword">in</span> loads</span><br><span class="line">    <span class="keyword">return</span> _default_decoder.decode(s)</span><br><span class="line">  File <span class="string">"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py"</span>, line <span class="number">366</span>, <span class="keyword">in</span> decode</span><br><span class="line">    obj, end = self.raw_decode(s, idx=_w(s, <span class="number">0</span>).end())</span><br><span class="line">  File <span class="string">"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py"</span>, line <span class="number">382</span>, <span class="keyword">in</span> raw_decode</span><br><span class="line">    obj, end = self.scan_once(s, idx)</span><br><span class="line">ValueError: Expecting property name: line <span class="number">1</span> column <span class="number">2</span> (char <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>But the dumps() would convert None into null making a valid JSON string that can be loaded:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = &#123;<span class="string">'jsonKey'</span>: <span class="keyword">None</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>json.dumps(data)</span><br><span class="line"><span class="string">'&#123;"jsonKey": null&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>json.loads(json.dumps(data))</span><br><span class="line">&#123;<span class="string">u'jsonKey'</span>: <span class="keyword">None</span>&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>In fact in (I believe most) implementations of Python, str(object) wraps strings in single quotes, which is not valid JSON.</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">An example:</span><br><span class="line"></span><br><span class="line">In [<span class="number">17</span>]: <span class="keyword">print</span> str(&#123;<span class="string">"a"</span>: <span class="number">1</span>&#125;)</span><br><span class="line">&#123;<span class="string">'a'</span>: <span class="number">1</span>&#125;</span><br><span class="line">str(boolean) <span class="keyword">is</span> also <span class="keyword">not</span> valid JSON:</span><br><span class="line"></span><br><span class="line">In [<span class="number">18</span>]: <span class="keyword">print</span> str(<span class="keyword">True</span>)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">__str__, can, however, be overridden <span class="keyword">in</span> user defined classes to ensure that objects <span class="keyword">return</span> JSON representations of themselves.</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>字典转字符串（dict to str）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If your dictionary isn't too big maybe str + eval can do the work:</span></span><br><span class="line">dict1 = &#123;<span class="string">'one'</span>:<span class="number">1</span>, <span class="string">'two'</span>:<span class="number">2</span>, <span class="string">'three'</span>: &#123;<span class="string">'three.1'</span>: <span class="number">3.1</span>, <span class="string">'three.2'</span>: <span class="number">3.2</span> &#125;&#125;</span><br><span class="line">str1 = str(dict1)</span><br><span class="line"></span><br><span class="line">dict2 = eval(str1)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict1==dict2</span><br><span class="line"><span class="comment"># You can use ast.literal_eval instead of eval for additional security if the source is untrusted.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="comment"># convert to string</span></span><br><span class="line">input = json.dumps(&#123;<span class="string">'id'</span>: id &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># load to dict</span></span><br><span class="line">my_dict = json.loads(input)</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>字符串转字典（str to dict）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># str to dict</span></span><br><span class="line">In [<span class="number">33</span>]: <span class="keyword">import</span> ast</span><br><span class="line">In [<span class="number">34</span>]: ast.literal_eval(<span class="string">"&#123;'x':1, 'y':2&#125;"</span>)</span><br><span class="line">Out[<span class="number">34</span>]: &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>转换已转义的字符串转字典（str to dict）</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">'&#123;\\"name\\":\\"michael\\"&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> a</span><br><span class="line">&#123;\<span class="string">"name\":\"michael\"&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt;&gt;&gt; type(json.loads('“' + a + '”'))</span></span><br><span class="line"><span class="string">&lt;type 'unicode'&gt;</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; type(json.loads(json.loads('“' + a + '”')))</span></span><br><span class="line"><span class="string">&lt;type 'dict'&gt;</span></span><br><span class="line"><span class="string"># 第一次json.loads是将里面的\"这样的字符串转为"</span>(只有一个双引号)，第二次再将其转为一个字典，记得不要漏掉前面先加双引号。</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>pymongo</code> 根据ObjectId进行查询<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bson.objectid <span class="keyword">import</span> ObjectId</span><br><span class="line">[i <span class="keyword">for</span> i <span class="keyword">in</span> dbm.neo_nodes.find(&#123;<span class="string">"_id"</span>: ObjectId(obj_id_to_find)&#125;)]</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>float nan</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x=float(<span class="string">'nan'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>math.isnan(x)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The usual way to test for a NaN is to see if it's equal to itself, since nan isn't equal anything.</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isNaN</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> num != num</span><br></pre></td></tr></table></figure>
-
           
+str() 与 json.dumps()的区别1234567891011121314151617&gt;&gt;&gt; data = &#123;'jsonKey': 'jsonValue',"title": "hello world"&#125;&gt;&gt;&gt; print json.
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/09/12/2017-9-12-str-vs-json-dumps/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1330,13 +1307,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/09/07/2017-9-7-机器学习分类/" class="post-title-link" itemprop="http://chihweihsu.com/index.html">2017-9-7 机器学习分类</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1734,9 +1711,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Chihwei·Hsu</span>
 

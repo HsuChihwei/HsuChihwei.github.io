@@ -198,7 +198,7 @@
     </div>
     
       
-        <p class="site-subtitle">You are my sunshine!</p>
+        <h1 class="site-subtitle" itemprop="description">You are my sunshine!</h1>
       
     
     
@@ -370,13 +370,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/08/28/2017-8-28-Pandas-agg-使用lambda/" class="post-title-link" itemprop="http://chihweihsu.com/page/3/index.html">2017-8-28 Pandas agg 使用lambda</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -475,19 +475,17 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">N = <span class="number">100</span></span><br><span class="line">data = pd.DataFrame(&#123;</span><br><span class="line">    <span class="string">'type'</span>: np.random.randint(<span class="number">10</span>, size=N),</span><br><span class="line">    <span class="string">'status'</span>: np.random.randint(<span class="number">10</span>, size=N),</span><br><span class="line">    <span class="string">'name'</span>: np.random.randint(<span class="number">10</span>, size=N),</span><br><span class="line">    <span class="string">'value'</span>: np.random.randint(<span class="number">10</span>, size=N),</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">reading = np.random.random(<span class="number">10</span>,)</span><br><span class="line"></span><br><span class="line">data = data.groupby([<span class="string">'type'</span>, <span class="string">'status'</span>, <span class="string">'name'</span>])[<span class="string">'value'</span>].agg(&#123;</span><br><span class="line">    <span class="string">'one'</span> : np.mean, </span><br><span class="line">    <span class="string">'two'</span> : <span class="keyword">lambda</span> value: <span class="number">100</span>* ((value&gt;<span class="number">32</span>).sum() / reading.mean()), </span><br><span class="line">    <span class="string">'test2'</span>: <span class="keyword">lambda</span> value: <span class="number">100</span>* ((value &gt; <span class="number">45</span>).sum() / value.mean())</span><br><span class="line">&#125;)</span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure>
-<h3 id="获取一列数据中最大值"><a href="#获取一列数据中最大值" class="headerlink" title="获取一列数据中最大值"></a>获取一列数据中最大值</h3><p><code>`</code>python<br>In [34]: df.loc[df[‘Value’].idxmax()]<br>Out[34]:<br>Country        US<br>Place      Kansas<br>Value         894<br>Name: 7</p>
-<p>df = df.reset_index()</p>
-<p>data.groupby([‘Country’,’Place’])[‘Value’].max().item()</p>
-<p>df.groupby([‘country’,’place’], as_index=False)[‘value’].max()</p>
-<p>df.groupby(“country”).apply(lambda df:df.irow(df.value.argmax()))</p>
-<p>In [5]: df = pandas.DataFrame(np.random.randn(10,3),columns=[‘A’,’B’,’C’])</p>
-<p>In [6]: df<br>Out[6]:<br>          A         B         C<br>0  2.001289  0.482561  1.579985<br>1 -0.991646 -0.387835  1.320236<br>2  0.143826 -1.096889  1.486508<br>3 -0.193056 -0.499020  1.536540<br>4 -2.083647 -3.074591  0.175772<br>5 -0.186138 -1.949731  0.287432<br>6 -0.480790 -1.771560 -0.930234<br>7  0.227383 -0.278253  2.102004<br>8 -0.002592  1.434192 -1.624915<br>9  0.404911 -2.167599 -0.452900</p>
-<p>In [7]: df.idxmax()<br>Out[7]:<br>A    0<br>B    8<br>C    7</p>
-<p>In [8]: df.ix[df[‘A’].idxmax()]<br>Out[8]:<br>A    2.001289<br>B    0.482561<br>C    1.579985</p>
-<p>···</p>
-
+          12345678910111213141516171819import numpy as npimport pandas as pdN = 100data = pd.DataFrame(&#123;    'type': np.random.randint(10, size=N),    'stat
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/08/28/2017-8-28-Pandas-agg-使用lambda/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -559,13 +557,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/08/27/2017-8-27-Pandas-dataframe与序列相乘/" class="post-title-link" itemprop="http://chihweihsu.com/page/3/index.html">2017-8-27 dataframe与序列相乘</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -746,13 +744,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/08/27/2017-8-27-python-协程加速/" class="post-title-link" itemprop="http://chihweihsu.com/page/3/index.html">2017-8-27 python 协程加速</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -933,13 +931,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/08/27/2017-8-27-Pandas-分箱操作（cut）/" class="post-title-link" itemprop="http://chihweihsu.com/page/3/index.html">2017-8-27 Pandas 分箱操作（cut）</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1120,13 +1118,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/" class="post-title-link" itemprop="http://chihweihsu.com/page/3/index.html">2017-8-23 mongo insert_many BulkWriteError</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1307,13 +1305,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2017/08/14/2017-8-14-JSON文件-读写-格式化/" class="post-title-link" itemprop="http://chihweihsu.com/page/3/index.html">2017-8-14 JSON文件 读写 格式化</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1713,9 +1711,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Chihwei·Hsu</span>
 
