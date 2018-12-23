@@ -529,9 +529,9 @@
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
     
-      <category term="mongo" scheme="http://chihweihsu.com/tags/mongo/"/>
-    
       <category term="Bug" scheme="http://chihweihsu.com/tags/Bug/"/>
+    
+      <category term="mongo" scheme="http://chihweihsu.com/tags/mongo/"/>
     
   </entry>
   
