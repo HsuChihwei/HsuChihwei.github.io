@@ -172,9 +172,9 @@
     
       <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
     
-      <category term="string" scheme="http://chihweihsu.com/tags/string/"/>
-    
       <category term="json" scheme="http://chihweihsu.com/tags/json/"/>
+    
+      <category term="string" scheme="http://chihweihsu.com/tags/string/"/>
     
   </entry>
   
