@@ -715,37 +715,6 @@
     
     
     <entry>
-      <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
-      <link href="/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
-      <url>/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/</url>
-      
-        <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote><p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p></blockquote><a id="more"></a><h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</span><br><span class="line"><span class="number">0</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">1</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">2</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">3</span>    <span class="keyword">False</span></span><br><span class="line">Name: A, dtype: bool</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</span><br><span class="line"><span class="number">0</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">1</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">2</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">3</span>     <span class="keyword">True</span></span><br><span class="line">Name: A, dtype: bool</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</span><br><span class="line">       A</span><br><span class="line"><span class="number">1</span>   this</span><br><span class="line"><span class="number">3</span>  apple</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ul><li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li><li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li></ul></blockquote><h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</span><br><span class="line">       A</span><br><span class="line"><span class="number">1</span>   this</span><br><span class="line"><span class="number">3</span>  apple</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多个条件情况下：</span></span><br><span class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></span><br></pre></td></tr></table></figure><h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</span><br><span class="line"><span class="number">0</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">1</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">2</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">3</span>     <span class="keyword">True</span></span><br><span class="line">Name: A, dtype: bool</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</span><br><span class="line">       A</span><br><span class="line"><span class="number">1</span>   this</span><br><span class="line"><span class="number">3</span>  apple</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据分析 </category>
-          
-          <category> Pandas </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> Pandas </tag>
-            
-            <tag> Contains </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2017-8-7 python args and kwargs</title>
       <link href="/2017/08/07/2017-8-7-python-args-and-kwargs/"/>
       <url>/2017/08/07/2017-8-7-python-args-and-kwargs/</url>
@@ -769,6 +738,37 @@
             <tag> args </tag>
             
             <tag> kwargs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2017-8-7 pandas 获取不符合条件的dataframe</title>
+      <link href="/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/"/>
+      <url>/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/</url>
+      
+        <content type="html"><![CDATA[<h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote><p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p></blockquote><a id="more"></a><h3 id="方法一：df-df-col-str-contains-word"><a href="#方法一：df-df-col-str-contains-word" class="headerlink" title="方法一：df[~df.col.str.contains(word)]"></a>方法一：df[~df.col.str.contains(word)]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df.A.str.contains(<span class="string">"Hello|World"</span>)</span><br><span class="line"><span class="number">0</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">1</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">2</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">3</span>    <span class="keyword">False</span></span><br><span class="line">Name: A, dtype: bool</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>~df.A.str.contains(<span class="string">"Hello|World"</span>)</span><br><span class="line"><span class="number">0</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">1</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">2</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">3</span>     <span class="keyword">True</span></span><br><span class="line">Name: A, dtype: bool</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[~df.A.str.contains(<span class="string">"Hello|World"</span>)]</span><br><span class="line">       A</span><br><span class="line"><span class="number">1</span>   this</span><br><span class="line"><span class="number">3</span>  apple</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span> rows x <span class="number">1</span> columns]</span><br></pre></td></tr></table></figure><blockquote><p>注意：</p><ul><li>似乎 <code>df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]</code>比上面使用正则，速度会快点</li><li>获取“非”数据的条数：<code>(~df.col3.str.contains(&#39;u|z&#39;)).sum()</code></li></ul></blockquote><h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">df[df[<span class="string">"col"</span>].str.contains(<span class="string">'this'</span>|<span class="string">'that'</span>)==<span class="keyword">False</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">"Hello|World"</span>)==<span class="keyword">False</span>]</span><br><span class="line">       A</span><br><span class="line"><span class="number">1</span>   this</span><br><span class="line"><span class="number">3</span>  apple</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多个条件情况下：</span></span><br><span class="line"><span class="comment"># df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True]</span></span><br></pre></td></tr></table></figure><h3 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>df = pd.DataFrame(&#123;<span class="string">"A"</span>: [<span class="string">"Hello"</span>, <span class="string">"this"</span>, <span class="string">"World"</span>, <span class="string">"apple"</span>]&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)</span><br><span class="line"><span class="number">0</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">1</span>     <span class="keyword">True</span></span><br><span class="line"><span class="number">2</span>    <span class="keyword">False</span></span><br><span class="line"><span class="number">3</span>     <span class="keyword">True</span></span><br><span class="line">Name: A, dtype: bool</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>df[df[<span class="string">'A'</span>].str.contains(<span class="string">r'^(?:(?!Hello|World).)*$'</span>)]</span><br><span class="line">       A</span><br><span class="line"><span class="number">1</span>   this</span><br><span class="line"><span class="number">3</span>  apple</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> Pandas </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Pandas </tag>
+            
+            <tag> Contains </tag>
             
         </tags>
       
@@ -1143,11 +1143,11 @@
       
         <tags>
             
+            <tag> 速查 </tag>
+            
             <tag> Hexo </tag>
             
             <tag> Blog </tag>
-            
-            <tag> 速查 </tag>
             
         </tags>
       
@@ -1205,9 +1205,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1216,9 +1216,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
