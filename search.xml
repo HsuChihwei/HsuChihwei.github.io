@@ -4,35 +4,6 @@
   
     
     <entry>
-      <title>2017-10-16 描述统计学笔记（Udacity）</title>
-      <link href="/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/"/>
-      <url>/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<h3 id="how-would-you-measure-memory"><a href="#how-would-you-measure-memory" class="headerlink" title="how would you measure memory?"></a>how would you measure memory?</h3><blockquote><ol><li>maybe can ask some question like what’s food you eat yesterday,2 days ago, 5 days ago, 10days ago…</li><li>give you a article,test how much time you take to keep in mind the whole article</li><li>give you 1 hours, test how many words that you keep in mind<a id="more"></a></li></ol></blockquote><p>### </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据分析 </category>
-          
-          <category> 描述统计学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 统计学 </tag>
-            
-            <tag> 数据分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2017-10-16 The unit test and mock in python</title>
       <link href="/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/"/>
       <url>/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/</url>
@@ -62,6 +33,35 @@
             <tag> 挡板 </tag>
             
             <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2017-10-16 描述统计学笔记（Udacity）</title>
+      <link href="/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/"/>
+      <url>/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="how-would-you-measure-memory"><a href="#how-would-you-measure-memory" class="headerlink" title="how would you measure memory?"></a>how would you measure memory?</h3><blockquote><ol><li>maybe can ask some question like what’s food you eat yesterday,2 days ago, 5 days ago, 10days ago…</li><li>give you a article,test how much time you take to keep in mind the whole article</li><li>give you 1 hours, test how many words that you keep in mind<a id="more"></a></li></ol></blockquote><p>### </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 描述统计学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 统计学 </tag>
+            
+            <tag> 数据分析 </tag>
             
         </tags>
       
@@ -1205,9 +1205,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1216,9 +1216,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
