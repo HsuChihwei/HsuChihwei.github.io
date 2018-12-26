@@ -469,9 +469,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/08/07/2017-8-7-python-args-and-kwargs/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="url">
               
-                <span itemprop="name">2017-8-7 python args and kwargs</span>
+                <span itemprop="name">2017-8-7 pandas 获取不符合条件的dataframe</span>
               
             </a>
         
@@ -495,9 +495,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/07/2017-8-7-python-args-and-kwargs/" itemprop="url">
               
-                <span itemprop="name">2017-8-7 pandas 获取不符合条件的dataframe</span>
+                <span itemprop="name">2017-8-7 python args and kwargs</span>
               
             </a>
         
@@ -573,9 +573,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/31/2017-7-31-python-交集、并集、差集/" itemprop="url">
+            <a class="post-title-link" href="/2017/07/31/2017-7-31-python-生成器（Generators）/" itemprop="url">
               
-                <span itemprop="name">2017-7-31 python set 交集、并集、差集</span>
+                <span itemprop="name">2017-7-31 python 生成器（Generators）</span>
               
             </a>
         
@@ -599,9 +599,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/31/2017-7-31-python-生成器（Generators）/" itemprop="url">
+            <a class="post-title-link" href="/2017/07/31/2017-7-31-python-交集、并集、差集/" itemprop="url">
               
-                <span itemprop="name">2017-7-31 python 生成器（Generators）</span>
+                <span itemprop="name">2017-7-31 python set 交集、并集、差集</span>
               
             </a>
         
@@ -1103,6 +1103,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 

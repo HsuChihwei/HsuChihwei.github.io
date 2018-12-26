@@ -393,7 +393,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
@@ -413,7 +413,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" class="post-title-link" itemprop="http://chihweihsu.com/page/5/index.html">2017-8-7 pandas 获取不符合条件的dataframe</a>
+                <a href="/2017/08/07/2017-8-7-python-args-and-kwargs/" class="post-title-link" itemprop="http://chihweihsu.com/page/5/index.html">2017-8-7 python args and kwargs</a>
               
             
           </h2>
@@ -472,14 +472,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据分析/" itemprop="url" rel="index"><span itemprop="name">数据分析</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据分析/Pandas/" itemprop="url" rel="index"><span itemprop="name">Pandas</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -489,11 +489,21 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/07/2017-8-7-python-args-and-kwargs/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/07/2017-8-7-python-args-and-kwargs/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
           
-             <span id="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" class="leancloud_visitors" data-flag-title="2017-8-7 pandas 获取不符合条件的dataframe">
+             <span id="/2017/08/07/2017-8-7-python-args-and-kwargs/" class="leancloud_visitors" data-flag-title="2017-8-7 python args and kwargs">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -525,13 +535,13 @@
 
       
         
-          <h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
-<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
+          <h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
+<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></span><br><span class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</span><br><span class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</span><br><span class="line"></span><br><span class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output：</span></span><br><span class="line"><span class="comment"># first normal arg: yasoob</span></span><br><span class="line"><span class="comment"># another arg through *argv: python</span></span><br><span class="line"><span class="comment"># another arg through *argv: eggs</span></span><br><span class="line"><span class="comment"># another arg through *argv: test</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/#more" rel="contents">
+              <a class="btn" href="/2017/08/07/2017-8-7-python-args-and-kwargs/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -686,6 +696,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/06/2017-8-6-python-string/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/06/2017-8-6-python-string/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -883,6 +903,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/01/2017-8-1-python-rrule-bug/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/01/2017-8-1-python-rrule-bug/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -927,202 +957,6 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2017/08/01/2017-8-1-python-rrule-bug/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/07/31/2017-7-31-python-交集、并集、差集/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chihwei·Hsu">
-      <meta itemprop="description" content="The harder, the luckier">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟の迹">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/07/31/2017-7-31-python-交集、并集、差集/" class="post-title-link" itemprop="http://chihweihsu.com/page/5/index.html">2017-7-31 python set 交集、并集、差集</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-07-31 00:00:00" itemprop="dateCreated datePublished" datetime="2017-07-31T00:00:00-04:00">2017-07-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-02-24 03:53:20" itemprop="dateModified" datetime="2018-02-24T03:53:20-05:00">2018-02-24</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/31/2017-7-31-python-交集、并集、差集/" class="leancloud_visitors" data-flag-title="2017-7-31 python set 交集、并集、差集">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="交集-intersection"><a href="#交集-intersection" class="headerlink" title="交集(intersection)"></a>交集(intersection)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">example：</span><br><span class="line">valid = set([<span class="string">'yellow'</span>, <span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>, <span class="string">'black'</span>])</span><br><span class="line">input_set = set([<span class="string">'red'</span>, <span class="string">'brown'</span>]) </span><br><span class="line">print(input_set.intersection(valid))</span><br><span class="line"><span class="comment">### 输出：set(['red'])</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法一:</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b=[<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tmp = [val <span class="keyword">for</span> val <span class="keyword">in</span> a <span class="keyword">if</span> val <span class="keyword">in</span> b]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tmp</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).intersection(set(b)))</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三：</span></span><br><span class="line">&gt;&gt;&gt;list(set(a) &amp; set(b))</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/07/31/2017-7-31-python-交集、并集、差集/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1278,6 +1112,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/31/2017-7-31-python-生成器（Generators）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/31/2017-7-31-python-生成器（Generators）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1327,6 +1171,212 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2017/07/31/2017-7-31-python-生成器（Generators）/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/07/31/2017-7-31-python-交集、并集、差集/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chihwei·Hsu">
+      <meta itemprop="description" content="The harder, the luckier">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟の迹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/07/31/2017-7-31-python-交集、并集、差集/" class="post-title-link" itemprop="http://chihweihsu.com/page/5/index.html">2017-7-31 python set 交集、并集、差集</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-07-31 00:00:00" itemprop="dateCreated datePublished" datetime="2017-07-31T00:00:00-04:00">2017-07-31</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-02-24 03:53:20" itemprop="dateModified" datetime="2018-02-24T03:53:20-05:00">2018-02-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/31/2017-7-31-python-交集、并集、差集/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/31/2017-7-31-python-交集、并集、差集/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/07/31/2017-7-31-python-交集、并集、差集/" class="leancloud_visitors" data-flag-title="2017-7-31 python set 交集、并集、差集">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="交集-intersection"><a href="#交集-intersection" class="headerlink" title="交集(intersection)"></a>交集(intersection)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">example：</span><br><span class="line">valid = set([<span class="string">'yellow'</span>, <span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>, <span class="string">'black'</span>])</span><br><span class="line">input_set = set([<span class="string">'red'</span>, <span class="string">'brown'</span>]) </span><br><span class="line">print(input_set.intersection(valid))</span><br><span class="line"><span class="comment">### 输出：set(['red'])</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法一:</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b=[<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tmp = [val <span class="keyword">for</span> val <span class="keyword">in</span> a <span class="keyword">if</span> val <span class="keyword">in</span> b]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tmp</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(set(a).intersection(set(b)))</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三：</span></span><br><span class="line">&gt;&gt;&gt;list(set(a) &amp; set(b))</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/07/31/2017-7-31-python-交集、并集、差集/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1482,6 +1532,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/24/2017-5-24-建站日志（二）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/24/2017-5-24-建站日志（二）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1519,7 +1579,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq548swo000nfov38rfscunp" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq54m1cz000mh0v3v3thgj6z" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl">
               </a>
             
@@ -2009,6 +2069,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 

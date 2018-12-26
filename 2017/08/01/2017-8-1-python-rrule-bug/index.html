@@ -490,6 +490,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/01/2017-8-1-python-rrule-bug/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/01/2017-8-1-python-rrule-bug/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -581,8 +591,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/31/2017-7-31-python-交集、并集、差集/" rel="next" title="2017-7-31 python set 交集、并集、差集">
-                <i class="fa fa-chevron-left"></i> 2017-7-31 python set 交集、并集、差集
+              <a href="/2017/07/31/2017-7-31-python-生成器（Generators）/" rel="next" title="2017-7-31 python 生成器（Generators）">
+                <i class="fa fa-chevron-left"></i> 2017-7-31 python 生成器（Generators）
               </a>
             
           </div>
@@ -614,6 +624,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -1064,6 +1078,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 

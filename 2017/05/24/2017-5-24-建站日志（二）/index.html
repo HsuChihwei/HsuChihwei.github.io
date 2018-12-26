@@ -492,6 +492,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/24/2017-5-24-建站日志（二）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/24/2017-5-24-建站日志（二）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -529,7 +539,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq548swo000nfov38rfscunp" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq54m1cz000mh0v3v3thgj6z" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl">
               </a>
             
@@ -626,8 +636,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/31/2017-7-31-python-生成器（Generators）/" rel="prev" title="2017-7-31 python 生成器（Generators）">
-                2017-7-31 python 生成器（Generators） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/31/2017-7-31-python-交集、并集、差集/" rel="prev" title="2017-7-31 python set 交集、并集、差集">
+                2017-7-31 python set 交集、并集、差集 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -649,6 +659,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -1099,6 +1113,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
+        appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
