@@ -23,14 +23,14 @@
   </url>
   
   <url>
-    <loc>http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/</loc>
+    <loc>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/</loc>
     
     <lastmod>2018-02-24T08:53:20.049Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/</loc>
+    <loc>http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/</loc>
     
     <lastmod>2018-02-24T08:53:20.049Z</lastmod>
     
@@ -205,13 +205,6 @@
   </url>
   
   <url>
-    <loc>http://chihweihsu.com/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
-    
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chihweihsu.com/2017/05/24/2017-5-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
     
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
@@ -226,7 +219,7 @@
   </url>
   
   <url>
-    <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/</loc>
+    <loc>http://chihweihsu.com/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
     
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
     
@@ -234,6 +227,13 @@
   
   <url>
     <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88Generators%EF%BC%89/</loc>
+    
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/</loc>
     
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
     
