@@ -151,6 +151,16 @@
 
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4dedea2c4f78342b6f61bb4de6c827db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -393,7 +403,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/">
+    <link itemprop="mainEntityOfPage" href="http://chihweihsu.com/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chihwei·Hsu">
@@ -413,7 +423,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/08/07/2017-8-7-python-args-and-kwargs/" class="post-title-link" itemprop="http://chihweihsu.com/page/5/index.html">2017-8-7 python args and kwargs</a>
+                <a href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" class="post-title-link" itemprop="http://chihweihsu.com/page/5/index.html">2017-8-7 pandas 获取不符合条件的dataframe</a>
               
             
           </h2>
@@ -472,14 +482,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据分析/" itemprop="url" rel="index"><span itemprop="name">数据分析</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notes/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据分析/Pandas/" itemprop="url" rel="index"><span itemprop="name">Pandas</span></a></span>
 
                 
                 
@@ -494,8 +504,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/07/2017-8-7-python-args-and-kwargs/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/07/2017-8-7-python-args-and-kwargs/" itemprop="commentCount"></span>
+                <a href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -503,7 +513,7 @@
 
           
           
-             <span id="/2017/08/07/2017-8-7-python-args-and-kwargs/" class="leancloud_visitors" data-flag-title="2017-8-7 python args and kwargs">
+             <span id="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/" class="leancloud_visitors" data-flag-title="2017-8-7 pandas 获取不符合条件的dataframe">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -528,7 +538,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">1.4k</span>
               
 
               
@@ -563,13 +573,13 @@
 
       
         
-          <h3 id="args："><a href="#args：" class="headerlink" title="*args："></a><code>*args</code>：</h3><blockquote>
-<p>传递一个非键值对的可变数量的参数列表给一个函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_var_args</span><span class="params">(f_arg, *argv)</span>:</span></span><br><span class="line">    print(<span class="string">"first normal arg:"</span>, f_arg)</span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> argv:</span><br><span class="line">        print(<span class="string">"another arg through *argv:"</span>, arg)</span><br><span class="line"></span><br><span class="line">test_var_args(<span class="string">'yasoob'</span>, <span class="string">'python'</span>, <span class="string">'eggs'</span>, <span class="string">'test'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output：</span></span><br><span class="line"><span class="comment"># first normal arg: yasoob</span></span><br><span class="line"><span class="comment"># another arg through *argv: python</span></span><br><span class="line"><span class="comment"># another arg through *argv: eggs</span></span><br><span class="line"><span class="comment"># another arg through *argv: test</span></span><br></pre></td></tr></table></figure></p>
+          <h2 id="search-for-“does-not-contain”-on-a-dataframe-in-pandas"><a href="#search-for-“does-not-contain”-on-a-dataframe-in-pandas" class="headerlink" title="search for “does-not-contain” on a dataframe in pandas"></a>search for “does-not-contain” on a dataframe in pandas</h2><blockquote>
+<p>问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。</p>
 </blockquote>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/08/07/2017-8-7-python-args-and-kwargs/#more" rel="contents">
+              <a class="btn" href="/2017/08/07/2017-8-7-pandas-获取不符合条件的dataframe/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1747,7 +1757,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq566w3z000p5zv3ip83n5ph" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" rel="gallery_cjq56jp3b002h7hv3t08jmvqb" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ohhmsby4v.bkt.clouddn.com/image/2017-05-19_%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97_Next.jpg" itemprop="contentUrl">
               </a>
             
@@ -2210,6 +2220,35 @@
     
 
     
+      <div>
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      </div>
+    
 
     
   </div>
@@ -2355,7 +2394,7 @@
         notify: false,
         appId: '5ATBUnDyAlR9AfcWzOrSm4bo-gzGzoHsz',
         appKey: '8WfLzwI3XXgXQBgfGyWdFU3w',
-        placeholder: 'Just go go',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
         avatar:'mm',
         meta:guest,
         pageSize:'10' || 10,
