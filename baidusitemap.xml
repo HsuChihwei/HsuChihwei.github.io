@@ -4,13 +4,16 @@
     <loc>http://chihweihsu.com/2017/09/12/2017-9-12-str-vs-json-dumps/</loc>
     <lastmod>2018-02-24T10:16:33.402Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
-    <lastmod>2018-02-24T08:53:20.049Z</lastmod>
-  </url>  <url>
     <loc>http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/</loc>
     <lastmod>2018-02-24T08:53:20.049Z</lastmod>
   </url>  <url>
+    <loc>http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
+    <lastmod>2018-02-24T08:53:20.049Z</lastmod>
+  </url>  <url>
     <loc>http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/</loc>
+    <lastmod>2018-02-24T08:53:20.049Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/09/14/2017-9-14-%E9%80%9A%E8%BF%87-slots-%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98/</loc>
     <lastmod>2018-02-24T08:53:20.049Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/09/28/2017-9-28-Python-%E7%BC%96%E7%A0%81%E4%B9%8B%E7%A6%85/</loc>
@@ -19,10 +22,19 @@
     <loc>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/</loc>
     <lastmod>2018-02-24T08:53:20.049Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/09/14/2017-9-14-%E9%80%9A%E8%BF%87-slots-%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98/</loc>
-    <lastmod>2018-02-24T08:53:20.049Z</lastmod>
+    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</loc>
+    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/08/06/2017-8-6-python-string/</loc>
+    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/08/09/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/</loc>
+    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/</loc>
     <lastmod>2018-02-24T08:53:20.048Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/08/07/2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe/</loc>
@@ -31,19 +43,7 @@
     <loc>http://chihweihsu.com/2017/08/08/2017-8-8-profile-cProfile-%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90/</loc>
     <lastmod>2018-02-24T08:53:20.048Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/07/2017-8-7-python-args-and-kwargs/</loc>
-    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/09/2017-8-9-Map%E3%80%81Filter%E3%80%81Reduce/</loc>
-    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/</loc>
-    <lastmod>2018-02-24T08:53:20.048Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/</loc>
+    <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/</loc>
     <lastmod>2018-02-24T08:53:20.047Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-%E5%8C%BA%E9%97%B4%E5%A4%84%E7%90%86/</loc>
@@ -52,28 +52,13 @@
     <loc>http://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-%E4%BD%BF%E7%94%A8lambda/</loc>
     <lastmod>2018-02-24T08:53:20.047Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/</loc>
-    <lastmod>2018-02-24T08:53:20.047Z</lastmod>
-  </url>  <url>
     <loc>http://chihweihsu.com/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/</loc>
     <lastmod>2018-02-24T08:53:20.047Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+    <loc>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/</loc>
+    <lastmod>2018-02-24T08:53:20.047Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/15/2017-5-15-pandas-%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/04/05/2017-4-5-you-are-my-sunshine/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/16/2017-5-16-%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/</loc>
+    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/05/17/2017-5-17-Markdown-%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
@@ -82,19 +67,10 @@
     <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%91%BD%E8%BF%90%E4%BB%8E%E4%B8%8D%E7%BC%BA%E5%B8%AD/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/15/2017-5-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/</loc>
+    <loc>http://chihweihsu.com/2017/05/15/2017-5-15-pandas-%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/17/2017-5-17-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/24/2017-5-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
-    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
-  </url>  <url>
-    <loc>http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
+    <loc>http://chihweihsu.com/2017/05/16/2017-5-16-%E4%BB%8E%E5%AD%97%E5%85%B8%E4%B8%AD%E6%8F%90%E5%8F%96%E5%AD%90%E9%9B%86/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/07/31/2017-7-31-python-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86/</loc>
@@ -109,13 +85,37 @@
     <loc>http://chihweihsu.com/2017/08/10/2017-8-10-string-%E5%8E%BB%E6%8E%89%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
+    <loc>http://chihweihsu.com/2017/05/24/2017-5-24-%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
     <loc>http://chihweihsu.com/2017/08/10/2017-8-10-%E8%B0%83%E8%AF%95-Pdb%EF%BC%88Python-debugger%EF%BC%89/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
     <loc>http://chihweihsu.com/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>  <url>
+    <loc>http://chihweihsu.com/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/04/05/2017-4-5-you-are-my-sunshine/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
     <loc>http://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/05/23/2017-5-23-%E4%B8%80%E4%B8%AA%E9%80%97%E5%8F%B7-%E5%BC%95%E8%B5%B7%E7%9A%84BUG/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/05/07/2017-5-7-Hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2018-02-24T08:53:20.046Z</lastmod>
+  </url>  <url>
+    <loc>http://chihweihsu.com/2017/05/15/2017-5-15-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2018-02-24T08:53:20.046Z</lastmod>
   </url>
 </urlset>
