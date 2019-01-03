@@ -514,9 +514,9 @@
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>速查</tag>
         <tag>Hexo</tag>
         <tag>Blog</tag>
-        <tag>速查</tag>
       </tags>
   </entry>
   <entry>
@@ -535,14 +535,14 @@
     <content type="text"><![CDATA[google-site-verification: google1c4a19302d3916a2.html]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>%2Fabout%2Findex.html</url>
-    <content type="text"><![CDATA[父母在，人生尚有來處；父母去，人生祗剩歸途。]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[categories]]></title>
     <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[父母在，人生尚有來處；父母去，人生祗剩歸途。]]></content>
   </entry>
   <entry>
     <title><![CDATA[tags]]></title>
