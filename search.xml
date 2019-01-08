@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Attention]]></title>
+    <url>%2F2019%2F01%2F08%2FAttention%2F</url>
+    <content type="text"><![CDATA[本站最新文章，请点击左侧更多]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>notice</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2017-10-16 The unit test and mock in python]]></title>
     <url>%2F2017%2F10%2F16%2F2017-10-16-The-unit-test-and-mock-in-python%2F</url>
     <content type="text"><![CDATA[mock 功效 完成功能测试123456789101112131415161718192021222324252627# module.pyclass Count(): def add(self, a, b): return a + b# test.pyfrom unittest import mockimport unittestfrom module import Countclass MockDemo(unittest.TestCase): def test_add(self): count = Count() count.add = mock.Mock(return_value=13, side_effect=count.add) # side_effect参数和return_value是相反的。它给mock分配了可替换的结果，覆盖了return_value。简单的说，一个模拟工厂调用将返回side_effect值，而不是return_value；所以，设置side_effect参数为Count类add()方法，那么return_value的作用失效。 result = count.add(8, 8) print(result) # 将会真正的调用add()方法，得到的返回值为16（8+8）。通过print打印结果。 count.add.assert_called_with(8, 8) # 检查mock方法是否获得了正确的参数。 self.assertEqual(result, 16)if __name__ == '__main__': unittest.main() 解决测试依赖 例如，我们要测试A模块，然后A模块依赖于B模块的调用。但是，由于B模块的改变，导致了A模块返回结果的改变，从而使A模块的测试用例失败。其实，对于A模块，以及A模块的用例来说，并没有变化，不应该失败才对。这个时候就是mock发挥作用的时候了。通过mock模拟掉影响A模块的部分（B模块）。至于mock掉的部分（B模块）应该由其它用例来测试。 add_and_multiply()函数依赖了multiply()函数的返回值123456789101112131415161718192021222324252627# function.pydef add_and_multiply(x, y): addition = x + y multiple = multiply(x, y) return (addition, multiple)def multiply(x, y): return x * y # test.pyimport unittestimport functionclass MyTestCase(unittest.TestCase): def test_add_and_multiply(self): x = 3 y = 5 addition, multiple = function.add_and_multiply(x, y) self.assertEqual(8, addition) self.assertEqual(15, multiple)if __name__ == "__main__": unittest.main() 修改multiply()函数的代码，这样测试会失败12def multiply(x, y): return x * y + 3 把 multiply()函数mock掉，解决依赖1234567891011121314151617181920212223import unittestfrom unittest.mock import patchimport functionclass MyTestCase(unittest.TestCase): @patch("function.multiply") # patch()装饰/上下文管理器可以很容易地模拟类或对象在模块测试。在测试过程中，您指定的对象将被替换为一个模拟（或其他对象），并在测试结束时还原。这里模拟function.py文件中multiply()函数。 def test_add_and_multiply2(self, mock_multiply): # 在定义测试用例中，将mock的multiply()函数（对象）重命名为 mock_multiply对象。 x = 3 y = 5 mock_multiply.return_value = 15 # 设定mock_multiply对象的返回值为固定的15。 addition, multiple = function.add_and_multiply(x, y) mock_multiply.assert_called_once_with(3, 5) # 检查mock_multiply方法的参数是否正确。 self.assertEqual(8, addition) self.assertEqual(15, multiple)if __name__ == "__main__": unittest.main() Mock attributes in Python mock?12with patch('requests.post') as patched_post: type(patched_post.return_value).ok = PropertyMock(return_value=True) Mock session in requests library？123456789101112131415161718192021222324252627282930313233343536373839404142# main.pyimport requestsdef do_session_get(): session = requests.session() return session.get('foo').status_code# tests.pyimport unittestimport mockfrom main import do_session_get# The module of we mock, return the exact data that we expecteddef mocked_requests(*args, **kwargs): # print args class MockResponse(object): def __init__(self, status_code, text, json_data=None, content=None): self.json_data = json_data self.status_code = status_code self.text = text self.content = content def json(self): return self.json_data if args[0] == 'foo': return MockResponse(200, 'success') elif args[0] == 'http://someurl.com/': return MockResponse(200, 'success') return MockResponse(404, '-1')# from main import do_session_getclass TestDoSessionGet(unittest.TestCase): @mock.patch('requests.session') def test_should_mock_session_get(self, mocked_session): mocked_session.return_value = mock.MagicMock(get=mock.MagicMock(side_effect=mocked_requests)) # print do_session_get() self.assertEqual(do_session_get(), 200)if __name__ == '__main__': unittest.main() assert 常用断言速查 项目 举例 assertEqual(a, b) a == b assertNotEqual(a, b) a != b assertGreater(a, b) a &gt; b assertGreaterEqual(a, b) a &gt;= b assertLess(a, b) a &lt; b assertLessEqual(a, b) a &lt;= b assertTrue(x) bool(x) is True assertFalse(x) bool(x) is False assertIs(a, b) a is b assertIsNot(a, b) a is not b assertIsNone(x) x is None assertIsNotNone(x) x is not None assertIn(a, b) a in b assertNotIn(a, b) a not in b assertIsInstance(a, b) isinstance(a, b) assertNotIsInstance(a, b) not isinstance(a, b) 干货：mock模板（requests）12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273# common_test.py# -*- coding: utf-8 -*-import unittestimport mockimport requests"""If the module is import from others files, like:from my.great.package import FlowTypeThen, we should do this, below:# Now we must patch 'my.great.package.requests.get'@mock.patch('my.great.package.requests.get', side_effect=mocked_requests)instead of "@mock.patch('common_test.requests.get', side_effect=mocked_requests)"because the requests module was imported in that file"""# The module that need unittestclass FlowType(object): def __init__(self): pass def flow_type(self): url = 'http://chihweihsu.com/' resp = requests.get(url) return resp# The data of we mockmock_status_code = 200mock_text = 'You are my sunshine!'mock_json = &#123;'data': 'You are my sunshine!'&#125;mock_content = 'You are my sunshine!'# The module of we mock, return the exact data that we expecteddef mocked_requests(*args, **kwargs): class MockResponse(object): def __init__(self, status_code, text, json_data=None, content=None): self.json_data = json_data self.status_code = status_code self.text = text self.content = content def json(self): return self.json_data if args[0] == 'http://chihweihsu.com/': return MockResponse(mock_status_code, mock_text, json_data=mock_json, content=mock_content) elif args[0] == 'http://someurl.com/': return MockResponse(200, 'success') return MockResponse(404, '-1')# The whole test case moduleclass TestCommon(unittest.TestCase): def setUp(self): pass # We patch 'common_test.requests.get' with our own method. The mock object is passed in to our test case method. @mock.patch('common_test.requests.get', side_effect=mocked_requests) def test_flow_type(self, mocked_get): f = FlowType() resp = f.flow_type() self.assertIsNotNone(resp) self.assertEqual(resp.status_code, mock_status_code) self.assertIs(resp.text, mock_text) self.assertIn(resp.content, mock_content) self.assertDictEqual(resp.json(), mock_json) self.assertIsInstance(resp.json(), dict)if __name__ == '__main__': unittest.main()]]></content>
@@ -322,20 +333,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2017-8-7 pandas 获取不符合条件的dataframe]]></title>
-    <url>%2F2017%2F08%2F07%2F2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe%2F</url>
-    <content type="text"><![CDATA[search for “does-not-contain” on a dataframe in pandas 问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。 方法一：df[~df.col.str.contains(word)]12345678910111213141516171819&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df.A.str.contains("Hello|World")0 True1 False2 True3 FalseName: A, dtype: bool&gt;&gt;&gt; ~df.A.str.contains("Hello|World")0 False1 True2 False3 TrueName: A, dtype: bool&gt;&gt;&gt; df[~df.A.str.contains("Hello|World")] A1 this3 apple[2 rows x 1 columns] 注意： 似乎 df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]比上面使用正则，速度会快点 获取“非”数据的条数：(~df.col3.str.contains(&#39;u|z&#39;)).sum() 方法二：123456789df[df["col"].str.contains('this'|'that')==False]&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df[df['A'].str.contains("Hello|World")==False] A1 this3 apple# 多个条件情况下：# df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True] 方法三：1234567891011&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df['A'].str.contains(r'^(?:(?!Hello|World).)*$')0 False1 True2 False3 TrueName: A, dtype: bool&gt;&gt;&gt; df[df['A'].str.contains(r'^(?:(?!Hello|World).)*$')] A1 this3 apple]]></content>
-      <categories>
-        <category>数据分析</category>
-        <category>Pandas</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Pandas</tag>
-        <tag>Contains</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2017-8-7 python args and kwargs]]></title>
     <url>%2F2017%2F08%2F07%2F2017-8-7-python-args-and-kwargs%2F</url>
     <content type="text"><![CDATA[*args： 传递一个非键值对的可变数量的参数列表给一个函数。123456789101112def test_var_args(f_arg, *argv): print("first normal arg:", f_arg) for arg in argv: print("another arg through *argv:", arg)test_var_args('yasoob', 'python', 'eggs', 'test')# output：# first normal arg: yasoob# another arg through *argv: python# another arg through *argv: eggs# another arg through *argv: test **kwargs： 传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。123456def greet_me(**kwargs): for key, value in kwargs.items(): print("&#123;0&#125; == &#123;1&#125;".format(key, value))&gt;&gt;&gt; greet_me(name="yasoob")name == yasoob 注意： 不是必须写成*args和**kwargs，只有变量前面的 *(星号)才是必须的；可以写成*var 和**vars，写成*args 和**kwargs只是一个通俗的命名约定；*args： 顺序不能变动；**kwargs：可以根据键指定顺序。123456789101112131415161718def test_args_kwargs(arg1, arg2, arg3): print("arg1:", arg1) print("arg2:", arg2) print("arg3:", arg3) # 首先使用 *args&gt;&gt;&gt; args = ("two", 3, 5)&gt;&gt;&gt; test_args_kwargs(*args)arg1: twoarg2: 3arg3: 5# 现在使用 **kwargs:&gt;&gt;&gt; kwargs = &#123;"arg3": 3, "arg2": "two", "arg1": 5&#125;&gt;&gt;&gt; test_args_kwargs(**kwargs)arg1: 5arg2: twoarg3: 3]]></content>
@@ -347,6 +344,20 @@
         <tag>Python</tag>
         <tag>args</tag>
         <tag>kwargs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2017-8-7 pandas 获取不符合条件的dataframe]]></title>
+    <url>%2F2017%2F08%2F07%2F2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe%2F</url>
+    <content type="text"><![CDATA[search for “does-not-contain” on a dataframe in pandas 问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。 方法一：df[~df.col.str.contains(word)]12345678910111213141516171819&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df.A.str.contains("Hello|World")0 True1 False2 True3 FalseName: A, dtype: bool&gt;&gt;&gt; ~df.A.str.contains("Hello|World")0 False1 True2 False3 TrueName: A, dtype: bool&gt;&gt;&gt; df[~df.A.str.contains("Hello|World")] A1 this3 apple[2 rows x 1 columns] 注意： 似乎 df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]比上面使用正则，速度会快点 获取“非”数据的条数：(~df.col3.str.contains(&#39;u|z&#39;)).sum() 方法二：123456789df[df["col"].str.contains('this'|'that')==False]&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df[df['A'].str.contains("Hello|World")==False] A1 this3 apple# 多个条件情况下：# df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True] 方法三：1234567891011&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df['A'].str.contains(r'^(?:(?!Hello|World).)*$')0 False1 True2 False3 TrueName: A, dtype: bool&gt;&gt;&gt; df[df['A'].str.contains(r'^(?:(?!Hello|World).)*$')] A1 this3 apple]]></content>
+      <categories>
+        <category>数据分析</category>
+        <category>Pandas</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Pandas</tag>
+        <tag>Contains</tag>
       </tags>
   </entry>
   <entry>
@@ -535,8 +546,8 @@
     <content type="text"><![CDATA[google-site-verification: google1c4a19302d3916a2.html]]></content>
   </entry>
   <entry>
-    <title><![CDATA[categories]]></title>
-    <url>%2Fcategories%2Findex.html</url>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
@@ -545,8 +556,8 @@
     <content type="text"><![CDATA[父母在，人生尚有來處；父母去，人生祗剩歸途。]]></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>
