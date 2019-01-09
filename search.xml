@@ -333,20 +333,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[2017-8-7 python args and kwargs]]></title>
-    <url>%2F2017%2F08%2F07%2F2017-8-7-python-args-and-kwargs%2F</url>
-    <content type="text"><![CDATA[*args： 传递一个非键值对的可变数量的参数列表给一个函数。123456789101112def test_var_args(f_arg, *argv): print("first normal arg:", f_arg) for arg in argv: print("another arg through *argv:", arg)test_var_args('yasoob', 'python', 'eggs', 'test')# output：# first normal arg: yasoob# another arg through *argv: python# another arg through *argv: eggs# another arg through *argv: test **kwargs： 传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。123456def greet_me(**kwargs): for key, value in kwargs.items(): print("&#123;0&#125; == &#123;1&#125;".format(key, value))&gt;&gt;&gt; greet_me(name="yasoob")name == yasoob 注意： 不是必须写成*args和**kwargs，只有变量前面的 *(星号)才是必须的；可以写成*var 和**vars，写成*args 和**kwargs只是一个通俗的命名约定；*args： 顺序不能变动；**kwargs：可以根据键指定顺序。123456789101112131415161718def test_args_kwargs(arg1, arg2, arg3): print("arg1:", arg1) print("arg2:", arg2) print("arg3:", arg3) # 首先使用 *args&gt;&gt;&gt; args = ("two", 3, 5)&gt;&gt;&gt; test_args_kwargs(*args)arg1: twoarg2: 3arg3: 5# 现在使用 **kwargs:&gt;&gt;&gt; kwargs = &#123;"arg3": 3, "arg2": "two", "arg1": 5&#125;&gt;&gt;&gt; test_args_kwargs(**kwargs)arg1: 5arg2: twoarg3: 3]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>args</tag>
-        <tag>kwargs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2017-8-7 pandas 获取不符合条件的dataframe]]></title>
     <url>%2F2017%2F08%2F07%2F2017-8-7-pandas-%E8%8E%B7%E5%8F%96%E4%B8%8D%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84dataframe%2F</url>
     <content type="text"><![CDATA[search for “does-not-contain” on a dataframe in pandas 问题来源：做项目时，想拿到不符合条件的所有数据，比如：通话类型有好多种（主叫、被叫、呼转……），现在想分析所有非主叫数据，那么问题就来了。 方法一：df[~df.col.str.contains(word)]12345678910111213141516171819&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df.A.str.contains("Hello|World")0 True1 False2 True3 FalseName: A, dtype: bool&gt;&gt;&gt; ~df.A.str.contains("Hello|World")0 False1 True2 False3 TrueName: A, dtype: bool&gt;&gt;&gt; df[~df.A.str.contains("Hello|World")] A1 this3 apple[2 rows x 1 columns] 注意： 似乎 df[~(df.A.str.contains(&quot;Hello&quot;) | (df.A.str.contains(&quot;World&quot;)))]比上面使用正则，速度会快点 获取“非”数据的条数：(~df.col3.str.contains(&#39;u|z&#39;)).sum() 方法二：123456789df[df["col"].str.contains('this'|'that')==False]&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df[df['A'].str.contains("Hello|World")==False] A1 this3 apple# 多个条件情况下：# df[df["col1"].str.contains('this|that')==False and df["col2"].str.contains('foo|bar')==True] 方法三：1234567891011&gt;&gt;&gt; df = pd.DataFrame(&#123;"A": ["Hello", "this", "World", "apple"]&#125;)&gt;&gt;&gt; df['A'].str.contains(r'^(?:(?!Hello|World).)*$')0 False1 True2 False3 TrueName: A, dtype: bool&gt;&gt;&gt; df[df['A'].str.contains(r'^(?:(?!Hello|World).)*$')] A1 this3 apple]]></content>
@@ -358,6 +344,20 @@
         <tag>Python</tag>
         <tag>Pandas</tag>
         <tag>Contains</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2017-8-7 python args and kwargs]]></title>
+    <url>%2F2017%2F08%2F07%2F2017-8-7-python-args-and-kwargs%2F</url>
+    <content type="text"><![CDATA[*args： 传递一个非键值对的可变数量的参数列表给一个函数。123456789101112def test_var_args(f_arg, *argv): print("first normal arg:", f_arg) for arg in argv: print("another arg through *argv:", arg)test_var_args('yasoob', 'python', 'eggs', 'test')# output：# first normal arg: yasoob# another arg through *argv: python# another arg through *argv: eggs# another arg through *argv: test **kwargs： 传递不定长度的键值对（字典）, 作为参数传递给一个函数（即传递带名字的参数）。123456def greet_me(**kwargs): for key, value in kwargs.items(): print("&#123;0&#125; == &#123;1&#125;".format(key, value))&gt;&gt;&gt; greet_me(name="yasoob")name == yasoob 注意： 不是必须写成*args和**kwargs，只有变量前面的 *(星号)才是必须的；可以写成*var 和**vars，写成*args 和**kwargs只是一个通俗的命名约定；*args： 顺序不能变动；**kwargs：可以根据键指定顺序。123456789101112131415161718def test_args_kwargs(arg1, arg2, arg3): print("arg1:", arg1) print("arg2:", arg2) print("arg3:", arg3) # 首先使用 *args&gt;&gt;&gt; args = ("two", 3, 5)&gt;&gt;&gt; test_args_kwargs(*args)arg1: twoarg2: 3arg3: 5# 现在使用 **kwargs:&gt;&gt;&gt; kwargs = &#123;"arg3": 3, "arg2": "two", "arg1": 5&#125;&gt;&gt;&gt; test_args_kwargs(**kwargs)arg1: 5arg2: twoarg3: 3]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>args</tag>
+        <tag>kwargs</tag>
       </tags>
   </entry>
   <entry>
