@@ -5,9 +5,9 @@
   <subtitle>You are my sunshine!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://chihweihsu.com/"/>
+  <link href="https://chihweihsu.com/"/>
   <updated>2019-01-08T12:38:04.000Z</updated>
-  <id>http://chihweihsu.com/</id>
+  <id>https://chihweihsu.com/</id>
   
   <author>
     <name>Chihwei·Hsu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Attention</title>
-    <link href="http://chihweihsu.com/2019/01/08/Attention/"/>
-    <id>http://chihweihsu.com/2019/01/08/Attention/</id>
+    <link href="https://chihweihsu.com/2019/01/08/Attention/"/>
+    <id>https://chihweihsu.com/2019/01/08/Attention/</id>
     <published>2019-01-08T23:00:00.000Z</published>
     <updated>2019-01-08T12:38:04.000Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
     
-      <category term="notice" scheme="http://chihweihsu.com/tags/notice/"/>
+      <category term="notice" scheme="https://chihweihsu.com/tags/notice/"/>
     
   </entry>
   
   <entry>
     <title>2017-10-16 The unit test and mock in python</title>
-    <link href="http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/"/>
-    <id>http://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/</id>
+    <link href="https://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/"/>
+    <id>https://chihweihsu.com/2017/10/16/2017-10-16-The-unit-test-and-mock-in-python/</id>
     <published>2017-10-16T22:48:19.000Z</published>
     <updated>2018-02-24T08:53:20.046Z</updated>
     
@@ -53,29 +53,29 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="unittest" scheme="http://chihweihsu.com/tags/unittest/"/>
+      <category term="unittest" scheme="https://chihweihsu.com/tags/unittest/"/>
     
-      <category term="mock" scheme="http://chihweihsu.com/tags/mock/"/>
+      <category term="mock" scheme="https://chihweihsu.com/tags/mock/"/>
     
-      <category term="单元测试" scheme="http://chihweihsu.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="单元测试" scheme="https://chihweihsu.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="挡板" scheme="http://chihweihsu.com/tags/%E6%8C%A1%E6%9D%BF/"/>
+      <category term="挡板" scheme="https://chihweihsu.com/tags/%E6%8C%A1%E6%9D%BF/"/>
     
-      <category term="测试" scheme="http://chihweihsu.com/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://chihweihsu.com/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>2017-10-16 描述统计学笔记（Udacity）</title>
-    <link href="http://chihweihsu.com/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/"/>
-    <id>http://chihweihsu.com/2017/10/16/2017-10-16-描述统计学笔记（Udacity）/</id>
+    <link href="https://chihweihsu.com/2017/10/16/2017-10-16-%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%88Udacity%EF%BC%89/"/>
+    <id>https://chihweihsu.com/2017/10/16/2017-10-16-描述统计学笔记（Udacity）/</id>
     <published>2017-10-16T22:48:19.000Z</published>
     <updated>2018-02-24T08:53:20.046Z</updated>
     
@@ -91,21 +91,21 @@
     
     </summary>
     
-      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="描述统计学" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+      <category term="描述统计学" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%8F%8F%E8%BF%B0%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
     
     
-      <category term="统计学" scheme="http://chihweihsu.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+      <category term="统计学" scheme="https://chihweihsu.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
     
-      <category term="数据分析" scheme="http://chihweihsu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://chihweihsu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-28 Python 编码之禅</title>
-    <link href="http://chihweihsu.com/2017/09/28/2017-9-28-Python-%E7%BC%96%E7%A0%81%E4%B9%8B%E7%A6%85/"/>
-    <id>http://chihweihsu.com/2017/09/28/2017-9-28-Python-编码之禅/</id>
+    <link href="https://chihweihsu.com/2017/09/28/2017-9-28-Python-%E7%BC%96%E7%A0%81%E4%B9%8B%E7%A6%85/"/>
+    <id>https://chihweihsu.com/2017/09/28/2017-9-28-Python-编码之禅/</id>
     <published>2017-09-28T18:39:44.000Z</published>
     <updated>2018-02-24T08:53:20.049Z</updated>
     
@@ -119,27 +119,27 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="decode" scheme="http://chihweihsu.com/tags/decode/"/>
+      <category term="decode" scheme="https://chihweihsu.com/tags/decode/"/>
     
-      <category term="encode" scheme="http://chihweihsu.com/tags/encode/"/>
+      <category term="encode" scheme="https://chihweihsu.com/tags/encode/"/>
     
-      <category term="总结" scheme="http://chihweihsu.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://chihweihsu.com/tags/%E6%80%BB%E7%BB%93/"/>
     
-      <category term="编码" scheme="http://chihweihsu.com/tags/%E7%BC%96%E7%A0%81/"/>
+      <category term="编码" scheme="https://chihweihsu.com/tags/%E7%BC%96%E7%A0%81/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-14 通过__slots__节省内存</title>
-    <link href="http://chihweihsu.com/2017/09/14/2017-9-14-%E9%80%9A%E8%BF%87-slots-%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98/"/>
-    <id>http://chihweihsu.com/2017/09/14/2017-9-14-通过-slots-节省内存/</id>
+    <link href="https://chihweihsu.com/2017/09/14/2017-9-14-%E9%80%9A%E8%BF%87-slots-%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98/"/>
+    <id>https://chihweihsu.com/2017/09/14/2017-9-14-通过-slots-节省内存/</id>
     <published>2017-09-14T19:01:38.000Z</published>
     <updated>2018-02-24T08:53:20.049Z</updated>
     
@@ -155,23 +155,23 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="内存" scheme="http://chihweihsu.com/tags/%E5%86%85%E5%AD%98/"/>
+      <category term="内存" scheme="https://chihweihsu.com/tags/%E5%86%85%E5%AD%98/"/>
     
-      <category term="slots" scheme="http://chihweihsu.com/tags/slots/"/>
+      <category term="slots" scheme="https://chihweihsu.com/tags/slots/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-12 str() vs json.dumps()</title>
-    <link href="http://chihweihsu.com/2017/09/12/2017-9-12-str-vs-json-dumps/"/>
-    <id>http://chihweihsu.com/2017/09/12/2017-9-12-str-vs-json-dumps/</id>
+    <link href="https://chihweihsu.com/2017/09/12/2017-9-12-str-vs-json-dumps/"/>
+    <id>https://chihweihsu.com/2017/09/12/2017-9-12-str-vs-json-dumps/</id>
     <published>2017-09-12T13:39:13.000Z</published>
     <updated>2018-02-24T10:16:33.402Z</updated>
     
@@ -187,23 +187,23 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="string" scheme="http://chihweihsu.com/tags/string/"/>
+      <category term="string" scheme="https://chihweihsu.com/tags/string/"/>
     
-      <category term="json" scheme="http://chihweihsu.com/tags/json/"/>
+      <category term="json" scheme="https://chihweihsu.com/tags/json/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-7 机器学习分类</title>
-    <link href="http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/"/>
-    <id>http://chihweihsu.com/2017/09/07/2017-9-7-机器学习分类/</id>
+    <link href="https://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/"/>
+    <id>https://chihweihsu.com/2017/09/07/2017-9-7-机器学习分类/</id>
     <published>2017-09-07T12:19:51.000Z</published>
     <updated>2018-02-24T08:53:20.049Z</updated>
     
@@ -215,21 +215,21 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="机器学习" scheme="http://chihweihsu.com/categories/Notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://chihweihsu.com/categories/Notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="机器学习" scheme="http://chihweihsu.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://chihweihsu.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-7 机器学习路线</title>
-    <link href="http://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
-    <id>http://chihweihsu.com/2017/09/07/2017-9-7-机器学习路线/</id>
+    <link href="https://chihweihsu.com/2017/09/07/2017-9-7-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <id>https://chihweihsu.com/2017/09/07/2017-9-7-机器学习路线/</id>
     <published>2017-09-07T11:21:28.000Z</published>
     <updated>2018-02-24T08:53:20.049Z</updated>
     
@@ -243,23 +243,23 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="机器学习" scheme="http://chihweihsu.com/categories/Notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://chihweihsu.com/categories/Notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="机器学习" scheme="http://chihweihsu.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://chihweihsu.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="路线" scheme="http://chihweihsu.com/tags/%E8%B7%AF%E7%BA%BF/"/>
+      <category term="路线" scheme="https://chihweihsu.com/tags/%E8%B7%AF%E7%BA%BF/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-5 计算体脂率</title>
-    <link href="http://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/"/>
-    <id>http://chihweihsu.com/2017/09/05/2017-9-5-计算体脂率/</id>
+    <link href="https://chihweihsu.com/2017/09/05/2017-9-5-%E8%AE%A1%E7%AE%97%E4%BD%93%E8%84%82%E7%8E%87/"/>
+    <id>https://chihweihsu.com/2017/09/05/2017-9-5-计算体脂率/</id>
     <published>2017-09-05T21:12:11.000Z</published>
     <updated>2018-02-24T08:53:20.049Z</updated>
     
@@ -273,21 +273,21 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="life" scheme="http://chihweihsu.com/tags/life/"/>
+      <category term="life" scheme="https://chihweihsu.com/tags/life/"/>
     
   </entry>
   
   <entry>
     <title>2017-9-5 python  list 排序 sort、sorted</title>
-    <link href="http://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/"/>
-    <id>http://chihweihsu.com/2017/09/05/2017-9-5-python-list-排序-sort、sorted/</id>
+    <link href="https://chihweihsu.com/2017/09/05/2017-9-5-python-list-%E6%8E%92%E5%BA%8F-sort%E3%80%81sorted/"/>
+    <id>https://chihweihsu.com/2017/09/05/2017-9-5-python-list-排序-sort、sorted/</id>
     <published>2017-09-05T19:17:50.000Z</published>
     <updated>2018-02-24T08:53:20.049Z</updated>
     
@@ -301,23 +301,23 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="list" scheme="http://chihweihsu.com/tags/list/"/>
+      <category term="list" scheme="https://chihweihsu.com/tags/list/"/>
     
-      <category term="sort" scheme="http://chihweihsu.com/tags/sort/"/>
+      <category term="sort" scheme="https://chihweihsu.com/tags/sort/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-31 自动 生成注释文档（docstring）</title>
-    <link href="http://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/"/>
-    <id>http://chihweihsu.com/2017/08/31/2017-8-31-python-自动-生成注释文档（docstring）/</id>
+    <link href="https://chihweihsu.com/2017/08/31/2017-8-31-python-%E8%87%AA%E5%8A%A8-%E7%94%9F%E6%88%90%E6%B3%A8%E9%87%8A%E6%96%87%E6%A1%A3%EF%BC%88docstring%EF%BC%89/"/>
+    <id>https://chihweihsu.com/2017/08/31/2017-8-31-python-自动-生成注释文档（docstring）/</id>
     <published>2017-09-01T00:22:52.000Z</published>
     <updated>2018-02-24T08:53:20.048Z</updated>
     
@@ -331,23 +331,23 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="Linux" scheme="http://chihweihsu.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://chihweihsu.com/tags/Linux/"/>
     
-      <category term="Docstring" scheme="http://chihweihsu.com/tags/Docstring/"/>
+      <category term="Docstring" scheme="https://chihweihsu.com/tags/Docstring/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-31 python  two sum 问题</title>
-    <link href="http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/"/>
-    <id>http://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-问题/</id>
+    <link href="https://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-%E9%97%AE%E9%A2%98/"/>
+    <id>https://chihweihsu.com/2017/08/31/2017-8-31-python-two-sum-问题/</id>
     <published>2017-08-31T21:02:59.000Z</published>
     <updated>2018-02-24T08:53:20.048Z</updated>
     
@@ -362,21 +362,21 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="算法" scheme="http://chihweihsu.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://chihweihsu.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-28 python interval  区间处理</title>
-    <link href="http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-%E5%8C%BA%E9%97%B4%E5%A4%84%E7%90%86/"/>
-    <id>http://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/</id>
+    <link href="https://chihweihsu.com/2017/08/28/2017-8-28-python-interval-%E5%8C%BA%E9%97%B4%E5%A4%84%E7%90%86/"/>
+    <id>https://chihweihsu.com/2017/08/28/2017-8-28-python-interval-区间处理/</id>
     <published>2017-08-28T22:25:08.000Z</published>
     <updated>2018-02-24T08:53:20.047Z</updated>
     
@@ -391,23 +391,23 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="区间" scheme="http://chihweihsu.com/tags/%E5%8C%BA%E9%97%B4/"/>
+      <category term="区间" scheme="https://chihweihsu.com/tags/%E5%8C%BA%E9%97%B4/"/>
     
-      <category term="interval" scheme="http://chihweihsu.com/tags/interval/"/>
+      <category term="interval" scheme="https://chihweihsu.com/tags/interval/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-28 Pandas agg 使用lambda</title>
-    <link href="http://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-%E4%BD%BF%E7%94%A8lambda/"/>
-    <id>http://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-使用lambda/</id>
+    <link href="https://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-%E4%BD%BF%E7%94%A8lambda/"/>
+    <id>https://chihweihsu.com/2017/08/28/2017-8-28-Pandas-agg-使用lambda/</id>
     <published>2017-08-28T22:12:25.000Z</published>
     <updated>2018-02-24T08:53:20.047Z</updated>
     
@@ -422,25 +422,25 @@
     
     </summary>
     
-      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+      <category term="Pandas" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
+      <category term="Pandas" scheme="https://chihweihsu.com/tags/Pandas/"/>
     
-      <category term="lambda" scheme="http://chihweihsu.com/tags/lambda/"/>
+      <category term="lambda" scheme="https://chihweihsu.com/tags/lambda/"/>
     
-      <category term="agg" scheme="http://chihweihsu.com/tags/agg/"/>
+      <category term="agg" scheme="https://chihweihsu.com/tags/agg/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-27 dataframe与序列相乘</title>
-    <link href="http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/"/>
-    <id>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe与序列相乘/</id>
+    <link href="https://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe%E4%B8%8E%E5%BA%8F%E5%88%97%E7%9B%B8%E4%B9%98/"/>
+    <id>https://chihweihsu.com/2017/08/27/2017-8-27-Pandas-dataframe与序列相乘/</id>
     <published>2017-08-27T22:28:54.000Z</published>
     <updated>2018-02-24T08:53:20.047Z</updated>
     
@@ -454,23 +454,23 @@
     
     </summary>
     
-      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+      <category term="Pandas" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
+      <category term="Pandas" scheme="https://chihweihsu.com/tags/Pandas/"/>
     
-      <category term="DataFrame" scheme="http://chihweihsu.com/tags/DataFrame/"/>
+      <category term="DataFrame" scheme="https://chihweihsu.com/tags/DataFrame/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-27 python 协程加速</title>
-    <link href="http://chihweihsu.com/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/"/>
-    <id>http://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/</id>
+    <link href="https://chihweihsu.com/2017/08/27/2017-8-27-python-%E5%8D%8F%E7%A8%8B%E5%8A%A0%E9%80%9F/"/>
+    <id>https://chihweihsu.com/2017/08/27/2017-8-27-python-协程加速/</id>
     <published>2017-08-27T20:05:58.000Z</published>
     <updated>2018-02-24T08:53:20.047Z</updated>
     
@@ -484,21 +484,21 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="gevent" scheme="http://chihweihsu.com/tags/gevent/"/>
+      <category term="gevent" scheme="https://chihweihsu.com/tags/gevent/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-27 Pandas 分箱操作（cut）</title>
-    <link href="http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/"/>
-    <id>http://chihweihsu.com/2017/08/27/2017-8-27-Pandas-分箱操作（cut）/</id>
+    <link href="https://chihweihsu.com/2017/08/27/2017-8-27-Pandas-%E5%88%86%E7%AE%B1%E6%93%8D%E4%BD%9C%EF%BC%88cut%EF%BC%89/"/>
+    <id>https://chihweihsu.com/2017/08/27/2017-8-27-Pandas-分箱操作（cut）/</id>
     <published>2017-08-27T15:12:47.000Z</published>
     <updated>2018-02-24T08:53:20.047Z</updated>
     
@@ -512,25 +512,25 @@
     
     </summary>
     
-      <category term="数据分析" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <category term="数据分析" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-      <category term="Pandas" scheme="http://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
+      <category term="Pandas" scheme="https://chihweihsu.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="Pandas" scheme="http://chihweihsu.com/tags/Pandas/"/>
+      <category term="Pandas" scheme="https://chihweihsu.com/tags/Pandas/"/>
     
-      <category term="cut" scheme="http://chihweihsu.com/tags/cut/"/>
+      <category term="cut" scheme="https://chihweihsu.com/tags/cut/"/>
     
-      <category term="评分卡" scheme="http://chihweihsu.com/tags/%E8%AF%84%E5%88%86%E5%8D%A1/"/>
+      <category term="评分卡" scheme="https://chihweihsu.com/tags/%E8%AF%84%E5%88%86%E5%8D%A1/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-23 mongo insert_many BulkWriteError</title>
-    <link href="http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/"/>
-    <id>http://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</id>
+    <link href="https://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/"/>
+    <id>https://chihweihsu.com/2017/08/23/2017-8-23-mongo-insert-many-BulkWriteError/</id>
     <published>2017-08-23T13:31:08.000Z</published>
     <updated>2018-02-24T08:53:20.046Z</updated>
     
@@ -544,23 +544,23 @@
     
     </summary>
     
-      <category term="Bug" scheme="http://chihweihsu.com/categories/Bug/"/>
+      <category term="Bug" scheme="https://chihweihsu.com/categories/Bug/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Bug/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Bug/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="Bug" scheme="http://chihweihsu.com/tags/Bug/"/>
+      <category term="Bug" scheme="https://chihweihsu.com/tags/Bug/"/>
     
-      <category term="mongo" scheme="http://chihweihsu.com/tags/mongo/"/>
+      <category term="mongo" scheme="https://chihweihsu.com/tags/mongo/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-14 JSON文件 读写 格式化</title>
-    <link href="http://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
-    <id>http://chihweihsu.com/2017/08/14/2017-8-14-JSON文件-读写-格式化/</id>
+    <link href="https://chihweihsu.com/2017/08/14/2017-8-14-JSON%E6%96%87%E4%BB%B6-%E8%AF%BB%E5%86%99-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    <id>https://chihweihsu.com/2017/08/14/2017-8-14-JSON文件-读写-格式化/</id>
     <published>2017-08-14T17:37:04.000Z</published>
     <updated>2018-02-24T08:53:20.046Z</updated>
     
@@ -574,21 +574,21 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="json" scheme="http://chihweihsu.com/tags/json/"/>
+      <category term="json" scheme="https://chihweihsu.com/tags/json/"/>
     
   </entry>
   
   <entry>
     <title>2017-8-13 三元表达式（条件表达式）</title>
-    <link href="http://chihweihsu.com/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/"/>
-    <id>http://chihweihsu.com/2017/08/13/2017-8-13-三元表达式（条件表达式）/</id>
+    <link href="https://chihweihsu.com/2017/08/13/2017-8-13-%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/"/>
+    <id>https://chihweihsu.com/2017/08/13/2017-8-13-三元表达式（条件表达式）/</id>
     <published>2017-08-13T14:41:33.000Z</published>
     <updated>2018-02-24T08:53:20.046Z</updated>
     
@@ -603,14 +603,14 @@
     
     </summary>
     
-      <category term="Notes" scheme="http://chihweihsu.com/categories/Notes/"/>
+      <category term="Notes" scheme="https://chihweihsu.com/categories/Notes/"/>
     
-      <category term="Python" scheme="http://chihweihsu.com/categories/Notes/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/categories/Notes/Python/"/>
     
     
-      <category term="Python" scheme="http://chihweihsu.com/tags/Python/"/>
+      <category term="Python" scheme="https://chihweihsu.com/tags/Python/"/>
     
-      <category term="条件表达式" scheme="http://chihweihsu.com/tags/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <category term="条件表达式" scheme="https://chihweihsu.com/tags/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
